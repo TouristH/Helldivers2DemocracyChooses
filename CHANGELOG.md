@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.2.2 - 2026-10-21
+
+- Checked the current Chinese and English Wiki catalogs and expanded the
+  loadout pool to 221 items: 56 primaries, 26 secondaries, 24 throwables,
+  20 boosters, and 95 stratagems. The seven Ironclad Democracy items were
+  already present in the existing catalog.
+- Added R-40 视界者, P-44 迷雾, G-11 铁蒺藜, AMW-20 尖峰, and LAS-44 新星,
+  with current Chinese Wiki names and actual embedded equipment artwork.
+- Updated Chinese Wiki translations, including P-34 爆破者, G-8 焚身, and
+  G-60 反坦克追踪者, while retaining applicable curated baseline names.
+  Only Surplus EAT Allocation and Integrated Extinguishers still use
+  explicitly identified community translations.
+- Retained the existing 216 icons and added five developer-render PNGs from
+  the English Wiki's original-file links while its API and thumbnails were
+  unavailable. The additions retain their original dimensions and include
+  file-page provenance, source hashes, and embedded-content checksums.
+- Documented the distinction between the historical API thumbnail bundle
+  and the five full-resolution additions, their separate game-art rights,
+  and the plugin registry's Release-based update and review process.
+- Checked cached image dimensions and MIME types before reuse so later
+  refreshes cannot label original-size artwork as a thumbnail.
+
 ## 0.2.1 - 2026-09-30
 
 - Rejected loopback, private, link-local, local-name, metadata-service, and

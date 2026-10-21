@@ -38,28 +38,28 @@ fan project and is not affiliated with, endorsed by, or sponsored by them.
 
 ## Helldivers Wiki
 
-The following sources are credited to the **Helldivers Wiki contributors** and
-were accessed on 2026-09-30:
+The following catalog sources are credited to the **Helldivers Wiki
+contributors** and were checked on 2026-10-21 for version `0.2.2`:
 
-- Chinese [武器](https://helldivers.wiki.gg/zh/wiki/武器), revision `6540`:
-  primary weapons, secondary weapons, throwables, Chinese names, and the
-  verified Chinese name used for the newly listed GL-28 support weapon;
-- Chinese [战略配备](https://helldivers.wiki.gg/zh/wiki/战略配备), revision `6647`:
+- Chinese [武器](https://helldivers.wiki.gg/zh/wiki/武器), revision `14373`:
+  primary weapons, secondary weapons, throwables, Chinese names, and
+  support-weapon names;
+- Chinese [战略配备](https://helldivers.wiki.gg/zh/wiki/战略配备), revision `9248`:
   the Chinese stratagem catalog and Chinese names;
-- English [Weapons](https://helldivers.wiki.gg/wiki/Weapons), revision `137028`:
+- English [Weapons](https://helldivers.wiki.gg/wiki/Weapons), revision `139355`:
   latest-catalog discovery and canonical English weapon names;
 - English [Boosters](https://helldivers.wiki.gg/wiki/Boosters), revision `136929`:
   latest-catalog discovery and canonical English booster names;
 - English [Stratagems](https://helldivers.wiki.gg/wiki/Stratagems), revision
-  `133897`: latest-catalog discovery and canonical English stratagem names.
+  `138203`: latest-catalog discovery and canonical English stratagem names.
 
-Individual Chinese item pages were also queried for translated infobox titles.
-Their exact page URLs and revision IDs are recorded per item in
-`loadout_data.json`. All 216 image filenames were resolved through the Chinese
-Wiki API. The API reports that these images are served from the Wiki's shared
-English media repository; `loadout_icons.json` records the returned description
-URL, repository identifier, source SHA-1, dimensions, and embedded SHA-256 for
-every file.
+Individual Chinese item pages were also checked for translated infobox titles.
+Their exact page URLs and available revision IDs are recorded per item in
+`loadout_data.json`. The `0.2.0` baseline used Chinese catalog revisions `6540`
+and `6647`, English Weapons revision `137028`, Boosters revision `136929`,
+and Stratagems revision `133897`. Established sourced or curated names and
+their item-level provenance remain where no replacement was needed; the
+current catalog check does not imply that every older page was fetched again.
 
 The two Chinese pages are available under the
 [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans)
@@ -69,24 +69,71 @@ The two Chinese pages are available under the
 
 For `loadout_data.json`, this project extracted and combined the Chinese and
 English catalogs, normalized model prefixes and names, assigned plugin slots,
-and converted the result to JSON. The final display language is Chinese. Ten
-items for which the Chinese Wiki did not provide a usable Chinese title on the
-access date use transparent community translations and carry
-`translation_source: community_translation`; the database identifies those
-items explicitly. Other curated labels are likewise distinguished from direct
-Wiki titles. The Chinese- and English-Wiki-derived portions of the database,
+and converted the result to JSON. The final display language is Chinese. The
+current catalog contains 221 items, including five Scope of Authority additions.
+Names formerly marked as community translations were updated where current
+Chinese Wiki titles were available, including P-34 爆破者, G-8 焚身,
+G-60 反坦克追踪者, LAS-12 钗, TD-110 风暴漩涡, and A/GM-17 瓦斯迫击哨戒炮.
+Two boosters still use transparent community translations: Surplus EAT
+Allocation (额外消耗性反坦克武器配额) and Integrated Extinguishers (集成灭火器).
+They carry `translation_source: community_translation`; other curated labels
+are likewise distinguished from direct Wiki titles. The Chinese- and
+English-Wiki-derived portions of the database,
 including adaptations, are redistributed under CC BY-SA 4.0 and CC BY-NC-SA
 4.0 respectively. The English-derived portions are therefore subject to the
 CC BY-NC-SA 4.0 non-commercial restriction.
 
-`loadout_icons.json` contains all 216 current icons downloaded through the
-Chinese Wiki API: raster artwork uses the API's 224-pixel thumbnail and vector
-artwork retains the Wiki-provided SVG. Querying or downloading a file through
-the Wiki does not itself grant additional rights in the underlying game art.
-The HELLDIVERS 2 material section above therefore remains controlling for game
-artwork, alongside any file-specific notice on the linked Wiki description
-page. These images are not represented as covered by this repository's MIT
-License.
+`loadout_icons.json` retains the 216 icons originally resolved through the
+Chinese Wiki API on 2026-09-30. The API resolved shared files to the Wiki's
+English media repository. Historical raster artwork generally uses the API's
+224-pixel thumbnail, while vector artwork retains the Wiki-provided SVG. The
+previously embedded EAT PNG is intentionally retained rather than replaced
+with the currently linked traced SVG.
+
+Five additional developer-render PNGs were retrieved on 2026-10-21 through
+the English Wiki file-description pages' original-file links (`format=original`)
+because the Wiki API and thumbnail endpoints were unavailable during this
+refresh. They retain their original dimensions, rather than a 224-pixel
+thumbnail. The uploader and retrieval credit for all five is **Tech Support
+Squid / Helldivers Wiki.gg**:
+
+| Equipment | File description and revision | Embedded dimensions |
+| --- | --- | --- |
+| R-40 Sightliner / R-40 视界者 | [Primary Render.png](https://helldivers.wiki.gg/wiki/File:R-40_Sightliner_Primary_Render.png?oldid=138586) | 2312 × 534 |
+| P-44 Mist / P-44 迷雾 | [Secondary Render.png](https://helldivers.wiki.gg/wiki/File:P-44_Mist_Secondary_Render.png?oldid=138590) | 1386 × 630 |
+| G-11 Caltrops / G-11 铁蒺藜 | [Throwable Render.png](https://helldivers.wiki.gg/wiki/File:G-11_Caltrops_Throwable_Render.png?oldid=138591) | 782 × 484 |
+| AMW-20 Apex / AMW-20 尖峰 | [Weapon and Backpack Support Render.png](https://helldivers.wiki.gg/wiki/File:AMW-20_Apex_Weapon_and_Backpack_Support_Render.png?oldid=138588) | 2998 × 1868 |
+| LAS-44 Nova / LAS-44 新星 | [Support Render.png](https://helldivers.wiki.gg/wiki/File:LAS-44_Nova_Support_Render.png?oldid=138592) | 2985 × 659 |
+
+The two support weapons use equipment-render PNGs instead of the traced SVG
+stratagem symbols, whose separate file notices impose their own reuse terms.
+The five selected file pages identify their source as developer artwork and
+their licensing as Arrowhead Game Studios and its licensors under the
+HELLDIVERS EULA. Their selection does not represent a new permission grant.
+`loadout_icons.json` records file-page revisions, retrieval method, original
+source URLs, computed source SHA-1, dimensions, and embedded SHA-256. The five
+original files total about 6.6 MB; Base64 encoding brings the combined historical
+and new JSON bundle to about 11 MB.
+
+Querying or downloading a file through either Wiki language does not itself
+grant additional rights in the underlying game art or apply the Wiki's text
+license to an image. The HELLDIVERS 2 material section above therefore remains
+controlling for game artwork, alongside each linked file's specific notice.
+These images are not represented as covered by this repository's MIT License.
+
+For release-date and equipment cross-checks, this refresh also used the official
+PlayStation Blog announcements by Arrowhead Game Studios:
+
+- [Ironclad Democracy](https://blog.playstation.com/2026/09/15/helldivers-2-ironclad-democracy-warbond-launches-sept-22/),
+  published 2026-09-15 for release on 2026-09-22; its seven equipment entries
+  were already present in the baseline catalog.
+- [Scope of Authority](https://blog.playstation.com/2026/10/13/helldivers-2-scope-of-authority-premium-warbond-launches-oct-20/),
+  published 2026-10-13 for release on 2026-10-20; its five equipment entries
+  are added in `0.2.2`.
+
+These announcements were checked on 2026-10-21. Their text, names, and media
+remain subject to their respective rights holders; they are not relicensed
+under MIT by this attribution.
 
 Separately, the plugin retrieves Wiki excerpts at runtime. Messages containing
 that material include the page link and an attribution matching the source:

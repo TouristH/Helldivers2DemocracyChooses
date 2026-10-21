@@ -1,47 +1,50 @@
 {
   "schema_version": 2,
-  "catalog_updated_at": "2026-09-30",
+  "catalog_updated_at": "2026-10-21",
   "language": "zh-CN",
   "source": "https://helldivers.wiki.gg/zh/wiki/%E6%AD%A6%E5%99%A8",
-  "source_revision": "6540",
+  "source_revision": "14373",
   "sources": [
     {
       "url": "https://helldivers.wiki.gg/zh/wiki/%E6%AD%A6%E5%99%A8",
-      "revision": "6540",
+      "revision": "14373",
       "license": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans",
       "scope": [
         "Chinese weapon names",
         "weapon icon filenames",
         "support-weapon names"
-      ]
+      ],
+      "accessed_at": "2026-10-21"
     },
     {
       "url": "https://helldivers.wiki.gg/zh/wiki/%E6%88%98%E7%95%A5%E9%85%8D%E5%A4%87",
-      "revision": "6647",
+      "revision": "9248",
       "license": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans",
       "scope": [
         "Chinese stratagem names",
         "stratagem icon filenames"
-      ]
+      ],
+      "accessed_at": "2026-10-21"
     },
     {
       "url": "https://helldivers.wiki.gg/zh/api.php",
       "revision": "per-file SHA-1 recorded on every item",
       "scope": [
-        "all embedded icon files resolved through the Chinese Wiki API"
+        "216 retained embedded icons originally resolved through the Chinese Wiki API on 2026-09-30"
       ]
     },
     {
       "url": "https://helldivers.wiki.gg/wiki/Weapons",
-      "revision": "137028",
+      "revision": "139355",
       "license": "CC BY-NC-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "scope": [
         "latest weapon catalog discovery",
         "canonical English names"
-      ]
+      ],
+      "accessed_at": "2026-10-21"
     },
     {
       "url": "https://helldivers.wiki.gg/wiki/Boosters",
@@ -51,16 +54,74 @@
       "scope": [
         "latest booster catalog discovery",
         "canonical English names"
-      ]
+      ],
+      "accessed_at": "2026-10-21"
     },
     {
       "url": "https://helldivers.wiki.gg/wiki/Stratagems",
-      "revision": "133897",
+      "revision": "138203",
       "license": "CC BY-NC-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "scope": [
         "latest stratagem catalog discovery",
         "canonical English names"
+      ],
+      "accessed_at": "2026-10-21"
+    },
+    {
+      "url": "https://blog.playstation.com/2026/09/15/helldivers-2-ironclad-democracy-warbond-launches-sept-22/",
+      "revision": "2026-09-15",
+      "accessed_at": "2026-10-21",
+      "scope": [
+        "Ironclad Democracy released 2026-09-22; all seven equipment entries verified present"
+      ]
+    },
+    {
+      "url": "https://blog.playstation.com/2026/10/13/helldivers-2-scope-of-authority-premium-warbond-launches-oct-20/",
+      "revision": "2026-10-13",
+      "accessed_at": "2026-10-21",
+      "scope": [
+        "Scope of Authority released 2026-10-20; five equipment entries"
+      ]
+    },
+    {
+      "url": "https://helldivers.wiki.gg/wiki/File:R-40_Sightliner_Primary_Render.png",
+      "revision": "138586",
+      "accessed_at": "2026-10-21",
+      "scope": [
+        "developer PNG original; uploader Tech Support Squid; exact source digest recorded per item"
+      ]
+    },
+    {
+      "url": "https://helldivers.wiki.gg/wiki/File:P-44_Mist_Secondary_Render.png",
+      "revision": "138590",
+      "accessed_at": "2026-10-21",
+      "scope": [
+        "developer PNG original; uploader Tech Support Squid; exact source digest recorded per item"
+      ]
+    },
+    {
+      "url": "https://helldivers.wiki.gg/wiki/File:G-11_Caltrops_Throwable_Render.png",
+      "revision": "138591",
+      "accessed_at": "2026-10-21",
+      "scope": [
+        "developer PNG original; uploader Tech Support Squid; exact source digest recorded per item"
+      ]
+    },
+    {
+      "url": "https://helldivers.wiki.gg/wiki/File:AMW-20_Apex_Weapon_and_Backpack_Support_Render.png",
+      "revision": "138588",
+      "accessed_at": "2026-10-21",
+      "scope": [
+        "developer PNG original; uploader Tech Support Squid; exact source digest recorded per item"
+      ]
+    },
+    {
+      "url": "https://helldivers.wiki.gg/wiki/File:LAS-44_Nova_Support_Render.png",
+      "revision": "138592",
+      "accessed_at": "2026-10-21",
+      "scope": [
+        "developer PNG original; uploader Tech Support Squid; exact source digest recorded per item"
       ]
     }
   ],
@@ -71,21 +132,13 @@
       "Chinese Wiki catalog",
       "curated/community Chinese translation"
     ],
-    "community_translation_count": 10,
+    "community_translation_count": 2,
     "community_translations": [
-      "AR-11 仲裁者",
-      "GL-15 驱逐者",
-      "LAS-12 铁尺",
-      "P-34 破门者",
-      "G-8 焚祭",
-      "G-60 反坦克寻踪者",
       "额外消耗性反坦克武器配额",
-      "集成灭火器",
-      "TD-110 大漩涡",
-      "A/GM-17 毒气迫击哨戒炮"
+      "集成灭火器"
     ]
   },
-  "notice": "216 项配装目录已按当前 Helldivers Wiki 校准，显示名全部为中文；图标均通过中文 Wiki API 解析并内嵌。中文 Wiki 尚无可用中文标题的条目使用明确标记的社区译名。完整署名、许可与游戏素材权利边界见 THIRD_PARTY_NOTICES.md。",
+  "notice": "221 项配装目录已核对民主铁壁与权威之镜债券；全部中文显示并内嵌图标。保留既有已核实记录，更新原社区译名与新增装备；两项强化资源仍明确使用社区译名。既有图标来自中文 Wiki API，新增五项为英文共享媒体库的开发者 PNG 原图。署名与权利边界见 THIRD_PARTY_NOTICES.md。",
   "slots": [
     "primary",
     "secondary",
@@ -268,8 +321,8 @@
       "name": "AR-11 仲裁者",
       "name_zh": "AR-11 仲裁者",
       "name_en": "AR-11 Arbitrator",
-      "translation_source": "community_translation",
-      "wiki_zh_page": null,
+      "translation_source": "zh_wiki_weapon_gallery",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/AR-11_Arbitrator",
       "wiki_zh_revision": null,
       "wiki_en_page": "https://helldivers.wiki.gg/wiki/AR-11_Arbitrator",
       "icon_file": "AR-11 Arbitrator Primary Render.png",
@@ -373,6 +426,20 @@
       "icon_file": "R-4 Hyena Primary Render.png",
       "icon_sha1": "f84f0d8ee72216174856e722e9b49167aeafe5fb",
       "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:R-4_Hyena_Primary_Render.png"
+    },
+    {
+      "id": "primary.r-40-sightliner",
+      "slot": "primary",
+      "name": "R-40 视界者",
+      "name_zh": "R-40 视界者",
+      "name_en": "R-40 Sightliner",
+      "translation_source": "zh_wiki_weapon_gallery",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/R-40_%E8%A7%86%E7%95%8C%E8%80%85",
+      "wiki_zh_revision": 14455,
+      "wiki_en_page": "https://helldivers.wiki.gg/wiki/R-40_Sightliner",
+      "icon_file": "R-40 Sightliner Primary Render.png",
+      "icon_sha1": "1d243b7be9b1ef14a25edc41708c6d6c5ea62e84",
+      "icon_source": "https://helldivers.wiki.gg/wiki/File:R-40_Sightliner_Primary_Render.png"
     },
     {
       "id": "primary.mp-98-knight",
@@ -660,8 +727,8 @@
       "name": "GL-15 驱逐者",
       "name_zh": "GL-15 驱逐者",
       "name_en": "GL-15 Evictor",
-      "translation_source": "community_translation",
-      "wiki_zh_page": null,
+      "translation_source": "zh_wiki_weapon_gallery",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/GL-15_Evictor",
       "wiki_zh_revision": null,
       "wiki_en_page": "https://helldivers.wiki.gg/wiki/GL-15_Evictor",
       "icon_file": "GL-15 Evictor Primary Render.png",
@@ -811,11 +878,11 @@
     {
       "id": "primary.las-12-sai",
       "slot": "primary",
-      "name": "LAS-12 铁尺",
-      "name_zh": "LAS-12 铁尺",
+      "name": "LAS-12 钗",
+      "name_zh": "LAS-12 钗",
       "name_en": "LAS-12 Sai",
-      "translation_source": "community_translation",
-      "wiki_zh_page": null,
+      "translation_source": "zh_wiki_weapon_gallery",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/LAS-12_Sai",
       "wiki_zh_revision": null,
       "wiki_en_page": "https://helldivers.wiki.gg/wiki/LAS-12_Sai",
       "icon_file": "LAS-12 Sai Primary Render.png",
@@ -961,6 +1028,20 @@
       "icon_file": "P-69 Veto Secondary Render.png",
       "icon_sha1": "3983fe3b875675e136ad73dbf4456fbeafa9a28a",
       "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:P-69_Veto_Secondary_Render.png"
+    },
+    {
+      "id": "secondary.p-44-mist",
+      "slot": "secondary",
+      "name": "P-44 迷雾",
+      "name_zh": "P-44 迷雾",
+      "name_en": "P-44 Mist",
+      "translation_source": "zh_wiki_weapon_gallery",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/P-44_%E8%BF%B7%E9%9B%BE",
+      "wiki_zh_revision": null,
+      "wiki_en_page": "https://helldivers.wiki.gg/wiki/P-44_Mist",
+      "icon_file": "P-44 Mist Secondary Render.png",
+      "icon_sha1": "8a61cf9f38ff7c50d8ac936166b32c8fcca60ec1",
+      "icon_source": "https://helldivers.wiki.gg/wiki/File:P-44_Mist_Secondary_Render.png"
     },
     {
       "id": "secondary.cqc-19-stun-lance",
@@ -1203,12 +1284,12 @@
     {
       "id": "secondary.p-34-breacher",
       "slot": "secondary",
-      "name": "P-34 破门者",
-      "name_zh": "P-34 破门者",
+      "name": "P-34 爆破者",
+      "name_zh": "P-34 爆破者",
       "name_en": "P-34 Breacher",
-      "translation_source": "community_translation",
-      "wiki_zh_page": null,
-      "wiki_zh_revision": null,
+      "translation_source": "zh_wiki_weapon_gallery",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/P-34_%E7%88%86%E7%A0%B4%E8%80%85",
+      "wiki_zh_revision": 13777,
       "wiki_en_page": "https://helldivers.wiki.gg/wiki/P-34_Breacher",
       "icon_file": "P-34 Breacher Secondary Render.png",
       "icon_sha1": "882b5b1f7fe0e2eed6bb351aeccd6961a36c16d5",
@@ -1511,11 +1592,11 @@
     {
       "id": "grenade.g-8-immolation",
       "slot": "grenade",
-      "name": "G-8 焚祭",
-      "name_zh": "G-8 焚祭",
+      "name": "G-8 焚身",
+      "name_zh": "G-8 焚身",
       "name_en": "G-8 Immolation",
-      "translation_source": "community_translation",
-      "wiki_zh_page": null,
+      "translation_source": "zh_wiki_weapon_gallery",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/G-8_Immolation",
       "wiki_zh_revision": null,
       "wiki_en_page": "https://helldivers.wiki.gg/wiki/G-8_Immolation",
       "icon_file": "G-8 Immolation Throwable Render.png",
@@ -1525,16 +1606,30 @@
     {
       "id": "grenade.g-60-anti-tank-seeker",
       "slot": "grenade",
-      "name": "G-60 反坦克寻踪者",
-      "name_zh": "G-60 反坦克寻踪者",
+      "name": "G-60 反坦克追踪者",
+      "name_zh": "G-60 反坦克追踪者",
       "name_en": "G-60 Anti-Tank Seeker",
-      "translation_source": "community_translation",
-      "wiki_zh_page": null,
+      "translation_source": "zh_wiki_weapon_gallery",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/G-60_Anti-Tank_Seeker",
       "wiki_zh_revision": null,
       "wiki_en_page": "https://helldivers.wiki.gg/wiki/G-60_Anti-Tank_Seeker",
       "icon_file": "G-60 Anti-Tank Seeker Throwable Render.png",
       "icon_sha1": "9524425b8c44ce0ff871297c7d2c1fc429a7be15",
       "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:G-60_Anti-Tank_Seeker_Throwable_Render.png"
+    },
+    {
+      "id": "grenade.g-11-caltrops",
+      "slot": "grenade",
+      "name": "G-11 铁蒺藜",
+      "name_zh": "G-11 铁蒺藜",
+      "name_en": "G-11 Caltrops",
+      "translation_source": "zh_wiki_weapon_gallery",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/G-11_%E9%93%81%E8%92%BA%E8%97%9C",
+      "wiki_zh_revision": null,
+      "wiki_en_page": "https://helldivers.wiki.gg/wiki/G-11_Caltrops",
+      "icon_file": "G-11 Caltrops Throwable Render.png",
+      "icon_sha1": "0a67b1269891d75183ce970da87f5b83a702c01a",
+      "icon_source": "https://helldivers.wiki.gg/wiki/File:G-11_Caltrops_Throwable_Render.png"
     },
     {
       "id": "booster.hellpod-space-optimization",
@@ -2335,6 +2430,20 @@
       "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:W.A.S.P._Launcher_Stratagem_Icon_Background.svg"
     },
     {
+      "id": "stratagem.amw-20-apex",
+      "slot": "stratagem",
+      "name": "AMW-20 尖峰",
+      "name_zh": "AMW-20 尖峰",
+      "name_en": "AMW-20 Apex",
+      "translation_source": "zh_wiki_page",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/AMW-20_%E5%B0%96%E5%B3%B0",
+      "wiki_zh_revision": 14456,
+      "wiki_en_page": "https://helldivers.wiki.gg/wiki/AMW-20_Apex",
+      "icon_file": "AMW-20 Apex Weapon and Backpack Support Render.png",
+      "icon_sha1": "5b950a4b26df755181269d2708d769c0177503e5",
+      "icon_source": "https://helldivers.wiki.gg/wiki/File:AMW-20_Apex_Weapon_and_Backpack_Support_Render.png"
+    },
+    {
       "id": "stratagem.cqc-20-breaching-hammer",
       "slot": "stratagem",
       "name": "CQC-20 破门锤",
@@ -2347,20 +2456,6 @@
       "icon_file": "Breaching Hammer Stratagem Icon Background.svg",
       "icon_sha1": "65dd9b51d118410a1a896311edfe35f0c9816ccc",
       "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Breaching_Hammer_Stratagem_Icon_Background.svg"
-    },
-    {
-      "id": "stratagem.plas-45-epoch",
-      "slot": "stratagem",
-      "name": "PLAS-45 纪元",
-      "name_zh": "PLAS-45 纪元",
-      "name_en": "PLAS-45 Epoch",
-      "translation_source": "zh_wiki_weapon_gallery",
-      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/PLAS-45_Epoch",
-      "wiki_zh_revision": 6163,
-      "wiki_en_page": "https://helldivers.wiki.gg/wiki/PLAS-45_Epoch",
-      "icon_file": "Epoch Stratagem Icon Background.svg",
-      "icon_sha1": "bfe6b15ea844b615369c4fd391445fd6f6f2cc34",
-      "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Epoch_Stratagem_Icon_Background.svg"
     },
     {
       "id": "stratagem.mgx-42-bullet-storm",
@@ -2377,6 +2472,20 @@
       "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Bullet_Storm_Stratagem_Icon_Background.svg"
     },
     {
+      "id": "stratagem.plas-45-epoch",
+      "slot": "stratagem",
+      "name": "PLAS-45 纪元",
+      "name_zh": "PLAS-45 纪元",
+      "name_en": "PLAS-45 Epoch",
+      "translation_source": "zh_wiki_weapon_gallery",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/PLAS-45_Epoch",
+      "wiki_zh_revision": 6163,
+      "wiki_en_page": "https://helldivers.wiki.gg/wiki/PLAS-45_Epoch",
+      "icon_file": "Epoch Stratagem Icon Background.svg",
+      "icon_sha1": "bfe6b15ea844b615369c4fd391445fd6f6f2cc34",
+      "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Epoch_Stratagem_Icon_Background.svg"
+    },
+    {
       "id": "stratagem.s-11-speargun",
       "slot": "stratagem",
       "name": "S-11 矛枪",
@@ -2389,6 +2498,34 @@
       "icon_file": "Speargun Stratagem Icon Background.svg",
       "icon_sha1": "2f0be9d0e2ec0e4048db7be525ffe29c35dfb34f",
       "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Speargun_Stratagem_Icon_Background.svg"
+    },
+    {
+      "id": "stratagem.eat-411-leveller",
+      "slot": "stratagem",
+      "name": "EAT-411 荡平者",
+      "name_zh": "EAT-411 荡平者",
+      "name_en": "EAT-411 Leveller",
+      "translation_source": "zh_wiki_weapon_gallery",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/EAT-411_Leveller",
+      "wiki_zh_revision": 6183,
+      "wiki_en_page": "https://helldivers.wiki.gg/wiki/EAT-411_Leveller",
+      "icon_file": "Leveller Stratagem Icon Background.svg",
+      "icon_sha1": "8f0c64504af62e4a602699ac647e07b331e6ffd6",
+      "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Leveller_Stratagem_Icon_Background.svg"
+    },
+    {
+      "id": "stratagem.eat-700-expendable-napalm",
+      "slot": "stratagem",
+      "name": "EAT-700 消耗性凝固汽油弹",
+      "name_zh": "EAT-700 消耗性凝固汽油弹",
+      "name_en": "EAT-700 Expendable Napalm",
+      "translation_source": "zh_wiki_weapon_gallery",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/EAT-700_Expendable_Napalm",
+      "wiki_zh_revision": 6185,
+      "wiki_en_page": "https://helldivers.wiki.gg/wiki/EAT-700_Expendable_Napalm",
+      "icon_file": "Expendable Napalm Stratagem Icon Background.svg",
+      "icon_sha1": "1177782e88094e486ff0a64d139042b26c3183d7",
+      "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Expendable_Napalm_Stratagem_Icon_Background.svg"
     },
     {
       "id": "stratagem.cqc-9-defoliation-tool",
@@ -2419,20 +2556,6 @@
       "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:De-Escalator_Stratagem_Icon_Background.svg"
     },
     {
-      "id": "stratagem.eat-700-expendable-napalm",
-      "slot": "stratagem",
-      "name": "EAT-700 消耗性凝固汽油弹",
-      "name_zh": "EAT-700 消耗性凝固汽油弹",
-      "name_en": "EAT-700 Expendable Napalm",
-      "translation_source": "zh_wiki_weapon_gallery",
-      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/EAT-700_Expendable_Napalm",
-      "wiki_zh_revision": 6185,
-      "wiki_en_page": "https://helldivers.wiki.gg/wiki/EAT-700_Expendable_Napalm",
-      "icon_file": "Expendable Napalm Stratagem Icon Background.svg",
-      "icon_sha1": "1177782e88094e486ff0a64d139042b26c3183d7",
-      "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Expendable_Napalm_Stratagem_Icon_Background.svg"
-    },
-    {
       "id": "stratagem.tx-41-sterilizer",
       "slot": "stratagem",
       "name": "TX-41 灭菌器",
@@ -2445,34 +2568,6 @@
       "icon_file": "Sterilizer Stratagem Icon Background.svg",
       "icon_sha1": "0a42db75c76594bba142abe9e8d438c67bed69ce",
       "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Sterilizer_Stratagem_Icon_Background.svg"
-    },
-    {
-      "id": "stratagem.eat-411-leveller",
-      "slot": "stratagem",
-      "name": "EAT-411 荡平者",
-      "name_zh": "EAT-411 荡平者",
-      "name_en": "EAT-411 Leveller",
-      "translation_source": "zh_wiki_weapon_gallery",
-      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/EAT-411_Leveller",
-      "wiki_zh_revision": 6183,
-      "wiki_en_page": "https://helldivers.wiki.gg/wiki/EAT-411_Leveller",
-      "icon_file": "Leveller Stratagem Icon Background.svg",
-      "icon_sha1": "8f0c64504af62e4a602699ac647e07b331e6ffd6",
-      "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Leveller_Stratagem_Icon_Background.svg"
-    },
-    {
-      "id": "stratagem.gl-28-belt-fed-grenade-launcher",
-      "slot": "stratagem",
-      "name": "GL-28 弹链式榴弹发射器背包",
-      "name_zh": "GL-28 弹链式榴弹发射器背包",
-      "name_en": "GL-28 Belt-Fed Grenade Launcher",
-      "translation_source": "zh_wiki_weapon_gallery",
-      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/GL-28_Belt-Fed_Grenade_Launcher",
-      "wiki_zh_revision": null,
-      "wiki_en_page": "https://helldivers.wiki.gg/wiki/GL-28_Belt-Fed_Grenade_Launcher",
-      "icon_file": "Belt-Fed Grenade Launcher Stratagem Icon Background.svg",
-      "icon_sha1": "4c99f199de4ad82163d18b9a7561ad380ad3e2e1",
-      "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Belt-Fed_Grenade_Launcher_Stratagem_Icon_Background.svg"
     },
     {
       "id": "stratagem.b-md-c4-pack",
@@ -2517,6 +2612,34 @@
       "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Cremator_Stratagem_Icon_Background.svg"
     },
     {
+      "id": "stratagem.cqc-1-one-true-flag",
+      "slot": "stratagem",
+      "name": "CQC-1 唯一真旗",
+      "name_zh": "CQC-1 唯一真旗",
+      "name_en": "CQC-1 One True Flag",
+      "translation_source": "zh_wiki_weapon_gallery",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/CQC-1_One_True_Flag",
+      "wiki_zh_revision": 6151,
+      "wiki_en_page": "https://helldivers.wiki.gg/wiki/CQC-1_One_True_Flag",
+      "icon_file": "One True Flag Stratagem Icon Background.svg",
+      "icon_sha1": "e919beb969325bcec21df7b9bbc87b11b5bcc747",
+      "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:One_True_Flag_Stratagem_Icon_Background.svg"
+    },
+    {
+      "id": "stratagem.gl-28-belt-fed-grenade-launcher",
+      "slot": "stratagem",
+      "name": "GL-28 弹链式榴弹发射器背包",
+      "name_zh": "GL-28 弹链式榴弹发射器背包",
+      "name_en": "GL-28 Belt-Fed Grenade Launcher",
+      "translation_source": "zh_wiki_weapon_gallery",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/GL-28_Belt-Fed_Grenade_Launcher",
+      "wiki_zh_revision": null,
+      "wiki_en_page": "https://helldivers.wiki.gg/wiki/GL-28_Belt-Fed_Grenade_Launcher",
+      "icon_file": "Belt-Fed Grenade Launcher Stratagem Icon Background.svg",
+      "icon_sha1": "4c99f199de4ad82163d18b9a7561ad380ad3e2e1",
+      "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Belt-Fed_Grenade_Launcher_Stratagem_Icon_Background.svg"
+    },
+    {
       "id": "stratagem.m-1000-maxigun",
       "slot": "stratagem",
       "name": "M-1000 重装机枪",
@@ -2531,18 +2654,18 @@
       "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Maxigun_Stratagem_Icon_Background.svg"
     },
     {
-      "id": "stratagem.cqc-1-one-true-flag",
+      "id": "stratagem.las-44-nova",
       "slot": "stratagem",
-      "name": "CQC-1 唯一真旗",
-      "name_zh": "CQC-1 唯一真旗",
-      "name_en": "CQC-1 One True Flag",
-      "translation_source": "zh_wiki_weapon_gallery",
-      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/CQC-1_One_True_Flag",
-      "wiki_zh_revision": 6151,
-      "wiki_en_page": "https://helldivers.wiki.gg/wiki/CQC-1_One_True_Flag",
-      "icon_file": "One True Flag Stratagem Icon Background.svg",
-      "icon_sha1": "e919beb969325bcec21df7b9bbc87b11b5bcc747",
-      "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:One_True_Flag_Stratagem_Icon_Background.svg"
+      "name": "LAS-44 新星",
+      "name_zh": "LAS-44 新星",
+      "name_en": "LAS-44 Nova",
+      "translation_source": "zh_wiki_page",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/LAS-44_%E6%96%B0%E6%98%9F",
+      "wiki_zh_revision": 14362,
+      "wiki_en_page": "https://helldivers.wiki.gg/wiki/LAS-44_Nova",
+      "icon_file": "LAS-44 Nova Support Render.png",
+      "icon_sha1": "1f91bff3a812ed1b2b49803085ceaf3c02da5fd9",
+      "icon_source": "https://helldivers.wiki.gg/wiki/File:LAS-44_Nova_Support_Render.png"
     },
     {
       "id": "stratagem.40-k-meltagun",
@@ -2741,34 +2864,6 @@
       "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Warp_Pack_Stratagem_Icon_Background.svg"
     },
     {
-      "id": "stratagem.m-103-supply-frv",
-      "slot": "stratagem",
-      "name": "M-103 补给型快速侦察载具",
-      "name_zh": "M-103 补给型快速侦察载具",
-      "name_en": "M-103 Supply FRV",
-      "translation_source": "zh_wiki_stratagem_table",
-      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/M-103_%E8%A1%A5%E7%BB%99%E5%9E%8B%E5%BF%AB%E9%80%9F%E4%BE%A6%E5%AF%9F%E8%BD%BD%E5%85%B7",
-      "wiki_zh_revision": 7070,
-      "wiki_en_page": "https://helldivers.wiki.gg/wiki/M-103_Supply_FRV",
-      "icon_file": "Supply FRV Stratagem Icon Background.svg",
-      "icon_sha1": "4154456cfcd89f591cd66e80970e659404468ec2",
-      "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Supply_FRV_Stratagem_Icon_Background.svg"
-    },
-    {
-      "id": "stratagem.td-110-maelstrom",
-      "slot": "stratagem",
-      "name": "TD-110 大漩涡",
-      "name_zh": "TD-110 大漩涡",
-      "name_en": "TD-110 Maelstrom",
-      "translation_source": "community_translation",
-      "wiki_zh_page": null,
-      "wiki_zh_revision": null,
-      "wiki_en_page": "https://helldivers.wiki.gg/wiki/TD-110_Maelstrom",
-      "icon_file": "Maelstrom Stratagem Icon Background.svg",
-      "icon_sha1": "23094c43cdb02374dd5819c88286bf9498bb5099",
-      "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Maelstrom_Stratagem_Icon_Background.svg"
-    },
-    {
       "id": "stratagem.m-104-incinerator-frv",
       "slot": "stratagem",
       "name": "M-104 炽灼型快速侦查载具",
@@ -2781,6 +2876,20 @@
       "icon_file": "Incinerator FRV Stratagem Icon Background.svg",
       "icon_sha1": "f5764f9b8bbd2d69ff37b8ecfcdc75685cab7807",
       "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Incinerator_FRV_Stratagem_Icon_Background.svg"
+    },
+    {
+      "id": "stratagem.td-110-maelstrom",
+      "slot": "stratagem",
+      "name": "TD-110 风暴漩涡",
+      "name_zh": "TD-110 风暴漩涡",
+      "name_en": "TD-110 Maelstrom",
+      "translation_source": "zh_wiki_stratagem_table",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/TD-110_%E9%A3%8E%E6%9A%B4%E6%BC%A9%E6%B6%A1",
+      "wiki_zh_revision": null,
+      "wiki_en_page": "https://helldivers.wiki.gg/wiki/TD-110_Maelstrom",
+      "icon_file": "Maelstrom Stratagem Icon Background.svg",
+      "icon_sha1": "23094c43cdb02374dd5819c88286bf9498bb5099",
+      "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Maelstrom_Stratagem_Icon_Background.svg"
     },
     {
       "id": "stratagem.exo-49-emancipator-exosuit",
@@ -2809,6 +2918,20 @@
       "icon_file": "Patriot Exosuit Stratagem Icon Background.svg",
       "icon_sha1": "3fa7def5493199b818a8997d5f27896bbd61c01e",
       "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Patriot_Exosuit_Stratagem_Icon_Background.svg"
+    },
+    {
+      "id": "stratagem.m-103-supply-frv",
+      "slot": "stratagem",
+      "name": "M-103 补给型快速侦察载具",
+      "name_zh": "M-103 补给型快速侦察载具",
+      "name_en": "M-103 Supply FRV",
+      "translation_source": "zh_wiki_stratagem_table",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/M-103_%E8%A1%A5%E7%BB%99%E5%9E%8B%E5%BF%AB%E9%80%9F%E4%BE%A6%E5%AF%9F%E8%BD%BD%E5%85%B7",
+      "wiki_zh_revision": 7070,
+      "wiki_en_page": "https://helldivers.wiki.gg/wiki/M-103_Supply_FRV",
+      "icon_file": "Supply FRV Stratagem Icon Background.svg",
+      "icon_sha1": "4154456cfcd89f591cd66e80970e659404468ec2",
+      "icon_source": "https://helldivers.wiki.gg/zh/wiki/File:Supply_FRV_Stratagem_Icon_Background.svg"
     },
     {
       "id": "stratagem.m-102-gunner-frv",
@@ -2995,12 +3118,12 @@
     {
       "id": "stratagem.a-gm-17-gas-mortar-sentry",
       "slot": "stratagem",
-      "name": "A/GM-17 毒气迫击哨戒炮",
-      "name_zh": "A/GM-17 毒气迫击哨戒炮",
+      "name": "A/GM-17 瓦斯迫击哨戒炮",
+      "name_zh": "A/GM-17 瓦斯迫击哨戒炮",
       "name_en": "A/GM-17 Gas Mortar Sentry",
-      "translation_source": "community_translation",
-      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/A/GM-17_Gas_Mortar_Sentry",
-      "wiki_zh_revision": 6263,
+      "translation_source": "zh_wiki_stratagem_table",
+      "wiki_zh_page": "https://helldivers.wiki.gg/zh/wiki/A/GM-17_%E7%93%A6%E6%96%AF%E8%BF%AB%E5%87%BB%E5%93%A8%E6%88%92%E7%82%AE",
+      "wiki_zh_revision": null,
       "wiki_en_page": "https://helldivers.wiki.gg/wiki/A/GM-17_Gas_Mortar_Sentry",
       "icon_file": "Gas Mortar Sentry Stratagem Icon Background.svg",
       "icon_sha1": "8948b9a6962663d95cb4e4b3e1de9f59fadabc58",

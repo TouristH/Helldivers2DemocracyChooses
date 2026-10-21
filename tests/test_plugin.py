@@ -1398,11 +1398,11 @@ def test_loadout_pool_reads_every_slot() -> None:
     pool = load_loadout_pool()
     assert set(pool) == {"primary", "secondary", "grenade", "booster", "stratagem"}
     assert {slot: len(names) for slot, names in pool.items()} == {
-        "primary": 55,
-        "secondary": 25,
-        "grenade": 23,
+        "primary": 56,
+        "secondary": 26,
+        "grenade": 24,
         "booster": 20,
-        "stratagem": 93,
+        "stratagem": 95,
     }
     all_names = [name for names in pool.values() for name in names]
     assert all(isinstance(name, str) and name.strip() for name in all_names)
@@ -1414,8 +1414,8 @@ def test_loadout_pool_reads_every_slot() -> None:
         "SMG/FLAM-34 司炉者",
         "CQC-73 堑壕工具",
         "AR-11 仲裁者",
-        "P-34 破门者",
-        "G-60 反坦克寻踪者",
+        "P-34 爆破者",
+        "G-60 反坦克追踪者",
         "额外消耗性反坦克武器配额",
         "集成灭火器",
         "40-K 热熔枪",
@@ -1424,7 +1424,7 @@ def test_loadout_pool_reads_every_slot() -> None:
         "MS-11 单兵导弹发射井",
         "S-11 矛枪",
         "GL-28 弹链式榴弹发射器背包",
-        "TD-110 大漩涡",
+        "TD-110 风暴漩涡",
     } <= current_names
     assert {
         "AR-2 郊狼",
@@ -1500,19 +1500,71 @@ def test_render_loadout_html_survives_an_item_missing_from_the_icon_file() -> No
     ) in page
 
 
+def test_loadout_pool_includes_both_recent_warbonds_in_the_correct_slots() -> None:
+    data = json.loads((MANIFEST_PATH.parent / "loadout_data.json").read_text(encoding="utf-8"))
+    by_name = {item["name_en"]: item for item in data["items"]}
+    expected = {
+        "AR-11 Arbitrator": "primary",
+        "GL-15 Evictor": "primary",
+        "P-34 Breacher": "secondary",
+        "G-60 Anti-Tank Seeker": "grenade",
+        "G-8 Immolation": "grenade",
+        "Surplus EAT Allocation": "booster",
+        "Integrated Extinguishers": "booster",
+        "R-40 Sightliner": "primary",
+        "P-44 Mist": "secondary",
+        "G-11 Caltrops": "grenade",
+        "AMW-20 Apex": "stratagem",
+        "LAS-44 Nova": "stratagem",
+    }
+    pool = load_loadout_pool()
+    icons = load_loadout_icons()
+    for english, slot in expected.items():
+        item = by_name[english]
+        assert item["slot"] == slot
+        assert item["name"] in pool[slot] and item["name"] in icons
+
+
+def test_refresher_resolves_support_names_from_developer_render_files() -> None:
+    from tools.refresh_loadout_database import ListedItem, build_items
+
+    rows = [
+        ListedItem("AMW-20 Apex", "AMW-20 Apex", "Apex Stratagem Icon Background.svg", "stratagem"),
+        ListedItem("LAS-44 Nova", "LAS-44 Nova", "Nova Stratagem Icon Background.svg", "stratagem"),
+    ]
+    localized = {
+        "AMW-20 Apex Weapon and Backpack Support Render.png": ("AMW-20 尖峰", "AMW-20 尖峰"),
+        "LAS-44 Nova Support Render.png": ("LAS-44 新星", "LAS-44 新星"),
+    }
+    items = build_items([], localized, {}, [], rows, [], {})
+    assert {item["icon_file"] for item in items} == set(localized)
+    assert all(item["translation_source"] == "zh_wiki_weapon_gallery" for item in items)
+
+
+def test_refresher_downloads_a_thumbnail_when_cached_bytes_are_an_original() -> None:
+    from tools.refresh_loadout_database import can_reuse_icon
+
+    original = {"source_sha1": "a" * 40, "embedded_width": 2998, "embedded_height": 1868, "mime": "image/png"}
+    thumbnail = {"sha1": "a" * 40, "embedded_width": 224, "embedded_height": 140, "mime": "image/png"}
+    assert not can_reuse_icon(original, thumbnail)
+    cached_thumbnail = {**original, "embedded_width": 224, "embedded_height": 140}
+    assert can_reuse_icon(cached_thumbnail, thumbnail)
+    assert not can_reuse_icon(cached_thumbnail, {**thumbnail, "sha1": "b" * 40})
+
+
 def test_loadout_database_is_chinese_traceable_and_complete() -> None:
     root = Path(__file__).resolve().parent.parent
     data = json.loads((root / "loadout_data.json").read_text(encoding="utf-8"))
     assert data["schema_version"] == 2 and data["language"] == "zh-CN"
-    assert data["catalog_updated_at"] == "2026-09-30"
-    assert len(data["items"]) == 216
-    assert data["translation_policy"]["community_translation_count"] == 10
+    assert data["catalog_updated_at"] == "2026-10-21"
+    assert len(data["items"]) == 221
+    assert data["translation_policy"]["community_translation_count"] == 2
     assert {source["revision"] for source in data["sources"]} >= {
-        "6540",
-        "6647",
-        "137028",
+        "14373",
+        "9248",
+        "139355",
         "136929",
-        "133897",
+        "138203",
     }
 
     ids = {item["id"] for item in data["items"]}
@@ -1523,7 +1575,10 @@ def test_loadout_database_is_chinese_traceable_and_complete() -> None:
         assert re.search(r"[\u3400-\u4dbf\u4e00-\u9fff]", item["name"])
         assert item["name_en"] and item["wiki_en_page"].startswith("https://helldivers.wiki.gg/wiki/")
         assert re.fullmatch(r"[0-9a-f]{40}", item["icon_sha1"])
-        assert item["icon_source"].startswith("https://helldivers.wiki.gg/zh/wiki/File:")
+        assert item["icon_source"].startswith((
+            "https://helldivers.wiki.gg/zh/wiki/File:",
+            "https://helldivers.wiki.gg/wiki/File:",
+        ))
 
     community = {
         item["name_en"]: item["name"]
@@ -1531,17 +1586,10 @@ def test_loadout_database_is_chinese_traceable_and_complete() -> None:
         if item["translation_source"] == "community_translation"
     }
     assert community == {
-        "AR-11 Arbitrator": "AR-11 仲裁者",
-        "GL-15 Evictor": "GL-15 驱逐者",
-        "LAS-12 Sai": "LAS-12 铁尺",
-        "P-34 Breacher": "P-34 破门者",
-        "G-60 Anti-Tank Seeker": "G-60 反坦克寻踪者",
-        "G-8 Immolation": "G-8 焚祭",
         "Surplus EAT Allocation": "额外消耗性反坦克武器配额",
         "Integrated Extinguishers": "集成灭火器",
-        "A/GM-17 Gas Mortar Sentry": "A/GM-17 毒气迫击哨戒炮",
-        "TD-110 Maelstrom": "TD-110 大漩涡",
     }
+    assert sorted(community.values()) == sorted(data["translation_policy"]["community_translations"])
 
 
 def test_loadout_icons_cover_every_item_and_match_recorded_digests() -> None:
@@ -1552,7 +1600,8 @@ def test_loadout_icons_cover_every_item_and_match_recorded_digests() -> None:
     icons = load_loadout_icons()
     names = {name for names in pool.values() for name in names}
     assert icon_payload["schema_version"] == 2
-    assert len(names) == len(icons) == len(icon_payload["files"]) == 216
+    assert len(names) == len(icons) == len(icon_payload["files"]) == 221
+    assert icon_payload["catalog_updated_at"] == data["catalog_updated_at"]
     assert set(icons) == set(icon_payload["files"]) == names
     assert {item["name"] for item in data["items"]} == names
 
@@ -1563,7 +1612,10 @@ def test_loadout_icons_cover_every_item_and_match_recorded_digests() -> None:
         metadata = icon_payload["files"][name]
         assert hashlib.sha256(payload).hexdigest() == metadata["embedded_sha256"]
         assert re.fullmatch(r"[0-9a-f]{40}", metadata["source_sha1"])
-        assert metadata["query_url"].startswith("https://helldivers.wiki.gg/zh/wiki/File:")
+        assert metadata["query_url"] == next(item["icon_source"] for item in data["items"] if item["name"] == name)
+        if metadata.get("retrieval_method"):
+            assert metadata["uploader"] == "Tech Support Squid"
+            assert hashlib.sha1(payload).hexdigest() == metadata["source_sha1"]
         if metadata["mime"] == "image/png":
             assert payload.startswith(b"\x89PNG\r\n\x1a\n")
         elif metadata["mime"] == "image/svg+xml":
@@ -2173,12 +2225,13 @@ def test_license_and_third_party_notices_are_published() -> None:
     assert "Xenfo-LC/Helldivers-2-Random-Loadout-Generator-CN" in notices
     assert "Erlend Dahl" in notices and "Xenfo" in notices
     assert "did not contain a standalone open-source license" in notices
-    for revision in ("6540", "6647", "137028", "136929", "133897"):
+    for revision in ("14373", "9248", "139355", "136929", "138203"):
         assert f"`{revision}`" in notices
     assert "CC BY-SA 4.0" in notices and "CC BY-NC-SA 4.0" in notices
     assert "creativecommons.org/licenses/by-sa/4.0" in notices
     assert "creativecommons.org/licenses/by-nc-sa/4.0" in notices
-    assert "loadout_data.json" in notices and "all 216 current icons" in notices
+    assert "loadout_data.json" in notices and "221" in notices
+    assert "Tech Support Squid" in " ".join(notices.split())
     assert "no equipment record or embedded icon" in notices
     contributors = (root / "CONTRIBUTORS.md").read_text(encoding="utf-8")
     assert "TouristH" in contributors and "OpenAI Codex" in contributors

@@ -44,19 +44,26 @@ EN_API = "https://helldivers.wiki.gg/api.php"
 ZH_ROOT = "https://helldivers.wiki.gg/zh/wiki/"
 EN_ROOT = "https://helldivers.wiki.gg/wiki/"
 USER_AGENT = (
-    "HelldiversPatchFeed-loadout-refresh/0.2.1 "
+    "HelldiversPatchFeed-loadout-refresh/0.2.2 "
     "(https://github.com/TouristH/HelldiversPatchFeed)"
 )
 SLOTS = ("primary", "secondary", "grenade", "booster", "stratagem")
 EXPECTED_COUNTS = {
-    "primary": 55,
-    "secondary": 25,
-    "grenade": 23,
+    "primary": 56,
+    "secondary": 26,
+    "grenade": 24,
     "booster": 20,
-    "stratagem": 93,
+    "stratagem": 95,
 }
 
-# The Chinese Wiki currently has no Booster catalog.  These established
+# Use developer artwork instead of traced SVGs with separate reuse restrictions.
+ICON_FILE_OVERRIDES = {
+    "AMW-20 Apex": "AMW-20 Apex Weapon and Backpack Support Render.png",
+    "LAS-44 Nova": "LAS-44 Nova Support Render.png",
+    "Surplus EAT Allocation": "Surplus EAT Allocation Booster Icon.png",
+}
+
+# The Chinese booster catalog remains mostly untranslated. These established
 # Chinese labels are therefore maintained explicitly instead of pretending
 # that they came from a Chinese Wiki page.
 BOOSTER_ZH = {
@@ -418,6 +425,16 @@ def download_icon(info: dict[str, Any]) -> tuple[str, str]:
     return f"data:{mime};base64,{base64.b64encode(payload).decode('ascii')}", hashlib.sha256(payload).hexdigest()
 
 
+def can_reuse_icon(previous: dict[str, Any], current: dict[str, Any]) -> bool:
+    return bool(current.get("sha1")) and (
+        previous.get("source_sha1") == current["sha1"]
+        and all(
+            current.get(key) is not None and previous.get(key) == current[key]
+            for key in ("embedded_width", "embedded_height", "mime")
+        )
+    )
+
+
 def build_items(
     weapon_rows: list[ListedItem],
     zh_weapon_by_icon: dict[str, tuple[str, str]],
@@ -448,7 +465,7 @@ def build_items(
                 "wiki_zh_page": wiki_url(ZH_ROOT, page_zh) if page_zh else None,
                 "wiki_zh_revision": zh_page.revision if zh_page else None,
                 "wiki_en_page": wiki_url(EN_ROOT, listed.page_en or listed.name_en),
-                "icon_file": listed.icon_file,
+                "icon_file": ICON_FILE_OVERRIDES.get(listed.name_en, listed.icon_file),
             }
         )
 
@@ -478,7 +495,9 @@ def build_items(
         page = zh_pages.get(listed.page_en)
         title = infobox_title(page)
         table_row = zh_stratagem_by_icon.get(listed.icon_file)
-        support = zh_weapon_by_page.get(listed.page_en)
+        support = zh_weapon_by_page.get(listed.page_en) or zh_weapon_by_icon.get(
+            ICON_FILE_OVERRIDES.get(listed.name_en, "")
+        )
         if has_han(title):
             append(listed, title, "zh_wiki_page", page)
         elif table_row and has_han(table_row.name_en):
@@ -577,9 +596,10 @@ def main() -> int:
         name = item["name"]
         info = dict(infos[item["icon_file"]])
         old = old_files.get(name, {})
-        if old.get("source_sha1") == info["sha1"] and name in old_icons:
+        if name in old_icons and can_reuse_icon(old, info):
             uri = old_icons[name]
             embedded_sha256 = old.get("embedded_sha256", "")
+            info = {**old, **info}
         else:
             uri, embedded_sha256 = download_icon(info)
         info["embedded_sha256"] = embedded_sha256
@@ -588,7 +608,7 @@ def main() -> int:
         info["source_sha1"] = info.pop("sha1")
         return name, uri, item["icon_file"], info
 
-    print("[4/6] 下载并内嵌 216 个最新版图标……", flush=True)
+    print(f"[4/6] 下载并内嵌 {len(items)} 个最新版图标……", flush=True)
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
         futures = [executor.submit(obtain, item) for item in items]
         for index, future in enumerate(concurrent.futures.as_completed(futures), start=1):
@@ -667,7 +687,7 @@ def main() -> int:
             "community_translations": community,
         },
         "notice": (
-            "216 项配装目录已按当前 Helldivers Wiki 校准，显示名全部为中文；"
+            f"{len(items)} 项配装目录已按当前 Helldivers Wiki 校准，显示名全部为中文；"
             "图标均通过中文 Wiki API 解析并内嵌。中文 Wiki 尚无可用中文标题的条目"
             "使用明确标记的社区译名。完整署名、许可与游戏素材权利边界见 "
             "THIRD_PARTY_NOTICES.md。"

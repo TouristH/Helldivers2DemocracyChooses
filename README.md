@@ -35,7 +35,7 @@
 
 ### 从 MaiBot 插件市场安装
 
-插件通过官方审核后，可在 MaiBot WebUI 的插件市场中搜索“Helldivers 2 更新推送”并安装。市场安装会根据 `_manifest.json` 检查 Host、SDK、依赖和能力兼容性。
+插件已收录至官方插件中心，可在 MaiBot WebUI 的插件市场中搜索“Helldivers 2 更新推送”并安装。市场安装会根据 `_manifest.json` 检查 Host、SDK、依赖和能力兼容性。
 
 ### 手动安装
 
@@ -169,11 +169,13 @@ push = ["10002"]
 
 在 `loadout_reroll_seconds` 时间内发送 `/helldivers loadout 1-8` 可只重抽对应格；每次成功重抽都会刷新有效期。会话按“聊天流 + 用户”隔离，不会改到同群其他人的配装。
 
-配装卡使用 `loadout_data.json` 与 `loadout_icons.json`，渲染 HTML 完全自包含，不在出图时访问外网。当前数据库包含 216 项装备（55 件主武器、25 件副武器、23 件投掷物、20 项强化资源和 93 项战略配备），每项都有中文显示名与内嵌图标。渲染器仍保留缺图降级：若以后新增条目尚未刷新图标，对应格会只显示名称；只有整张卡渲染或图片发送失败时才回退为纯文本。
+配装卡使用 `loadout_data.json` 与 `loadout_icons.json`，渲染 HTML 完全自包含，不在出图时访问外网。`0.2.2` 数据库核对日期为 2026-10-21，包含 221 项装备（56 件主武器、26 件副武器、24 件投掷物、20 项强化资源和 95 项战略配备），每项都有中文显示名与内嵌图标。本次新增 R-40 视界者、P-44 迷雾、G-11 铁蒺藜、AMW-20 尖峰和 LAS-44 新星；“民主铁壁”的七项装备此前已收录。渲染器仍保留缺图降级：若以后新增条目尚未刷新图标，对应格会只显示名称；只有整张卡渲染或图片发送失败时才回退为纯文本。
 
-当前装备目录依据 Helldivers Wiki 中文《[武器](https://helldivers.wiki.gg/zh/wiki/武器)》、中文《[战略配备](https://helldivers.wiki.gg/zh/wiki/战略配备)》及各中文条目页校准。英文 [Weapons](https://helldivers.wiki.gg/wiki/Weapons)、[Boosters](https://helldivers.wiki.gg/wiki/Boosters) 与 [Stratagems](https://helldivers.wiki.gg/wiki/Stratagems) 只用于发现中文目录尚未列出的最新项目和记录英文规范名，不作为最终显示语言。中文 Wiki 尚无可用标题的 10 项装备采用明确标记的社区直译；每条记录都带有 `translation_source`，不会把社区译名伪装成 Wiki 官方译名。
+当前装备目录依据 Helldivers Wiki 中文《[武器](https://helldivers.wiki.gg/zh/wiki/武器)》、中文《[战略配备](https://helldivers.wiki.gg/zh/wiki/战略配备)》及各中文条目页校准。英文 [Weapons](https://helldivers.wiki.gg/wiki/Weapons)、[Boosters](https://helldivers.wiki.gg/wiki/Boosters) 与 [Stratagems](https://helldivers.wiki.gg/wiki/Stratagems) 用于发现新品和记录英文规范名，不作为最终显示语言。本次按中文 Wiki 更新了 P-34 爆破者、G-8 焚身、G-60 反坦克追踪者等名称，并保留仍适用的既有人工校准名称。目前仅“额外消耗性反坦克武器配额”（Surplus EAT Allocation）与“集成灭火器”（Integrated Extinguishers）两项使用明确标记的社区译名；每条记录都带有 `translation_source`，不会把社区译名伪装成 Wiki 标题。
 
-全部 216 个图标均通过中文 Wiki API 查询并内嵌；中文站会把共享媒体文件解析到 Wiki 的公共英文媒体仓库，这是 API 返回的正常来源链。数据库保存每个源文件的 SHA-1，图标包另存内嵌内容的 SHA-256，方便核验与后续增量刷新。随机配装的初始槽位思路与交互仍声明参考 [Xenfo-LC/Helldivers-2-Random-Loadout-Generator-CN](https://github.com/Xenfo-LC/Helldivers-2-Random-Loadout-Generator-CN)，但当前装备目录与图标包已完全从 Wiki 重建，不再使用该项目的旧图标。中文、英文 Wiki 衍生文本分别遵循 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans) 与 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)；游戏图像素材的权利仍归相应权利人。详细修订号、署名和许可边界见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+历史的 216 个图标保留自 `0.2.0` 通过中文 Wiki API 解析的图标包，包括 EAT 的原有 PNG；中文站将共享媒体解析到 Wiki 的英文媒体仓库。新增五项因 Wiki API 和缩略图接口不可用，改从英文 Wiki 文件说明页获取开发者装备 PNG 原图；AMW-20、LAS-44 也使用装备渲染图，描摹 SVG 战略配备图标另有复用条件。历史栅格图主要为 224 像素缩略图，新增五张保留原始尺寸。这五张 PNG 原文件合计约 6.6 MB，Base64 编码后的完整图标包约 11 MB。数据库和图标包保留来源链接、源文件 SHA-1、尺寸及内嵌内容 SHA-256，供核验和增量刷新。
+
+随机配装的初始槽位思路与交互仍声明参考 [Xenfo-LC/Helldivers-2-Random-Loadout-Generator-CN](https://github.com/Xenfo-LC/Helldivers-2-Random-Loadout-Generator-CN)，但当前装备目录与图标包已从 Wiki 重建，不再使用该项目的旧图标。中文、英文 Wiki 衍生文本分别遵循 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-hans) 与 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)；游戏图像素材的权利仍归相应权利人，下载自 Wiki 不会使其自动取得 Wiki 文本许可。详细修订号、署名和许可边界见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
 ## 数据、网络与隐私
 
@@ -226,13 +228,13 @@ python -m pytest -q
 python tools/refresh_loadout_database.py
 ```
 
-刷新器以中文 Wiki 作为中文名称与图标入口，以英文目录检查新品，并在目录数量、中文名、稳定 ID、图标文件或完整覆盖不符合预期时直接失败，要求人工复核后再发布。
+刷新器默认以中文 Wiki API 作为中文名称与图标入口，以英文目录检查新品，并在目录数量、中文名、稳定 ID、图标文件或完整覆盖不符合预期时直接失败，要求人工复核后再发布。`0.2.2` 新增五张全分辨率 PNG 是 API 不可用时经人工核验的 HTML 原始文件补录，已单独记录获取方法；后续刷新应核对各文件来源、尺寸与摘要。
 
 渲染调用使用 MaiBot Plugin SDK 2.7.1+ 的公开 `PluginContext.call_capability(..., timeout_ms=...)` 接口提高冷启动 RPC 预算；2.7.1 是同时保证自定义 `Command` 元数据正确展开的最低版本。命令预算通过 MaiBot Host 支持的组件 `timeout_ms` 元数据配置。原始能力路径与类型化 `ctx.render.html2png` 回退路径传入相同的 `selector`、视口、渲染超时和 `allow_network = false` 参数。
 
 测试覆盖公告解析、官方来源过滤、中文增强、Wiki 降级、数据库迁移、幂等投递、权限矩阵、配置模型、命令别名、随机配装和 manifest 约束。合并前仍建议在真实 MaiBot 中至少验证插件加载、订阅、`push`、`diag` 与热更新配置。
 
-发布版本时，`_manifest.json` 的 `version`、Git Tag 和 GitHub Release 版本必须一致；已经发布并被插件中心收录的版本不得移动 Tag。
+发布 `0.2.2` 时，在目标提交中设置 `_manifest.json` 的 `version: "0.2.2"`，创建匹配的 `v0.2.2` Tag 并发布非草稿 GitHub Release；GitHub 自动生成的源码包即可。插件中心北京时间每日 02:00、15:00 扫描已登记仓库的新 Release，随后进行版本审核，通过后才进入可安装版本索引。普通版本更新无需重新提交登记 Issue；发布、审核与固定提交安装规则见插件中心的[贡献指南](https://github.com/Mai-with-u/plugin-repo/blob/main/CONTRIBUTING.md)和[版本说明](https://github.com/Mai-with-u/plugin-repo/blob/main/VERSIONING.md)。以后各版本也必须保持 manifest、Tag 与 Release 版本一致，已经收录的版本不得移动 Tag 或替换其提交。
 
 ## 贡献者与 AI 辅助
 
