@@ -47,9 +47,9 @@ permission they require.
 
 ## User-provided animated plugin icon
 
-`assets/icon.webp` is a lossless animated-WebP conversion of the red Helldiver
-helmet animation supplied and selected by the user for this plugin. The supplied
-file contained GIF data despite its `.jpg` filename. All 29 frames, the 96 x 96
+`assets/icon.webp` is a lossless animated-WebP conversion of the green Helldiver
+helmet nodding animation supplied and selected by the user for this plugin. The supplied
+file contained GIF data despite its `.jpg` filename. All 18 frames, the 96 x 96
 dimensions and the frame timing were retained; no original authorship is claimed.
 
 The original creator and redistribution license were not identified in the

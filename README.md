@@ -1,6 +1,6 @@
 # 绝地潜兵 2：民主帮你选择
 
-![红色潜兵头盔动图标](assets/icon.webp)
+![绿色潜兵头盔点头动图标](assets/icon.webp)
 
 [![Tests](https://github.com/TouristH/DemocracyChooses/actions/workflows/tests.yml/badge.svg)](https://github.com/TouristH/DemocracyChooses/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
