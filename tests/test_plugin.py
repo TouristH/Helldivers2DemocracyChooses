@@ -1295,7 +1295,8 @@ def test_auto_push_attaches_the_wiki_detail_link() -> None:
         sent: list[str] = []
 
         async def collect() -> list[UpdateEntry]:
-            return [entry("v-9", title="Machinery of Oppression: 6.3.0")]
+            # This test exercises detail links for a recent announcement.
+            return [entry("v-9", title="Machinery of Oppression: 6.3.0", published=datetime.now(timezone.utc))]
 
         async def send(group: str, message: str) -> tuple[bool, str]:
             sent.append(message)

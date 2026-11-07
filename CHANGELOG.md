@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.2.3 - 2026-11-08
+
+- Final retirement and migration-notice release. Marked the plugin as retired
+  in its README and manifest, with no further feature maintenance planned.
+- Directed random-loadout users to
+  [Helldivers2DemocracyChooses](https://github.com/TouristH/Helldivers2DemocracyChooses),
+  and users seeking broader war intelligence and news features to
+  [fiatlux2333/maibot_plugin_Helldivers](https://github.com/fiatlux2333/maibot_plugin_Helldivers).
+- Explained the scope reduction, manual migration and new group allowlist;
+  preserved the old documentation and third-party attribution for reference.
+- Replaced the unsupported Host upper bound `999.999.999` with `1.3.99`
+  to meet the current plugin-center version format requirements. This does
+  not claim new end-to-end Host validation.
+- Kept the detail-link test announcement within its intended recent-news
+  window instead of relying on a fixed date that expires over time.
+- Kept the runtime behavior intact; this release does not automatically
+  disable installed plugins or transfer their data to either replacement.
+
 ## 0.2.2 - 2026-10-21
 
 - Checked the current Chinese and English Wiki catalogs and expanded the

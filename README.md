@@ -1,7 +1,7 @@
 # Helldivers 2 更新推送（已停用）
 
 > [!IMPORTANT]
-> **HelldiversPatchFeed 已停用，不再维护功能或发布新版本。** 本仓库保留代码、历史版本和署名，供已有用户查阅。请停用已安装的旧插件，并根据用途选择下方项目；本公告不会自动关闭您本地正在运行的旧插件。
+> **HelldiversPatchFeed 已停用，`v0.2.3` 是最后一次停用与迁移公告版本，此后不再维护功能或发布新版本。** 本仓库保留代码、历史版本和署名，供已有用户查阅。请停用已安装的旧插件，并根据用途选择下方项目；本公告不会自动关闭您本地正在运行的旧插件。
 
 ## 为什么停止旧插件、精简新插件
 
@@ -264,7 +264,7 @@ python tools/refresh_loadout_database.py
 
 测试覆盖公告解析、官方来源过滤、中文增强、Wiki 降级、数据库迁移、幂等投递、权限矩阵、配置模型、命令别名、随机配装和 manifest 约束。合并前仍建议在真实 MaiBot 中至少验证插件加载、订阅、`push`、`diag` 与热更新配置。
 
-发布 `0.2.2` 时，在目标提交中设置 `_manifest.json` 的 `version: "0.2.2"`，创建匹配的 `v0.2.2` Tag 并发布非草稿 GitHub Release；GitHub 自动生成的源码包即可。插件中心北京时间每日 02:00、15:00 扫描已登记仓库的新 Release，随后进行版本审核，通过后才进入可安装版本索引。普通版本更新无需重新提交登记 Issue；发布、审核与固定提交安装规则见插件中心的[贡献指南](https://github.com/Mai-with-u/plugin-repo/blob/main/CONTRIBUTING.md)和[版本说明](https://github.com/Mai-with-u/plugin-repo/blob/main/VERSIONING.md)。以后各版本也必须保持 manifest、Tag 与 Release 版本一致，已经收录的版本不得移动 Tag 或替换其提交。
+以下是 `0.2.2` 时期的历史发布说明，仅供留档：在目标提交中设置 `_manifest.json` 的 `version: "0.2.2"`，创建匹配的 `v0.2.2` Tag 并发布非草稿 GitHub Release；GitHub 自动生成的源码包即可。插件中心北京时间每日 02:00、15:00 扫描已登记仓库的新 Release，随后进行版本审核，通过后才进入可安装版本索引。普通版本更新无需重新提交登记 Issue；发布、审核与固定提交安装规则见插件中心的[贡献指南](https://github.com/Mai-with-u/plugin-repo/blob/main/CONTRIBUTING.md)和[版本说明](https://github.com/Mai-with-u/plugin-repo/blob/main/VERSIONING.md)。最终停用公告 `0.2.3` 同样保持 manifest、Tag 与 Release 版本一致，已经收录的版本不得移动 Tag 或替换其提交；此后不再维护功能或发布新版本。
 
 ## 贡献者与 AI 辅助
 

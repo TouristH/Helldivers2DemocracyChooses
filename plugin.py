@@ -87,7 +87,7 @@ except ImportError as sdk_import_error:  # importing should still support isolat
 
 APP_ID = 553850
 PROJECT_URL = "https://github.com/TouristH/HelldiversPatchFeed"
-USER_AGENT = f"HelldiversPatchFeed/0.2.2 (+{PROJECT_URL})"
+USER_AGENT = f"HelldiversPatchFeed/0.2.3 (+{PROJECT_URL})"
 STEAM_NEWS_URL = (
     "https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/"
     f"?appid={APP_ID}&count=50&maxlength=10000"
