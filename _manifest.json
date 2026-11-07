@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "id": "github.touristh.democracy-chooses",
+  "version": "0.1.0",
+  "name": "绝地潜兵 2：民主帮你选择",
+  "description": "HELLDIVERS 2（绝地潜兵2）随机配装插件，支持八格离线图卡、单格重抽、文字回退、配置式群白名单与管理员渲染诊断。",
+  "author": {
+    "name": "TouristH",
+    "url": "https://github.com/TouristH"
+  },
+  "license": "MIT",
+  "urls": {
+    "repository": "https://github.com/TouristH/DemocracyChooses",
+    "homepage": "https://github.com/TouristH/DemocracyChooses",
+    "documentation": "https://github.com/TouristH/DemocracyChooses/blob/main/README.md",
+    "issues": "https://github.com/TouristH/DemocracyChooses/issues"
+  },
+  "host_application": {
+    "min_version": "1.0.0",
+    "max_version": "1.3.99"
+  },
+  "sdk": {
+    "min_version": "2.7.1",
+    "max_version": "2.21.99"
+  },
+  "dependencies": [
+    {
+      "type": "python_package",
+      "name": "playwright",
+      "version_spec": ">=1.54.0"
+    }
+  ],
+  "plugin_type": "game",
+  "capabilities": ["send.text", "send.image", "render.html2png"],
+  "display": {
+    "icon": {
+      "type": "local",
+      "value": "assets/icon.webp",
+      "fallback": "gamepad-2"
+    }
+  },
+  "i18n": {
+    "default_locale": "zh-CN",
+    "supported_locales": ["zh-CN"]
+  }
+}

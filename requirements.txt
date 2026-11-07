@@ -1,0 +1,8 @@
+# 插件进程使用的 MaiBot SDK。
+maibot-plugin-sdk>=2.7.1,<3.0
+
+# 图片渲染运行于 MaiBot 宿主进程，需装在宿主的 Python 环境中。
+# 与 _manifest.json 的渲染依赖一致；浏览器另用下列命令安装：
+#   python -m playwright install chromium
+# 没有可用浏览器、渲染能力或图片发送失败时，配装仍可返回文字。
+playwright>=1.54.0
