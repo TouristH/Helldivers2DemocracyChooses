@@ -57,7 +57,7 @@ python -m playwright install chromium
 
 只使用文字配装时无需安装浏览器；图片渲染或发送失败会自动回退文字。插件只声明 `send.text`、`send.image`、`render.html2png` 三项能力。
 
-插件中心的收录进度见[登记申请 #1484](https://github.com/Mai-with-u/plugin-repo/issues/1484)。审核状态以申请页面为准；在此之前可按上方步骤手动安装。
+插件中心的登记与迁移进度见[相关申请](https://github.com/Mai-with-u/plugin-repo/issues?q=is%3Aissue+%22github.touristh.helldivers2-democracy-chooses%22)。审核状态以申请页面为准；在此之前可按上方步骤手动安装。
 
 ## 向军需部门递交申请
 
@@ -142,6 +142,10 @@ python -m pytest -q
 本部门专职配装娱乐。原来的更新推送、运行时 Steam/Wiki 查询、后台轮询、订阅和公告数据库已经移除；需要战况、地图、公告查询及资讯订阅的潜兵，请前往 [fiatlux2333 的绝地潜兵 2 情报助手](https://github.com/fiatlux2333/maibot_plugin_Helldivers)。看战报和决定带什么枪，是两份不同的工作。
 
 此前 `0.1.0` 使用不含游戏名的 ID `github.touristh.democracy-chooses`，该历史版本保持原样。已安装它的用户请先备份 `config.toml` 并停用旧 ID，再按新 ID 安装并恢复配置；此次 ID 修正不依赖旧插件的自动升级。
+
+`0.3.0` 是用于承接旧插件中心登记的迁移版本，版本号高于旧项目的 `0.2.x`。登记修改使用 `Modify Plugin / 修改插件` 流程，由维护者审核旧 ID `github.touristh.helldivers2-patch-feed` 到当前 ID 与仓库的替换。旧版 Git 提交已保留以供历史核验，当前程序仍只提供配装娱乐功能；旧项目的历史 Release 继续保存在原仓库。
+
+插件中心登记迁移不等于本地安装或配置自动迁移。旧 PatchFeed 用户请先备份配置并停用旧插件，再按当前 ID 安装；手动填写 `allowed_groups`，按需恢复管理员和黑名单配置。旧订阅与公告数据库不迁移。军需部门接受调任，不负责把旧办公室整栋空投过来。
 
 ## 地球上的许可与署名
 
