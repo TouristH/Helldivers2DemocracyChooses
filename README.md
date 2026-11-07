@@ -134,6 +134,8 @@ loadout = ["10002"]
 
 ## 维护人员的战前检查
 
+测试和装备刷新请使用完整 Git 仓库。发行 ZIP 只包含插件运行文件、配置示例及说明与许可文件；测试、刷新工具、开发依赖清单和 GitHub 配置留在仓库中，不随安装包配发。
+
 ```bash
 python -m pip install -r requirements.txt -r requirements-dev.txt
 python -m pytest -q

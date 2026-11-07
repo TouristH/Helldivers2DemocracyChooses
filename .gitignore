@@ -24,5 +24,6 @@ dist/
 .DS_Store
 
 # Planning/source snapshots kept outside the plugin repository
+/docs/superpowers/
 _pluginrepo_tmp/
 _watcher_tmp/
