@@ -1,4 +1,4 @@
-# DemocracyChooses Implementation Plan
+# Helldivers2DemocracyChooses Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development or superpowers:executing-plans to implement this plan task-by-task.
 
@@ -48,5 +48,5 @@ Consumes: Task 1 的四动作与四项配置（allowed_groups、admin_users、co
 
 - [ ] 进行独立代码审查并修复重要问题；运行完整测试与编译检查。
 - [ ] 打包安装源码 ZIP，确认无旧配置/数据库/本地环境/开发缓存。
-- [ ] 创建 TouristH/Helldivers2DemocracyChooses 公开仓库，提交并上传 main；创建匹配 v0.1.1 的首版 Release。
+- [ ] 将已有公开仓库重命名为 TouristH/Helldivers2DemocracyChooses，同步 main，并发布 v0.1.1 修正版；保留已发布 v0.1.0 的 Tag 与安装包原内容。
 - [ ] 验证远端 SHA、Release 及原仓库未修改；报告测试和本地产物路径。
