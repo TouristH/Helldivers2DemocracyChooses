@@ -1,4 +1,34 @@
-# Helldivers 2 更新推送
+# Helldivers 2 更新推送（已停用）
+
+> [!IMPORTANT]
+> **HelldiversPatchFeed 已停用，不再维护功能或发布新版本。** 本仓库保留代码、历史版本和署名，供已有用户查阅。请停用已安装的旧插件，并根据用途选择下方项目；本公告不会自动关闭您本地正在运行的旧插件。
+
+## 为什么停止旧插件、精简新插件
+
+社区已有覆盖更广的绝地潜兵 2 情报插件，继续在本项目重复建设战况、公告、Wiki 查询和资讯推送，带给用户的新增价值有限。资讯功能还需要持续维护上游接口、公告筛选、订阅与投递状态，容易分散配装功能的开发精力。
+
+因此，本项目停止旧版维护，将随机配装部分独立为 **“绝地潜兵 2：民主帮你选择”**。新插件保留随机配装、单格重抽、离线图卡、文字降级和权限控制，移除更新推送、运行时 Steam/Wiki 查询、群订阅、后台轮询和公告数据库。这次功能精简是产品定位的收缩，目的是集中维护配装娱乐体验。
+
+## 按用途选择插件
+
+| 用途 | 推荐项目 |
+|---|---|
+| 随机配装、单格重抽和群内配装娱乐 | [绝地潜兵 2：民主帮你选择 · Helldivers2DemocracyChooses](https://github.com/TouristH/Helldivers2DemocracyChooses) |
+| 更齐全的战况、地图、任务、公告查询和资讯订阅 | [绝地潜兵 2 情报助手 · fiatlux2333/maibot_plugin_Helldivers](https://github.com/fiatlux2333/maibot_plugin_Helldivers) |
+
+**需要资讯功能的用户，推荐使用 fiatlux2333 的绝地潜兵 2 情报助手。** 该项目提供银河战争总览、主要任务、战争地图、战线排行、Steam 公告查询、Wiki/军需簿查询，以及 Companion 新闻和 B 站银河快报订阅。具体安装、可选截图/翻译依赖与订阅配置请以[对方 README](https://github.com/fiatlux2333/maibot_plugin_Helldivers#readme)为准。
+
+## 迁移到“民主帮你选择”
+
+1. 备份需要保留的旧配置，在 MaiBot 插件管理中停用本插件，避免新旧插件响应相同命令。
+2. 按[新仓库 README](https://github.com/TouristH/Helldivers2DemocracyChooses#readme)安装；发布包见[新插件 Releases](https://github.com/TouristH/Helldivers2DemocracyChooses/releases)。新插件 ID 为 `github.touristh.helldivers2-democracy-chooses`，使用独立身份，不通过旧插件自动升级。
+3. 编辑新插件的 `config.toml`，在 `[plugin].allowed_groups` 中添加允许使用的群号。默认空名单不开放任何群，管理员不能绕过，群内没有增删名单命令。
+
+旧版订阅与公告数据库不迁移，新插件也不承接旧版的更新推送功能。原项目和第三方数据、图像的署名与许可继续保留，详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
+<details>
+<summary>旧版使用文档（仅供历史查阅，不再推荐安装）</summary>
+
 
 [![Tests](https://github.com/TouristH/HelldiversPatchFeed/actions/workflows/tests.yml/badge.svg)](https://github.com/TouristH/HelldiversPatchFeed/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -250,3 +280,5 @@ python tools/refresh_loadout_database.py
 - HELLDIVERS 2 的名称、图像及相关媒体归其各自权利人所有。
 
 问题与建议请提交到 [GitHub Issues](https://github.com/TouristH/HelldiversPatchFeed/issues)。
+
+</details>
