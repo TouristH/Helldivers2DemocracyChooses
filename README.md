@@ -126,6 +126,12 @@ loadout = ["10002"]
 
 若只返回文字，由管理员执行 `/hd diag` 检查：宿主需启用 `plugin_runtime.render.enabled`，安装 Playwright 与 Chromium，并允许 `render.html2png` 和图片发送。首次启动浏览器较慢时可完成初始化后重试。请先检修打印机，暂时不要把显示器列为非法广播。
 
+## 军需部征集下一句标语
+
+觉得配装结果里的随机标语还不够“民主”？欢迎[提交新标语提议](https://github.com/TouristH/Helldivers2DemocracyChooses/issues/new?template=motto-suggestion.yml)。你的独立思考已获准用于宣传，请在指定表格内发挥。
+
+填入想加入的标语即可，也可以补充梗的说明或出处。建议每条控制在 **25 字以内**，方便图卡完整展示；军需审批、增援、样本回收以及管理式民主的黑色幽默都欢迎。提议由维护者审核，采用后随后续版本加入随机标语池。
+
 ## 维护人员的战前检查
 
 ```bash

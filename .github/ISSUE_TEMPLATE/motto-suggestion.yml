@@ -1,0 +1,23 @@
+name: 提议新标语
+description: 给「绝地潜兵 2：民主帮你选择」的随机配装结果添一句标语。
+title: "[标语提议] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎向超级地球军需部提交宣传文案。你的独立思考已获准用于此处。
+        标语会用于随机配装图卡和文字结果；维护者审核采用后，随后续版本加入标语池。
+  - type: textarea
+    id: motto
+    attributes:
+      label: 标语正文
+      description: 每条建议 25 字以内，方便图卡完整展示；多条提议可分行填写。
+      placeholder: 装备已经批准，生还申请请另行提交。
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 梗的说明或出处（可选）
+      description: 可以解释笑点；如果引用了游戏台词或他人的文案，也请注明出处。
+      placeholder: 这句想调侃的是……
