@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 - Final retirement and migration-notice release. Marked the plugin as retired
   in its README and manifest, with no further feature maintenance planned.
+- Added the user-selected red helmet shaking-head animation to the README
+  and local plugin icon, as a lossless 29-frame animated WebP.
 - Directed random-loadout users to
   [Helldivers2DemocracyChooses](https://github.com/TouristH/Helldivers2DemocracyChooses),
   and users seeking broader war intelligence and news features to

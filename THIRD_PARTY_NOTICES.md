@@ -29,6 +29,19 @@ Copyright and other rights remain with the upstream contributors and the
 applicable rights holders. Redistributors must independently obtain any
 permission they require.
 
+## User-provided animated retirement icon
+
+`assets/icon.webp` is a lossless animated-WebP conversion of the red Helldiver
+helmet shaking-head animation supplied and selected by the user to mark this
+plugin as retired. The supplied file contained GIF data despite its `.jpg`
+filename. All 29 frames, the 96 x 96 dimensions and frame timing were retained.
+No original authorship is claimed.
+
+The original creator and redistribution license were not identified in the
+attachment. This animation and the game imagery it contains are not represented
+as covered by this repository's MIT License. Rights remain with the respective
+creators and game-material rights holders.
+
 ## HELLDIVERS 2 material
 
 HELLDIVERS, HELLDIVERS 2, related names, artwork, icons, and other game media

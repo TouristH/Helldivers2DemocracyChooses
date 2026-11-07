@@ -34,8 +34,9 @@
   "capabilities": ["chat.open_session", "send.text", "send.image", "render.html2png"],
   "display": {
     "icon": {
-      "type": "lucide",
-      "value": "satellite"
+      "type": "local",
+      "value": "assets/icon.webp",
+      "fallback": "archive"
     }
   },
   "i18n": {
