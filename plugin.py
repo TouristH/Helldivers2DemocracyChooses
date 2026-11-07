@@ -11,11 +11,6 @@ import unicodedata
 from pathlib import Path
 from typing import Any, Iterable, Mapping, Sequence
 
-if __package__:
-    from .loadout_knowledge import KnowledgeError, load_knowledge
-else:
-    from loadout_knowledge import KnowledgeError, load_knowledge
-
 
 try:  # maibot-plugin-sdk 2.x
     from maibot_sdk import (  # type: ignore
@@ -806,14 +801,6 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
             f"配装数据：{sum(len(names) for names in pool.values())} 件，图标 {len(icons)} 个\n"
             f"重抽时间窗：{self._loadout_reroll_seconds()} 秒"
         )
-        try:
-            knowledge = load_knowledge()
-            player_count = sum(bool(item.player_roles) for item in knowledge.items.values())
-            edited_count = sum(item.user_modified for item in knowledge.items.values())
-            message += f"\n配装标签：{len(knowledge.items)} 件，含玩家定位 {player_count} 件，标签修改 {edited_count} 件"
-        except KnowledgeError as exc:
-            message += "\n配装标签库暂不可用，请管理员检查 loadout_tags.csv"
-            self._log("warning", "Loadout knowledge is unavailable: %s", exc)
         if self._last_render_error:
             message += f"\n配装出图异常：{self._last_render_error}（可用 /helldivers diag 复现）"
         await self._reply(kwargs, message)

@@ -44,7 +44,7 @@ EN_API = "https://helldivers.wiki.gg/api.php"
 ZH_ROOT = "https://helldivers.wiki.gg/zh/wiki/"
 EN_ROOT = "https://helldivers.wiki.gg/wiki/"
 USER_AGENT = (
-    "Helldivers2DemocracyChooses-loadout-refresh/0.4.0 "
+    "Helldivers2DemocracyChooses-loadout-refresh/0.3.2 "
     "(https://github.com/TouristH/Helldivers2DemocracyChooses)"
 )
 SLOTS = ("primary", "secondary", "grenade", "booster", "stratagem")
