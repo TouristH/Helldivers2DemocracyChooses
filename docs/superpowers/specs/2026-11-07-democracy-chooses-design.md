@@ -1,8 +1,8 @@
-# 绝地潜兵 2：民主帮你选择 0.1.0
+# 绝地潜兵 2：民主帮你选择 0.1.1
 
 用户已选择另建仓库与新插件 ID，首版仅从现有 HelldiversPatchFeed 0.2.2 删减资讯功能并保留白名单，不新增配装玩法。展示名称采用用户要求的“绝地潜兵 2：民主帮你选择”。
 
-- 新仓库：TouristH/DemocracyChooses；ID：github.touristh.democracy-chooses；版本：0.1.0；类别：game。
+- 新仓库：TouristH/Helldivers2DemocracyChooses；ID：github.touristh.helldivers2-democracy-chooses；版本：0.1.1；类别：game。
 - 保留随机八格配装、单格重抽、按聊天与用户隔离的限时会话、离线图卡、文字降级、渲染诊断、状态及帮助。
 - 按用户最新要求新增全局群白名单 allowed_groups，默认空列表；只有配置文件内列出的群可使用任何命令。宿主操作员与 admin_users 不绕过群白名单；私聊或缺少群号均拒绝；群内无白名单增删指令。
 - 保留 admin_users 管理员权限及 command_blacklist 规则；允许群内仅宿主操作员和白名单管理员可执行 diag，管理员优先于功能黑名单。

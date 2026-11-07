@@ -2,12 +2,14 @@
 
 ![绿色潜兵头盔点头动图标](assets/icon.webp)
 
-[![Tests](https://github.com/TouristH/DemocracyChooses/actions/workflows/tests.yml/badge.svg)](https://github.com/TouristH/DemocracyChooses/actions/workflows/tests.yml)
+[![Tests](https://github.com/TouristH/Helldivers2DemocracyChooses/actions/workflows/tests.yml/badge.svg)](https://github.com/TouristH/Helldivers2DemocracyChooses/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 面向 MaiBot Plugin SDK 2.x 的 **HELLDIVERS 2（绝地潜兵2）随机配装**插件，分类为**游戏娱乐**（`game`）。生成八格配装，支持限时单格重抽、自包含离线图卡、文字回退，以及管理员渲染诊断。
 
-本项目从 [TouristH/HelldiversPatchFeed](https://github.com/TouristH/HelldiversPatchFeed/tree/555c3a5) 的配装功能独立精简而来，使用新仓库、新 ID `github.touristh.democracy-chooses`，首版为 `0.1.0`。不沿用原项目版本号、配置或旧公告数据；运行时没有资讯推送、订阅、Steam/Wiki 查询、后台轮询或公告数据库。
+本项目从 [TouristH/HelldiversPatchFeed](https://github.com/TouristH/HelldiversPatchFeed/tree/555c3a5) 的配装功能独立精简而来。自 `0.1.1` 起，仓库为 `Helldivers2DemocracyChooses`，插件 ID 为 `github.touristh.helldivers2-democracy-chooses`。运行时没有资讯推送、订阅、Steam/Wiki 查询、后台轮询或公告数据库。
+
+此前 `0.1.0` 使用不含游戏名的 ID `github.touristh.democracy-chooses`，该历史版本保持原样。已安装它的用户请先备份 `config.toml` 并停用旧 ID，再按新 ID 安装并恢复配置；此次 ID 修正不依赖旧插件的自动升级。新插件尚未登记插件市场。
 
 这是非官方粉丝作品，与 Arrowhead Game Studios 或 Sony Interactive Entertainment 无关联。代码、Wiki 衍生文本和游戏图像的许可边界见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
@@ -25,13 +27,13 @@
 在 MaiBot 的 `plugins` 目录执行：
 
 ```bash
-git clone https://github.com/TouristH/DemocracyChooses.git
+git clone https://github.com/TouristH/Helldivers2DemocracyChooses.git
 ```
 
 在**运行 MaiBot 宿主的同一个 Python 环境**安装依赖和渲染浏览器：
 
 ```bash
-python -m pip install -r plugins/DemocracyChooses/requirements.txt
+python -m pip install -r plugins/Helldivers2DemocracyChooses/requirements.txt
 python -m playwright install chromium
 ```
 
@@ -110,4 +112,4 @@ python -m pytest -q
 
 原创代码与文档使用 [MIT License](LICENSE)，Copyright © 2026 TouristH。保留 HelldiversPatchFeed 原项目、Helldivers Wiki 贡献者、Xenfo-LC 参考项目及相关素材贡献者的署名；这些第三方内容不自动纳入 MIT。完整贡献说明见 [CONTRIBUTORS.md](CONTRIBUTORS.md)。OpenAI Codex 是 AI 辅助贡献者，不是仓库所有者、维护者或版权持有人。
 
-问题与建议请提交至 [GitHub Issues](https://github.com/TouristH/DemocracyChooses/issues)。
+问题与建议请提交至 [GitHub Issues](https://github.com/TouristH/Helldivers2DemocracyChooses/issues)。

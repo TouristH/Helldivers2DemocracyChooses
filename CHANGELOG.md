@@ -1,5 +1,11 @@
 # 更新记录
 
+## 0.1.1 - 2026-11-08
+
+- 在 GitHub 仓库名与插件 ID 中加入游戏名：`Helldivers2DemocracyChooses`、`github.touristh.helldivers2-democracy-chooses`，同步安装命令、文档链接与维护工具标识。
+- 展示名称仍为“绝地潜兵 2：民主帮你选择”；`Democracy Chooses` 表示由民主作出选择。
+- 已发布的 `0.1.0` Tag 与安装包保留原内容；已有安装需备份配置、停用旧 ID 后按新 ID 安装。游戏娱乐分类、点头图标和全局群白名单逻辑保持原样。
+
 ## 0.1.0 - 2026-11-08
 
 - 从 [TouristH/HelldiversPatchFeed @555c3a5](https://github.com/TouristH/HelldiversPatchFeed/tree/555c3a5) 独立精简配装功能，以“绝地潜兵 2：民主帮你选择”、新仓库和新插件 ID `github.touristh.democracy-chooses` 开始版本记录；分类为游戏娱乐（`game`）。

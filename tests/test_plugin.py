@@ -1010,9 +1010,9 @@ def test_sdk_minimum_is_consistent_across_release_files() -> None:
 def test_manifest_uses_the_repository_owners_identity() -> None:
     """Publication metadata must not drift back to a previous or project-name signature."""
     manifest = load_manifest()
-    assert manifest["id"] == "github.touristh.democracy-chooses"
+    assert manifest["id"] == "github.touristh.helldivers2-democracy-chooses"
     assert manifest["author"] == {"name": "TouristH", "url": "https://github.com/TouristH"}
-    expected = "https://github.com/TouristH/DemocracyChooses"
+    expected = "https://github.com/TouristH/Helldivers2DemocracyChooses"
     assert manifest["urls"]["repository"] == expected
     assert manifest["urls"]["homepage"] == expected
     assert manifest["urls"]["documentation"] == f"{expected}/blob/main/README.md"

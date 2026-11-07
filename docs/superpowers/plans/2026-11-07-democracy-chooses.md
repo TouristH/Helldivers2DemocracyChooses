@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development or superpowers:executing-plans to implement this plan task-by-task.
 
-**Goal:** 发布独立身份的“绝地潜兵 2：民主帮你选择”0.1.0，删除运行时资讯推送并保留配装及白名单。
+**Goal:** 发布独立身份的“绝地潜兵 2：民主帮你选择”0.1.1，删除运行时资讯推送并保留配装及白名单。
 
 **Architecture:** 从 0.2.2 导出受版本控制文件到独立仓库，精简 plugin.py 与测试；不继承旧 Git 历史。装备数据与离线图片继续复用，外部访问仅保留在维护者刷新脚本中。
 
@@ -12,7 +12,7 @@
 
 ## Global Constraints
 
-- ID github.touristh.democracy-chooses；版本 0.1.0；展示名称 绝地潜兵 2：民主帮你选择。
+- ID github.touristh.helldivers2-democracy-chooses；版本 0.1.1；展示名称 绝地潜兵 2：民主帮你选择。
 - allowed_groups 是全局群门禁，默认空列表；所有命令和管理员均受限，私聊拒绝，群内无增删白名单指令。允许群内保留已有管理员与功能黑名单权限优先级。
 - 运行时不采集、不推送、不建公告数据库、不需要群订阅。
 - 保留数据来源、素材许可边界与旧项目贡献署名。
@@ -48,5 +48,5 @@ Consumes: Task 1 的四动作与四项配置（allowed_groups、admin_users、co
 
 - [ ] 进行独立代码审查并修复重要问题；运行完整测试与编译检查。
 - [ ] 打包安装源码 ZIP，确认无旧配置/数据库/本地环境/开发缓存。
-- [ ] 创建 TouristH/DemocracyChooses 公开仓库，提交并上传 main；创建匹配 v0.1.0 的首版 Release。
+- [ ] 创建 TouristH/Helldivers2DemocracyChooses 公开仓库，提交并上传 main；创建匹配 v0.1.1 的首版 Release。
 - [ ] 验证远端 SHA、Release 及原仓库未修改；报告测试和本地产物路径。

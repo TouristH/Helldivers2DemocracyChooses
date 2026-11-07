@@ -1,11 +1,11 @@
 # Third-party notices
 
-This file records third-party sources used by DemocracyChooses. It is an
+This file records third-party sources used by Helldivers2DemocracyChooses. It is an
 attribution record, not a new license grant.
 
 ## Source project: HelldiversPatchFeed
 
-DemocracyChooses is an independent, loadout-only extraction from
+Helldivers2DemocracyChooses is an independent, loadout-only extraction from
 [TouristH/HelldiversPatchFeed](https://github.com/TouristH/HelldiversPatchFeed/tree/555c3a5),
 revision `555c3a5`, whose plugin version was `0.2.2`. The source project's
 original code and documentation are Copyright (c) 2026 TouristH under the
@@ -13,11 +13,11 @@ MIT License; that copyright notice and license are retained in `LICENSE`.
 Its project and AI-assisted contributions remain acknowledged in
 `CONTRIBUTORS.md`.
 
-DemocracyChooses starts its own version sequence at `0.1.0` and does not
+Helldivers2DemocracyChooses starts its own version sequence at `0.1.0` and does not
 carry over old announcement data. The equipment catalog and embedded icon
 bundle are retained unchanged from the source project, with a catalog check
 date of 2026-10-21 and 221 items. The `0.2.0` and `0.2.2` versions mentioned
-below refer only to that source-project history, not DemocracyChooses releases.
+below refer only to that source-project history, not Helldivers2DemocracyChooses releases.
 
 ## Helldivers 2 Random Loadout Generator CN
 
@@ -163,7 +163,7 @@ These announcements were checked on 2026-10-21. Their text, names, and media
 remain subject to their respective rights holders; they are not relicensed
 under MIT by this attribution.
 
-DemocracyChooses does not retrieve Wiki excerpts at runtime. Its manual
+Helldivers2DemocracyChooses does not retrieve Wiki excerpts at runtime. Its manual
 maintainer refresh tool still accesses the sources above; removing the old
 runtime queries does not remove the attribution or license obligations for
 the bundled Wiki-derived catalog and game artwork.
