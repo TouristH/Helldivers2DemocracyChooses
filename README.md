@@ -33,12 +33,17 @@
 
 | 项目 | 要求或声明范围 |
 |---|---|
-| MaiBot Host | manifest 声明 `1.0.0–1.3.99` |
-| MaiBot Plugin SDK | 依赖 `>= 2.7.1, < 3.0.0`；manifest 声明 `2.7.1–2.21.99` |
+| MaiBot Host | manifest 声明 `1.0.0–1.4.99`（1.4.x 已按多实例与命令权限改动适配） |
+| MaiBot Plugin SDK | 依赖 `>= 2.7.1, < 3.0.0`；manifest 声明 `2.7.1–2.22.99`（MaiBot 1.4.3 随附 2.22.1） |
 | Python | 开发验证使用 3.12；部署以 MaiBot/SDK 支持的版本为准 |
 | 图片渲染 | 宿主环境安装 `playwright>=1.54.0` 和 Chromium，并开放渲染能力 |
 
-以上是兼容声明，不代表已经逐个版本实机测试。当前本地验证使用真实 SDK 与模拟宿主，尚未完成真实 MaiBot 宿主的加载、图片发送和配置热更新端到端验证。兼容区间格式依据 MaiBot 的 [Manifest 文档](https://docs.maibot.chat/plugin/manifest)；后续宿主版本需重新验证后再扩大范围。
+以上是兼容声明，不代表已经逐个版本实机测试。当前本地验证使用真实 SDK（2.7.1 与 2.22.1 两套测试矩阵）与模拟宿主，尚未完成真实 MaiBot 宿主的加载、图片发送和配置热更新端到端验证。兼容区间格式依据 MaiBot 的 [Manifest 文档](https://docs.maibot.chat/plugin/manifest)；后续宿主版本需重新验证后再扩大范围。
+
+### 在 MaiBot 1.4 上要注意的两件事
+
+- **多实例各读各的数据。** 1.4 允许一个 MAIBOT 跑多只麦麦，每个实例只有自己的 `data/plugins/<插件 ID>/` 目录。装备清单（`loadout_data.json`）和标签库（`loadout_tags.xlsx`、`loadout_knowledge.json`）优先从那里读取，第一次使用时从插件目录复制过去；改这份副本（而不是源码目录里的那份）才会生效，插件更新覆盖源码也不会再把改动删掉。`/hd status` 会显示当前实例实际使用的数据目录。1.3 及更老的宿主没有这个目录接口，仍然读插件目录里的文件，行为与升级前一致。
+- **命令权限多了一层。** 1.4 的「配置 → 命令权限」可以按用户或聊天限制插件命令，宿主会在命令到达插件之前先拦一次；插件自己的 `allowed_groups`、`admin_users` 和 `command_blacklist` 照常生效，两层都要放行。命令目录（`/pm cmd`）里本插件显示为 `public`：公开动作与管理指令 `diag` 共用同一个命令组件，`diag` 的管理员判定由插件自己完成。
 
 在 MaiBot 的 `plugins` 目录执行：
 

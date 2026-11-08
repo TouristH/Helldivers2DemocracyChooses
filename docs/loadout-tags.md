@@ -2,6 +2,8 @@
 
 插件优先读取 `loadout_tags.xlsx` 的“装备标签”工作表；Excel不存在时才读取 `loadout_tags.csv`。保存后下次读取生效。
 
+MaiBot 1.4 起，标签表从本实例的数据目录读取（`data/plugins/<插件 ID>/`，`/hd status` 会显示实际路径）：首次使用时从插件目录复制一份 `loadout_tags.xlsx` 和 `loadout_knowledge.json`，之后编辑数据目录里的副本才生效；删掉工作簿改用 CSV 时不会被重新播种。1.3 及更老的宿主没有数据目录，仍读取插件目录里的文件。
+
 ## 玩家标签集与独立标签
 
 “玩家标签集”是一列便于审阅的显示集合。例如 `控场；清杂；易误伤` 对应三个独立ID：`player.crowd_control`、`player.crowd_clear`、`player.friendly_fire_risk`。另一个例子 `反重；简易使用；对单` 同样是三个标签，组合本身不会注册为标签。

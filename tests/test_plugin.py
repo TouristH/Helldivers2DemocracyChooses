@@ -17,6 +17,7 @@ from plugin import (
     ACTION_ALIASES,
     ADMIN_ACTIONS,
     ACTION_LABELS,
+    BUNDLE_DIR,
     COMMAND_ACTIONS,
     COMMAND_ALIASES,
     COMMAND_NAME,
@@ -1444,5 +1445,195 @@ def test_group_allowlist_accepts_unquoted_group_numbers() -> None:
         plugin = command_plugin([])
         plugin._cfg = {"allowed_groups": [100]}
         assert (await plugin.handle_command(text="/hd status", group_id=100, stream_id="s"))[0] is True
+
+    asyncio.run(scenario())
+
+
+# ── MaiBot 1.4 compatibility ────────────────────────────────────────────────
+# 1.4 换了次版本号的兼容区间、给每个实例独立的 data_dir，并把当前插件配置随
+# 命令一起传进处理器。下面这些用例把三处变化钉在宿主行为上，而不是钉在实现上。
+
+
+def test_manifest_accepts_maiBot_1_4_hosts() -> None:
+    """1.4 是新的次版本，旧的 1.3.99 上限会让 ManifestValidator 直接拒绝加载。"""
+    manifest = load_manifest()
+    host = manifest["host_application"]
+    assert host["max_version"] == "1.4.99"
+    assert tuple(map(int, host["min_version"].split("."))) < (1, 4, 0), "老宿主仍要能装"
+    assert tuple(map(int, manifest["sdk"]["max_version"].split("."))) >= (2, 22, 0), (
+        "MaiBot 1.4 随附 SDK 2.22.1，区间必须覆盖它"
+    )
+
+
+def test_command_declares_a_public_permission_for_the_1_4_catalog() -> None:
+    """1.4 在进入处理器之前就会拦截 permission=operator 的命令。
+
+    本插件把公开动作和管理指令 diag 放在同一个组件里，所以只能声明 public 再按
+    动作自行判定；宿主侧的插件权限与命令权限列表依然叠加生效。
+    """
+    info = getattr(DemocracyChoosesPlugin.handle_command, "__maibot_component_info__", None)
+    meta = dict(getattr(info, "metadata", info) or {})
+    assert meta.get("permission") == "public"
+    assert ADMIN_ACTIONS == {"diag"}, "管理动作若变多，需要重新审视上面的 public 声明"
+
+
+def test_equipment_data_is_seeded_into_the_instance_data_directory(tmp_path: Path) -> None:
+    """1.4 每个实例只有自己的 data_dir；升级覆盖源码目录不能删掉玩家改动。"""
+
+    async def scenario() -> None:
+        plugin = DemocracyChoosesPlugin()
+
+        class Ctx:
+            class paths:
+                data_dir = tmp_path / "instance"
+
+        attach_ctx(plugin, Ctx())
+        seeded = plugin._data_file("loadout_data.json")
+        assert seeded == tmp_path / "instance" / "loadout_data.json"
+        assert seeded.read_text(encoding="utf-8") == (BUNDLE_DIR / "loadout_data.json").read_text(encoding="utf-8")
+        # 图标有十几 MB 且不需要玩家编辑：就地读取，不复制。
+        assert plugin._data_file("loadout_icons.json") == BUNDLE_DIR / "loadout_icons.json"
+        # 真正被读取的是副本，所以改副本立即生效。
+        seeded.write_text('{"items": [{"slot": "primary", "name": "测试步枪"}]}', encoding="utf-8")
+        assert load_loadout_pool(plugin._data_file("loadout_data.json"))["primary"] == ["测试步枪"]
+
+    asyncio.run(scenario())
+
+
+def test_tag_knowledge_is_seeded_per_instance_and_prefers_excel(tmp_path: Path) -> None:
+    """标签表也属于可编辑数据：播种到实例目录，Excel 优先、删掉后回落到 CSV。"""
+
+    async def scenario() -> None:
+        plugin = DemocracyChoosesPlugin()
+
+        class Ctx:
+            class paths:
+                data_dir = tmp_path / "instance"
+
+        attach_ctx(plugin, Ctx())
+        table = plugin._knowledge_table()
+        assert table == tmp_path / "instance" / "loadout_tags.xlsx"
+        assert table.exists(), "首次使用应从插件目录播种"
+        assert plugin._data_file("loadout_knowledge.json").exists()
+        # 维护者删掉工作簿改用 CSV 时，不能被悄悄重新播种。
+        table.unlink()
+        csv_copy = tmp_path / "instance" / "loadout_tags.csv"
+        csv_copy.write_text("id\n", encoding="utf-8")
+        assert plugin._knowledge_table() == csv_copy
+
+    asyncio.run(scenario())
+
+
+def test_two_instances_never_share_an_equipment_list(tmp_path: Path) -> None:
+    """多实例是 1.4 的主打功能：两个实例各一份装备清单，互不覆盖。"""
+
+    async def scenario() -> None:
+        def instance(name: str) -> DemocracyChoosesPlugin:
+            plugin = DemocracyChoosesPlugin()
+
+            class Ctx:
+                class paths:
+                    data_dir = tmp_path / name
+
+            attach_ctx(plugin, Ctx())
+            return plugin
+
+        first, second = instance("bot-a"), instance("bot-b")
+        first._data_file("loadout_data.json").write_text(
+            '{"items": [{"slot": "primary", "name": "甲"}]}', encoding="utf-8"
+        )
+        assert load_loadout_pool(first._data_file("loadout_data.json"))["primary"] == ["甲"]
+        # 第二个实例拿到的仍是自己的初始副本，没有被第一个实例的改动污染。
+        assert load_loadout_pool(second._data_file("loadout_data.json"))["primary"] != ["甲"]
+
+    asyncio.run(scenario())
+
+
+def test_hosts_without_data_paths_keep_reading_the_bundled_files() -> None:
+    """1.3 及更老的宿主没有 ctx.paths：行为必须与升级前完全一致。"""
+
+    async def scenario() -> None:
+        plugin = DemocracyChoosesPlugin()
+        attach_ctx(plugin, object())
+        assert plugin._data_dir() == BUNDLE_DIR
+        assert plugin._data_file("loadout_data.json") == BUNDLE_DIR / "loadout_data.json"
+
+    asyncio.run(scenario())
+
+
+def test_unusable_data_directory_falls_back_to_the_bundled_file(tmp_path: Path) -> None:
+    """数据目录建不出来时，不能连配装都抽不出来。"""
+
+    async def scenario() -> None:
+        plugin = DemocracyChoosesPlugin()
+        blocker = tmp_path / "not-a-directory"
+        blocker.write_text("", encoding="utf-8")  # 同名文件，mkdir 必然失败
+
+        class Ctx:
+            class paths:
+                data_dir = blocker / "instance"
+
+        attach_ctx(plugin, Ctx())
+        assert plugin._data_file("loadout_data.json") == BUNDLE_DIR / "loadout_data.json"
+        assert load_loadout_pool(plugin._data_file("loadout_data.json"))
+
+    asyncio.run(scenario())
+
+
+def test_command_adopts_the_live_config_maiBot_1_4_injects() -> None:
+    """1.4 把当前插件配置随命令传进来；漏掉一次广播也不能继续用旧白名单。"""
+
+    async def scenario() -> None:
+        replies: list[str] = []
+        plugin, rendered, sent = loadout_plugin(replies)
+        plugin._cfg = {}  # 还没从 runner 拿到任何配置
+        ok, _, _ = await plugin.handle_command(
+            text="/hd loadout",
+            stream_id="s",
+            user_id="u1",
+            group_id="100",
+            plugin_config={"plugin": {"allowed_groups": ["100"], "loadout_reroll_seconds": 90}},
+        )
+        assert ok and len(rendered) == len(sent) == 1
+        assert plugin._cfg["allowed_groups"] == ["100"]
+        assert plugin._loadout_reroll_seconds() == 90
+
+    asyncio.run(scenario())
+
+
+def test_empty_plugin_config_never_wipes_loaded_settings() -> None:
+    """宿主读不到配置时会传空表；那不等于"把白名单清空"。"""
+
+    async def scenario() -> None:
+        replies: list[str] = []
+        plugin, _, _ = loadout_plugin(replies)
+        plugin._cfg = {"allowed_groups": ["100"]}
+        ok, _, _ = await plugin.handle_command(
+            text="/hd status", stream_id="s", user_id="u1", group_id="100", plugin_config={}
+        )
+        assert ok
+        assert plugin._cfg == {"allowed_groups": ["100"]}
+
+    asyncio.run(scenario())
+
+
+def test_status_reports_the_data_directory_and_reads_it(tmp_path: Path) -> None:
+    """多实例排查的第一件事：这个实例到底读的哪份数据。"""
+
+    async def scenario() -> None:
+        replies: list[str] = []
+        plugin = command_plugin(replies)
+
+        class Ctx:
+            class paths:
+                data_dir = tmp_path / "instance"
+
+        attach_ctx(plugin, Ctx())
+        ok, _, _ = await plugin.handle_command(
+            text="/hd status", stream_id="s", user_id="u1", group_id="100"
+        )
+        assert ok
+        assert str(tmp_path / "instance") in replies[-1]
+        assert "配装标签" in replies[-1], "标签库应从实例目录读取并通过校验"
 
     asyncio.run(scenario())
