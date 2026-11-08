@@ -6,6 +6,7 @@ import json
 import logging
 import random
 import re
+import shutil
 import time
 import unicodedata
 from pathlib import Path
@@ -78,6 +79,17 @@ except ImportError as sdk_import_error:  # importing should still support isolat
 # the card HTML must not reference anything outside itself.
 LOADOUT_DATA_FILE = Path(__file__).with_name("loadout_data.json")
 LOADOUT_ICONS_FILE = Path(__file__).with_name("loadout_icons.json")
+# MaiBot 1.4 can host several bots inside one MAIBOT, and every instance owns a
+# separate ``data/plugins/<plugin id>`` directory (``ctx.paths.data_dir`` in the
+# SDK). User editable game data belongs there: replacing this source tree on a
+# plugin update can no longer wipe the edits, and two instances never share one
+# equipment list. ``BUNDLE_DIR`` stays the fallback for hosts without the path
+# API (MaiBot 1.3 and older) and for tests.
+BUNDLE_DIR = Path(__file__).resolve().parent
+# Seeded into the data directory on first use. Only files users are expected to
+# edit are copied; the multi-megabyte icon bundle is read in place unless a copy
+# already exists in the data directory.
+EDITABLE_DATA_FILES = frozenset({"loadout_data.json"})
 LOADOUT_SLOTS = ("primary", "secondary", "grenade", "booster")
 LOADOUT_SLOT_LABELS = {
     "primary": "主武器",
@@ -114,7 +126,10 @@ LOADOUT_MOTTOS = (
 )
 LOADOUT_FOOTER = "绝地潜兵 2：民主帮你选择 · 随机配装"
 # Lazily filled by ``load_loadout_icons``; ``None`` means "not read yet".
+# ``_LOADOUT_ICONS_CACHE_PATH`` is the file the cache holds, so a second
+# instance reading a different icon file does not get the first one's data.
 _LOADOUT_ICONS_CACHE: dict[str, str] | None = None
+_LOADOUT_ICONS_CACHE_PATH: Path | None = None
 # ``/helldivers loadout <1-8>`` re-draws a single card of the loadout that was
 # generated within this many seconds. The window slides on every reroll so a
 # series of rerolls cannot be cut off halfway.
@@ -213,7 +228,8 @@ def topic_loadout(plugin: Any) -> str:
         f"每重抽一次倒计时重新开始；时间窗可在 config.toml 的 plugin.loadout_reroll_seconds 调整。\n"
         "超过时间或还没抽过时，重抽会提示你先抽一套。\n"
         "中文写法：/helldivers 配装 或 /helldivers 随机配装\n"
-        "装备清单来自项目根目录的 loadout_data.json，可自行增删。"
+        "装备清单读取插件数据目录里的 loadout_data.json"
+        "（MaiBot 1.4 为 data/plugins/<插件 ID>/，首次使用时从插件目录复制），可自行增删。"
     )
 
 
@@ -265,7 +281,7 @@ HELP_TOPICS = {
     ),
     "status": (
         "【/helldivers status】查看配装状态\n"
-        "显示装备数据、图标数量、重抽时间窗与最近一次出图异常。\n"
+        "显示装备数据、图标数量、重抽时间窗、当前实例的数据目录与最近一次出图异常。\n"
         "中文写法：/helldivers 状态"
     ),
     "help": (
@@ -380,6 +396,9 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
         self._loadout_sessions: dict[str, tuple[dict[str, str], str, float]] = {}
         # Why the last card render / image send failed; empty after a success.
         self._last_render_error = ""
+        # Resolved lazily: ``ctx.paths`` only exists inside a runner, and the
+        # directory is per instance (MaiBot 1.4 multi-instance).
+        self._data_dir_path: Path | None = None
 
     async def on_load(self) -> None:
         raw: Any = {}
@@ -414,6 +433,35 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
 
     def _actor_id(self, kwargs: Mapping[str, Any]) -> str:
         return str(kwargs.get("user_id") or "").strip()
+
+    def _data_dir(self) -> Path:
+        """Per-instance data directory, resolved once per plugin instance."""
+        if self._data_dir_path is None:
+            try:
+                context: Any = self.ctx
+            except (AttributeError, RuntimeError):
+                context = None
+            self._data_dir_path = resolve_data_dir(context)
+        return self._data_dir_path
+
+    def _data_file(self, name: str) -> Path:
+        """Active path of one data file; seeds the data directory on first use."""
+        return data_file(name, self._data_dir())
+
+    def _apply_command_config(self, kwargs: Mapping[str, Any]) -> None:
+        """Adopt the live config MaiBot 1.4 attaches to every command call.
+
+        The runner already pushes ``on_config_update`` when the file changes, but
+        1.4 additionally hands the handler the current ``plugin_config``; reading
+        it keeps the group white list correct when a broadcast was missed. An
+        empty payload must never wipe a working configuration.
+        """
+        injected = kwargs.get("plugin_config")
+        if not isinstance(injected, Mapping) or not injected:
+            return
+        parsed = _parse_config(injected)
+        if parsed and parsed != self._cfg:
+            self._cfg = parsed
 
     def _cfg_id_list(self, key: str) -> set[str]:
         """Read a list of QQ numbers, tolerating a bare string or a TOML table."""
@@ -637,8 +685,8 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
         nothing said why. This command walks the same steps and reports the host's
         own error message.
         """
-        pool = load_loadout_pool()
-        icons = load_loadout_icons()
+        pool = load_loadout_pool(self._data_file("loadout_data.json"))
+        icons = load_loadout_icons(self._data_file("loadout_icons.json"))
         total = sum(len(names) for names in pool.values())
         missing = [name for names in pool.values() for name in names if name not in icons]
         lines = [
@@ -672,7 +720,7 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
         return sent, "自检通过" if sent else "图片发送失败", 2
 
     async def _send_loadout_card(self, kwargs: Mapping[str, Any], loadout: Mapping[str, str], motto: str) -> tuple[bool, str, int]:
-        image = await self._render_card(render_loadout_html(loadout, motto=motto, icons=load_loadout_icons()))
+        image = await self._render_card(render_loadout_html(loadout, motto=motto, icons=load_loadout_icons(self._data_file("loadout_icons.json"))))
         if image and await self._send_image(kwargs, image):
             return True, "已发送配装图", 2
         reason = self._last_render_error or "未知原因"
@@ -721,7 +769,7 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
 
     async def _random_loadout(self, kwargs: Mapping[str, Any], argument: str = "") -> tuple[bool, str, int]:
         """Roll a loadout, or re-draw one card of the previous roll."""
-        pool = load_loadout_pool()
+        pool = load_loadout_pool(self._data_file("loadout_data.json"))
         if not pool:
             await self._reply(kwargs, "没有找到配装数据（loadout_data.json），无法生成配装")
             return False, "缺少配装数据", 2
@@ -756,11 +804,19 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
 
     @Command(
         COMMAND_NAME,
+        description="随机配装、单格重抽、状态与出图自检（/helldivers 或 /hd）",
         pattern=COMMAND_PATTERN,
         aliases=list(COMMAND_ALIASES),
         timeout_ms=COMMAND_RPC_TIMEOUT_MS,
+        # MaiBot 1.4 gates ``permission="operator"`` commands on its own allow
+        # lists before the handler runs. This component mixes public actions with
+        # the admin-only ``diag``, so it stays public and keeps checking per
+        # action itself; the host-side lists still apply on top.
+        permission="public",
     )
     async def handle_command(self, **kwargs: Any) -> tuple[bool, str, int]:
+        # 1.4 hands the live plugin config to every command; 1.3 does not.
+        self._apply_command_config(kwargs)
         group_id = str(kwargs.get("group_id") or "").strip()
         if not group_id or group_id not in self._cfg_id_list("allowed_groups"):
             refusal = "本插件仅限配置白名单群聊使用"
@@ -794,12 +850,13 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
             message = f"未知子命令：{action}\n\n{self._usage_hint()}"
             await self._reply(kwargs, message)
             return False, f"未知子命令 {action}", 2
-        pool = load_loadout_pool()
-        icons = load_loadout_icons()
+        pool = load_loadout_pool(self._data_file("loadout_data.json"))
+        icons = load_loadout_icons(self._data_file("loadout_icons.json"))
         message = (
             "绝地潜兵 2：民主帮你选择\n"
             f"配装数据：{sum(len(names) for names in pool.values())} 件，图标 {len(icons)} 个\n"
-            f"重抽时间窗：{self._loadout_reroll_seconds()} 秒"
+            f"重抽时间窗：{self._loadout_reroll_seconds()} 秒\n"
+            f"数据目录：{self._data_dir()}"
         )
         if self._last_render_error:
             message += f"\n配装出图异常：{self._last_render_error}（可用 /helldivers diag 复现）"
@@ -849,6 +906,48 @@ def reroll_loadout_slot(
     return picker.choice(candidates) if candidates else None
 
 
+def resolve_data_dir(ctx: Any) -> Path:
+    """The host-assigned per-instance data directory, or the bundled directory.
+
+    MaiBot 1.4 passes ``ctx.paths.data_dir``; older hosts do not, and a plugin
+    running outside a runner has no context at all. Both cases keep the previous
+    behaviour: read the files shipped next to this module.
+    """
+    paths = getattr(ctx, "paths", None)
+    raw = getattr(paths, "data_dir", None)
+    if raw is None or not str(raw).strip():
+        return BUNDLE_DIR
+    try:
+        return Path(raw)
+    except (TypeError, ValueError):
+        return BUNDLE_DIR
+
+
+def data_file(name: str, data_dir: Path | None = None) -> Path:
+    """Active copy of a data file: the per-instance one first, else the bundled one.
+
+    ``EDITABLE_DATA_FILES`` are seeded into the data directory once so that an
+    existing installation keeps its edited equipment list after the upgrade, and
+    a later plugin update -- which replaces the source tree -- cannot drop it.
+    A read-only or missing data directory simply falls back to the bundled file.
+    """
+    source = BUNDLE_DIR / name
+    base = Path(data_dir) if data_dir is not None else BUNDLE_DIR
+    if base == BUNDLE_DIR:
+        return source
+    target = base / name
+    if target.exists():
+        return target
+    if name not in EDITABLE_DATA_FILES or not source.exists():
+        return source
+    try:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, target)
+    except OSError:
+        return source
+    return target
+
+
 def load_loadout_pool(path: str | Path = LOADOUT_DATA_FILE) -> dict[str, list[str]]:
     """Slot -> item names. Returns an empty mapping when the data file is missing."""
     try:
@@ -870,14 +969,16 @@ def load_loadout_pool(path: str | Path = LOADOUT_DATA_FILE) -> dict[str, list[st
 def load_loadout_icons(path: str | Path = LOADOUT_ICONS_FILE) -> dict[str, str]:
     """Item name -> self-contained data URI. Empty when the icon file is absent.
 
-    Read once per process: the file is a few hundred kilobytes and the icon set
-    does not change while the bot runs.
+    Cached per path: the file is several megabytes and the icon set does not
+    change while the bot runs, but two instances (or a test run) can point at
+    different files, so the cache cannot ignore ``path``.
     """
-    global _LOADOUT_ICONS_CACHE
-    if _LOADOUT_ICONS_CACHE is None:
+    global _LOADOUT_ICONS_CACHE, _LOADOUT_ICONS_CACHE_PATH
+    target = Path(path)
+    if _LOADOUT_ICONS_CACHE is None or _LOADOUT_ICONS_CACHE_PATH != target:
         icons: dict[str, str] = {}
         try:
-            payload = json.loads(Path(path).read_text(encoding="utf-8"))
+            payload = json.loads(target.read_text(encoding="utf-8"))
         except (OSError, ValueError):
             payload = None
         raw = payload.get("icons") if isinstance(payload, Mapping) else None
@@ -887,6 +988,7 @@ def load_loadout_icons(path: str | Path = LOADOUT_ICONS_FILE) -> dict[str, str]:
                 if text.startswith("data:image/"):
                     icons[str(name)] = text
         _LOADOUT_ICONS_CACHE = icons
+        _LOADOUT_ICONS_CACHE_PATH = target
     return _LOADOUT_ICONS_CACHE
 
 
