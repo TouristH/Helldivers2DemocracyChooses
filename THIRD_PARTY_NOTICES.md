@@ -190,9 +190,11 @@ subject to its respective rights holders and terms.
 
 Wiki sources read through search excerpts are explicitly recorded as
 `search_excerpt` with no invented revision ID. Entries depending on those
-excerpts remain partially verified. Community positioning and the subjective
-`community.toy` tag are kept separate from mechanism descriptions and preserve
-conditions, disagreement, and counterexamples where reported. Editing the CSV
+excerpts remain partially verified. The fixed, independent `player.*` tags,
+including the subjective `player.toy` tag, are kept separate from mechanism
+descriptions and preserve conditions, disagreement, and counterexamples where
+reported. A semicolon-joined tag collection is only a review/export view, not
+a composite tag or a convenience score. Editing the workbook or CSV
 does not rewrite or fabricate the initial source evidence.
 
 ## Python dependencies

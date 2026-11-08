@@ -1,22 +1,18 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "researched_at": "2026-11-08",
   "catalog_updated_at": "2026-10-21",
   "policy": {
-    "practical_role_priority": [
-      "user_edit",
-      "community_observation",
-      "curated_inference",
-      "wiki_fact",
-      "official_fact"
-    ],
     "mechanics": "Independent factual descriptions; never converted directly into convenience ratings.",
     "uncertainty": "Search excerpts are partial verification; absence of a community rating means unknown.",
     "runtime_table_precedence": [
       "loadout_tags.xlsx",
       "loadout_tags.csv"
     ],
-    "scope": "Knowledge foundation only; current random generation is unchanged."
+    "scope": "Knowledge foundation only; current random generation is unchanged.",
+    "player_tags": "Independent IDs from the fixed player vocabulary; no combination IDs or standalone anti-tank convenience score.",
+    "player_tag_display": "A semicolon-joined review/export view, parsed into a set of independent IDs at runtime.",
+    "practical_priority": "Prefer sourced player tags over reference-role inference; retain mechanism descriptions independently."
   },
   "taxonomy": {
     "categories": {
@@ -178,21 +174,6 @@
       }
     },
     "tags": {
-      "community.automaton_recommended": {
-        "label": "机器人玩家推荐",
-        "description": "玩家机器人战线配装清单中推荐；具体任务与使用条件见来源。",
-        "dimension": "community"
-      },
-      "community.illuminate_recommended": {
-        "label": "光能玩家推荐",
-        "description": "玩家光能战线配装清单中推荐；不等同于通用强度或方便反重。",
-        "dimension": "community"
-      },
-      "community.toy": {
-        "label": "玩具",
-        "description": "有玩家认为偏整活、角色扮演或耍帅，实用性有限；保留版本、条件及反例，不表示完全无效。",
-        "dimension": "community"
-      },
       "limitation.no_demolition": {
         "label": "不可常规拆迁",
         "description": "来源明确限制普通生成点拆除用途，例外见备注。",
@@ -482,8 +463,160 @@
         "label": "治疗剂强化",
         "description": "影响治疗剂使用或效果。",
         "dimension": "auxiliary"
+      },
+      "player.anti_tank": {
+        "label": "反重",
+        "description": "玩家反馈可承担重型威胁处理；适用目标与条件见研究备注。",
+        "dimension": "player"
+      },
+      "player.anti_medium": {
+        "label": "反中",
+        "description": "处理中型威胁的玩家定位，不由穿甲等级自动生成。",
+        "dimension": "player"
+      },
+      "player.anti_air": {
+        "label": "对空",
+        "description": "有玩家实战依据的对空用途。",
+        "dimension": "player"
+      },
+      "player.crowd_control": {
+        "label": "控场",
+        "description": "通过眩晕、错乱、硬直等限制敌人行动。",
+        "dimension": "player"
+      },
+      "player.crowd_clear": {
+        "label": "清杂",
+        "description": "适合清理轻型敌群的玩家定位。",
+        "dimension": "player"
+      },
+      "player.structure_demolition": {
+        "label": "拆迁",
+        "description": "有玩家依据的生成点或设施处理用途，具体对象见备注。",
+        "dimension": "player"
+      },
+      "player.area_denial": {
+        "label": "区域封锁",
+        "description": "持续影响区域、限制敌方通行或驻留。",
+        "dimension": "player"
+      },
+      "player.sustain": {
+        "label": "续航支援",
+        "description": "补给或治疗等续航支援用途。",
+        "dimension": "player"
+      },
+      "player.protection": {
+        "label": "防护",
+        "description": "玩家认可的减伤、挡弹或掩护用途。",
+        "dimension": "player"
+      },
+      "player.mobility": {
+        "label": "机动",
+        "description": "帮助移动、转移或接近目标。",
+        "dimension": "player"
+      },
+      "player.stealth": {
+        "label": "潜行",
+        "description": "有实际隐蔽或脱战反馈，不将出现在潜行配装中等同无声属性。",
+        "dimension": "player"
+      },
+      "player.objective_support": {
+        "label": "任务辅助",
+        "description": "对样本、撤离、增援等任务流程有帮助。",
+        "dimension": "player"
+      },
+      "player.easy_to_use": {
+        "label": "简易使用",
+        "description": "玩家在备注场景中认为操作直观或命中要求较宽容，不保证无条件有效。",
+        "dimension": "player"
+      },
+      "player.precise_aim_required": {
+        "label": "需精确瞄准",
+        "description": "较依赖弱点或精确命中，适用目标与距离见备注。",
+        "dimension": "player"
+      },
+      "player.preparation_required": {
+        "label": "需准备",
+        "description": "发挥依赖蓄力、架设、等待或合适站位等准备条件。",
+        "dimension": "player"
+      },
+      "player.supply_dependent": {
+        "label": "补给依赖",
+        "description": "玩家明确指出弹量或持续作战对补给的依赖。",
+        "dimension": "player"
+      },
+      "player.single_target": {
+        "label": "对单",
+        "description": "有明确单个或指定目标的实战定位，不由反重标签自动推导。",
+        "dimension": "player"
+      },
+      "player.area_target": {
+        "label": "对群",
+        "description": "有明确多目标或范围作战反馈，不由清杂标签自动推导。",
+        "dimension": "player"
+      },
+      "player.friendly_fire_risk": {
+        "label": "易误伤",
+        "description": "玩家明确讨论的友军误伤风险。",
+        "dimension": "player"
+      },
+      "player.self_damage_risk": {
+        "label": "易自伤",
+        "description": "玩家明确讨论的自伤风险。",
+        "dimension": "player"
+      },
+      "player.emergency_backup": {
+        "label": "应急补位",
+        "description": "在备注所述目标或场景中更适合作为补充，不等于整件装备只能应急。",
+        "dimension": "player"
+      },
+      "player.toy": {
+        "label": "玩具",
+        "description": "部分玩家认为偏整活、角色扮演或耍帅，保留实用反例，不等于完全无效。",
+        "dimension": "player"
+      },
+      "player.disputed": {
+        "label": "评价有分歧",
+        "description": "存在不同玩家体验或不同条件下的相反反馈，具体内容见备注。",
+        "dimension": "player"
+      },
+      "player.automaton_recommended": {
+        "label": "机器人推荐",
+        "description": "玩家机器人战线配装推荐，不是通用强度评级。",
+        "dimension": "player"
+      },
+      "player.illuminate_recommended": {
+        "label": "光能族推荐",
+        "description": "玩家光能族战线配装推荐，不是通用强度评级。",
+        "dimension": "player"
       }
-    }
+    },
+    "player_tag_order": [
+      "player.anti_tank",
+      "player.anti_medium",
+      "player.anti_air",
+      "player.crowd_control",
+      "player.crowd_clear",
+      "player.structure_demolition",
+      "player.area_denial",
+      "player.sustain",
+      "player.protection",
+      "player.mobility",
+      "player.stealth",
+      "player.objective_support",
+      "player.easy_to_use",
+      "player.precise_aim_required",
+      "player.preparation_required",
+      "player.supply_dependent",
+      "player.single_target",
+      "player.area_target",
+      "player.friendly_fire_risk",
+      "player.self_damage_risk",
+      "player.emergency_backup",
+      "player.toy",
+      "player.disputed",
+      "player.automaton_recommended",
+      "player.illuminate_recommended"
+    ]
   },
   "sources": [
     {
@@ -2094,8 +2227,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.ar-23p-liberator-penetrator",
@@ -2133,8 +2265,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.ar-23c-liberator-concussive",
@@ -2180,8 +2311,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.br-14-adjudicator",
@@ -2219,8 +2349,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.ar-61-tenderizer",
@@ -2258,8 +2387,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.ar-23a-liberator-carbine",
@@ -2297,8 +2425,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.sta-52-assault-rifle",
@@ -2336,8 +2463,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.ar-32-pacifier",
@@ -2381,7 +2507,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_steam_cn_modding",
@@ -2400,8 +2526,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.ma5c-assault-rifle",
@@ -2439,8 +2564,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.ar-2-coyote",
@@ -2476,7 +2600,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -2484,7 +2608,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -2492,7 +2616,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_bili_coyote_desc",
@@ -2511,8 +2635,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.ar-gl-21-one-two",
@@ -2556,7 +2679,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_steam_cn_modding"
@@ -2574,8 +2697,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.ar-59-suppressor",
@@ -2621,8 +2743,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.ar-11-arbitrator",
@@ -2661,8 +2782,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。 官方为实弹步枪加下挂霰弹；电击发不等于电弧攻击。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.r-63-diligence",
@@ -2700,8 +2820,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.r-63cs-diligence-counter-sniper",
@@ -2729,12 +2848,20 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_steam_cn_modding"
           ],
           "note": "依赖小型双足等目标弱点。"
+        },
+        {
+          "id": "player.precise_aim_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnwp_steam_cn_modding"
+          ],
+          "note": "既有反中型玩家备注明确依赖小型双足等目标弱点。"
         }
       ],
       "occupancy": {
@@ -2747,8 +2874,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.r-2124-constitution",
@@ -2768,7 +2894,7 @@
           "note": "实弹/动能投射；不据此推断伤害、穿甲或反坦克能力。"
         },
         {
-          "id": "community.toy",
+          "id": "player.toy",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_constitution_attachments",
@@ -2783,6 +2909,15 @@
             "wp_traits_index"
           ],
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "wp_comm_constitution_attachments",
+            "wp_comm_constitution_post_buff"
+          ],
+          "note": "现有玩具评价同条备注保留了实用反例/熟练玩家意见；表达分歧，不作无效或禁抽结论。"
         }
       ],
       "occupancy": {
@@ -2795,8 +2930,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.r-6-deadeye",
@@ -2834,8 +2968,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.r-2-amendment",
@@ -2873,8 +3006,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.r-72-censor",
@@ -2910,7 +3042,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.stealth",
+          "id": "player.stealth",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_steam_cn_modding"
@@ -2928,8 +3060,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.r-4-hyena",
@@ -2975,8 +3106,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.r-40-sightliner",
@@ -3014,8 +3144,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.mp-98-knight",
@@ -3051,7 +3180,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_bili_dominator_comments"
@@ -3059,7 +3188,7 @@
           "note": "一位2026高赞玩家的定位，非共识排名。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_bili_dominator_comments"
@@ -3077,8 +3206,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.smg-37-defender",
@@ -3114,7 +3242,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.mobility",
+          "id": "player.mobility",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_steam_cn_modding"
@@ -3132,8 +3260,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.smg-72-pummeler",
@@ -3185,7 +3312,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_steam_cn_modding",
@@ -3204,8 +3331,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.smg-32-reprimand",
@@ -3233,12 +3359,20 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_steam_cn_modding"
           ],
           "note": "瞄弱点；后坐控制有门槛。"
+        },
+        {
+          "id": "player.precise_aim_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnwp_steam_cn_modding"
+          ],
+          "note": "既有玩家备注明确需瞄弱点并控制后坐；不从武器分类猜测。"
         }
       ],
       "occupancy": {
@@ -3251,8 +3385,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.sta-11-smg",
@@ -3298,8 +3431,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.m7s-smg",
@@ -3353,8 +3485,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.smg-flam-34-stoker",
@@ -3398,7 +3529,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_steam_cn_modding"
@@ -3416,8 +3547,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.smg-203-gallant",
@@ -3463,8 +3593,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.sg-8-punisher",
@@ -3492,7 +3621,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_shotguns_nov"
@@ -3510,8 +3639,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.sg-225-breaker",
@@ -3539,7 +3667,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_shotguns_nov"
@@ -3557,8 +3685,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.sg-8s-slugger",
@@ -3586,7 +3713,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_shotguns_nov",
@@ -3595,12 +3722,20 @@
           "note": "单点推退，拦截冲脸目标。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_cyborg_counter"
           ],
           "note": "用于生化人，仍需有效命中。"
+        },
+        {
+          "id": "player.single_target",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnwp_reddit_shotguns_nov"
+          ],
+          "note": "既有玩家备注明确描述单点推退、拦截冲脸目标；对单不是由反重职责自动推来。"
         }
       ],
       "occupancy": {
@@ -3613,8 +3748,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.sg-225sp-breaker-spray-and-pray",
@@ -3642,7 +3776,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_shotguns_nov",
@@ -3661,8 +3795,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.sg-225ie-breaker-incendiary",
@@ -3698,7 +3831,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_shotguns_nov",
@@ -3718,8 +3851,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.sg-451-cookout",
@@ -3755,7 +3887,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_shotguns_nov"
@@ -3763,7 +3895,7 @@
           "note": "硬直配合燃烧，近身可靠性有分歧。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_shotguns_nov"
@@ -3781,8 +3913,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.sg-20-halt",
@@ -3836,7 +3967,7 @@
           "note": "界面并列轻/中档，来自不同弹种；不是每次攻击同时具备，非实战反重判断。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_bili_halt_desc",
@@ -3857,8 +3988,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.dbs-2-double-freedom",
@@ -3886,7 +4016,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_steam_cn_modding"
@@ -3904,8 +4034,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.m90a-shotgun",
@@ -3943,8 +4072,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.sg-97-sweeper",
@@ -3972,7 +4100,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_cyborg_counter"
@@ -3990,8 +4118,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.r-36-eruptor",
@@ -4028,7 +4155,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -4036,7 +4163,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -4044,7 +4171,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_steam_cn_modding"
@@ -4052,13 +4179,22 @@
           "note": "拆巢补位，腾出其他装备职责。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_steam_cn_modding",
             "cnwp_reddit_cyborg_counter"
           ],
           "note": "处理中型威胁；自伤/操控/射速限制。"
+        },
+        {
+          "id": "player.self_damage_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnwp_steam_cn_modding",
+            "cnwp_reddit_cyborg_counter"
+          ],
+          "note": "既有反中型玩家备注明确列出自伤限制；不是仅因爆炸机制就批量贴风险。"
         }
       ],
       "occupancy": {
@@ -4072,8 +4208,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.cb-9-exploding-crossbow",
@@ -4109,7 +4244,7 @@
           "note": "对照表明确One Handed；未把该特性推广至所有SMG。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -4117,7 +4252,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -4125,7 +4260,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_steam_cn_modding"
@@ -4143,8 +4278,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.gl-15-evictor",
@@ -4191,8 +4325,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.las-5-scythe",
@@ -4236,7 +4369,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_steam_cn_modding"
@@ -4254,8 +4387,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.plas-1-scorcher",
@@ -4306,7 +4438,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -4314,7 +4446,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -4332,8 +4464,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.las-16-sickle",
@@ -4378,8 +4509,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。 索引个页明确不点燃目标，未添加fire。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.sg-8p-punisher-plasma",
@@ -4422,7 +4552,7 @@
           "note": "靠爆炸硬直干扰群体；未标为眩晕状态。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_steam_cn_modding",
@@ -4431,7 +4561,7 @@
           "note": "范围硬直，需适应抛物线。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_cyborg_counter",
@@ -4440,7 +4570,7 @@
           "note": "溅射处理集中敌群；避免贴身。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_cyborg_counter"
@@ -4458,8 +4588,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.arc-12-blitzer",
@@ -4512,8 +4641,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.plas-101-purifier",
@@ -4555,7 +4683,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -4563,7 +4691,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -4571,7 +4699,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_cyborg_counter"
@@ -4589,8 +4717,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.plas-39-accelerator-rifle",
@@ -4643,8 +4770,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.las-17-double-edge-sickle",
@@ -4698,7 +4824,7 @@
           "note": "界面并列多档，实际随热状态变化并伴随自伤风险；非恒定重穿透，不等同便捷反重。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -4716,8 +4842,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。 过热可自伤；未将自燃写成对敌燃烧能力。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.las-13-trident",
@@ -4753,7 +4878,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -4761,7 +4886,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_cyborg_counter"
@@ -4779,8 +4904,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.r-40-k-hot-shot-marksman-rifle",
@@ -4818,8 +4942,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。 发射激光但需换电池，不添加heat标签。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.las-12-sai",
@@ -4855,7 +4978,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -4873,8 +4996,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.jar-5-dominator",
@@ -4902,7 +5024,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_steam_cn_modding",
@@ -4911,7 +5033,7 @@
           "note": "看重硬直，操控笨重影响应急。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_cyborg_counter"
@@ -4929,8 +5051,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。 不因名称或旧分类误加explosive；当前对照表仅支持动能投射。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.flam-66-torcher",
@@ -4976,8 +5097,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "primary.vg-70-variable",
@@ -5015,8 +5135,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.p-2-peacemaker",
@@ -5062,8 +5181,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.p-19-redeemer",
@@ -5091,7 +5209,7 @@
           "note": "对照表One Handed特性；不代表占用背包或支援武器槽。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_sidearm_complements"
@@ -5117,8 +5235,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.p-4-senator",
@@ -5146,7 +5263,7 @@
           "note": "对照表One Handed特性；不代表占用背包或支援武器槽。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_senator_balance"
@@ -5160,6 +5277,23 @@
             "wp_traits_index"
           ],
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
+        },
+        {
+          "id": "player.precise_aim_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "wp_comm_senator_balance",
+            "wp_comm_at_sidearm"
+          ],
+          "note": "仅重型应急用途需命中特定弱点；不把反中型日常使用一概称为难用。"
+        },
+        {
+          "id": "player.emergency_backup",
+          "basis": "community_observation",
+          "source_ids": [
+            "wp_comm_at_sidearm"
+          ],
+          "note": "旧讨论允许特定重敌补刀，但较慢击杀/换弹使其不能替代专用反重。"
         }
       ],
       "occupancy": {
@@ -5173,10 +5307,8 @@
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
       },
-      "community_assessments": [
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "emergency",
           "source_ids": [
             "wp_comm_senator_balance",
             "wp_comm_at_sidearm"
@@ -5211,7 +5343,7 @@
           "note": "对照表One Handed特性；不代表占用背包或支援武器槽。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_senator_balance"
@@ -5237,8 +5369,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.p-92-warrant",
@@ -5284,8 +5415,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.m6c-socom-pistol",
@@ -5339,8 +5469,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.p-69-veto",
@@ -5376,7 +5505,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_cyborg_counter"
@@ -5394,8 +5523,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.p-44-mist",
@@ -5442,8 +5570,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。 官方介绍已核实单手机关手枪；未按Mist名称加烟雾或消音。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.cqc-19-stun-lance",
@@ -5504,8 +5631,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.cqc-30-stun-baton",
@@ -5566,8 +5692,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.cqc-5-combat-hatchet",
@@ -5612,8 +5737,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.cqc-2-saber",
@@ -5640,7 +5764,7 @@
           ]
         },
         {
-          "id": "community.toy",
+          "id": "player.toy",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_saber_baton",
@@ -5656,6 +5780,16 @@
             "wp_traits_index"
           ],
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "wp_comm_saber_baton",
+            "wp_comm_melee_balance",
+            "wp_comm_melee_counterpoint"
+          ],
+          "note": "现有玩具评价同条备注保留了实用反例/熟练玩家意见；表达分歧，不作无效或禁抽结论。"
         }
       ],
       "occupancy": {
@@ -5668,8 +5802,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.cqc-42-machete",
@@ -5714,8 +5847,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.cqc-73-entrenchment-tool",
@@ -5752,8 +5884,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.las-7-dagger",
@@ -5815,8 +5946,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.gp-31-grenade-pistol",
@@ -5852,7 +5982,7 @@
           "note": "资料明确可封闭普通虫洞；不承诺适用于所有建筑。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_sidearm_complements",
@@ -5871,8 +6001,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.sg-22-bushwhacker",
@@ -5900,7 +6029,7 @@
           "note": "对照表One Handed特性；不代表占用背包或支援武器槽。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_senator_balance"
@@ -5926,8 +6055,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.p-72-crisper",
@@ -5955,7 +6083,7 @@
           "note": "表列Incendiary或Fire伤害/状态；未归为通用反坦克。"
         },
         {
-          "id": "role.area_denial",
+          "id": "player.area_denial",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_sidearm_complements"
@@ -5963,12 +6091,28 @@
           "note": "玩家描述用地面火焰边退边烧近身杂兵；历史体验，待实测。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_sidearm_complements"
           ],
           "note": "历史玩家经验：处理近身轻型敌人；不据此作当前强度评级。"
+        },
+        {
+          "id": "player.emergency_backup",
+          "basis": "community_observation",
+          "source_ids": [
+            "wp_comm_at_sidearm"
+          ],
+          "note": "历史玩家只在特定近距场景处理重敌，主用途仍是清杂/拒止。"
+        },
+        {
+          "id": "player.self_damage_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "wp_comm_at_sidearm"
+          ],
+          "note": "现有实战评价明确提到近距喷射的自燃风险。"
         }
       ],
       "occupancy": {
@@ -5982,10 +6126,8 @@
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
       },
-      "community_assessments": [
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "emergency",
           "source_ids": [
             "wp_comm_at_sidearm"
           ],
@@ -6029,8 +6171,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.plas-15-loyalist",
@@ -6073,7 +6214,7 @@
           ]
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_sidearm_complements"
@@ -6099,8 +6240,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.gp-20-ultimatum",
@@ -6144,7 +6284,7 @@
           "note": "资料明确反坦克爆破用途；限近距、低备弹。"
         },
         {
-          "id": "role.anti_tank",
+          "id": "player.anti_tank",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_ultimatum_uses",
@@ -6153,7 +6293,7 @@
           "note": "玩家用于补足非反重支援装的重敌缺口；也有以低弹量和自伤风险拒用的意见。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_ultimatum_uses"
@@ -6161,7 +6301,7 @@
           "note": "玩家用于巢穴/制造厂/停泊飞船；弹药宝贵，取舍依赖任务。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -6169,12 +6309,46 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.precise_aim_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "wp_comm_ultimatum_uses"
+          ],
+          "note": "指抛物线落点与安全距离判断，不是必须命中重甲小弱点。"
+        },
+        {
+          "id": "player.friendly_fire_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "wp_comm_ultimatum_uses",
+            "wp_comm_at_sidearm"
+          ],
+          "note": "现有评价明确提到爆炸友伤，需要保留安全距离。"
+        },
+        {
+          "id": "player.self_damage_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "wp_comm_ultimatum_uses",
+            "wp_comm_at_sidearm"
+          ],
+          "note": "近距落点和自伤风险是玩家拒用理由之一。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "wp_comm_ultimatum_uses"
+          ],
+          "note": "有人作近中距主力，有人仅补位或拒用；低备弹与自伤影响偏好。"
         }
       ],
       "occupancy": {
@@ -6188,10 +6362,8 @@
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
       },
-      "community_assessments": [
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "wp_comm_ultimatum_uses",
             "wp_comm_at_sidearm"
@@ -6250,7 +6422,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_cyborg_counter"
@@ -6268,8 +6440,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.p-35-re-educator",
@@ -6322,8 +6493,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.p-33-missile-pistol",
@@ -6367,7 +6537,7 @@
           "note": "基于资料明确反装甲用途与重型弱点用法；不由穿甲等级单独推断。"
         },
         {
-          "id": "role.anti_tank",
+          "id": "player.anti_tank",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_missile_breacher"
@@ -6375,7 +6545,7 @@
           "note": "玩家比较其反重用途：P33更重视弱点瞄准，P34黏附后可转移；均受低备弹限制。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_missile_breacher"
@@ -6389,6 +6559,22 @@
             "wp_traits_index"
           ],
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
+        },
+        {
+          "id": "player.precise_aim_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "wp_comm_missile_breacher"
+          ],
+          "note": "针对重地面目标仍需弱点，锁定不能替代部位判断。"
+        },
+        {
+          "id": "player.supply_dependent",
+          "basis": "community_observation",
+          "source_ids": [
+            "wp_comm_missile_breacher"
+          ],
+          "note": "限连续反重语境：费弹、低备弹和补给限制被明确比较，不指偶尔拆点必须绑定补给包。"
         }
       ],
       "occupancy": {
@@ -6402,10 +6588,8 @@
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
       },
-      "community_assessments": [
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "wp_comm_missile_breacher"
           ],
@@ -6455,7 +6639,7 @@
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_cyborg_counter"
@@ -6463,7 +6647,7 @@
           "note": "靠硬直打断突进，为后续射击创造空间。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_cyborg_counter"
@@ -6481,8 +6665,7 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      },
-      "community_assessments": []
+      }
     },
     {
       "id": "secondary.p-34-breacher",
@@ -6535,7 +6718,7 @@
           "note": "黏附爆破可处理重型弱点和破甲；不保证任何部位一击击杀。"
         },
         {
-          "id": "role.anti_tank",
+          "id": "player.anti_tank",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_missile_breacher"
@@ -6543,7 +6726,7 @@
           "note": "玩家比较其反重用途：P33更重视弱点瞄准，P34黏附后可转移；均受低备弹限制。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_missile_breacher"
@@ -6551,7 +6734,7 @@
           "note": "玩家报告用于远距离敌方生成点，P34较少依赖开口；经验不保证所有结构。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -6559,12 +6742,30 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.easy_to_use",
+          "basis": "community_observation",
+          "source_ids": [
+            "wp_comm_missile_breacher",
+            "wp_comm_breacher_daily"
+          ],
+          "note": "相对P33，黏附命中后可转移且较少依赖精确弱点；限这一比较，不保证所有巨型目标简单。"
+        },
+        {
+          "id": "player.supply_dependent",
+          "basis": "community_observation",
+          "source_ids": [
+            "wp_comm_missile_breacher",
+            "wp_comm_breacher_daily"
+          ],
+          "note": "连续反重受低弹量、场景补弹和延迟限制；不硬编码某件补给搭配。"
         }
       ],
       "occupancy": {
@@ -6579,10 +6780,8 @@
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
       },
-      "community_assessments": [
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "convenient",
           "source_ids": [
             "wp_comm_missile_breacher",
             "wp_comm_breacher_daily"
@@ -6632,7 +6831,6 @@
           "ut_standard_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。"
@@ -6687,7 +6885,6 @@
           "ut_standard_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。"
@@ -6750,7 +6947,6 @@
           "ut_standard_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。Wiki已报告洞穴内火焰生成问题，效果依赖环境。"
@@ -6790,7 +6986,7 @@
           "note": "大范围爆炸；需管理较长延时。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_thermite_conditions"
@@ -6805,7 +7001,6 @@
           "ut_standard_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。"
@@ -6852,7 +7047,6 @@
           "ut_standard_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。"
@@ -6899,7 +7093,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。"
@@ -6939,7 +7132,7 @@
           "note": "遮断视线后需移位，烟雾不等于停止敌方射击。"
         },
         {
-          "id": "role.objective_support",
+          "id": "player.objective_support",
           "basis": "community_observation",
           "source_ids": [
             "ut_community_support"
@@ -6962,7 +7155,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。"
@@ -6986,7 +7178,7 @@
           "note": ""
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "ut_community_support"
@@ -7009,7 +7201,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。眩晕的穿甲显示不代表拥有伤害型反坦克能力。"
@@ -7049,7 +7240,7 @@
           "note": ""
         },
         {
-          "id": "role.anti_tank",
+          "id": "player.anti_tank",
           "basis": "community_observation",
           "source_ids": [
             "ut_community_at",
@@ -7057,6 +7248,33 @@
             "cnwp_reddit_thermite_conditions"
           ],
           "note": "玩家常用的口袋反重补位；先粘附目标，再等待作用。 补足反重；投掷命中、延迟与部位影响可靠性。"
+        },
+        {
+          "id": "player.single_target",
+          "basis": "community_observation",
+          "source_ids": [
+            "ut_community_at",
+            "ut_community_support"
+          ],
+          "note": "原评价明确称单体反重补位；先粘附具体目标再等待作用。"
+        },
+        {
+          "id": "player.emergency_backup",
+          "basis": "community_observation",
+          "source_ids": [
+            "ut_community_at",
+            "ut_community_support"
+          ],
+          "note": "玩家用来填补配装的反重缺口；并非否认熟练使用者把它作为主要反重来源。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "ut_community_at",
+            "cnwp_reddit_thermite_conditions"
+          ],
+          "note": "有人看重口袋反重，有人不喜欢命中难度、反弹与生效延迟；场景和偏好不能抹平。"
         }
       ],
       "occupancy": {
@@ -7066,10 +7284,12 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。实战便利性和纸面穿甲分开；粘附失败、延迟爆炸及近身燃烧风险仍需考虑。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "convenient",
           "source_ids": [
             "ut_community_at",
             "ut_community_support"
@@ -7077,18 +7297,12 @@
           "note": "玩家普遍用作方便的单体反重补位，但需成功粘附并等待；讨论中也有反弹与延迟的负面反馈，不保证一次命中解决所有重型。"
         },
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "cnwp_reddit_thermite_conditions"
           ],
           "note": "讨论存在分歧：认可反重补位，但有人嫌难投中、起效慢或支援武器更顺手；并非所有玩家的统一评级。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。实战便利性和纸面穿甲分开；粘附失败、延迟爆炸及近身燃烧风险仍需考虑。"
-      }
+      ]
     },
     {
       "id": "grenade.g-13-incendiary-impact",
@@ -7147,7 +7361,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。Wiki已报告洞穴内火焰生成问题。"
@@ -7179,13 +7392,22 @@
           "note": "适合精确安静击杀，需命中弱点。"
         },
         {
-          "id": "community.toy",
+          "id": "player.toy",
           "basis": "community_observation",
           "source_ids": [
             "ut_community_knife_recent",
             "ut_community_knife_fun"
           ],
           "note": "部分玩家将飞刀视作整活、挑战或风格选择；同帖有认可其无声潜行与对特定目标用途的意见，保留争议，不等于完全无效。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "ut_community_knife_recent",
+            "ut_community_knife_fun"
+          ],
+          "note": "现有玩具评价同条备注保留了实用反例/熟练玩家意见；表达分歧，不作无效或禁抽结论。"
         }
       ],
       "occupancy": {
@@ -7195,7 +7417,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。Wiki有主机情况下仍可能惊动敌人的已知问题，不保证绝对静默。社区“玩具”评价存在明显分歧，不能覆盖静默潜行的窄用途。"
@@ -7227,7 +7448,7 @@
           "note": ""
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "ut_community_support"
@@ -7251,7 +7472,7 @@
           "note": "Wiki明确气体弹爆发具有拆除生成建筑的能力。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -7259,7 +7480,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -7274,7 +7495,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。气体的高穿甲值不等于快速反重，未据此添加反坦克便利性评价。"
@@ -7329,7 +7549,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。生成建筑适用条件不同，寻踪器不索敌虫洞；不作通用拆迁工具标注。"
@@ -7361,7 +7580,7 @@
           "note": ""
         },
         {
-          "id": "role.area_denial",
+          "id": "player.area_denial",
           "basis": "community_observation",
           "source_ids": [
             "ut_community_pyro"
@@ -7369,7 +7588,7 @@
           "note": "玩家常投在窄口、增援点和敌方行进路径。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "ut_community_pyro"
@@ -7377,12 +7596,28 @@
           "note": ""
         },
         {
-          "id": "role.anti_tank",
+          "id": "player.anti_tank",
           "basis": "community_observation",
           "source_ids": [
             "ut_community_pyro"
           ],
           "note": "实战能处理部分重型，但依赖火花命中与目标停留，稳定性有争议。"
+        },
+        {
+          "id": "player.preparation_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "ut_community_pyro"
+          ],
+          "note": "反重需安排目标留在火花区，慢速/静止大目标更合适；属于布置与时机要求。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "ut_community_pyro"
+          ],
+          "note": "部分重型的命中稳定性、击杀次数及补丁时期有不同反馈，保留历史条件。"
         }
       ],
       "occupancy": {
@@ -7392,20 +7627,18 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。Wiki已报告洞穴火焰问题；社区较早讨论推荐洞穴的意见不作为现行环境保证。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "ut_community_pyro"
           ],
           "note": "玩家反馈对慢速或静止且大碰撞体积的重型更好用；需让目标留在火花区，快速目标及细小腿部命中不稳定；讨论有击杀次数与补丁变化争议，不按纸面中穿排除，也不保证反重。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。Wiki已报告洞穴火焰问题；社区较早讨论推荐洞穴的意见不作为现行环境保证。"
-      }
+      ]
     },
     {
       "id": "grenade.g-109-urchin",
@@ -7464,7 +7697,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。"
@@ -7519,7 +7751,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。放电和弹跳可能伤及队友，不能替代虫洞/制造厂拆迁工具。"
@@ -7582,7 +7813,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。虽可拆生成建筑，但近炸触发条件导致操作不便，未标成通用拆迁优选。"
@@ -7637,7 +7867,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。撞击即生烟，需注意范围较小；烟雾本身不取消已经开始的攻击。"
@@ -7692,7 +7921,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。"
@@ -7724,7 +7952,7 @@
           "note": ""
         },
         {
-          "id": "role.anti_tank",
+          "id": "player.anti_tank",
           "basis": "community_observation",
           "source_ids": [
             "ut_community_at",
@@ -7733,12 +7961,38 @@
           "note": "玩家以即时高爆处理近中距重型，应考虑投掷位置和安全距离。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "ut_community_at"
           ],
           "note": "爆炸可同时处理重型周边的多个目标。"
+        },
+        {
+          "id": "player.self_damage_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "ut_community_at",
+            "ut_community_support"
+          ],
+          "note": "有效落点靠近自身时存在明显自伤风险。"
+        },
+        {
+          "id": "player.area_target",
+          "basis": "community_observation",
+          "source_ids": [
+            "ut_community_at"
+          ],
+          "note": "原玩家职责记录明确可同时处理重型周边多个目标，并非从“爆炸”机制推导。"
+        },
+        {
+          "id": "player.emergency_backup",
+          "basis": "community_observation",
+          "source_ids": [
+            "ut_community_at",
+            "ut_community_support"
+          ],
+          "note": "即时爆炸可救急，但小有效内圈、安全距离与携带量仍影响可靠性。"
         }
       ],
       "occupancy": {
@@ -7748,21 +8002,19 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。社区旧的每箱只补一枚说法已过时，未收录为现行补给事实。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "ut_community_at",
             "ut_community_support"
           ],
           "note": "即时爆炸被多位玩家认为能方便救急，但有效内圈小、近距离自伤风险及携带量限制需要配合落点和补给；反重方便程度有个人偏好，不等同纸面穿甲等级。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。社区旧的每箱只补一枚说法已过时，未收录为现行补给事实。"
-      }
+      ]
     },
     {
       "id": "grenade.g-40-k-melta-mine",
@@ -7821,7 +8073,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。无社区实战便利性评价；Wiki所述个别一击击杀细节有讨论争议，未收录这些保证。"
@@ -7884,7 +8135,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。火场弹无拆迁力；Wiki报告洞穴内火焰问题，不能以爆炸式投掷物的名称推导拆洞能力。"
@@ -7939,7 +8189,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。没有当前所选社区资料的反重便利性评价；Wiki提示飞行轨迹及命中部位可能令对泰坦不稳定，不将官方定位当可靠击杀保证。"
@@ -7994,7 +8243,6 @@
           "ut_special_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。主要为近炸控制与预警，未据低额爆炸标签推导大范围杀伤或拆迁。"
@@ -8026,7 +8274,7 @@
           "note": ""
         },
         {
-          "id": "role.sustain",
+          "id": "player.sustain",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_booster_basics",
@@ -8042,7 +8290,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8066,7 +8313,7 @@
           "note": "全队获得小幅减伤。"
         },
         {
-          "id": "role.protection",
+          "id": "player.protection",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_booster_basics",
@@ -8082,7 +8329,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8106,7 +8352,7 @@
           "note": "扩大雷达有效范围。"
         },
         {
-          "id": "role.stealth",
+          "id": "player.stealth",
           "basis": "community_observation",
           "source_ids": [
             "ut_community_boosters",
@@ -8115,7 +8361,7 @@
           "note": "玩家认为更大侦察范围便于隐蔽路线规划。 熟用雷达时辅助避巡逻，非直接隐身。"
         },
         {
-          "id": "role.objective_support",
+          "id": "player.objective_support",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_booster_conditions"
@@ -8130,7 +8376,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8154,7 +8399,7 @@
           "note": ""
         },
         {
-          "id": "role.mobility",
+          "id": "player.mobility",
           "basis": "community_observation",
           "source_ids": [
             "ut_community_boosters",
@@ -8171,7 +8416,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8195,7 +8439,7 @@
           "note": "减少困难地形造成的通行负担。"
         },
         {
-          "id": "role.mobility",
+          "id": "player.mobility",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_booster_basics",
@@ -8211,7 +8455,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8242,7 +8485,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8273,7 +8515,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8304,7 +8545,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。社区提醒它不作用于所有任务自动刷怪；尚待正文与实际宿主规则进一步核对。"
@@ -8335,7 +8575,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8374,7 +8613,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8414,7 +8652,7 @@
           "note": ""
         },
         {
-          "id": "role.mobility",
+          "id": "player.mobility",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_booster_basics",
@@ -8423,7 +8661,7 @@
           "note": "打针后转移；有视觉/声音体验反对意见。"
         },
         {
-          "id": "role.protection",
+          "id": "player.protection",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_booster_basics"
@@ -8438,7 +8676,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8470,7 +8707,7 @@
           "note": "喷射舱落地引燃周边。"
         },
         {
-          "id": "risk.friendly_fire",
+          "id": "player.friendly_fire_risk",
           "basis": "community_observation",
           "source_ids": [
             "ut_community_boosters"
@@ -8485,7 +8722,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8517,7 +8753,7 @@
           "note": "以消耗生命换持续冲刺。"
         },
         {
-          "id": "role.mobility",
+          "id": "player.mobility",
           "basis": "community_observation",
           "source_ids": [
             "ut_community_boosters",
@@ -8533,7 +8769,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。社区对收益和负面体验存在分歧，须考虑生命强化、补给与队伍配合。"
@@ -8565,12 +8800,20 @@
           "note": ""
         },
         {
-          "id": "role.objective_support",
+          "id": "player.objective_support",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_booster_conditions"
           ],
           "note": "守点兼顾物资与额外火力，放置可能误伤。"
+        },
+        {
+          "id": "player.friendly_fire_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnwp_reddit_booster_conditions"
+          ],
+          "note": "既有玩家守点反馈明确提醒放置可能误伤。"
         }
       ],
       "occupancy": {
@@ -8580,7 +8823,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8619,7 +8861,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8658,7 +8899,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8698,7 +8938,7 @@
           "note": "落地使附近单位眩晕。"
         },
         {
-          "id": "risk.friendly_fire",
+          "id": "player.friendly_fire_risk",
           "basis": "community_observation",
           "source_ids": [
             "ut_community_boosters"
@@ -8706,7 +8946,7 @@
           "note": "玩家报告也可能影响附近队友。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_booster_conditions"
@@ -8721,7 +8961,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8769,7 +9008,7 @@
           "note": "掩护领取补给和目标操作；应留意烟雾对防御设备的影响。"
         },
         {
-          "id": "role.stealth",
+          "id": "player.stealth",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_booster_conditions"
@@ -8777,7 +9016,7 @@
           "note": "烟幕空降接近目标；可能影响炮塔视线。"
         },
         {
-          "id": "role.objective_support",
+          "id": "player.objective_support",
           "basis": "community_observation",
           "source_ids": [
             "cnwp_reddit_booster_conditions"
@@ -8792,7 +9031,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。社区报告烟雾可能遮挡炮台索敌，未据此设一律禁用规则。"
@@ -8823,7 +9061,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8862,7 +9099,6 @@
           "ut_boosters"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
@@ -8894,7 +9130,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_support"
@@ -8910,7 +9146,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -8941,7 +9176,7 @@
           ]
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnst_barrages_practice"
@@ -8949,7 +9184,7 @@
           "note": "玩家用来清聚团杂兵，便于反复补压制。"
         },
         {
-          "id": "role.area_denial",
+          "id": "player.area_denial",
           "basis": "community_observation",
           "source_ids": [
             "cnst_barrages_practice"
@@ -8965,7 +9200,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9003,7 +9237,7 @@
           ]
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -9011,7 +9245,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.area_denial",
+          "id": "player.area_denial",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -9027,7 +9261,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9059,7 +9292,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -9067,7 +9300,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "cnst_barrages_practice"
@@ -9075,7 +9308,7 @@
           "note": "玩家用于清营地刷怪建筑/侦测塔；并非单次必中目标。"
         },
         {
-          "id": "role.area_denial",
+          "id": "player.area_denial",
           "basis": "community_observation",
           "source_ids": [
             "cnst_barrages_practice"
@@ -9091,7 +9324,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9115,7 +9347,7 @@
           "note": "记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。"
         },
         {
-          "id": "role.area_denial",
+          "id": "player.area_denial",
           "basis": "community_observation",
           "source_ids": [
             "cnst_airburst_cluster"
@@ -9123,7 +9355,7 @@
           "note": "玩家用多轮空爆短暂封住增援区域与通道。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnst_airburst_cluster"
@@ -9131,7 +9363,7 @@
           "note": "配合队友反重，空爆负责增援中的轻中型群。"
         },
         {
-          "id": "risk.friendly_fire",
+          "id": "player.friendly_fire_risk",
           "basis": "community_observation",
           "source_ids": [
             "cnst_airburst_cluster"
@@ -9147,7 +9379,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9179,7 +9410,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9226,7 +9456,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9258,7 +9487,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -9274,7 +9503,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9306,7 +9534,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -9314,7 +9542,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -9322,7 +9550,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "cnst_barrages_practice"
@@ -9338,7 +9566,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9377,7 +9604,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -9385,7 +9612,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -9393,7 +9620,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -9409,7 +9636,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9454,7 +9680,7 @@
           ]
         },
         {
-          "id": "role.area_denial",
+          "id": "player.area_denial",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -9470,7 +9696,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9494,12 +9719,36 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "role.anti_tank",
+          "id": "player.anti_tank",
           "basis": "community_observation",
           "source_ids": [
             "cnst_barrages_practice"
           ],
           "note": "有玩家带它快速处理指定重型，让其余装备负责群体；亦有玩家认为泛用性不足。"
+        },
+        {
+          "id": "player.easy_to_use",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_barrages_practice"
+          ],
+          "note": "自动选目标省瞄准，限玩家看重的瞬时处理用途；不保证选中希望击杀的单位。"
+        },
+        {
+          "id": "player.single_target",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_barrages_practice"
+          ],
+          "note": "玩家明确让它处理指定重型，其余装备负责群体。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_barrages_practice"
+          ],
+          "note": "有人肯定快速应对特定重型，也有人批评目标选择、冷却和泛用性。"
         }
       ],
       "occupancy": {
@@ -9510,20 +9759,18 @@
           "st_traits"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "cnst_barrages_practice"
           ],
           "note": "自动选目标省瞄准，部分玩家看重瞬时应对特定重型；目标选择与冷却令评价分歧，不能保证消灭所有重甲。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      ]
     },
     {
       "id": "stratagem.eagle-gas-airstrike",
@@ -9565,7 +9812,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9589,7 +9835,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -9605,7 +9851,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9637,7 +9882,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -9645,7 +9890,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -9653,7 +9898,7 @@
           "note": "2025攻略：清杂。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -9669,7 +9914,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9693,7 +9937,7 @@
           "note": "记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnst_airburst_cluster"
@@ -9701,7 +9945,7 @@
           "note": "玩家偏好其快速清群；与持续封区型空爆用途不同。"
         },
         {
-          "id": "risk.friendly_fire",
+          "id": "player.friendly_fire_risk",
           "basis": "community_observation",
           "source_ids": [
             "cnst_airburst_cluster"
@@ -9717,7 +9961,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9756,7 +9999,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9787,7 +10029,7 @@
           ]
         },
         {
-          "id": "role.area_denial",
+          "id": "player.area_denial",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -9803,7 +10045,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9843,7 +10084,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9875,7 +10115,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -9883,7 +10123,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -9891,7 +10131,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -9899,7 +10139,7 @@
           "note": "2025攻略：清杂/压增援。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -9915,7 +10155,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9945,7 +10184,7 @@
           ]
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -9961,7 +10200,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -9993,7 +10231,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "role.anti_tank",
+          "id": "player.anti_tank",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_support"
@@ -10009,7 +10247,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -10039,7 +10276,7 @@
           ]
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -10047,7 +10284,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnst_stalwart_practice"
@@ -10063,7 +10300,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -10093,7 +10329,7 @@
           ]
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -10101,7 +10337,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -10109,7 +10345,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnst_tieba_laser_cannon"
@@ -10117,12 +10353,28 @@
           "note": "2025年贴吧玩家肯定持续照射清中甲的资源效率；历史反馈，不沿用伤害数字。"
         },
         {
-          "id": "role.anti_air",
+          "id": "player.anti_air",
           "basis": "community_observation",
           "source_ids": [
             "cnst_tieba_laser_cannon"
           ],
           "note": "历史实战帖明确推荐瞄炮艇引擎，属于定点持续照射用途。"
+        },
+        {
+          "id": "player.precise_aim_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_tieba_laser_cannon"
+          ],
+          "note": "2025历史实战：重甲补刀与炮艇引擎等部位需要定点持续照射。"
+        },
+        {
+          "id": "player.emergency_backup",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_tieba_laser_cannon"
+          ],
+          "note": "历史反馈更偏向先由爆炸战备压血，再用激光补刀；不是新增通用反重主职责。"
         }
       ],
       "occupancy": {
@@ -10133,20 +10385,18 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "cnst_tieba_laser_cannon"
           ],
           "note": "历史玩家更推荐重甲补刀；低压可照弱点，高压持续暴露过久，不宜独扛反重。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      ]
     },
     {
       "id": "stratagem.apw-1-anti-materiel-rifle",
@@ -10166,7 +10416,7 @@
           "note": "仅记录 Wiki Heavy Armor Penetrating 展示特征，不表示实战方便反重。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -10174,7 +10424,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -10182,12 +10432,20 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnst_amr_discussion"
           ],
           "note": "1月讨论主要肯定机器人反中型与远距精确火力，是否优于其他支援武器有争议。"
+        },
+        {
+          "id": "player.precise_aim_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_amr_discussion"
+          ],
+          "note": "重型需特定弱点与精确命中；标签限这些用途，不沿用旧弹数。"
         }
       ],
       "occupancy": {
@@ -10198,20 +10456,18 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "cnst_amr_discussion"
           ],
           "note": "重型需特定弱点与精确命中，部分玩家建议另带反重；不沿用旧帖具体弹数。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      ]
     },
     {
       "id": "stratagem.gr-8-recoilless-rifle",
@@ -10231,7 +10487,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "role.anti_tank",
+          "id": "player.anti_tank",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_support",
@@ -10241,7 +10497,7 @@
           "note": "玩家把它作为直接、稳定的重目标处理手段；需弹药、装填和背包。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -10249,12 +10505,21 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.easy_to_use",
+          "basis": "community_observation",
+          "source_ids": [
+            "st_comm_nova",
+            "st_comm_melta"
+          ],
+          "note": "相对蓄力/持续照射方案，玩家认可直接爆发处理重型；仍需弹药和装填空间，不是全场景无门槛。"
         }
       ],
       "occupancy": {
@@ -10265,21 +10530,19 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "convenient",
           "source_ids": [
             "st_comm_nova",
             "st_comm_melta"
           ],
           "note": "讨论中多位玩家认可其直接爆发反重；前提是有弹药、装填空间并接受背包占用。并非所有重目标都保证一击。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      ]
     },
     {
       "id": "stratagem.gl-21-grenade-launcher",
@@ -10299,7 +10562,7 @@
           "note": "记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -10307,7 +10570,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -10323,7 +10586,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -10346,7 +10608,7 @@
           ]
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -10362,7 +10624,6 @@
           "st_comm_flame_backpack"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；资料依据可读搜索索引片段。无需弹药背包有玩家实际配装讨论交叉佐证，仍待全文及后续平衡补丁复核。"
@@ -10400,7 +10661,7 @@
           ]
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -10408,7 +10669,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -10416,7 +10677,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnst_hmg_practice"
@@ -10424,12 +10685,36 @@
           "note": "反中型是讨论中反复认可的职责，需控后坐与弹量。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnst_hmg_practice"
           ],
           "note": "可扫轻型群，但部分玩家认为清小怪浪费弹药，偏向留弹反中型。"
+        },
+        {
+          "id": "player.precise_aim_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_hmg_practice"
+          ],
+          "note": "重甲需瞄眼/关节等弱点并控后坐；日常反中与扫轻型不要求同等精度。"
+        },
+        {
+          "id": "player.preparation_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_hmg_practice"
+          ],
+          "note": "玩家反重体验依赖合适姿态、射界和换弹窗口，不能直接顶着重型长时间扫射。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_hmg_practice"
+          ],
+          "note": "熟练玩家认可兼顾重型，另有人认为弹量和暴露时间使其不值得；不压成统一难用。"
         }
       ],
       "occupancy": {
@@ -10440,20 +10725,18 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "cnst_hmg_practice"
           ],
           "note": "能靠重甲弱点处理巨型者/收割者等；精度、姿态、换弹窗口要求高，实用性评价有分歧。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      ]
     },
     {
       "id": "stratagem.ac-8-autocannon",
@@ -10473,7 +10756,7 @@
           "note": "仅记录 Wiki Heavy Armor Penetrating 展示特征，不表示实战方便反重。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -10481,7 +10764,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -10489,7 +10772,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnst_autocannon_tips",
@@ -10498,7 +10781,7 @@
           "note": "高射模式清群是中英玩家均明确提到的用途；近身与换弹仍需其他手段补位。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnst_autocannon_tips"
@@ -10506,7 +10789,7 @@
           "note": "玩家按群体/单体与目标部位切高射和AP模式，兼顾中型单位。"
         },
         {
-          "id": "role.anti_air",
+          "id": "player.anti_air",
           "basis": "community_observation",
           "source_ids": [
             "cnst_autocannon_tips"
@@ -10514,7 +10797,7 @@
           "note": "玩家建议高射扫光能飞行单位，或精确AP命中；不是自动锁空。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "cnst_autocannon_tips"
@@ -10522,12 +10805,29 @@
           "note": "用于虫洞、工厂通风口、护盾已破飞船门及孢子/尖啸巢，强调模式与角度。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "cnst_autocannon_tips"
           ],
           "note": "玩家利用击退打断冲锋、压住巨型者并争取换弹窗口。"
+        },
+        {
+          "id": "player.precise_aim_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_autocannon_tips"
+          ],
+          "note": "限AP反重和拆点的弱点/开口角度；高射清群不应被误称为每发都必须精确命中。"
+        },
+        {
+          "id": "player.area_target",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_autocannon_tips",
+            "cnst_bili_ac8_flak"
+          ],
+          "note": "高射模式清敌群是明确玩家用途；不能从反重模式外推为纯对单武器。"
         }
       ],
       "occupancy": {
@@ -10538,20 +10838,18 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "cnst_autocannon_tips"
           ],
           "note": "重甲多依赖AP模式和弱点；泰坦等建议额外反重配合，不等于泛用反重便捷。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      ]
     },
     {
       "id": "stratagem.arc-3-arc-thrower",
@@ -10585,7 +10883,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_random"
@@ -10593,7 +10891,7 @@
           "note": "旧版随机配装讨论中玩家认可电弧眩晕控场，也有人不喜欢其节奏；不按主观偏好删去功能定位。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_arc_advice"
@@ -10601,12 +10899,20 @@
           "note": "玩家以电弧清杂兵群和压制推进；尸体、植被及队友位置可能限制使用。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.emergency_backup",
+          "basis": "community_observation",
+          "source_ids": [
+            "st_comm_arc_advice"
+          ],
+          "note": "反重只保留已有伤重收尾语境，主要玩家职责仍为清群/眩晕。"
         }
       ],
       "occupancy": {
@@ -10617,20 +10923,18 @@
           "st_comm_arc_advice"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki 正文访问返回 403；资料依据可读搜索索引片段。无需弹药背包有玩家实际配装讨论交叉佐证，仍待全文及后续平衡补丁复核。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "emergency",
           "source_ids": [
             "st_comm_arc_advice"
           ],
           "note": "玩家主定位为清群、眩晕和辅助队友；高耐久重目标击杀慢，常建议用专用反重补位。已有伤重可收尾，不能按 Wiki Anti-Tank 展示特征算方便反重。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki 正文访问返回 403；资料依据可读搜索索引片段。无需弹药背包有玩家实际配装讨论交叉佐证，仍待全文及后续平衡补丁复核。"
-      }
+      ]
     },
     {
       "id": "stratagem.las-99-quasar-cannon",
@@ -10657,7 +10961,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "role.anti_tank",
+          "id": "player.anti_tank",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_nova"
@@ -10665,12 +10969,20 @@
           "note": "玩家认可间歇反重；可留背包槽，但蓄力与冷却影响连续处理多个重目标。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.preparation_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "st_comm_nova"
+          ],
+          "note": "玩家明确指出蓄力、受击晃动和射后冷却影响连续反重，需安排发射窗口。"
         }
       ],
       "occupancy": {
@@ -10681,20 +10993,18 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "st_comm_nova"
           ],
           "note": "免弹药与空闲背包槽受好评；蓄力、受击晃动和射后长冷却使连续反重不如即时开火方案方便。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      ]
     },
     {
       "id": "stratagem.rl-77-airburst-rocket-launcher",
@@ -10713,7 +11023,7 @@
           ]
         },
         {
-          "id": "risk.self_damage",
+          "id": "player.self_damage_risk",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -10729,7 +11039,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -10761,7 +11070,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -10769,7 +11078,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.anti_tank",
+          "id": "player.anti_tank",
           "basis": "community_observation",
           "source_ids": [
             "cnst_commando_enthusiasts",
@@ -10778,12 +11087,29 @@
           "note": "玩家用于重型目标，优点是火箭全数随身、可引导；单发威力和命中要求有取舍。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "cnst_commando_tradeoffs"
           ],
           "note": "玩家明确提到工厂通风口等弱点拆点；不是任意部位均能拆。"
+        },
+        {
+          "id": "player.precise_aim_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_commando_tradeoffs"
+          ],
+          "note": "提高单发击杀效率需精准命中部位，四发随身不能消除这一取舍。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_commando_enthusiasts",
+            "cnst_commando_tradeoffs"
+          ],
+          "note": "4月更认可携行与背包自由，6月更强调单发效率和精确命中；保留时间/偏好差异。"
         }
       ],
       "occupancy": {
@@ -10794,28 +11120,24 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "convenient",
           "source_ids": [
             "cnst_commando_enthusiasts"
           ],
           "note": "4月使用者明确肯定四发随身、引导与可另选背包的反重便利；属于历史个人经验。"
         },
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "cnst_commando_tradeoffs"
           ],
           "note": "6月讨论有人嫌单发击杀效率低，其他人强调精准命中与全弹携行的取舍；保留分歧。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      ]
     },
     {
       "id": "stratagem.faf-14-spear",
@@ -10842,7 +11164,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -10850,7 +11172,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -10866,7 +11188,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -10897,7 +11218,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_railgun"
@@ -10905,12 +11226,28 @@
           "note": "玩家教学优先处理中型单位和特定重型弱点，不把它当作通用方便反坦克。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.precise_aim_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "st_comm_railgun"
+          ],
+          "note": "玩家教学强调特定重型弱点；反中主职责不等于通用高效反重。"
+        },
+        {
+          "id": "player.preparation_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "st_comm_railgun"
+          ],
+          "note": "反重需掌握蓄力节奏/不安全模式熟练度，限相应目标和操作方案。"
         }
       ],
       "occupancy": {
@@ -10921,20 +11258,18 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "st_comm_railgun"
           ],
           "note": "反中型单位是主要定位；反重大多依赖弱点、蓄力熟练度与目标种类。玩家明确建议大型高耐久目标交给专用反重或队友。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      ]
     },
     {
       "id": "stratagem.sta-x3-w-a-s-p-launcher",
@@ -10961,7 +11296,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "role.anti_air",
+          "id": "player.anti_air",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -10969,12 +11304,21 @@
           "note": "2025攻略：快锁快发，优先处理光能飞包兵/探机。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnst_amr_discussion"
           ],
           "note": "1月讨论将其用于快速处理中型单位，另有玩家更偏好AMR精度与弹量，保留分歧。"
+        },
+        {
+          "id": "player.emergency_backup",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_bili_2025_loadouts",
+            "cnst_amr_discussion"
+          ],
+          "note": "历史意见不建议独撑重型，优先保留反中/对空职责与反重补充语境。"
         }
       ],
       "occupancy": {
@@ -10985,21 +11329,19 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "emergency",
           "source_ids": [
             "cnst_bili_2025_loadouts",
             "cnst_amr_discussion"
           ],
           "note": "历史反馈认为总输出难独撑反重，重型复杂部位分散命中，近处/遮挡也有限制。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      ]
     },
     {
       "id": "stratagem.amw-20-apex",
@@ -11033,7 +11375,6 @@
           "st_apex"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -11072,7 +11413,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -11088,7 +11429,6 @@
           "st_hammer"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -11126,7 +11466,7 @@
           ]
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -11142,7 +11482,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -11180,7 +11519,7 @@
           ]
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -11188,7 +11527,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -11204,7 +11543,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -11236,7 +11574,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_support"
@@ -11244,7 +11582,7 @@
           "note": "玩家反馈其可用于减缓接近敌群。"
         },
         {
-          "id": "role.structure_demolition",
+          "id": "player.structure_demolition",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_support"
@@ -11260,7 +11598,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -11300,7 +11637,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -11339,7 +11675,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -11370,12 +11705,20 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "community.toy",
+          "id": "player.toy",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_chainsaw_fun"
           ],
           "note": "部分玩家明确为好玩、耍帅的 gimmick 而带，批评近身命中与挥动停步；亦有熟练玩家支持其潜行/控制配合用途。属于有分歧的玩家评价，不能外推所有近战或视为零实用性。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "st_comm_chainsaw_fun"
+          ],
+          "note": "现有玩具评价同条备注保留了实用反例/熟练玩家意见；表达分歧，不作无效或禁抽结论。"
         }
       ],
       "occupancy": {
@@ -11386,7 +11729,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -11433,7 +11775,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -11473,7 +11814,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -11504,7 +11844,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -11522,7 +11862,6 @@
           "st_comm_c4"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -11554,7 +11893,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "role.anti_tank",
+          "id": "player.anti_tank",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_support"
@@ -11570,7 +11909,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -11600,7 +11938,7 @@
           ]
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "cnst_maxigun_nov"
@@ -11608,7 +11946,7 @@
           "note": "11月对比评论明确提到减速与控群，仅作玩家用途反馈，不作为数值验证。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnst_maxigun_nov"
@@ -11624,7 +11962,6 @@
           "st_cremator"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -11655,7 +11992,7 @@
           ]
         },
         {
-          "id": "community.toy",
+          "id": "player.toy",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_flag_fun",
@@ -11664,12 +12001,21 @@
           "note": "玩家常强调插旗、斯巴达扮演和士气/趣味价值；有人质疑实用性，但其他玩家提供吸引仇恨、引走敌群的用途。标签表达部分玩家的娱乐取向，不等于当前版本完全无用。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_flag_taunt"
           ],
           "note": "玩家以吸引仇恨、风筝敌人替队友争取任务空间；要求走位、生存及队友配合，并非直接杀伤效率。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "st_comm_flag_fun",
+            "st_comm_flag_taunt"
+          ],
+          "note": "现有玩具评价同条备注保留了实用反例/熟练玩家意见；表达分歧，不作无效或禁抽结论。"
         }
       ],
       "occupancy": {
@@ -11680,7 +12026,6 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -11734,7 +12079,6 @@
           "st_gl28"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -11758,7 +12102,7 @@
           "note": "支援武器需要背包供弹，与独立背包争用同一携带槽。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnst_maxigun_nov"
@@ -11766,12 +12110,36 @@
           "note": "11月增强后玩家肯定其压住虫群；站桩和尸体阻挡改善程度仍有分歧。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "cnst_maxigun_nov"
           ],
           "note": "玩家明确定位反中型与清杂，重甲另配手雷、副手或战备；不按高射速推断反重便利。"
+        },
+        {
+          "id": "player.emergency_backup",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_maxigun_nov"
+          ],
+          "note": "仅在可伤弱点磨伤重目标，主用途是清杂/反中，讨论建议另配专用反重。"
+        },
+        {
+          "id": "player.area_target",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_maxigun_nov"
+          ],
+          "note": "11月增强后玩家明确用于压住虫群；这是实际群体用途，而非从高射速推导。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "cnst_maxigun_nov"
+          ],
+          "note": "新增强后的机动、尸体阻挡改善和实际收益仍有分歧；不能沿用旧“纯玩具”评价。"
         }
       ],
       "occupancy": {
@@ -11782,20 +12150,18 @@
           "st_support_guide"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "emergency",
           "source_ids": [
             "cnst_maxigun_nov"
           ],
           "note": "重甲仅能磨可伤弱点且坚固目标输出受限，讨论建议另配专用反重。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      ]
     },
     {
       "id": "stratagem.las-44-nova",
@@ -11829,7 +12195,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "role.anti_tank",
+          "id": "player.anti_tank",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_nova"
@@ -11837,7 +12203,7 @@
           "note": "部分玩家反馈能兼顾重目标，但较依赖精准命中和多发；意见存在分歧。"
         },
         {
-          "id": "role.anti_medium",
+          "id": "player.anti_medium",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_nova"
@@ -11845,12 +12211,28 @@
           "note": "玩家讨论定位为中型到较重目标的持续精准火力，不强制当作重甲速杀武器。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.precise_aim_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "st_comm_nova"
+          ],
+          "note": "反重较依赖命中部位和多次精准射击，不能由资料Anti-Tank特征代替玩家判断。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "st_comm_nova"
+          ],
+          "note": "玩家对超重型处理效率有不同反馈，非否认持续火力用途。"
         }
       ],
       "occupancy": {
@@ -11861,20 +12243,18 @@
           "st_nova"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "st_comm_nova"
           ],
           "note": "多位玩家认可持续精准火力，但对反超重目标效率意见分歧；较依赖命中部位和多次射击，不按资料 Anti-Tank 特征判成无条件便利。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      ]
     },
     {
       "id": "stratagem.40-k-meltagun",
@@ -11901,7 +12281,7 @@
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
         },
         {
-          "id": "role.anti_tank",
+          "id": "player.anti_tank",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_melta"
@@ -11909,7 +12289,7 @@
           "note": "玩家反馈近距离重目标击杀快；接近、稳定瞄准和地形是明显前提。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -11917,12 +12297,28 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.precise_aim_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "st_comm_melta"
+          ],
+          "note": "近距反重仍有瞄准学习成本；机动背包只帮助接近，不等于自动命中。"
+        },
+        {
+          "id": "player.preparation_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "st_comm_melta"
+          ],
+          "note": "短射程需规划接近路线/安全窗口，可借机动或传送辅助；不硬绑定背包。"
         }
       ],
       "occupancy": {
@@ -11933,20 +12329,18 @@
           "st_comm_melta"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "st_comm_melta"
           ],
           "note": "近距离命中后玩家反馈重目标处理快，但短射程、接近风险与瞄准学习成本限制便利性；传送/机动背包可辅助接近。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      ]
     },
     {
       "id": "stratagem.b-1-supply-pack",
@@ -11958,7 +12352,7 @@
       ],
       "tags": [
         {
-          "id": "role.sustain",
+          "id": "player.sustain",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_support"
@@ -11966,7 +12360,7 @@
           "note": "玩家反复推荐其为队友恢复弹药、治疗针和投掷物的持续支援手段。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -11974,7 +12368,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -11990,7 +12384,6 @@
           "st_backpack_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12013,7 +12406,7 @@
           ]
         },
         {
-          "id": "role.mobility",
+          "id": "player.mobility",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_backpacks"
@@ -12029,7 +12422,6 @@
           "st_backpack_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12068,7 +12460,6 @@
           "st_backpack_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12099,7 +12490,6 @@
           "st_backpack_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12129,7 +12519,7 @@
           ]
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_backpacks"
@@ -12145,7 +12535,6 @@
           "st_backpack_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12168,7 +12557,7 @@
           ]
         },
         {
-          "id": "role.protection",
+          "id": "player.protection",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_backpacks"
@@ -12176,7 +12565,7 @@
           "note": "玩家区分球形护盾的防御用途与进攻/机动背包。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -12184,7 +12573,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -12200,7 +12589,6 @@
           "st_backpack_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12239,7 +12627,6 @@
           "st_backpack_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12277,7 +12664,6 @@
           "st_backpack_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12317,7 +12703,7 @@
           "note": "根据可携带地狱火炸弹的介绍归入爆破用途，具体可拆建筑仍需逐类核实。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -12333,7 +12719,6 @@
           "st_backpack_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12371,12 +12756,20 @@
           ]
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_backpacks"
           ],
           "note": "玩家反馈连锁电弧可处理杂兵群，但友伤与走位限制明显，不按高杀敌数推断无条件最强。"
+        },
+        {
+          "id": "player.friendly_fire_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "st_comm_backpacks"
+          ],
+          "note": "既有玩家清杂备注明确说友伤与走位限制明显。"
         }
       ],
       "occupancy": {
@@ -12387,7 +12780,6 @@
           "st_backpack_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12418,7 +12810,6 @@
           "st_backpack_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12456,7 +12847,7 @@
           ]
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_backpacks"
@@ -12472,7 +12863,6 @@
           "st_backpack_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12495,7 +12885,7 @@
           ]
         },
         {
-          "id": "role.mobility",
+          "id": "player.mobility",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_backpacks"
@@ -12511,7 +12901,6 @@
           "st_backpack_guide"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12542,7 +12931,7 @@
           "note": "按 FRV 运载与快速机动介绍分类，不给火力强度评级。"
         },
         {
-          "id": "risk.friendly_fire",
+          "id": "player.friendly_fire_risk",
           "basis": "community_observation",
           "source_ids": [
             "cnst_frv_variants"
@@ -12558,7 +12947,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12605,7 +12993,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12637,7 +13024,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12669,7 +13055,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12707,7 +13092,7 @@
           ]
         },
         {
-          "id": "role.sustain",
+          "id": "player.sustain",
           "basis": "community_observation",
           "source_ids": [
             "cnst_frv_variants"
@@ -12723,7 +13108,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12747,7 +13131,7 @@
           "note": "按 FRV 运载与快速机动介绍分类，不给火力强度评级。"
         },
         {
-          "id": "role.mobility",
+          "id": "player.mobility",
           "basis": "community_observation",
           "source_ids": [
             "cnst_frv_variants"
@@ -12763,7 +13147,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12803,7 +13186,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12843,7 +13225,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12882,7 +13263,6 @@
           "st_traits"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12922,7 +13302,6 @@
           "st_overview"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -12954,7 +13333,7 @@
           "note": "部署后固定在该位置；不是指支援武器的静止装填。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -12962,7 +13341,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "role.crowd_clear",
+          "id": "player.crowd_clear",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -12978,7 +13357,6 @@
           "st_overview"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13018,7 +13396,7 @@
           "note": "部署后固定在该位置；不是指支援武器的静止装填。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -13034,7 +13412,6 @@
           "st_overview"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13074,7 +13451,7 @@
           "note": "部署后固定在该位置；不是指支援武器的静止装填。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -13082,7 +13459,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "risk.friendly_fire",
+          "id": "player.friendly_fire_risk",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -13098,7 +13475,6 @@
           "st_overview"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13146,7 +13522,7 @@
           "note": "部署后固定在该位置；不是指支援武器的静止装填。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -13154,7 +13530,7 @@
           "note": "2026-10配装清单所列；限对应阵营。"
         },
         {
-          "id": "community.automaton_recommended",
+          "id": "player.automaton_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_automatons_oct2026"
@@ -13170,7 +13546,6 @@
           "st_overview"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13209,7 +13584,7 @@
           "note": "部署后固定在该位置；不是指支援武器的静止装填。"
         },
         {
-          "id": "risk.friendly_fire",
+          "id": "player.friendly_fire_risk",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -13225,7 +13600,6 @@
           "st_overview"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13265,7 +13639,7 @@
           "note": "部署后固定在该位置；不是指支援武器的静止装填。"
         },
         {
-          "id": "role.crowd_control",
+          "id": "player.crowd_control",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_support"
@@ -13280,7 +13654,6 @@
           "st_overview"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13342,7 +13715,6 @@
           "st_overview"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13389,7 +13761,6 @@
           "st_overview"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13437,7 +13808,7 @@
           "note": "取气体混乱及减速机制，不把穿甲或气体数字视为方便反重。"
         },
         {
-          "id": "community.illuminate_recommended",
+          "id": "player.illuminate_recommended",
           "basis": "community_observation",
           "source_ids": [
             "cnroot_illuminate_oct2026"
@@ -13453,7 +13824,6 @@
           "st_overview"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13501,7 +13871,6 @@
           "st_emplacement_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13556,7 +13925,6 @@
           "st_emplacement_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13612,7 +13980,6 @@
           "st_emplacement_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13636,7 +14003,7 @@
           "note": "部署后固定在该位置；不是指支援武器的静止装填。"
         },
         {
-          "id": "role.protection",
+          "id": "player.protection",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -13652,7 +14019,6 @@
           "st_emplacement_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13692,7 +14058,6 @@
           "st_emplacement_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13724,7 +14089,6 @@
           "st_emplacement_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13764,7 +14128,7 @@
           "note": "取气体混乱及减速机制，不把穿甲或气体数字视为方便反重。"
         },
         {
-          "id": "role.area_denial",
+          "id": "player.area_denial",
           "basis": "community_observation",
           "source_ids": [
             "cnst_bili_2025_loadouts"
@@ -13780,7 +14144,6 @@
           "st_emplacement_category"
         ]
       },
-      "community_assessments": [],
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
@@ -13812,12 +14175,20 @@
           "note": "部署后固定在该位置；不是指支援武器的静止装填。"
         },
         {
-          "id": "role.anti_tank",
+          "id": "player.anti_tank",
           "basis": "community_observation",
           "source_ids": [
             "st_comm_support"
           ],
           "note": "玩家反馈固定阵地可远程替队伍处理大目标，依赖架设和射界。"
+        },
+        {
+          "id": "player.preparation_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "st_comm_support"
+          ],
+          "note": "固定阵地需架设、操作人员与合适射界，移动作战不能直接照搬。"
         }
       ],
       "occupancy": {
@@ -13828,20 +14199,18 @@
           "st_emplacement_category"
         ]
       },
-      "community_assessments": [
+      "review": {
+        "status": "partial",
+        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
+      },
+      "observations": [
         {
-          "dimension": "anti_tank_ease",
-          "value": "conditional",
           "source_ids": [
             "st_comm_support"
           ],
           "note": "玩家反馈在固定阵地远程处理重目标方便；需先架设、有人操作并具有合适射界，不适合把效果泛化到移动作战。"
         }
-      ],
-      "review": {
-        "status": "partial",
-        "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      ]
     }
   ]
 }

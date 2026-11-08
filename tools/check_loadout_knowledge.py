@@ -31,9 +31,9 @@ def main() -> int:
         if item is None:
             print("没有找到该装备", file=sys.stderr)
             return 1
-        print(json.dumps({"id": item.id, "名称": item.name, "分类": item.category, "机制标签": sorted(item.mechanics), "玩家定位": sorted(item.player_roles), "玩家评价": sorted(item.community_evaluations), "资料定位": sorted(item.reference_roles), "反重便利性": item.anti_tank_ease, "支援武器槽": item.support_weapon, "背包槽": item.backpack, "表格已修改": item.user_modified, "研究备注": item.research_notes}, ensure_ascii=False, indent=2))
+        print(json.dumps({"id": item.id, "名称": item.name, "分类": item.category, "机制标签": sorted(item.mechanics), "玩家标签": sorted(item.player_tags), "玩家标签集（仅显示）": item.player_tag_display, "资料定位": sorted(item.reference_roles), "支援武器槽": item.support_weapon, "背包槽": item.backpack, "表格已修改": item.user_modified, "研究备注": item.research_notes}, ensure_ascii=False, indent=2))
     else:
-        print(json.dumps({"读取文件": str(knowledge.table_path), "装备数": len(knowledge.items), "槽位": dict(Counter(item.slot for item in knowledge.items.values())), "玩家定位或评价覆盖": knowledge.player_tag_count, "反重便利性待评价": sum(item.anti_tank_ease == "unknown" for item in knowledge.items.values()), "反重便利性有分歧": sum(item.anti_tank_ease == "disputed" for item in knowledge.items.values()), "表格修改数": sum(item.user_modified for item in knowledge.items.values())}, ensure_ascii=False, indent=2))
+        print(json.dumps({"读取文件": str(knowledge.table_path), "装备数": len(knowledge.items), "槽位": dict(Counter(item.slot for item in knowledge.items.values())), "玩家标签覆盖": knowledge.player_tag_count, "玩家词表标签数": len(knowledge.taxonomy["player_tag_order"]), "表格修改数": sum(item.user_modified for item in knowledge.items.values())}, ensure_ascii=False, indent=2))
     return 0
 
 
