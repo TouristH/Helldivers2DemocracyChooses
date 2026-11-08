@@ -1,0 +1,42 @@
+name: Dev 配备标签反馈
+description: 为开发版补充、纠正或移除配备的独立玩家标签。
+title: "[Dev 标签反馈] "
+labels: ["Dev", "标签反馈"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        军需部正在复核 Dev 配备标签，欢迎带着实战经验来补正。
+        每个标签都是独立数据，例如“控场；清杂；易误伤”是三个标签，不是一个新标签。
+        请参考 [Dev 标签词表与编辑说明](https://github.com/TouristH/Helldivers2DemocracyChooses/blob/Dev/docs/loadout-tags.md)。
+        本表反馈开发版标签，不会自动修改正式版或直接写入知识库。
+  - type: input
+    id: equipment
+    attributes:
+      label: 装备名称或 ID
+      description: 建议一条 Issue 聚焦一件配备，方便逐项核对。
+      placeholder: 例如 GR-8 无后坐力步枪 / stratagem.gr-8-recoilless-rifle
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_tags
+    attributes:
+      label: 建议增删或修改的标签
+      description: 使用独立标签，多个标签以分号分隔；请说明哪些是新增、保留或移除。
+      placeholder: |
+        现有：控场；清杂
+        建议新增：易误伤
+        建议移除：……
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 实战场景与理由（可选）
+      description: 阵营、难度、搭配、目标或操作要求。若不同条件下表现相反，也请一起说明。
+      placeholder: 在什么场景更顺手？是否需要弱点瞄准、准备或补给？为什么应保留或移除该标签？
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 讨论链接或验证依据（可选）
+      description: 欢迎 Reddit、贴吧、B站等出处；视频可附时间点或注明参考简介/评论，没有链接也可描述自己的实战过程。
