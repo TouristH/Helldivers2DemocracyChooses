@@ -1,5 +1,7 @@
 # 绝地潜兵 2：民主帮你选择
 
+> 当前为 **Dev 开发分支**，包含配备知识库及 Excel 映射。正式稳定版为 [v0.3.2](https://github.com/TouristH/Helldivers2DemocracyChooses/releases/tag/v0.3.2)，本分支改动暂不发布正式 Release。
+
 ![军需部门已点头批准这次配装](assets/icon.webp)
 
 [![Tests](https://github.com/TouristH/Helldivers2DemocracyChooses/actions/workflows/tests.yml/badge.svg)](https://github.com/TouristH/Helldivers2DemocracyChooses/actions/workflows/tests.yml)
@@ -41,7 +43,7 @@
 在 MaiBot 的 `plugins` 目录执行：
 
 ```bash
-git clone https://github.com/TouristH/Helldivers2DemocracyChooses.git
+git clone --branch Dev https://github.com/TouristH/Helldivers2DemocracyChooses.git
 ```
 
 在**运行 MaiBot 宿主的同一个 Python 环境**安装依赖和渲染浏览器：
@@ -84,14 +86,18 @@ python -m playwright install chromium
 
 ## 军需部的配备标签簿
 
-“尽量合理”先从认识装备开始。当前为既有 **221 项配备**整理了分类与标签，编辑入口是根目录 [loadout_tags.csv](loadout_tags.csv)，Excel、WPS 或文本编辑器均可修改。保存为 **UTF-8 CSV** 后，插件下一次读取即使用新内容，无需重建 JSON；`/hd status` 会读取同一份表格并显示覆盖数与标签修改数。
+“尽量合理”先从认识装备开始。当前为既有 **221 项配备**整理了分类与标签，推荐直接编辑根目录 [loadout_tags.xlsx](loadout_tags.xlsx) 的“装备标签”工作表。提供筛选、冻结表头与名称列、分类和便利性等下拉选项，以及可查阅的标签字典；浅黄色区域为可编辑字段。保存后插件下一次读取即使用新内容，无需重建 JSON；`/hd status` 会显示实际读取的文件、覆盖数与标签修改数。
+
+读取顺序为 **Excel 优先，Excel 不存在时才读取 [CSV](loadout_tags.csv)**，不会混用两份内容。Excel 有错误时会提示校验问题，不会静默沿用旧 CSV。仍想编辑 CSV 时，请先移走同目录 Excel，再按 UTF-8 CSV 保存；校验工具也支持 `--table loadout_tags.csv` 显式读取。
 
 - **玩家定位与反重便利性优先**：记录清杂、反中型、反重等实战用途，以及方便、有条件、应急等体验；备注保留弱点、距离、弹药和使用条件。
 - **机制事实另存**：穿透资料、爆炸、燃烧、单手、背包供弹等独立保留。重甲穿透不会自动变成“反重方便”。
 - **玩家评价含“玩具”**：用于有社区讨论支持的整活、Cosplay 或耍帅倾向，保留争议和实用反例，不表示完全无效。
 - **占用明确登记**：支援武器槽与背包槽分开记录，自带弹药背包也计入背包占用。
 
-分类、标签、玩家评价、便利性与占用都可以在 CSV 中调整；`id`、装备名称、英文名和槽位请保持不变。多个标签用 `|` 分隔，中文标签或标签 ID 都能识别。可用取值与完整字典见 [标签编辑说明](docs/loadout-tags.md)，查证记录及逐条来源保存在 [loadout_knowledge.json](loadout_knowledge.json)。CSV 修改不会改写原始研究证据，读取接口会识别标签、分类和占用等结构字段的修改。
+分类、标签、玩家评价、便利性与占用都可以在表格中调整；`id`、装备名称、英文名和槽位请保持不变。Excel 允许排序、筛选、调整列顺序和添加个人备注列，程序按表头映射；请保留“装备标签”工作表名称和必需表头，标签字段使用纯文本。多个标签用 `|` 分隔，中文标签或标签 ID 都能识别。可用取值与完整字典见 [标签编辑说明](docs/loadout-tags.md)，查证记录及逐条来源保存在 [loadout_knowledge.json](loadout_knowledge.json)。表格修改不会改写原始研究证据，读取接口会识别标签、分类和占用等结构字段的修改。
+
+维护者可运行 `python tools/check_loadout_knowledge.py --export-csv loadout_tags.csv`，将当前实际使用的 Excel 内容校验后导出为标准 CSV；读取 Excel 使用 Python 标准库，无需额外安装 Excel 库。
 
 **当前是知识库首版，尚未启用“尽量合理”的抽取规则。** Wiki 正文访问受限，本轮使用搜索索引摘录的记录均标为“部分核实”；未找到足够玩家反馈的便利性保持“待评价”。这本簿子允许补正，军需部暂不接受把“它能穿甲”当成“它打起来一定顺手”的审批依据。
 

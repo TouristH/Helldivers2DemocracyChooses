@@ -4,6 +4,7 @@
 *.jpg binary
 *.jpeg binary
 *.webp binary
+*.xlsx binary
 
 # Keep development and GitHub metadata in Git, outside installation archives.
 .gitattributes export-ignore

@@ -808,11 +808,11 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
         )
         try:
             knowledge = load_knowledge()
-            player_count = sum(bool(item.player_roles) for item in knowledge.items.values())
+            player_count = knowledge.player_tag_count
             edited_count = sum(item.user_modified for item in knowledge.items.values())
-            message += f"\n配装标签：{len(knowledge.items)} 件，含玩家定位 {player_count} 件，标签修改 {edited_count} 件"
+            message += f"\n配装标签：{len(knowledge.items)} 件，含玩家标签 {player_count} 件，标签修改 {edited_count} 件\n标签表：{knowledge.table_path.name}"
         except KnowledgeError as exc:
-            message += "\n配装标签库暂不可用，请管理员检查 loadout_tags.csv"
+            message += "\n配装标签库暂不可用，请管理员检查 loadout_tags.xlsx 或 CSV"
             self._log("warning", "Loadout knowledge is unavailable: %s", exc)
         if self._last_render_error:
             message += f"\n配装出图异常：{self._last_render_error}（可用 /helldivers diag 复现）"

@@ -170,14 +170,18 @@ the bundled Wiki-derived catalog and game artwork.
 
 ## Equipment knowledge annotations
 
-`loadout_tags.csv` is the editable runtime table introduced in version `0.4.0`.
+`loadout_tags.xlsx` is the primary editable runtime workbook in the `0.4.0`
+development branch. `loadout_tags.csv` is its textual export and fallback.
 `loadout_knowledge.json` preserves its initial research, project-authored tag
 definitions, per-claim source references, and access limitations. The research
 date is 2026-11-08; its equipment coverage remains the 2026-10-21 catalog.
 
 The source registry credits Helldivers Wiki contributors, Arrowhead Game Studios
 through the official PlayStation Blog, and the authors and commenters of the
-linked Reddit discussions. Community experiences are recorded as concise
+linked Reddit, Bilibili, Baidu Tieba, and Steam Community discussions and guides.
+For video sources, the registry distinguishes descriptions and comments actually
+read from the video itself; a cited description is not a claim to have watched
+the full video. Community experiences are recorded as concise
 project-written annotations, not copied posts or claims of player consensus.
 The Wiki-derived portions retain the respective CC BY-SA 4.0 and CC BY-NC-SA 4.0
 boundaries described above; this repository does not relicense third-party

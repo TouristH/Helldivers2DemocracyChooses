@@ -1,15 +1,23 @@
-"""Read the editable CSV used by the loadout knowledge base, without networking."""
+"""Read editable Excel/CSV equipment knowledge without networking or dependencies."""
 from __future__ import annotations
 
 import csv
 from dataclasses import dataclass
 import io
 import json
+import os
 from pathlib import Path
+import tempfile
 from typing import Any, Mapping
+
+if __package__:
+    from .knowledge_workbook import WorkbookError, read_workbook_rows
+else:
+    from knowledge_workbook import WorkbookError, read_workbook_rows
 
 ROOT = Path(__file__).resolve().parent
 TABLE_PATH = ROOT / "loadout_tags.csv"
+WORKBOOK_PATH = ROOT / "loadout_tags.xlsx"
 EVIDENCE_PATH = ROOT / "loadout_knowledge.json"
 CATALOG_PATH = ROOT / "loadout_data.json"
 CSV_FIELDS = (
@@ -18,7 +26,7 @@ CSV_FIELDS = (
 )
 SLOT_LABELS = {"primary": "主武器", "secondary": "副武器", "grenade": "投掷物", "booster": "强化资源", "stratagem": "战略配备"}
 REVIEW_LABELS = {"verified": "已核实", "partial": "部分核实", "user_reviewed": "人工复核"}
-EASE_LABELS = {"convenient": "方便", "conditional": "有条件", "emergency": "应急", "not_applicable": "不适用", "unknown": "待评价"}
+EASE_LABELS = {"convenient": "方便", "conditional": "有条件", "emergency": "应急", "not_applicable": "不适用", "disputed": "有分歧", "unknown": "待评价"}
 BASES = {"wiki_fact", "official_fact", "community_observation", "curated_inference"}
 
 
@@ -70,6 +78,11 @@ class KnowledgeBase:
     taxonomy: Mapping[str, Any]
     sources: Mapping[str, Any]
     research: Mapping[str, Any]
+    table_path: Path
+
+    @property
+    def player_tag_count(self) -> int:
+        return sum(bool(item.player_roles or item.community_evaluations) or item.anti_tank_ease != "unknown" for item in self.items.values())
 
     def find(self, name_or_id: str) -> EquipmentKnowledge | None:
         key = name_or_id.strip().casefold()
@@ -172,14 +185,18 @@ def _baseline(entry: Mapping[str, Any]) -> tuple[Any, ...]:
     references = frozenset(c["id"] for c in claims if c["id"].startswith("role.") and c["basis"] != "community_observation")
     utility = frozenset(c["id"] for c in claims if not c["id"].startswith(("mechanic.", "role.", "community.")))
     assessments = entry.get("community_assessments", [])
-    # Disagreeing experiences remain undecided instead of selecting a winner.
+    # Preserve conflicting experiences instead of turning disagreement into no evidence.
     values = {a["value"] for a in assessments}
-    ease = next(iter(values)) if len(values) == 1 else "unknown"
+    ease = next(iter(values)) if len(values) == 1 else "disputed" if values else "unknown"
     return (entry["category"], mechanics, players, evaluations, references, utility, ease, entry["occupancy"].get("support_weapon"), entry["occupancy"].get("backpack"))
 
 
-def load_knowledge(table_path: Path = TABLE_PATH, evidence_path: Path = EVIDENCE_PATH, catalog_path: Path = CATALOG_PATH) -> KnowledgeBase:
-    """Read CSV on each call so saved edits take effect without regenerating JSON."""
+def selected_table_path(table_path: Path | None = None) -> Path:
+    return Path(table_path) if table_path is not None else WORKBOOK_PATH if WORKBOOK_PATH.exists() else TABLE_PATH
+
+
+def load_knowledge(table_path: Path | None = None, evidence_path: Path = EVIDENCE_PATH, catalog_path: Path = CATALOG_PATH) -> KnowledgeBase:
+    """Prefer Excel when present; explicitly passed CSV paths remain supported."""
     try:
         evidence = json.loads(Path(evidence_path).read_text(encoding="utf-8"))
         catalog = json.loads(Path(catalog_path).read_text(encoding="utf-8"))
@@ -189,10 +206,16 @@ def load_knowledge(table_path: Path = TABLE_PATH, evidence_path: Path = EVIDENCE
         catalog_items = _index(catalog["items"], "装备目录")
         research = _index(evidence["items"], "研究记录")
         category_aliases = _label_map(categories)
-        rows = csv.DictReader(io.StringIO(Path(table_path).read_text(encoding="utf-8-sig")))
-        _require(tuple(rows.fieldnames or []) == CSV_FIELDS, "CSV 列名或顺序不匹配，请保留原表头")
+        path = selected_table_path(table_path)
+        if path.suffix.casefold() == ".xlsx":
+            records = enumerate(read_workbook_rows(path, CSV_FIELDS), start=2)
+        else:
+            _require(path.suffix.casefold() == ".csv", "标签表仅支持 .xlsx 或 .csv")
+            rows = csv.DictReader(io.StringIO(path.read_text(encoding="utf-8-sig")))
+            _require(tuple(rows.fieldnames or []) == CSV_FIELDS, "CSV 列名或顺序不匹配，请保留原表头")
+            records = ((rows.line_num, row) for row in rows)
         result = {}
-        for row in rows:
+        for row_number, row in records:
             if not any(value for value in row.values()):
                 continue
             key = (row.get("id") or "").strip()
@@ -212,7 +235,7 @@ def load_knowledge(table_path: Path = TABLE_PATH, evidence_path: Path = EVIDENCE
                 utility = _tokens(row["辅助标签"], tags, "auxiliary")
                 ease_aliases = {v: k for k, v in EASE_LABELS.items()} | {k: k for k in EASE_LABELS}
                 review_aliases = {v: k for k, v in REVIEW_LABELS.items()} | {k: k for k in REVIEW_LABELS}
-                _require(row["反重便利性"] in ease_aliases, "反重便利性请填：方便/有条件/应急/不适用/待评价")
+                _require(row["反重便利性"] in ease_aliases, "反重便利性请填：方便/有条件/应急/不适用/有分歧/待评价")
                 _require(row["核实状态"] in review_aliases, "核实状态请填：已核实/部分核实/人工复核")
                 support, backpack = _occupancy(row["支援武器槽"]), _occupancy(row["背包槽"])
                 if item["slot"] != "stratagem":
@@ -221,8 +244,36 @@ def load_knowledge(table_path: Path = TABLE_PATH, evidence_path: Path = EVIDENCE
                 edited = (category, mechanics, players, evaluations, references, utility, ease, support, backpack) != _baseline(research[key])
                 result[key] = EquipmentKnowledge(key, item["name"], item["name_en"], item["slot"], category, mechanics, players, evaluations, references, utility, ease, support, backpack, review_aliases[row["核实状态"]], row["来源"], row["研究备注"], row["编辑说明"], edited)
             except KnowledgeError as exc:
-                raise KnowledgeError(f"CSV 第 {rows.line_num} 行（{key or '无 id'}）：{exc}") from exc
-        _require(set(result) == set(catalog_items), f"CSV 装备缺失：{'、'.join(sorted(set(catalog_items) - set(result))[:5])}")
-        return KnowledgeBase(result, taxonomy, _index(evidence["sources"], "来源"), research)
-    except (OSError, UnicodeError, json.JSONDecodeError, csv.Error, KeyError, TypeError, AttributeError) as exc:
+                raise KnowledgeError(f"{path.name} 第 {row_number} 条记录（{key or '无 id'}）：{exc}") from exc
+        _require(set(result) == set(catalog_items), f"标签表装备缺失：{'、'.join(sorted(set(catalog_items) - set(result))[:5])}")
+        return KnowledgeBase(result, taxonomy, _index(evidence["sources"], "来源"), research, path)
+    except (OSError, UnicodeError, json.JSONDecodeError, csv.Error, KeyError, TypeError, AttributeError, WorkbookError) as exc:
         raise KnowledgeError(f"知识库读取失败：{exc}") from exc
+
+
+def export_csv(knowledge: KnowledgeBase, destination: Path) -> Path:
+    """Export the validated effective workbook/table to the canonical CSV columns."""
+    destination = Path(destination)
+    _require(destination.suffix.casefold() == ".csv", "导出文件请使用 .csv 后缀")
+    tags, categories = knowledge.taxonomy["tags"], knowledge.taxonomy["categories"]
+    labels = lambda values: "|".join(tags[key]["label"] for key in sorted(values))
+    occupied = lambda value: "待核实" if value is None else "是" if value else "否"
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8-sig", newline="", dir=destination.parent, prefix=".knowledge-", suffix=".csv", delete=False) as stream:
+            temporary = Path(stream.name)
+            writer = csv.DictWriter(stream, fieldnames=CSV_FIELDS, lineterminator="\n")
+            writer.writeheader()
+            for item in knowledge.items.values():
+                writer.writerow(dict(zip(CSV_FIELDS, (
+                    item.id, item.name, item.name_en, SLOT_LABELS[item.slot], categories[item.category]["label"],
+                    labels(item.mechanics), labels(item.player_roles), labels(item.community_evaluations),
+                    labels(item.reference_roles), labels(item.utility), EASE_LABELS[item.anti_tank_ease],
+                    occupied(item.support_weapon), occupied(item.backpack), REVIEW_LABELS[item.review_status],
+                    item.source_urls, item.research_notes, item.edit_notes,
+                ))))
+        os.replace(temporary, destination)
+        return destination
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
