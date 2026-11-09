@@ -1,7 +1,8 @@
 ﻿id,名称,英文名,槽位,分类,机制标签,玩家标签集,资料定位,辅助标签,支援武器槽,背包槽,核实状态,来源,研究备注,编辑说明
 primary.ar-23-liberator,AR-23 解放者,AR-23 Liberator,主武器,突击步枪,动能投射；轻甲穿透（资料）,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 动能投射（Wiki资料）：实弹/动能投射；不据此推断伤害、穿甲或反坦克能力。
-轻甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。",
+轻甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。
+玩家实战补充：2026-10 有玩家把解放者称作唯一轮椅：不知道带什么战备时就带它，除超巨巢拆不掉几乎什么都能干；属夸张口吻，只作出场率线索。",
 primary.ar-23p-liberator-penetrator,AR-23P 穿甲“解放者”,AR-23P Liberator Penetrator,主武器,突击步枪,动能投射；中甲穿透（资料）,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 动能投射（Wiki资料）：实弹/动能投射；不据此推断伤害、穿甲或反坦克能力。
 中甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。",
@@ -30,13 +31,14 @@ primary.ar-32-pacifier,AR-32 安抚者,AR-32 Pacifier,主武器,突击步枪,动
 primary.ma5c-assault-rifle,MA5C 突击步枪,MA5C Assault Rifle,主武器,突击步枪,动能投射；中甲穿透（资料）,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 动能投射（Wiki资料）：实弹/动能投射；不据此推断伤害、穿甲或反坦克能力。
 中甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。",
-primary.ar-2-coyote,AR-2 野狼,AR-2 Coyote,主武器,突击步枪,动能投射；对敌燃烧；中甲穿透（资料）,清杂；机器人推荐；光能族推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/AR-2_Coyote | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://api.bilibili.com/x/web-interface/view?bvid=BV1qhahzLEH3 | https://steamcommunity.com/sharedfiles/filedetails/?id=3745279768,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
+primary.ar-2-coyote,AR-2 野狼,AR-2 Coyote,主武器,突击步枪,动能投射；对敌燃烧；中甲穿透（资料）,清杂；对单；机器人推荐；光能族推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/AR-2_Coyote | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://api.bilibili.com/x/web-interface/view?bvid=BV1qhahzLEH3 | https://steamcommunity.com/sharedfiles/filedetails/?id=3745279768,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 动能投射（Wiki资料）：实弹/动能投射；不据此推断伤害、穿甲或反坦克能力。
 对敌燃烧（Wiki资料）：燃烧弹可点燃目标。
 中甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
-清杂（玩家反馈）：2025简介用于清无票者；不沿用跨年强度比较。",
+清杂（玩家反馈）：2025简介用于清无票者；不沿用跨年强度比较。
+对单（玩家反馈）：2026-09 玩家说野狼在西线主要是泼，9到10发算上火能处理一个蹂躏；不打弱点比焦土慢，比离子喷、爆燃弩、爆裂铳快。",
 primary.ar-gl-21-one-two,AR/GL-21 幺二,AR/GL-21 One-Two,主武器,下挂榴弹突击步枪,动能投射；爆炸；轻甲穿透（资料）,拆迁,拆迁,,否,否,部分核实,https://helldivers.wiki.gg/wiki/One_Two | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://steamcommunity.com/sharedfiles/filedetails/?id=3745279768,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 动能投射（Wiki资料）：实弹/动能投射；不据此推断伤害、穿甲或反坦克能力。
 爆炸（Wiki资料）：下挂榴弹模式；步枪模式本身不标为爆炸。
@@ -78,9 +80,10 @@ primary.r-4-hyena,R-4 鬣狗,R-4 Hyena,主武器,精确射手步枪,动能投射
 动能投射（Wiki资料）：实弹/动能投射；不据此推断伤害、穿甲或反坦克能力。
 对敌燃烧（Wiki资料）：表列Incendiary或Fire伤害/状态；未归为通用反坦克。
 中甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。",
-primary.r-40-sightliner,R-40 视界者,R-40 Sightliner,主武器,栓动狙击步枪,动能投射；重甲穿透（资料）,,,,否,否,部分核实,https://blog.playstation.com/2026/10/13/helldivers-2-scope-of-authority-premium-warbond-launches-oct-20/ | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
+primary.r-40-sightliner,R-40 视界者,R-40 Sightliner,主武器,栓动狙击步枪,动能投射；重甲穿透（资料）,评价有分歧,,,否,否,部分核实,https://blog.playstation.com/2026/10/13/helldivers-2-scope-of-authority-premium-warbond-launches-oct-20/ | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 动能投射（Wiki资料）：实弹/动能投射；不据此推断伤害、穿甲或反坦克能力。
-重甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。",
+重甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。
+评价有分歧（玩家反馈）：2026-10 高赞批评它卡指挥官和武斗的阈值、处理效率相当一般，另有玩家反驳猛吹的人是把拉烟压力全给队友。",
 primary.mp-98-knight,MP-98 骑士,MP-98 Knight,主武器,冲锋枪,动能投射；轻甲穿透（资料）；单手使用,反中；清杂,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://api.bilibili.com/x/v2/reply?type=1&oid=116135244597488&sort=2&pn=1&ps=10,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 动能投射（Wiki资料）：实弹/动能投射；不据此推断伤害、穿甲或反坦克能力。
 单手使用（Wiki资料）：对照表明确One Handed；未把该特性推广至所有SMG。
@@ -162,7 +165,8 @@ primary.sg-20-halt,SG-20 止息,SG-20 Halt,主武器,霰弹枪,动能投射；�
 primary.dbs-2-double-freedom,DBS-2 双重自由,DBS-2 Double Freedom,主武器,霰弹枪,动能投射；中甲穿透（资料）,反中,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://steamcommunity.com/sharedfiles/filedetails/?id=3745279768,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 动能投射（Wiki资料）：实弹/动能投射；不据此推断伤害、穿甲或反坦克能力。
 中甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。
-反中（玩家反馈）：齐射处理中型威胁；频繁装弹。",
+反中（玩家反馈）：齐射处理中型威胁；频繁装弹。
+玩家实战补充：玩家配装帖把双重自由用来清中型虫、榴弹炸小虫并拆巢，认为能解放一个战备位，城市图补给也充足。",
 primary.m90a-shotgun,M90A 霰弹枪,M90A Shotgun,主武器,霰弹枪,动能投射；轻甲穿透（资料）,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 动能投射（Wiki资料）：实弹/动能投射；不据此推断伤害、穿甲或反坦克能力。
 轻甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。",
@@ -170,7 +174,7 @@ primary.sg-97-sweeper,SG-97 扫荡者,SG-97 Sweeper,主武器,霰弹枪,动能�
 动能投射（Wiki资料）：实弹/动能投射；不据此推断伤害、穿甲或反坦克能力。
 中甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。
 反中（玩家反馈）：玩家用于生化人等中型敌，不推导反重。",
-primary.r-36-eruptor,R-36 爆裂铳,R-36 Eruptor,主武器,爆炸栓动步枪,爆炸；重甲穿透（资料）,反中；拆迁；易自伤；机器人推荐；光能族推荐,拆迁,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Bile_Titan_Bug_Hole | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://steamcommunity.com/sharedfiles/filedetails/?id=3745279768 | https://www.reddit.com/r/Helldivers/comments/1wei43c/best_counter_to_cyborgs/,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
+primary.r-36-eruptor,R-36 爆裂铳,R-36 Eruptor,主武器,爆炸栓动步枪,爆炸；重甲穿透（资料）,反中；清杂；拆迁；易自伤；机器人推荐；光能族推荐,拆迁,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Bile_Titan_Bug_Hole | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://steamcommunity.com/sharedfiles/filedetails/?id=3745279768 | https://www.reddit.com/r/Helldivers/comments/1wei43c/best_counter_to_cyborgs/,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 爆炸（Wiki资料）：存在爆炸作用；不自动等同拆建筑或反坦克。
 拆迁（资料推导）：资料明确可封闭普通虫洞；不承诺适用于所有建筑。
 重甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。
@@ -178,18 +182,23 @@ primary.r-36-eruptor,R-36 爆裂铳,R-36 Eruptor,主武器,爆炸栓动步枪,�
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 拆迁（玩家反馈）：拆巢补位，腾出其他装备职责。
 反中（玩家反馈）：处理中型威胁；自伤/操控/射速限制。
-易自伤（玩家反馈）：既有反中型玩家备注明确列出自伤限制；不是仅因爆炸机制就批量贴风险。",
-primary.cb-9-exploding-crossbow,CB-9 爆燃弩,CB-9 Exploding Crossbow,主武器,爆炸弩,爆炸；单手使用,拆迁；机器人推荐；光能族推荐,拆迁,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Exploding_Crossbow | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://steamcommunity.com/sharedfiles/filedetails/?id=3745279768,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
+易自伤（玩家反馈）：既有反中型玩家备注明确列出自伤限制；不是仅因爆炸机制就批量贴风险。
+清杂（玩家反馈）：玩家谈反器材时说被近身就拿爆裂铳一枪清理跳虫，清杂效率也不低。",
+primary.cb-9-exploding-crossbow,CB-9 爆燃弩,CB-9 Exploding Crossbow,主武器,爆炸弩,爆炸；单手使用,清杂；拆迁；机器人推荐；光能族推荐,拆迁,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Exploding_Crossbow | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://steamcommunity.com/sharedfiles/filedetails/?id=3745279768,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 爆炸（Wiki资料）：存在爆炸作用；不自动等同拆建筑或反坦克。
 拆迁（资料推导）：爆炸弩箭可摧毁敌方生成点。
 单手使用（Wiki资料）：对照表明确One Handed；未把该特性推广至所有SMG。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
-拆迁（玩家反馈）：拆巢补位，不是所有建筑通解。",
-primary.gl-15-evictor,GL-15 驱逐者,GL-15 Evictor,主武器,泵动榴弹发射器,爆炸；中甲穿透（资料）,,拆迁,,否,否,部分核实,https://blog.playstation.com/2026/09/15/helldivers-2-ironclad-democracy-warbond-launches-sept-22/ | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Evictor | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
+拆迁（玩家反馈）：拆巢补位，不是所有建筑通解。
+清杂（玩家反馈）：东线烈焰站桩套里，玩家说小虫数目稍多就用爆燃弩，远距离一炸一大片。",
+primary.gl-15-evictor,GL-15 驱逐者,GL-15 Evictor,主武器,泵动榴弹发射器,爆炸；中甲穿透（资料）,清杂；拆迁；机器人推荐,拆迁,,否,否,部分核实,https://blog.playstation.com/2026/09/15/helldivers-2-ironclad-democracy-warbond-launches-sept-22/ | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Evictor | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 爆炸（官方资料）：存在爆炸作用；不自动等同拆建筑或反坦克。
 拆迁（资料推导）：需要命中目标弱点或开口。
-中甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。",
+中甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。
+清杂（玩家反馈）：2026-09 神九门称它是爆炸家族新成员、第三把炸弹分类武器；玩家补充一般是在需要补主手拆迁或清杂时才起爆炸主手。
+拆迁（玩家反馈）：同一期说明其定位是补主手拆迁，用绝对数值统治西线；评论说下坠比通牒小、50米内指哪打哪。
+机器人推荐（玩家反馈）：视频明确以『统治西线』描述这把爆炸主手，西线即机器人战线。",
 primary.las-5-scythe,LAS-5 长柄镰,LAS-5 Scythe,主武器,能量武器,对敌燃烧；热量管理；激光；轻甲穿透（资料）,清杂,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://steamcommunity.com/sharedfiles/filedetails/?id=3745279768,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 对敌燃烧（Wiki资料）：表列Incendiary或Fire伤害/状态；未归为通用反坦克。
 激光（Wiki资料）：对照表明确列Laser。
@@ -202,7 +211,8 @@ primary.plas-1-scorcher,PLAS-1 焦土,PLAS-1 Scorcher,主武器,等离子步枪,
 反中型（资料推导）：资料明确部分中型敌人与弱点用法；仍需有效命中。
 轻甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
-机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。",
+机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
+玩家实战补充：2026-10 有玩家把焦土放进自己研究的三线通用配装（焦土、通牒、反坦克追踪者、补包、矛枪、毒气地雷、120）。",
 primary.las-16-sickle,LAS-16 镰刀,LAS-16 Sickle,主武器,能量武器,热量管理；激光；轻甲穿透（资料）,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/LAS-16_Sickle | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。 索引个页明确不点燃目标，未添加fire。
 热量管理（Wiki资料）：Heat特性；需管理热量，不承诺无条件无限射击。
 轻甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。",
@@ -217,16 +227,18 @@ primary.arc-12-blitzer,ARC-12 雷霆,ARC-12 Blitzer,主武器,能量武器,电�
 眩晕（Wiki资料）：状态页明确列为眩晕施加装备；不据名字推断。
 控场（资料推导）：由已列明眩晕能力整理为控场标签；目标免疫和具体效果仍需实测。
 中甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。",
-primary.plas-101-purifier,PLAS-101 净化者,PLAS-101 Purifier,主武器,蓄力等离子步枪,蓄力；爆炸；中甲穿透（资料）；等离子,反中；机器人推荐；光能族推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Purifier | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://www.reddit.com/r/Helldivers/comments/1wei43c/best_counter_to_cyborgs/,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
+primary.plas-101-purifier,PLAS-101 净化者,PLAS-101 Purifier,主武器,蓄力等离子步枪,蓄力；爆炸；中甲穿透（资料）；等离子,反中；易自伤；机器人推荐；光能族推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Purifier | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://www.reddit.com/r/Helldivers/comments/1wei43c/best_counter_to_cyborgs/,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 爆炸（Wiki资料）：存在爆炸作用；不自动等同拆建筑或反坦克。
 中甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
-反中（玩家反馈）：玩家用于生化人等目标；需掌握蓄力节奏。",
-primary.plas-39-accelerator-rifle,PLAS-39 加速步枪,PLAS-39 Accelerator Rifle,主武器,连发等离子狙击步枪,蓄力；爆炸；中甲穿透（资料）；等离子,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/PLAS-39_Accelerator_Rifle | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
+反中（玩家反馈）：玩家用于生化人等目标；需掌握蓄力节奏。
+易自伤（玩家反馈）：2026-11 玩家指出净化者蓄力过程中被打断会自动往地上开枪把自己炸死，忠诚者爆炸伤害低炸不死、纪元肩扛式则不会打地板。",
+primary.plas-39-accelerator-rifle,PLAS-39 加速步枪,PLAS-39 Accelerator Rifle,主武器,连发等离子狙击步枪,蓄力；爆炸；中甲穿透（资料）；等离子,评价有分歧,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/PLAS-39_Accelerator_Rifle | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 爆炸（Wiki资料）：存在爆炸作用；不自动等同拆建筑或反坦克。
 蓄力（Wiki资料）：武器说明明确需要蓄力后发射。
-中甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。",
+中甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。
+评价有分歧（玩家反馈）：2026-10 有高赞批评阈值设计，也有债券体验帖把PLAS-39等武器的加强列为正面改动，评价并不一致。",
 primary.las-17-double-edge-sickle,LAS-17 双刃镰刀,LAS-17 Double-Edge Sickle,主武器,能量武器,热量管理；重甲穿透（资料）；激光；轻甲穿透（资料）；中甲穿透（资料）,光能族推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/LAS-17_Double-Edge_Sickle | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。 过热可自伤；未将自燃写成对敌燃烧能力。
 热量管理（Wiki资料）：Heat特性；需管理热量，不承诺无条件无限射击。
 轻甲穿透（资料）（Wiki资料）：界面并列多档，实际随热状态变化并伴随自伤风险；非恒定重穿透，不等同便捷反重。
@@ -238,7 +250,8 @@ primary.las-13-trident,LAS-13 三叉戟,LAS-13 Trident,主武器,能量武器,�
 热量管理（Wiki资料）：Heat特性；需管理热量，不承诺无条件无限射击。
 轻甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
-反中（玩家反馈）：用于生化人等特定目标，不泛化重甲。",
+反中（玩家反馈）：用于生化人等特定目标，不泛化重甲。
+玩家实战补充：三线通解配装把三叉戟称作近防的神，极高爆发能瞬间蒸发身边敌人，正好补机炮频繁换弹的空窗。",
 primary.r-40-k-hot-shot-marksman-rifle,R/40-K 高能精确射手步枪,R/40-K Hot-Shot Marksman Rifle,主武器,能量精确步枪,激光；中甲穿透（资料）,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/R/40-K_Hot-Shot_Marksman_Rifle | https://helldivers.wiki.gg/wiki/Talon | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。 发射激光但需换电池，不添加heat标签。
 激光（Wiki资料）：正文将两者明确称为半自动激光武器；Hot-Shot并非热沉回复武器。
 中甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。",
@@ -255,7 +268,8 @@ primary.jar-5-dominator,JAR-5 主宰,JAR-5 Dominator,主武器,特殊主武器,�
 primary.flam-66-torcher,FLAM-66 火炬手,FLAM-66 Torcher,主武器,喷火器,对敌燃烧,,区域封锁；控场,,否,否,部分核实,https://helldivers.wiki.gg/wiki/FLAM-66_Torcher | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Stagger,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 对敌燃烧（Wiki资料）：表列Incendiary或Fire伤害/状态；未归为通用反坦克。
 区域封锁（资料推导）：点燃地面可形成短时伤害区，同时妨碍友军通过。
-控场（资料推导）：状态页明确列直接火流减速/混乱；存在目标限制。",
+控场（资料推导）：状态页明确列直接火流减速/混乱；存在目标限制。
+玩家实战补充：萌新反馈：火炬手/火焰喷射器在东线清杂效率似乎不高，持续开火减速让成群敌人能从最远射程走到脸上；配悬浮背包不易被贴脸但跳虫能从空中突脸。",
 primary.vg-70-variable,VG-70 变数,VG-70 Variable,主武器,特殊主武器,动能投射；轻甲穿透（资料）,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 动能投射（Wiki资料）：实弹/动能投射；不据此推断伤害、穿甲或反坦克能力。
 轻甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。",
@@ -322,12 +336,14 @@ secondary.cqc-42-machete,CQC-42 砍刀,CQC-42 Machete,副武器,近战武器,中
 中甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。",
 secondary.cqc-73-entrenchment-tool,CQC-73 堑壕工具,CQC-73 Entrenchment Tool,副武器,近战武器,近战；单手使用,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 单手使用（Wiki资料）：对照表One Handed特性；不代表占用背包或支援武器槽。",
-secondary.las-7-dagger,LAS-7 匕首,LAS-7 Dagger,副武器,特殊副武器,对敌燃烧；热量管理；激光；轻甲穿透（资料）；单手使用,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
+secondary.las-7-dagger,LAS-7 匕首,LAS-7 Dagger,副武器,特殊副武器,对敌燃烧；热量管理；激光；轻甲穿透（资料）；单手使用,清杂；简易使用,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 单手使用（Wiki资料）：对照表One Handed特性；不代表占用背包或支援武器槽。
 对敌燃烧（Wiki资料）：表列Incendiary或Fire伤害/状态；未归为通用反坦克。
 激光（Wiki资料）：对照表明确列Laser。
 热量管理（Wiki资料）：Heat特性；需管理热量，不承诺无条件无限射击。
-轻甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。",
+轻甲穿透（资料）（Wiki资料）：仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。
+清杂（玩家反馈）：东线烈焰站桩套把匕首当对单清小虫位：超长射程、点火机制让小虫打个照面就死，赶路可以一边跑一边回头扫。
+简易使用（玩家反馈）：同一帖称匕首指到哪小跳虫死到哪，用来处理贴脸目标非常直观。",
 secondary.gp-31-grenade-pistol,GP-31 榴弹手枪,GP-31 Grenade Pistol,副武器,特殊副武器,爆炸；单手使用,拆迁,拆迁,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Primary_weapons | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Bile_Titan_Bug_Hole | https://www.reddit.com/r/Helldivers/comments/1i7rxta/ | https://api.bilibili.com/x/web-interface/view?bvid=BV1G7dUBhER5,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 单手使用（Wiki资料）：对照表One Handed特性；不代表占用背包或支援武器槽。
 爆炸（Wiki资料）：存在爆炸作用；不自动等同拆建筑或反坦克。
@@ -368,7 +384,9 @@ secondary.gp-20-ultimatum,GP-20 最后通牒,GP-20 Ultimatum,副武器,单发爆
 易误伤（玩家反馈）：现有评价明确提到爆炸友伤，需要保留安全距离。
 易自伤（玩家反馈）：近距落点和自伤风险是玩家拒用理由之一。
 评价有分歧（玩家反馈）：有人作近中距主力，有人仅补位或拒用；低备弹与自伤影响偏好。
-玩家实战补充：玩家肯定补足反重缺口的能力，但要掌握抛物线/安全距离并控制自伤、友伤与低备弹；有人主用也有人仅应急或拒用。",
+玩家实战补充：玩家肯定补足反重缺口的能力，但要掌握抛物线/安全距离并控制自伤、友伤与低备弹；有人主用也有人仅应急或拒用。
+玩家实战补充：2026-08 配装用两颗通牒处理泰坦、坦克等高级重甲，作为轨道火力网之外的补刀。
+玩家实战补充：2026-09 同期债券的铝热手枪四发弹容吃一口补给只补一发，玩家拿来和通牒的补给待遇比较；说的是另一把副武器，仅作补给体系线索。",
 secondary.las-58-talon,LAS-58 猛爪,LAS-58 Talon,副武器,激光左轮,热量管理；激光；中甲穿透（资料）；单手使用,反中,反中型,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Talon | https://helldivers.wiki.gg/wiki/Scratchpad/Weapons_List_DPL | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1wei43c/best_counter_to_cyborgs/,"Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。
 单手使用（Wiki资料）：对照表One Handed特性；不代表占用背包或支援武器槽。
 激光（Wiki资料）：正文将两者明确称为半自动激光武器；Hot-Shot并非热沉回复武器。
@@ -431,13 +449,16 @@ grenade.g-3-smoke,G-3 烟雾弹,G-3 Smoke,投掷物,特殊投掷物,引信延时
 任务辅助（玩家反馈）：玩家用烟雾遮蔽终端与地狱火操作。",
 grenade.g-23-stun,G-23 眩晕弹,G-23 Stun,投掷物,特殊投掷物,眩晕,控场,,不可常规拆迁,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://helldivers.wiki.gg/wiki/Stagger | https://www.reddit.com/r/Helldivers/comments/1w65vc4/what_do_you_personally_think_is_the_best_support/ | https://helldivers.wiki.gg/wiki/Damage_Comparison,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。眩晕的穿甲显示不代表拥有伤害型反坦克能力。
 控场（玩家反馈）：玩家用于争取精确瞄准、装填与救治窗口。",
-grenade.g-123-thermite,G-123 铝热弹,G-123 Thermite,投掷物,特殊投掷物,爆炸；对敌燃烧；黏附,反重；对单；应急补位；评价有分歧,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://helldivers.wiki.gg/wiki/G-123_Thermite | https://www.reddit.com/r/Helldivers/comments/1sva49t/which_at_grenade_do_you_prefer_thermite_or_giga/ | https://www.reddit.com/r/Helldivers/comments/1w65vc4/what_do_you_personally_think_is_the_best_support/ | https://www.reddit.com/r/LowSodiumHellDivers/comments/1wpraae/level_155_mo_diver_with_600_hours_convince_me_to/,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。实战便利性和纸面穿甲分开；粘附失败、延迟爆炸及近身燃烧风险仍需考虑。
+grenade.g-123-thermite,G-123 铝热弹,G-123 Thermite,投掷物,特殊投掷物,爆炸；对敌燃烧；黏附,反重；对单；应急补位；评价有分歧；机器人推荐；光能族推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://helldivers.wiki.gg/wiki/G-123_Thermite | https://www.reddit.com/r/Helldivers/comments/1sva49t/which_at_grenade_do_you_prefer_thermite_or_giga/ | https://www.reddit.com/r/Helldivers/comments/1w65vc4/what_do_you_personally_think_is_the_best_support/ | https://www.reddit.com/r/LowSodiumHellDivers/comments/1wpraae/level_155_mo_diver_with_600_hours_convince_me_to/,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。实战便利性和纸面穿甲分开；粘附失败、延迟爆炸及近身燃烧风险仍需考虑。
 反重（玩家反馈）：玩家常用的口袋反重补位；先粘附目标，再等待作用。 补足反重；投掷命中、延迟与部位影响可靠性。
 对单（玩家反馈）：原评价明确称单体反重补位；先粘附具体目标再等待作用。
 应急补位（玩家反馈）：玩家用来填补配装的反重缺口；并非否认熟练使用者把它作为主要反重来源。
 评价有分歧（玩家反馈）：有人看重口袋反重，有人不喜欢命中难度、反弹与生效延迟；场景和偏好不能抹平。
+光能族推荐（玩家反馈）：2026-06 玩家比较手雷位时说铝热在南线反而有优势，可以无交互拆飞碟。
+机器人推荐（玩家反馈）：同一帖说铝热在西线能稳定杀坦克和炮塔，只是千兆瞬爆加AOE更香。
 玩家实战补充：玩家普遍用作方便的单体反重补位，但需成功粘附并等待；讨论中也有反弹与延迟的负面反馈，不保证一次命中解决所有重型。
-玩家实战补充：讨论存在分歧：认可反重补位，但有人嫌难投中、起效慢或支援武器更顺手；并非所有玩家的统一评级。",
+玩家实战补充：讨论存在分歧：认可反重补位，但有人嫌难投中、起效慢或支援武器更顺手；并非所有玩家的统一评级。
+玩家实战补充：2026-06 玩家复盘：千兆级和雷管加强后铝热被完爆，东线彻底查无此人，毒雷、千兆、雷管三巨头一个没法碰瓷；西线还能稳定杀坦克炮塔，南线有无交互拆飞碟的优势。",
 grenade.g-13-incendiary-impact,G-13 燃烧冲击弹,G-13 Incendiary Impact,投掷物,特殊投掷物,爆炸；对敌燃烧；触碰起爆,,区域封锁；拆迁,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://helldivers.wiki.gg/wiki/Impact_Incendiary_Grenade,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。Wiki已报告洞穴内火焰生成问题。
 区域封锁（资料推导）：撞击后留下火焰，可封路。
 拆迁（Wiki资料）：需要准确投入开口。",
@@ -460,10 +481,15 @@ grenade.g-142-pyrotech,G-142 烟花术,G-142 Pyrotech,投掷物,特殊投掷物,
 需准备（玩家反馈）：反重需安排目标留在火花区，慢速/静止大目标更合适；属于布置与时机要求。
 评价有分歧（玩家反馈）：部分重型的命中稳定性、击杀次数及补丁时期有不同反馈，保留历史条件。
 玩家实战补充：玩家反馈对慢速或静止且大碰撞体积的重型更好用；需让目标留在火花区，快速目标及细小腿部命中不稳定；讨论有击杀次数与补丁变化争议，不按纸面中穿排除，也不保证反重。",
-grenade.g-109-urchin,G-109 海胆,G-109 Urchin,投掷物,特殊投掷物,黏附；眩晕,,控场；潜行,不可常规拆迁,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://helldivers.wiki.gg/wiki/G-109_Urchin,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。
-控场（Wiki资料）：粘附后多次脉冲；不给伤害型反坦克标签。",
-grenade.g-31-arc,G-31 电弧,G-31 Arc,投掷物,特殊投掷物,电弧；眩晕,,清杂,不可常规拆迁,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://helldivers.wiki.gg/wiki/G-31_ARC,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。放电和弹跳可能伤及队友，不能替代虫洞/制造厂拆迁工具。
-清杂（Wiki资料）：弹跳放电可链向多个目标。",
+grenade.g-109-urchin,G-109 海胆,G-109 Urchin,投掷物,特殊投掷物,黏附；眩晕,控场；潜行,控场；潜行,不可常规拆迁,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://helldivers.wiki.gg/wiki/G-109_Urchin,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。
+控场（Wiki资料）：粘附后多次脉冲；不给伤害型反坦克标签。
+潜行（玩家反馈）：玩家认为海胆其实是为潜行特化的控制手雷，一颗能让潜兵无视某个敌人十多秒，东线潜行单通离不开它。
+控场（玩家反馈）：同一帖说用它打正面肯定差强人意，但换成潜行这个本职工作表现十分亮眼。",
+grenade.g-31-arc,G-31 电弧,G-31 Arc,投掷物,特殊投掷物,电弧；眩晕,清杂；易误伤,清杂,不可常规拆迁,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://helldivers.wiki.gg/wiki/G-31_ARC,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。放电和弹跳可能伤及队友，不能替代虫洞/制造厂拆迁工具。
+清杂（Wiki资料）：弹跳放电可链向多个目标。
+清杂（玩家反馈）：玩家称电弧雷是清杂好手，清杂手雷里除毒雷几乎没有清得过它的；雷霆跳弹还被用来在撤离前清场。
+易误伤（玩家反馈）：玩家专门提醒：第一发精准可控，但后续链锁基本180度范围内都可能致命，怪后面的队友不能射，不电队友是玩电弧最基础的。
+玩家实战补充：2026-09 玩家澄清电榴弹的电弧同样不会锁定趴下的潜兵，近距离可以通过飞扑避免被锁定；与『自伤回归』的公告讨论同月。",
 grenade.tm-1-lure-mine,TM-1 诱饵地雷,TM-1 Lure Mine,投掷物,特殊投掷物,爆炸；近炸；黏附,,区域封锁；控场,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://helldivers.wiki.gg/wiki/TM-1_Lure_Mine,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。虽可拆生成建筑，但近炸触发条件导致操作不便，未标成通用拆迁优选。
 控场（Wiki资料）：声光诱导可引开已交战敌人。
 区域封锁（资料推导）：留置诱导近炸雷，可覆盖通路。",
@@ -477,17 +503,37 @@ grenade.g-48-giga-grenade,G-48 千兆,G-48 Giga Grenade,投掷物,特殊投掷�
 易自伤（玩家反馈）：有效落点靠近自身时存在明显自伤风险。
 对群（玩家反馈）：原玩家职责记录明确可同时处理重型周边多个目标，并非从“爆炸”机制推导。
 应急补位（玩家反馈）：即时爆炸可救急，但小有效内圈、安全距离与携带量仍影响可靠性。
-玩家实战补充：即时爆炸被多位玩家认为能方便救急，但有效内圈小、近距离自伤风险及携带量限制需要配合落点和补给；反重方便程度有个人偏好，不等同纸面穿甲等级。",
-grenade.g-40-k-melta-mine,G/40-K 热熔地雷,G/40-K Melta Mine,投掷物,特殊投掷物,爆炸；对敌燃烧；近炸,,反重；拆迁,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://helldivers.wiki.gg/wiki/G/40-K_Melta_Mine,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。无社区实战便利性评价；Wiki所述个别一击击杀细节有讨论争议，未收录这些保证。
+玩家实战补充：即时爆炸被多位玩家认为能方便救急，但有效内圈小、近距离自伤风险及携带量限制需要配合落点和补给；反重方便程度有个人偏好，不等同纸面穿甲等级。
+玩家实战补充：玩家称其长期强势的原因是直击伤害稳定，不依赖锁定或溅射覆盖。
+玩家实战补充：2026-06 玩家称千兆和雷管加强后压制了铝热，千兆瞬爆加AOE很香；9月神九门又拿它当反坦克追踪者的功能性与反应速度上限。",
+grenade.g-40-k-melta-mine,G/40-K 热熔地雷,G/40-K Melta Mine,投掷物,特殊投掷物,爆炸；对敌燃烧；近炸,反重；拆迁；需精确瞄准；易自伤,反重；拆迁,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://helldivers.wiki.gg/wiki/G/40-K_Melta_Mine,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。无社区实战便利性评价；Wiki所述个别一击击杀细节有讨论争议，未收录这些保证。
 对敌燃烧（Wiki资料）：热墙火属性伤害，未标持续燃烧。
 反重（Wiki资料）：Wiki明确反坦克用途；尚无所选社区资料中的便利性评价。
-拆迁（Wiki资料）：可安全距离射击引爆以拆建筑。",
-grenade.g-8-immolation,G-8 焚身,G-8 Immolation,投掷物,特殊投掷物,对敌燃烧；触碰起爆,,区域封锁；清杂,不可常规拆迁,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://blog.playstation.com/2026/09/15/helldivers-2-ironclad-democracy-warbond-launches-sept-22/ | https://helldivers.wiki.gg/wiki/Immolation,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。火场弹无拆迁力；Wiki报告洞穴内火焰问题，不能以爆炸式投掷物的名称推导拆洞能力。
-清杂（Wiki资料）：大火场用于轻型群体，处理中型能力有限。",
-grenade.g-60-anti-tank-seeker,G-60 反坦克追踪者,G-60 Anti-Tank Seeker,投掷物,特殊投掷物,爆炸；制导；触碰起爆,,反重,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://blog.playstation.com/2026/09/15/helldivers-2-ironclad-democracy-warbond-launches-sept-22/,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。没有当前所选社区资料的反重便利性评价；Wiki提示飞行轨迹及命中部位可能令对泰坦不稳定，不将官方定位当可靠击杀保证。
-反重（官方资料）：官方定位为对装甲载具的导引投掷物。",
-grenade.g-11-caltrops,G-11 铁蒺藜,G-11 Caltrops,投掷物,特殊投掷物,近炸；眩晕,,区域封锁；控场,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://blog.playstation.com/2026/10/13/helldivers-2-scope-of-authority-premium-warbond-launches-oct-20/ | https://helldivers.wiki.gg/wiki/G-11_Caltrops,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。主要为近炸控制与预警，未据低额爆炸标签推导大范围杀伤或拆迁。
-区域封锁（资料推导）：子雷可在狭窄通路提供减速眩晕。",
+拆迁（Wiki资料）：可安全距离射击引爆以拆建筑。
+反重（玩家反馈）：2026-10 玩家认为它是手雷位反强袭虫与泰坦最稳的选择，炸泰坦脚部也能处理；对蟑龙这类目标无效。
+拆迁（玩家反馈）：2026-10 玩家给出拆巢方法：扔出地雷后拿枪点爆，或直接往虫洞附近的虫子身上扔，爆炸拆毁范围约7米、能全向拆小虫洞，泰坦洞要扔近洞口。
+需精确瞄准（玩家反馈）：玩家指出泰坦左前腿血量低，要往左前腿扔、射流命中基本能秒，投掷距离可按住前进并抬高视角增加；另有玩家说扎腿能炸但很不稳定。
+易自伤（玩家反馈）：2026-08 神九门把热熔地雷概括为手短、自杀、不好反泰坦、会被中型单位踩爆、需要手动引爆；该说法早于10月的打点技巧，按历史观点保留。
+玩家实战补充：2026-08 配装带六颗热熔地雷处理无畏与大锤哥；作者对比千兆：容量少、有时秒不掉强袭虫、碰到西线坦克模板乏力，热熔地雷不受此限。
+玩家实战补充：时间线：2026-08 简介说它不好反泰坦、手短、需手动引爆；2026-09 玩家说热熔两件套给潜行很大灵活度、能高效清小中甲集群，但东线反泰坦仍差点、扎腿不稳定；2026-10 给出往泰坦左前腿扔基本能秒的打点方法。以最新打点结论为准。",
+grenade.g-8-immolation,G-8 焚身,G-8 Immolation,投掷物,特殊投掷物,对敌燃烧；触碰起爆,清杂,区域封锁；清杂,不可常规拆迁,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://blog.playstation.com/2026/09/15/helldivers-2-ironclad-democracy-warbond-launches-sept-22/ | https://helldivers.wiki.gg/wiki/Immolation,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。火场弹无拆迁力；Wiki报告洞穴内火焰问题，不能以爆炸式投掷物的名称推导拆洞能力。
+清杂（Wiki资料）：大火场用于轻型群体，处理中型能力有限。
+清杂（玩家反馈）：2026-09 有『堪称手持飞鹰火』的新债券焚身火雷2300杀东线N10单通视频，评论称确实很不错。
+玩家实战补充：2026-09 评论提醒组个反重仙人，不然这套火雷配装反重压力有点大。",
+grenade.g-60-anti-tank-seeker,G-60 反坦克追踪者,G-60 Anti-Tank Seeker,投掷物,特殊投掷物,爆炸；制导；触碰起爆,反重；拆迁；需准备；易自伤；评价有分歧；机器人推荐,反重,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://blog.playstation.com/2026/09/15/helldivers-2-ironclad-democracy-warbond-launches-sept-22/,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。没有当前所选社区资料的反重便利性评价；Wiki提示飞行轨迹及命中部位可能令对泰坦不稳定，不将官方定位当可靠击杀保证。
+反重（官方资料）：官方定位为对装甲载具的导引投掷物。
+反重（玩家反馈）：西线玩家称两发大概率处理重甲单位，配合补给背包可单人拦车队；锁定机制影响对移动目标的命中。
+拆迁（玩家反馈）：玩家称拆迁小构筑方便；具体目标未逐一列举。
+需准备（玩家反馈）：UP主总结几乎全能但被锁定机制拖累，需要等待锁定并预判目标走向。
+机器人推荐（玩家反馈）：评论明确称西线好用，作为不占支援武器位的脱手反重。
+易自伤（玩家反馈）：2026-09 玩家说太近炸牛经常把自己炸飞；另有帖子记录用它拆泰坦巢时手雷飞回来把机甲炸成人棍。
+评价有分歧（玩家反馈）：神九门评语称越用越顺手、债券整体西线T-1，但东线适应与练习成本明显更高、综合功能性和反应速度弱于千兆；也有玩家说炸泰坦扔了三发头还没死。
+玩家实战补充：2026-10 玩家实测打蟑龙两发不稳、有时要四发；讨论认为溅射或空中提前引爆导致伤害丢失，锁定制导类普遍不如直击稳定。
+玩家实战补充：2026-09 神九门简介写『越用越顺手』、债券整体西线T-1，东线适应与练习成本显著高于西线；10月有玩家把它放进三线通用科研配装。",
+grenade.g-11-caltrops,G-11 铁蒺藜,G-11 Caltrops,投掷物,特殊投掷物,近炸；眩晕,控场,区域封锁；控场,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASpecial_Throwables | https://blog.playstation.com/2026/10/13/helldivers-2-scope-of-authority-premium-warbond-launches-oct-20/ | https://helldivers.wiki.gg/wiki/G-11_Caltrops,"Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。主要为近炸控制与预警，未据低额爆炸标签推导大范围杀伤或拆迁。
+区域封锁（资料推导）：子雷可在狭窄通路提供减速眩晕。
+控场（玩家反馈）：2026-10 债券体验帖称铁蒺藜能停牛，可以保护喷火炮台免于被牛换掉。
+玩家实战补充：2026-10 有帖子专门打假：宣传里『铁蒺藜两颗子炸弹炸死武斗』做不到，实际是潜兵补的枪；同期也有人打假尖峰颗秒大双足裆部。属反夸大线索，不作为强度结论。",
 booster.hellpod-space-optimization,绝地喷射舱空间优化,Hellpod Space Optimization,强化资源,强化资源,,续航支援,,弹药辅助；落地物资,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters | https://www.reddit.com/r/Helldivers/comments/1rshejw/the_booster_meta_needs_to_be_shaken_up/ | https://www.reddit.com/r/Helldivers/comments/1whry8u/booster_tier_list/,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
 落地物资（Wiki资料）：出舱时补足弹药、投掷物和治疗针。
 续航支援（玩家反馈）：出生/增援物资；低死亡或固定队价值有分歧。",
@@ -497,23 +543,30 @@ booster.vitality-enhancement,生命强化,Vitality Enhancement,强化资源,强�
 booster.uav-recon-booster,UAV侦察强化,UAV Recon Booster,强化资源,强化资源,,潜行；任务辅助,,侦测,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters | https://www.reddit.com/r/Helldivers/comments/1wjzrz3/a_genuine_booster_tier_list/ | https://www.reddit.com/r/Helldivers/comments/1whry8u/booster_tier_list/,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
 侦测（Wiki资料）：扩大雷达有效范围。
 潜行（玩家反馈）：玩家认为更大侦察范围便于隐蔽路线规划。 熟用雷达时辅助避巡逻，非直接隐身。
-任务辅助（玩家反馈）：雷达辅助兴趣点/巡逻定位，非直接全图标记。",
+任务辅助（玩家反馈）：雷达辅助兴趣点/巡逻定位，非直接全图标记。
+玩家实战补充：2026-08 评价帖把侦察强化列T1：可达200米雷达，在低能见、多障碍时预知巡逻队，对空爆类玩法尤其有用。",
 booster.stamina-enhancement,耐力强化,Stamina Enhancement,强化资源,强化资源,,机动,,耐力辅助,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters | https://www.reddit.com/r/Helldivers/comments/1wjzrz3/a_genuine_booster_tier_list/ | https://www.reddit.com/r/Helldivers/comments/1rshejw/the_booster_meta_needs_to_be_shaken_up/ | https://www.reddit.com/r/Helldivers/comments/1whry8u/booster_tier_list/,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
-机动（玩家反馈）：玩家用于长距离地图移动与跟上队伍。 长距步行收益，车辆/跳包流可能不优先。",
+机动（玩家反馈）：玩家用于长距离地图移动与跟上队伍。 长距步行收益，车辆/跳包流可能不优先。
+玩家实战补充：强化资源简评说耐力强化增加体力上限并加快回复，极暑星球几乎必带，普通星球也能增加满管体力奔跑距离和后续回复速度；另一篇给出轻甲无强化约30秒持续、约11秒恢复的实测。",
 booster.muscle-enhancement,肌肉强化,Muscle Enhancement,强化资源,强化资源,,机动,机动,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters | https://www.reddit.com/r/Helldivers/comments/1rshejw/the_booster_meta_needs_to_be_shaken_up/ | https://www.reddit.com/r/Helldivers/comments/1whry8u/booster_tier_list/,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
 机动（Wiki资料）：减少困难地形造成的通行负担。
-机动（玩家反馈）：恶劣地形/天气更受认可，普通环境较弱。",
+机动（玩家反馈）：恶劣地形/天气更受认可，普通环境较弱。
+玩家实战补充：2026-08 评价帖称肌肉强化可抵消地形减速，对孢子、柏油、冰面、沙暴都起效；9月有玩家认为三线里它强到可以称T0，不只是暴雪沙暴的对策卡。",
 booster.increased-reinforcement-budget,提高增援预算,Increased Reinforcement Budget,强化资源,强化资源,,,,增援辅助,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
-增援辅助（Wiki资料）：增加可用增援储备。",
+增援辅助（Wiki资料）：增加可用增援储备。
+玩家实战补充：同帖把提高增援预算列T2：增援预算加四个，但如果20个都不够用，24个也没变化。",
 booster.flexible-reinforcement-budget,灵活增援预算,Flexible Reinforcement Budget,强化资源,强化资源,,,,增援辅助,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
-增援辅助（Wiki资料）：加快储备耗尽后获取新增援。",
+增援辅助（Wiki资料）：加快储备耗尽后获取新增援。
+玩家实战补充：同帖把灵活增援预算列T3：恢复时间缩短到一分三十秒，但耗光20个后要不间断消耗24分钟增援才超过提高增援预算。",
 booster.localization-confusion,定位混淆,Localization Confusion,强化资源,强化资源,,,,遭遇间隔,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。社区提醒它不作用于所有任务自动刷怪；尚待正文与实际宿主规则进一步核对。
-遭遇间隔（Wiki资料）：延长敌方遭遇间隔；不承诺所有任务脚本生成受影响。",
+遭遇间隔（Wiki资料）：延长敌方遭遇间隔；不承诺所有任务脚本生成受影响。
+玩家实战补充：同帖说明定位混淆在一直拉烟时把拉烟间隔延长约10%，但一波烟出来的怪物总量不变。",
 booster.expert-extraction-pilot,专业撤离飞行员,Expert Extraction Pilot,强化资源,强化资源,,,,撤离辅助,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
 撤离辅助（Wiki资料）：缩短撤离运输艇抵达等待。",
 booster.motivational-shocks,激励性冲击,Motivational Shocks,强化资源,强化资源,,,机动,减速恢复,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
 减速恢复（Wiki资料）：加快从攻击施加的减速中恢复；不覆盖所有范围效果。
-机动（资料推导）：较快解除攻击减速有利于脱离追击。",
+机动（资料推导）：较快解除攻击减速有利于脱离追击。
+玩家实战补充：同帖说明激励性冲击：帮助提前零点几秒从东线酸性地雷和霸王虫吐酸中恢复。",
 booster.experimental-infusion,实验性注射剂,Experimental Infusion,强化资源,强化资源,,防护；机动,机动；防护,治疗剂强化,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters | https://www.reddit.com/r/Helldivers/comments/1rshejw/the_booster_meta_needs_to_be_shaken_up/ | https://www.reddit.com/r/Helldivers/comments/1whry8u/booster_tier_list/,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
 治疗剂强化（Wiki资料）：治疗针临时提高移速和减伤。
 机动（玩家反馈）：打针后转移；有视觉/声音体验反对意见。
@@ -521,20 +574,24 @@ booster.experimental-infusion,实验性注射剂,Experimental Infusion,强化资
 booster.firebomb-hellpods,火焰喷射仓,Firebomb Hellpods,强化资源,强化资源,对敌燃烧；喷射舱相关,易误伤,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters | https://www.reddit.com/r/Helldivers/comments/1wjzrz3/a_genuine_booster_tier_list/,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
 喷射舱相关（Wiki资料）：喷射舱落地引燃周边。
 易误伤（玩家反馈）：玩家报告投放火焰可误伤队友或防御设备。",
-booster.dead-sprint,死亡冲刺,Dead Sprint,强化资源,强化资源,,机动,,自伤风险；耐力辅助,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters | https://helldivers.wiki.gg/wiki/Dead_Sprint | https://www.reddit.com/r/Helldivers/comments/1wjzrz3/a_genuine_booster_tier_list/ | https://www.reddit.com/r/Helldivers/comments/1whry8u/booster_tier_list/,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。社区对收益和负面体验存在分歧，须考虑生命强化、补给与队伍配合。
+booster.dead-sprint,死亡冲刺,Dead Sprint,强化资源,强化资源,,机动；评价有分歧,,自伤风险；耐力辅助,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters | https://helldivers.wiki.gg/wiki/Dead_Sprint | https://www.reddit.com/r/Helldivers/comments/1wjzrz3/a_genuine_booster_tier_list/ | https://www.reddit.com/r/Helldivers/comments/1whry8u/booster_tier_list/,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。社区对收益和负面体验存在分歧，须考虑生命强化、补给与队伍配合。
 耐力辅助（Wiki资料）：耐力耗尽后仍可冲刺。
 自伤风险（Wiki资料）：以消耗生命换持续冲刺。
-机动（玩家反馈）：玩家意见分歧，常配合生命强化和队伍协调使用。 延长机动但扣血争议大，常结合生命强化。",
+机动（玩家反馈）：玩家意见分歧，常配合生命强化和队伍协调使用。 延长机动但扣血争议大，常结合生命强化。
+评价有分歧（玩家反馈）：付费债券简评称它耐力耗尽后烧血续航、配合生命强化能跑超久、十分好用；但野排很多人不喜欢血条烧掉一点又要打针，严重的甚至会被踢，也说它打不过五天王。另有玩家直接称它是最简单最轮椅。",
 booster.armed-resupply-pods,武装补给仓,Armed Resupply Pods,强化资源,强化资源,自动运作,任务辅助；易误伤,,补给辅助,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters | https://www.reddit.com/r/Helldivers/comments/1whry8u/booster_tier_list/,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
 补给辅助（Wiki资料）：补给舱增设自动机枪，补给点可提供额外火力。
 任务辅助（玩家反馈）：守点兼顾物资与额外火力，放置可能误伤。
-易误伤（玩家反馈）：既有玩家守点反馈明确提醒放置可能误伤。",
+易误伤（玩家反馈）：既有玩家守点反馈明确提醒放置可能误伤。
+玩家实战补充：同帖把武装重新补给仓列为防守图常见选择。",
 booster.sample-extricator,样本拯救者,Sample Extricator,强化资源,强化资源,,,任务辅助,样本辅助,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
 样本辅助（Wiki资料）：大型敌人有概率掉落样本。
-任务辅助（资料推导）：有利于样本收集目标，不作为战斗反重工具。",
+任务辅助（资料推导）：有利于样本收集目标，不作为战斗反重工具。
+玩家实战补充：同帖说明样本拯救者：击杀大型敌人时按概率给一个普通样本。",
 booster.sample-scanner,样本扫描仪,Sample Scanner,强化资源,强化资源,,,任务辅助,样本辅助,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
 样本辅助（Wiki资料）：拾取样本时有概率获得额外样本。
-任务辅助（资料推导）：用于样本收集。",
+任务辅助（资料推导）：用于样本收集。
+玩家实战补充：同帖说明样本扫描仪：拾取普通样本时15%概率多一个普通样本。",
 booster.stun-pods,眩晕喷射仓,Stun Pods,强化资源,强化资源,喷射舱相关；眩晕,控场；易误伤,控场,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters | https://www.reddit.com/r/Helldivers/comments/1wjzrz3/a_genuine_booster_tier_list/ | https://www.reddit.com/r/Helldivers/comments/1whry8u/booster_tier_list/,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
 控场（资料推导）：落地使附近单位眩晕。
 易误伤（玩家反馈）：玩家报告也可能影响附近队友。
@@ -545,17 +602,21 @@ booster.concealed-insertion,隐蔽上阵,Concealed Insertion,强化资源,强化
 任务辅助（玩家反馈）：热降目标点，需队伍协调。",
 booster.surplus-eat-allocation,额外消耗性反坦克武器配额,Surplus EAT Allocation,强化资源,强化资源,,,,反重装备配发,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters | https://blog.playstation.com/2026/09/15/helldivers-2-ironclad-democracy-warbond-launches-sept-22/,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
 反重装备配发（官方资料）：每任务额外提供有限次数EAT调用；补充武器来源。",
-booster.integrated-extinguishers,集成灭火器,Integrated Extinguishers,强化资源,强化资源,,,防护,灭火辅助,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters | https://blog.playstation.com/2026/09/15/helldivers-2-ironclad-democracy-warbond-launches-sept-22/,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
+booster.integrated-extinguishers,集成灭火器,Integrated Extinguishers,强化资源,强化资源,,评价有分歧,防护,灭火辅助,否,否,部分核实,https://helldivers.wiki.gg/wiki/Boosters | https://blog.playstation.com/2026/09/15/helldivers-2-ironclad-democracy-warbond-launches-sept-22/,"Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。
 灭火辅助（官方资料）：缩短自然熄灭身上火焰的时间。
-防护（资料推导）：较快灭火可降低暴露于燃烧的负担。",
+防护（资料推导）：较快灭火可降低暴露于燃烧的负担。
+评价有分歧（玩家反馈）：2026-06 新强化预览称内置灭火器让人不再需要翻滚灭火；2026-10 则有玩家质疑被点着不飞扑也得死、灭火阈值不明、意义存疑。以较新的质疑为准，保留预览作历史。
+玩家实战补充：2026 铁甲民主债券体验把集成灭火器等新强化放在一起做T度评价，说明它属于同批讨论对象。",
 stratagem.orbital-precision-strike,轨道精准攻击,Orbital Precision Strike,战略配备,轨道支援,反坦克特征（资料）；爆炸,拆迁,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.reddit.com/r/Helldivers/comments/1qfrhzr/good_support_builds/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
-拆迁（玩家反馈）：玩家反馈其适合处理侦测塔等目标；实际例外另见 Wiki 单项页。",
+拆迁（玩家反馈）：玩家反馈其适合处理侦测塔等目标；实际例外另见 Wiki 单项页。
+玩家实战补充：2026-02 有玩家说100秒冷却低廉就能丢、很长一段时间把它当500kg用，还称一发够炸烂探测塔；2026-10 另一批玩家嫌1分30只能射击一次，希望缩到20秒。",
 stratagem.orbital-gatling-barrage,轨道加特林火力网,Orbital Gatling Barrage,战略配备,轨道支援,爆炸,清杂；区域封锁,清杂,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.reddit.com/r/Helldivers/comments/1uissdc/120mm_orbital_barrage_is_the_new_500kg/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
 清杂（玩家反馈）：玩家用来清聚团杂兵，便于反复补压制。
-区域封锁（玩家反馈）：玩家明确用于虫族增援口、敌人汇入的通道与瓶颈。",
+区域封锁（玩家反馈）：玩家明确用于虫族增援口、敌人汇入的通道与瓶颈。
+玩家实战补充：2025-02 有玩家做动态战备演示时说轨道加特林火力网『怪怪的、还说不上哪里怪』；属早期观感，未作为当前结论。",
 stratagem.orbital-gas-strike,轨道毒气攻击,Orbital Gas Strike,战略配备,轨道支援,毒气,区域封锁；光能族推荐,区域封锁；控场,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Stagger | https://helldivers.wiki.gg/wiki/Orbital_gas | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 区域封锁（玩家反馈）：2025攻略：用于压增援。",
@@ -564,108 +625,142 @@ stratagem.orbital-120mm-he-barrage,轨道120MM高爆弹火力网,Orbital 120mm H
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 拆迁（玩家反馈）：玩家用于清营地刷怪建筑/侦测塔；并非单次必中目标。
-区域封锁（玩家反馈）：玩家用于增援口、撤退掩护与集中区域压制，城市遮挡会影响可靠性。",
+区域封锁（玩家反馈）：玩家用于增援口、撤退掩护与集中区域压制，城市遮挡会影响可靠性。
+【历史观点】玩家实战补充：【历史观点，已被更新证据覆盖】2026-09 高赞对比120与380，认为380能干的120都能干，380大概只剩拆机器人堡垒或虫子巨巢；2025-12 曾有玩家说两个120间隔10秒扔烟里可压完一整波虫烟。以2026年对比结论为准。",
 stratagem.orbital-airburst-strike,轨道空爆攻击,Orbital Airburst Strike,战略配备,轨道支援,爆炸,清杂；区域封锁；易误伤,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.reddit.com/r/Helldivers/comments/1vm1w1h/eagle_cluster_bomb_or_orbital_airburst_strike/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
 区域封锁（玩家反馈）：玩家用多轮空爆短暂封住增援区域与通道。
 清杂（玩家反馈）：配合队友反重，空爆负责增援中的轻中型群。
-易误伤（玩家反馈）：玩家反复提醒空爆角度与覆盖易误伤，队友接近时需避用。",
+易误伤（玩家反馈）：玩家反复提醒空爆角度与覆盖易误伤，队友接近时需避用。
+玩家实战补充：全战备介绍红战备篇指出轨道空爆可瞬间摧毁范围内中小型目标，但无法对重甲目标造成有效杀伤。",
 stratagem.orbital-smoke-strike,轨道烟雾攻击,Orbital Smoke Strike,战略配备,轨道支援,烟雾,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Orbital_smoke,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
-烟雾（Wiki资料）：烟幕为遮蔽用途，未把爆炸展示特征计作杀伤或拆除。",
+烟雾（Wiki资料）：烟幕为遮蔽用途，未把爆炸展示特征计作杀伤或拆除。
+玩家实战补充：2025-11 社区小报记录轨道烟雾攻击冷却时间增加30秒；属旧版本改动，按历史观点保留。",
 stratagem.orbital-ems-strike,轨道电磁冲击波攻击,Orbital EMS Strike,战略配备,轨道支援,反坦克特征（资料）；眩晕,,控场,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Stagger,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。",
-stratagem.orbital-380mm-he-barrage,轨道380毫米高爆弹火力网,Orbital 380mm HE Barrage,战略配备,轨道支援,反坦克特征（资料）；爆炸,机器人推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+stratagem.orbital-380mm-he-barrage,轨道380毫米高爆弹火力网,Orbital 380mm HE Barrage,战略配备,轨道支援,反坦克特征（资料）；爆炸,评价有分歧；机器人推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
-机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。",
-stratagem.orbital-walking-barrage,轨道游走火力网,Orbital Walking Barrage,战略配备,轨道支援,反坦克特征（资料）；爆炸,拆迁；机器人推荐；光能族推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://www.reddit.com/r/Helldivers/comments/1uissdc/120mm_orbital_barrage_is_the_new_500kg/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
+评价有分歧（玩家反馈）：2026-09 高赞认为120比380好搓、冷却快、落点集中、弹药投送率高，想不出380的优势；10月有玩家直接说『我们找到了比你更好的，现在你被开除了』。
+玩家实战补充：玩家把轨道游走与轨道380成对投放，称相当于每轮六发炮弹，比单用多一枚炮弹和清重甲能力。",
+stratagem.orbital-walking-barrage,轨道游走火力网,Orbital Walking Barrage,战略配备,轨道支援,反坦克特征（资料）；爆炸,拆迁；区域封锁；机器人推荐；光能族推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://www.reddit.com/r/Helldivers/comments/1uissdc/120mm_orbital_barrage_is_the_new_500kg/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
-拆迁（玩家反馈）：玩家尤其肯定机器人推进拆基地用途；方向与区域仍需规划。",
-stratagem.orbital-laser,轨道激光炮,Orbital Laser,战略配备,轨道支援,反坦克特征（资料）；激光；次数有限,拆迁；机器人推荐；光能族推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Orbital_Laser | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+拆迁（玩家反馈）：玩家尤其肯定机器人推进拆基地用途；方向与区域仍需规划。
+区域封锁（玩家反馈）：2026-08 三线通用配装把轨道游走、轨道380与轨道燃烧轮流投放，作者称三个轨道火力网足以压住任何模板的每一波增援。",
+stratagem.orbital-laser,轨道激光炮,Orbital Laser,战略配备,轨道支援,反坦克特征（资料）；激光；次数有限,拆迁；任务辅助；机器人推荐；光能族推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Orbital_Laser | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 次数有限（Wiki资料）：任务内总使用次数有限；未硬编码可能随平衡改变的数值。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
-拆迁（玩家反馈）：2025攻略：用于拆点。",
+拆迁（玩家反馈）：2025攻略：用于拆点。
+任务辅助（玩家反馈）：玩家说西线、南线都会带，西线用来引导处理任务目标，同时刷出很多大怪不能快速处理时喊它。",
 stratagem.orbital-napalm-barrage,轨道凝固汽油弹火力网,Orbital Napalm Barrage,战略配备,轨道支援,爆炸；对敌燃烧,区域封锁,区域封锁；清杂,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Orbital_Napalm_Barrage | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
-区域封锁（玩家反馈）：2025攻略：压虫/光能增援。",
+区域封锁（玩家反馈）：2025攻略：压虫/光能增援。
+玩家实战补充：东线烟持续时间较长；队友也带轨道燃烧时可错开投放，轮流压住剩下的增援。
+玩家实战补充：2026-10 玩家提出毒气地雷加火炮塔的压烟法，明确说相比轨道火的CD，这个方法每波烟都能接、输出环境安逸，最适合需要站桩换弹的战备。",
 stratagem.orbital-railcannon-strike,轨道磁轨炮攻击,Orbital Railcannon Strike,战略配备,轨道支援,反坦克特征（资料）,反重；简易使用；对单；评价有分歧,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.reddit.com/r/Helldivers/comments/1uissdc/120mm_orbital_barrage_is_the_new_500kg/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 反重（玩家反馈）：有玩家带它快速处理指定重型，让其余装备负责群体；亦有玩家认为泛用性不足。
 简易使用（玩家反馈）：自动选目标省瞄准，限玩家看重的瞬时处理用途；不保证选中希望击杀的单位。
 对单（玩家反馈）：玩家明确让它处理指定重型，其余装备负责群体。
 评价有分歧（玩家反馈）：有人肯定快速应对特定重型，也有人批评目标选择、冷却和泛用性。
-玩家实战补充：自动选目标省瞄准，部分玩家看重瞬时应对特定重型；目标选择与冷却令评价分歧，不能保证消灭所有重甲。",
-stratagem.eagle-gas-airstrike,“飞鹰”毒气空袭,Eagle Gas Airstrike,战略配备,飞鹰支援,毒气,,区域封锁；控场,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Stagger | https://helldivers.wiki.gg/wiki/Eagle_Gas_Airstrike,Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。,
-stratagem.eagle-strafing-run,“飞鹰”机枪扫射,Eagle Strafing Run,战略配备,飞鹰支援,反坦克特征（资料）,清杂,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+玩家实战补充：自动选目标省瞄准，部分玩家看重瞬时应对特定重型；目标选择与冷却令评价分歧，不能保证消灭所有重甲。
+玩家实战补充：2026-10-25 多条帖子同时提到轨道炮攻击减CD，玩家称30多秒的轨道炮随便甩、自己再带一个一共三个，落地连喊轨道攻击给无畏『插双马尾』。",
+stratagem.eagle-gas-airstrike,“飞鹰”毒气空袭,Eagle Gas Airstrike,战略配备,飞鹰支援,毒气,,区域封锁；控场,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Stagger | https://helldivers.wiki.gg/wiki/Eagle_Gas_Airstrike,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+玩家实战补充：2026-10 有专门讲飞鹰毒怎么配装的两分钟视频，同期评论提到对增援的压制；未见可读的具体结论，暂只作线索。",
+stratagem.eagle-strafing-run,“飞鹰”机枪扫射,Eagle Strafing Run,战略配备,飞鹰支援,反坦克特征（资料）,清杂；拆迁；简易使用,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
-清杂（玩家反馈）：2025攻略：清杂与压增援。",
+清杂（玩家反馈）：2025攻略：清杂与压增援。
+拆迁（玩家反馈）：2025-11 高赞称它在西线是拆迁好手、4+1发且CD极短；2026-08 有玩家查Wiki说100发里25发高爆弹带30爆炸拆，推论可用来拆虫洞。
+简易使用（玩家反馈）：同一评论称它反应速度快、解锁极早，从萌新用到老登，能开路能断后。
+【历史观点】玩家实战补充：【历史观点，已被更新证据覆盖】2024-12光能族版本玩家先用扫射打掉猎杀器护盾，再补爆炸物拆除营地飞船；属该版本观点，之后有多次平衡改动。",
 stratagem.eagle-airstrike,“飞鹰”空袭,Eagle Airstrike,战略配备,飞鹰支援,反坦克特征（资料）；爆炸,清杂；拆迁；机器人推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.bilibili.com/opus/910576488913305616 | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 清杂（玩家反馈）：2025攻略：清杂。
 拆迁（玩家反馈）：2025攻略：用于清点。",
-stratagem.eagle-cluster-bomb,“飞鹰”集束炸弹,Eagle Cluster Bomb,战略配备,飞鹰支援,爆炸,清杂；易误伤,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.reddit.com/r/Helldivers/comments/1vm1w1h/eagle_cluster_bomb_or_orbital_airburst_strike/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+stratagem.eagle-cluster-bomb,“飞鹰”集束炸弹,Eagle Cluster Bomb,战略配备,飞鹰支援,爆炸,反重；清杂；易误伤,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.reddit.com/r/Helldivers/comments/1vm1w1h/eagle_cluster_bomb_or_orbital_airburst_strike/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
 清杂（玩家反馈）：玩家偏好其快速清群；与持续封区型空爆用途不同。
-易误伤（玩家反馈）：玩家指出横向宽覆盖和投放方向可造成队友伤亡。",
+易误伤（玩家反馈）：玩家指出横向宽覆盖和投放方向可造成队友伤亡。
+反重（玩家反馈）：2026-07 玩家称集束在东线反重清杂都可以，只是范围太长容易把队友一起炸死。",
 stratagem.eagle-smoke-strike,“飞鹰”烟雾攻击,Eagle Smoke Strike,战略配备,飞鹰支援,烟雾,,潜行,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Eagle_Smoke_Strike,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 潜行（Wiki资料）：遮断视线可辅助脱战，敌人仍能听见并射向最后已知位置。",
 stratagem.eagle-napalm-airstrike,“飞鹰”凝固汽油弹空袭,Eagle Napalm Airstrike,战略配备,飞鹰支援,爆炸；对敌燃烧,区域封锁,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
-区域封锁（玩家反馈）：2025攻略：用于压增援。",
-stratagem.eagle-110mm-rocket-pods,“飞鹰”110MM火箭巢,Eagle 110mm Rocket Pods,战略配备,飞鹰支援,反坦克特征（资料）；爆炸,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+区域封锁（玩家反馈）：2025攻略：用于压增援。
+玩家实战补充：全战备评测红战备篇说明它在一代叫火墙，二代因地图较大和伤害不稳定应用面不广，投弹4-5枚燃烧弹覆盖地面、弹体250伤害、穿透3级、火焰半径8米。",
+stratagem.eagle-110mm-rocket-pods,“飞鹰”110MM火箭巢,Eagle 110mm Rocket Pods,战略配备,飞鹰支援,反坦克特征（资料）；爆炸,对单；评价有分歧,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
-反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。",
-stratagem.eagle-500kg-bomb,“飞鹰”500KG炸弹,Eagle 500kg Bomb,战略配备,飞鹰支援,反坦克特征（资料）；爆炸,清杂；拆迁；机器人推荐；光能族推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
+对单（玩家反馈）：2026-06 玩家称它确实能用了，基本用途就是点杀牛和无畏之类，但一发千兆也能做到，仍不配跟机枪、空袭、500抢位置。
+评价有分歧（玩家反馈）：2025-11 有玩家说刚开始以为很行、后来发现打泰坦几次不死、锁牛牛却炸地板；与2026年『能用了但不突出』并存。",
+stratagem.eagle-500kg-bomb,“飞鹰”500KG炸弹,Eagle 500kg Bomb,战略配备,飞鹰支援,反坦克特征（资料）；爆炸,清杂；拆迁；评价有分歧；机器人推荐；光能族推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 清杂（玩家反馈）：2025攻略：清杂/压增援。
-拆迁（玩家反馈）：2025攻略：进攻拆点。",
-stratagem.mg-43-machine-gun,MG-43 机枪,MG-43 Machine Gun,战略配备,支援武器,,光能族推荐,反中型；清杂,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.bilibili.com/opus/1010453981962436614/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
-光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。",
+拆迁（玩家反馈）：2025攻略：进攻拆点。
+评价有分歧（玩家反馈）：2026-06 玩家认为500在东线跟机枪扫射、空袭不算一个级别，『现在带个500都不知道能干什么用』，只算T2；优势区间是一发清掉大部分巢穴。2025-10 也有人说范围不大、清群清巢都炸不干净。
+玩家实战补充：时间线：2025-11 神九门把飞鹰三兄弟概括为机枪纵向、空袭横向、500KG圆形消消乐，东西线基本至少带一个；2026-06 玩家改称500像轨道毒一样被毒雷毒地雷完爆、只能算T2。以2026年结论为准，旧观点保留作历史。",
+stratagem.mg-43-machine-gun,MG-43 机枪,MG-43 Machine Gun,战略配备,支援武器,,拆迁；光能族推荐,反中型；清杂,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.bilibili.com/opus/1010453981962436614/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
+拆迁（玩家反馈）：2026-10 玩家称在东线最喜欢拿这把免费的机枪拆泰坦巢。",
 stratagem.eat-17-expendable-anti-tank,EAT-17 消耗性反坦克武器,EAT-17 Expendable Anti-Tank,战略配备,支援武器,反坦克特征（资料）；消耗式,反重,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1qfrhzr/good_support_builds/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 消耗式（Wiki资料）：物品本体为消耗性，不等于整个任务仅能呼叫一次。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
-反重（玩家反馈）：玩家作为可快速拾取使用的反重补充；装备后仍占支援武器槽。",
-stratagem.m-105-stalwart,M-105 “盟友”,M-105 Stalwart,战略配备,支援武器,动能投射,清杂；光能族推荐,清杂,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Stalwart | https://www.bilibili.com/opus/1010453981962436614/ | https://www.reddit.com/r/Helldivers/comments/1vrnhbh/i_used_to_talk_shit_about_the_stalwart_and_then_i/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+反重（玩家反馈）：玩家作为可快速拾取使用的反重补充；装备后仍占支援武器槽。
+玩家实战补充：2026-10 萌新说自己迷上次抛，一枪打中远处的泰坦、牛牛和穿刺虫，形容像给左轮上了唯一一发子弹。",
+stratagem.m-105-stalwart,M-105 “盟友”,M-105 Stalwart,战略配备,支援武器,动能投射,清杂；评价有分歧；光能族推荐,清杂,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Stalwart | https://www.bilibili.com/opus/1010453981962436614/ | https://www.reddit.com/r/Helldivers/comments/1vrnhbh/i_used_to_talk_shit_about_the_stalwart_and_then_i/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
-清杂（玩家反馈）：用于清无票者与虫潮；玩家常让爆炸主手承担较硬目标，与盟友互补。",
-stratagem.las-98-laser-cannon,LAS-98 激光大炮,LAS-98 Laser Cannon,战略配备,支援武器,热量管理；激光,反中；对空；需精确瞄准；应急补位；机器人推荐；光能族推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://tieba.baidu.com/p/9827381290,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+清杂（玩家反馈）：用于清无票者与虫潮；玩家常让爆炸主手承担较硬目标，与盟友互补。
+评价有分歧（玩家反馈）：2026-11 玩家说普通虫子盟友泼水压制力很强，但新变种里明显变弱，后面受不了改玩榴弹。",
+stratagem.las-98-laser-cannon,LAS-98 激光大炮,LAS-98 Laser Cannon,战略配备,支援武器,热量管理；激光,反中；对空；需精确瞄准；应急补位；评价有分歧；机器人推荐；光能族推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://tieba.baidu.com/p/9827381290,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 反中（玩家反馈）：2025年贴吧玩家肯定持续照射清中甲的资源效率；历史反馈，不沿用伤害数字。
 对空（玩家反馈）：历史实战帖明确推荐瞄炮艇引擎，属于定点持续照射用途。
 需精确瞄准（玩家反馈）：2025历史实战：重甲补刀与炮艇引擎等部位需要定点持续照射。
 应急补位（玩家反馈）：历史反馈更偏向先由爆炸战备压血，再用激光补刀；不是新增通用反重主职责。
+评价有分歧（玩家反馈）：2026-11 有玩家说输出太低、不打弱点打一辈子；也有玩家认为它无后坐力、无下坠、超长射程，滋死大半虫群、飞龙碰一下就死。
 玩家实战补充：历史玩家更推荐重甲补刀；低压可照弱点，高压持续暴露过久，不宜独扛反重。",
-stratagem.apw-1-anti-materiel-rifle,APW-1 反器材步枪,APW-1 Anti-Materiel Rifle,战略配备,支援武器,重甲穿透（资料）,反中；需精确瞄准；机器人推荐；光能族推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://www.reddit.com/r/Helldivers/comments/1qngm89/daily_helldivers_2_stratagem_discussion_2_apw1/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+stratagem.apw-1-anti-materiel-rifle,APW-1 反器材步枪,APW-1 Anti-Materiel Rifle,战略配备,支援武器,重甲穿透（资料）,反中；需精确瞄准；需准备；评价有分歧；机器人推荐；光能族推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://www.reddit.com/r/Helldivers/comments/1qngm89/daily_helldivers_2_stratagem_discussion_2_apw1/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 重甲穿透（资料）（Wiki资料）：仅记录 Wiki Heavy Armor Penetrating 展示特征，不表示实战方便反重。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 反中（玩家反馈）：1月讨论主要肯定机器人反中型与远距精确火力，是否优于其他支援武器有争议。
 需精确瞄准（玩家反馈）：重型需特定弱点与精确命中；标签限这些用途，不沿用旧弹数。
+评价有分歧（玩家反馈）：2026-10 玩家称西线完全算神九门、东南只能算新九门且有衰减bug；2026-08 另一批玩家认为趴下对腿两个弹夹就够轮椅，门槛争议明显。
+需准备（玩家反馈）：需要趴下从容打点、没有准星，新手在第一人称瞄准上手前容易打空；一波失误就会堆怪。
 玩家实战补充：重型需特定弱点与精确命中，部分玩家建议另带反重；不沿用旧帖具体弹数。",
-stratagem.gr-8-recoilless-rifle,GR-8 无后坐力炮,GR-8 Recoilless Rifle,战略配备,支援武器,反坦克特征（资料）,反重；简易使用；机器人推荐；光能族推荐,,,是,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1qfrhzr/good_support_builds/ | https://www.reddit.com/r/Helldivers/comments/1wax7hl/i_am_too_dependant_on_recoiless_for_anti_tank/ | https://www.reddit.com/r/Helldivers/comments/1xdr9rb/nova_vs_quasar_vs_recoiless_rifle_which_is_better/ | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+stratagem.gr-8-recoilless-rifle,GR-8 无后坐力炮,GR-8 Recoilless Rifle,战略配备,支援武器,反坦克特征（资料）,反重；简易使用；评价有分歧；机器人推荐；光能族推荐,,,是,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1qfrhzr/good_support_builds/ | https://www.reddit.com/r/Helldivers/comments/1wax7hl/i_am_too_dependant_on_recoiless_for_anti_tank/ | https://www.reddit.com/r/Helldivers/comments/1xdr9rb/nova_vs_quasar_vs_recoiless_rifle_which_is_better/ | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 反重（玩家反馈）：玩家把它作为直接、稳定的重目标处理手段；需弹药、装填和背包。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 简易使用（玩家反馈）：相对蓄力/持续照射方案，玩家认可直接爆发处理重型；仍需弹药和装填空间，不是全场景无门槛。
-玩家实战补充：讨论中多位玩家认可其直接爆发反重；前提是有弹药、装填空间并接受背包占用。并非所有重目标都保证一击。",
-stratagem.gl-21-grenade-launcher,GL-21 榴弹发射器,GL-21 Grenade Launcher,战略配备,支援武器,爆炸,机器人推荐；光能族推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+评价有分歧（玩家反馈）：2026-10 有玩家直言东线进图哪哪都不行、感觉都有上位；另有长帖分析风评由盛转衰：反重压力小的图用不上，高压图罚站换弹容易被踢死，单通更明显。
+玩家实战补充：讨论中多位玩家认可其直接爆发反重；前提是有弹药、装填空间并接受背包占用。并非所有重目标都保证一击。
+【历史观点】玩家实战补充：【历史观点，已被更新证据覆盖】2024-12光能族版本玩家用其一发打掉猎杀器与飞船腹部出兵口；属该版本观点，后续有平衡改动。
+玩家实战补充：比较弹药量时指出无后座只有六发炮弹，而六颗热熔地雷足以在不补给的情况下处理多轮重甲。
+玩家实战补充：2026-08 有玩家问打穿刺不管开没开壳都要两发是不是没打弱点；另有长帖把罚站换弹、生存与清杂问题列为风评下滑主因，单通时没有队友分担火力会更难受。",
+stratagem.gl-21-grenade-launcher,GL-21 榴弹发射器,GL-21 Grenade Launcher,战略配备,支援武器,爆炸,清杂；易自伤；机器人推荐；光能族推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
-机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。",
-stratagem.flam-40-flamethrower,FLAM-40火焰喷射器,FLAM-40 Flamethrower,战略配备,支援武器,对敌燃烧,光能族推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://www.reddit.com/r/LowSodiumHellDivers/comments/1rpx5e6/as_a_flamethrower_main_the_new_backpack_flamer/ | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/,"Wiki 正文访问返回 403；资料依据可读搜索索引片段。无需弹药背包有玩家实际配装讨论交叉佐证，仍待全文及后续平衡补丁复核。
-光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。",
+机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
+清杂（玩家反馈）：2026-10 玩家认为它伤害高、射速不慢、很强但出场少；另一篇配装帖说榴弹直接炸小虫、能解放一个战备位。
+易自伤（玩家反馈）：2026-09 玩家实测榴弹有时瞬爆、有时先弹一下再爆，被弹回来的榴弹把自己炸飞好几次。
+玩家实战补充：时间线：2026-02 神九门标注『榴弹神已被回调』（此前短暂四级穿甲），2026-09 玩家谈到1800伤害阈值与千兆差不多、并给出标记泰坦等吐酸停下时往肚子下扔可一发送走；以2026-09后的表现为准。",
+stratagem.flam-40-flamethrower,FLAM-40火焰喷射器,FLAM-40 Flamethrower,战略配备,支援武器,对敌燃烧,评价有分歧；光能族推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://www.reddit.com/r/LowSodiumHellDivers/comments/1rpx5e6/as_a_flamethrower_main_the_new_backpack_flamer/ | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/,"Wiki 正文访问返回 403；资料依据可读搜索索引片段。无需弹药背包有玩家实际配装讨论交叉佐证，仍待全文及后续平衡补丁复核。
+光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
+评价有分歧（玩家反馈）：2026-10 有人给出东线烈焰站桩套，称火焰喷射器对付中距离大群重甲绰绰有余；同期也有萌新说没网上说的那么强、射程近被虫子两刀重新部署，另一篇说持续开火减速导致清杂效率不高。",
 stratagem.mg-206-heavy-machine-gun,MG-206 重机枪,MG-206 Heavy Machine Gun,战略配备,支援武器,动能投射；重甲穿透（资料）,反中；清杂；需精确瞄准；需准备；评价有分歧；机器人推荐；光能族推荐,反中型,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/HMG | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://www.reddit.com/r/helldivers2/comments/1vfgqj0/what_im_i_missing_about_the_hmg/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 重甲穿透（资料）（Wiki资料）：仅记录 Wiki Heavy Armor Penetrating 展示特征，不表示实战方便反重。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
@@ -675,7 +770,8 @@ stratagem.mg-206-heavy-machine-gun,MG-206 重机枪,MG-206 Heavy Machine Gun,战
 需精确瞄准（玩家反馈）：重甲需瞄眼/关节等弱点并控后坐；日常反中与扫轻型不要求同等精度。
 需准备（玩家反馈）：玩家反重体验依赖合适姿态、射界和换弹窗口，不能直接顶着重型长时间扫射。
 评价有分歧（玩家反馈）：熟练玩家认可兼顾重型，另有人认为弹量和暴露时间使其不值得；不压成统一难用。
-玩家实战补充：能靠重甲弱点处理巨型者/收割者等；精度、姿态、换弹窗口要求高，实用性评价有分歧。",
+玩家实战补充：能靠重甲弱点处理巨型者/收割者等；精度、姿态、换弹窗口要求高，实用性评价有分歧。
+玩家实战补充：2026-08 玩家说100发打起来不一样、能用来反中清杂；10月有人补充使用重机枪支架时仇恨优先级会低于队友，且它命中体积比看上去小。",
 stratagem.ac-8-autocannon,AC-8 机炮,AC-8 Autocannon,战略配备,支援武器,重甲穿透（资料）,反中；对空；控场；清杂；拆迁；需精确瞄准；对群；机器人推荐；光能族推荐,,,是,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616 | https://www.reddit.com/r/LowSodiumHellDivers/comments/1wt5ljy/trying_to_get_into_the_autocannon_got_any_tips/ | https://www.bilibili.com/video/BV1PzgE6REaF/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 重甲穿透（资料）（Wiki资料）：仅记录 Wiki Heavy Armor Penetrating 展示特征，不表示实战方便反重。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
@@ -687,22 +783,30 @@ stratagem.ac-8-autocannon,AC-8 机炮,AC-8 Autocannon,战略配备,支援武器,
 控场（玩家反馈）：玩家利用击退打断冲锋、压住巨型者并争取换弹窗口。
 需精确瞄准（玩家反馈）：限AP反重和拆点的弱点/开口角度；高射清群不应被误称为每发都必须精确命中。
 对群（玩家反馈）：高射模式清敌群是明确玩家用途；不能从反重模式外推为纯对单武器。
-玩家实战补充：重甲多依赖AP模式和弱点；泰坦等建议额外反重配合，不等于泛用反重便捷。",
-stratagem.arc-3-arc-thrower,ARC-3 电弧发射器,ARC-3 Arc Thrower,战略配备,支援武器,反坦克特征（资料）；电弧；蓄力,控场；清杂；应急补位；光能族推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://www.reddit.com/r/LowSodiumHellDivers/comments/1t2d5yo/asking_for_advice_on_the_arc_thrower/ | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1iak2u1/i_tried_25_random_loadouts_on_difficulty_10/ | https://www.bilibili.com/opus/1010453981962436614/,"Wiki 正文访问返回 403；资料依据可读搜索索引片段。无需弹药背包有玩家实际配装讨论交叉佐证，仍待全文及后续平衡补丁复核。
+玩家实战补充：重甲多依赖AP模式和弱点；泰坦等建议额外反重配合，不等于泛用反重便捷。
+玩家实战补充：在三重轨道火力网配装中负责清理被炮火轰过一轮的残兵与巡逻队，作者看重其功能性。",
+stratagem.arc-3-arc-thrower,ARC-3 电弧发射器,ARC-3 Arc Thrower,战略配备,支援武器,反坦克特征（资料）；电弧；蓄力,控场；清杂；易误伤；应急补位；评价有分歧；光能族推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://www.reddit.com/r/LowSodiumHellDivers/comments/1t2d5yo/asking_for_advice_on_the_arc_thrower/ | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1iak2u1/i_tried_25_random_loadouts_on_difficulty_10/ | https://www.bilibili.com/opus/1010453981962436614/,"Wiki 正文访问返回 403；资料依据可读搜索索引片段。无需弹药背包有玩家实际配装讨论交叉佐证，仍待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 控场（玩家反馈）：旧版随机配装讨论中玩家认可电弧眩晕控场，也有人不喜欢其节奏；不按主观偏好删去功能定位。
 清杂（玩家反馈）：玩家以电弧清杂兵群和压制推进；尸体、植被及队友位置可能限制使用。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 应急补位（玩家反馈）：反重只保留已有伤重收尾语境，主要玩家职责仍为清群/眩晕。
-玩家实战补充：玩家主定位为清群、眩晕和辅助队友；高耐久重目标击杀慢，常建议用专用反重补位。已有伤重可收尾，不能按 Wiki Anti-Tank 展示特征算方便反重。",
-stratagem.las-99-quasar-cannon,LAS-99 类星体加农炮,LAS-99 Quasar Cannon,战略配备,支援武器,反坦克特征（资料）；蓄力,反重；需准备；机器人推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1xdr9rb/nova_vs_quasar_vs_recoiless_rifle_which_is_better/ | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+评价有分歧（玩家反馈）：同版本既有玩家以它单通N10毒瘴变种全清，也有人认为电弧数量不足而一直不推荐，强度评价分歧。
+易误伤（玩家反馈）：玩家明确列出蓄力走路、锁定尸体、不小心电死队友等毒点；2026-11 有人因『玩电弧没TK过队友』被老外称赞，可见误伤口碑。
+玩家实战补充：玩家主定位为清群、眩晕和辅助队友；高耐久重目标击杀慢，常建议用专用反重补位。已有伤重可收尾，不能按 Wiki Anti-Tank 展示特征算方便反重。
+玩家实战补充：该视频以ARC-3完成N10虫族毒瘴变种千杀全清，说明上限存在但高度依赖操作与配装。",
+stratagem.las-99-quasar-cannon,LAS-99 类星体加农炮,LAS-99 Quasar Cannon,战略配备,支援武器,反坦克特征（资料）；蓄力,反重；需准备；评价有分歧；机器人推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1xdr9rb/nova_vs_quasar_vs_recoiless_rifle_which_is_better/ | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 反重（玩家反馈）：玩家认可间歇反重；可留背包槽，但蓄力与冷却影响连续处理多个重目标。
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 需准备（玩家反馈）：玩家明确指出蓄力、受击晃动和射后冷却影响连续反重，需安排发射窗口。
-玩家实战补充：免弹药与空闲背包槽受好评；蓄力、受击晃动和射后长冷却使连续反重不如即时开火方案方便。",
+评价有分歧（玩家反馈）：2026-09 视频标题即称其从人手一把到无人问津，高赞评论指冷却太慢、堆怪量下杀得慢约等于没杀；另有玩家算出2000直击却常要两发点掉大狗炮。旧的『配装不用思考』评价保留为历史。
+玩家实战补充：免弹药与空闲背包槽受好评；蓄力、受击晃动和射后长冷却使连续反重不如即时开火方案方便。
+【历史观点】玩家实战补充：【历史观点，已被更新证据覆盖】玩家认为其最大优点是配装时不用思考，可稳定占一个反重位；也有人认为视频表现主要来自基本功，不代表武器本身强度。
+玩家实战补充：2026-09 视频标题『从人手一把的反重武器到如今的无人问津』，高赞指冷却和蓄力期间连无后座都能打出去一半弹药；10月出现『再见了磁轨纪元类星体』的新星单通视频。较旧的『配装不用思考』评价降为历史观点。",
 stratagem.rl-77-airburst-rocket-launcher,RL-77 空爆火箭弹发射器,RL-77 Airburst Rocket Launcher,战略配备,支援武器,爆炸,易自伤,,,是,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Stratagem_Previews | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
-易自伤（玩家反馈）：2025攻略：未熟练前自杀风险高。",
+易自伤（玩家反馈）：2025攻略：未熟练前自杀风险高。
+玩家实战补充：2026-08 玩家问空爆模式往高打在天上爆、往低完全不爆，还不如直击模式，且拆孢子太慢。",
 stratagem.mls-4x-commando,MLS-4X 突击兵,MLS-4X Commando,战略配备,支援武器,反坦克特征（资料）；消耗式,反重；拆迁；需精确瞄准；评价有分歧；机器人推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/910576488913305616 | https://www.reddit.com/r/Helldivers/comments/1sq1sn7/commando_enthusiasts_sell_me_this_weapon/ | https://www.reddit.com/r/HelldiversUnfiltered/comments/1u7yf8c/commando_needs_buff/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 消耗式（Wiki资料）：物品本体为消耗性，不等于整个任务仅能呼叫一次。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
@@ -716,7 +820,8 @@ stratagem.mls-4x-commando,MLS-4X 突击兵,MLS-4X Commando,战略配备,支援�
 stratagem.faf-14-spear,FAF-14飞矛,FAF-14 Spear,战略配备,支援武器,反坦克特征（资料）；制导,机器人推荐；光能族推荐,,,是,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
-机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。",
+机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
+玩家实战补充：玩家讨论磁轨炮加强方案时提到，自从反器材步枪加强到同样能对无畏颗秒后，飞矛一类蓄力武器的缺点更明显；属讨论线索，未作为强度结论。",
 stratagem.rs-422-railgun,RS-422磁轨炮,RS-422 Railgun,战略配备,支援武器,反坦克特征（资料）；蓄力,反中；需精确瞄准；需准备；机器人推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1wmxovt/how_to_railgun/ | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 反中（玩家反馈）：玩家教学优先处理中型单位和特定重型弱点，不把它当作通用方便反坦克。
@@ -730,61 +835,95 @@ stratagem.sta-x3-w-a-s-p-launcher,StA-X3 W.A.S.P.发射器,StA-X3 W.A.S.P. Launc
 反中（玩家反馈）：1月讨论将其用于快速处理中型单位，另有玩家更偏好AMR精度与弹量，保留分歧。
 应急补位（玩家反馈）：历史意见不建议独撑重型，优先保留反中/对空职责与反重补充语境。
 玩家实战补充：历史反馈认为总输出难独撑反重，重型复杂部位分散命中，近处/遮挡也有限制。",
-stratagem.amw-20-apex,AMW-20 尖峰,AMW-20 Apex,战略配备,支援武器,背包供弹；动能投射,,,,是,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/AMW-20_Apex,Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。,
-stratagem.cqc-20-breaching-hammer,CQC-20 破门锤,CQC-20 Breaching Hammer,战略配备,支援武器,反坦克特征（资料）；爆炸；近战,机器人推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/CQC-20_Breaching_Hammer | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+stratagem.amw-20-apex,AMW-20 尖峰,AMW-20 Apex,战略配备,支援武器,背包供弹；动能投射,反重；清杂；需准备；对单,,,是,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/AMW-20_Apex,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+反重（玩家反馈）：2026-11 回归玩家求推荐时被点名为主推，玩家称其重甲消消乐、三线通用；备弹五乘五且战术换弹可留一发，容错高于一次性反重。
+清杂（玩家反馈）：2026-11 玩家称尖峰打红色变种时反重甲好用、清杂感觉也不错，且弹药效率太高，可以从容吃野外补给。
+对单（玩家反馈）：2026-11 配装教学强调打点，神九门评论称视野里有指挥官和牛会先抽指挥官；债券测评给出蹲/趴时弹容5、背包备弹4共25发。
+需准备（玩家反馈）：使用时需要蹲或趴，能打断牛牛冲刺；对泰坦头等弱点两枪可解决，但打大双足裆部因衰减往往要两三枪。
+玩家实战补充：推荐语境偏保底反重：清杂交给其他位，西线还需主副手有一个能拆巢。
+玩家实战补充：2026-10 有玩家试玩称两枪能爆泰坦或白牛的头、蓄力冷却短、无限弹药，在非孢裂变种里甚至能和无后座竞争反重；另一帖随即打假，指出大双足裆部4甲1800血，尖峰5穿1550/930，零距离也要两枪、算衰减要三枪。",
+stratagem.cqc-20-breaching-hammer,CQC-20 破门锤,CQC-20 Breaching Hammer,战略配备,支援武器,反坦克特征（资料）；爆炸；近战,补给依赖；机器人推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/CQC-20_Breaching_Hammer | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：仅安装药包的爆破攻击具有爆炸效果。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
-机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。",
-stratagem.mgx-42-bullet-storm,MGX-42 子弹风暴,MGX-42 Bullet Storm,战略配备,支援武器,动能投射；消耗式,光能族推荐,清杂,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/MGX-42 | https://www.bilibili.com/opus/1010453981962436614/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
+补给依赖（玩家反馈）：玩家指出只有七枚炸药、不能清杂、主武器弹药压力大，普遍建议搭配喷气或传送背包，并担心续航。",
+stratagem.mgx-42-bullet-storm,MGX-42 子弹风暴,MGX-42 Bullet Storm,战略配备,支援武器,动能投射；消耗式,清杂；简易使用；评价有分歧；光能族推荐,清杂,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/MGX-42 | https://www.bilibili.com/opus/1010453981962436614/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 消耗式（Wiki资料）：物品本体为消耗性，不等于整个任务仅能呼叫一次。
-光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。",
+光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
+清杂（玩家反馈）：玩家简评认为它适合中距离压制场景，近战和远距反而不如盟友。
+简易使用（玩家反馈）：同一篇简评称它特别好上手、属于萌新之友，是脱离补包体系的便携支援火力。
+评价有分歧（玩家反馈）：2026-06 有玩家直接说它配传包打东线太痛苦，与简评里的萌新之友定位相反。",
 stratagem.plas-45-epoch,PLAS-45 纪元,PLAS-45 Epoch,战略配备,支援武器,蓄力；爆炸；等离子,机器人推荐；光能族推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/Stratagem_Previews | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
-机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。",
-stratagem.s-11-speargun,S-11 矛枪,S-11 Speargun,战略配备,支援武器,反坦克特征（资料）；毒气,控场；拆迁,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Stagger | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1qfrhzr/good_support_builds/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
+玩家实战补充：2026-10 玩家把纪元与类星体并列，称新星是它们的全面上位替代；说明同批次蓄力等离子武器的相对定位在变化。",
+stratagem.s-11-speargun,S-11 矛枪,S-11 Speargun,战略配备,支援武器,反坦克特征（资料）；毒气,控场；拆迁；需准备；对单,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Stagger | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1qfrhzr/good_support_builds/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 控场（玩家反馈）：玩家反馈其可用于减缓接近敌群。
-拆迁（玩家反馈）：帖子提到虫洞、制造厂与停泊飞船；这是玩家用途反馈，未硬编码所有结构兼容。",
-stratagem.eat-411-leveller,EAT-411 荡平者,EAT-411 Leveller,战略配备,支援武器,反坦克特征（资料）；消耗式,,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+拆迁（玩家反馈）：帖子提到虫洞、制造厂与停泊飞船；这是玩家用途反馈，未硬编码所有结构兼容。
+对单（玩家反馈）：2026-09 玩家称它能颗秒指挥官、被包围时对地一发让虫子吃尾气；7月有人补充它锁不到大型构筑者。
+需准备（玩家反馈）：锁定有目标限制，面对大型构筑者需要改用手雷拆除。",
+stratagem.eat-411-leveller,EAT-411 荡平者,EAT-411 Leveller,战略配备,支援武器,反坦克特征（资料）；消耗式,区域封锁,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 消耗式（Wiki资料）：物品本体为消耗性，不等于整个任务仅能呼叫一次。
-反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。",
+反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
+区域封锁（玩家反馈）：2026-10 南线N10守导弹时全次抛配装一次呼叫两发，能爽压一侧所有援军；另有测评给出内径10米致死、外半径25米只剩血皮的覆盖范围。",
 stratagem.eat-700-expendable-napalm,EAT-700 消耗性凝固汽油弹,EAT-700 Expendable Napalm,战略配备,支援武器,消耗式；对敌燃烧,,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 消耗式（Wiki资料）：物品本体为消耗性，不等于整个任务仅能呼叫一次。",
-stratagem.cqc-9-defoliation-tool,CQC-9 除叶工具,CQC-9 Defoliation Tool,战略配备,支援武器,反坦克特征（资料）；近战,玩具；评价有分歧,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/CQC-9_Defoliation_Tool | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/LowSodiumHellDivers/comments/1vb6vfu/while_we_didnt_get_a_chainsword_we_still_have_the/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+stratagem.cqc-9-defoliation-tool,CQC-9 除叶工具,CQC-9 Defoliation Tool,战略配备,支援武器,反坦克特征（资料）；近战,需准备；易自伤；玩具；评价有分歧,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/CQC-9_Defoliation_Tool | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/LowSodiumHellDivers/comments/1vb6vfu/while_we_didnt_get_a_chainsword_we_still_have_the/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 玩具（玩家反馈）：部分玩家明确为好玩、耍帅的 gimmick 而带，批评近身命中与挥动停步；亦有熟练玩家支持其潜行/控制配合用途。属于有分歧的玩家评价，不能外推所有近战或视为零实用性。
-评价有分歧（玩家反馈）：现有玩具评价同条备注保留了实用反例/熟练玩家意见；表达分歧，不作无效或禁抽结论。",
-stratagem.gl-52-de-escalator,GL-52 缓和使者,GL-52 De-Escalator,战略配备,支援武器,电弧；爆炸；重甲穿透（资料）,,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+评价有分歧（玩家反馈）：现有玩具评价同条备注保留了实用反例/熟练玩家意见；表达分歧，不作无效或禁抽结论。
+易自伤（玩家反馈）：2026-11 玩家指出蓄力过程中被打断会自动往地上开枪把自己炸死，几乎只有这把武器有此问题。
+需准备（玩家反馈）：2026-10 玩家称爽但短板大：基本没办法处理坦克工厂和大象，补给和拆构筑也是大问题。",
+stratagem.gl-52-de-escalator,GL-52 缓和使者,GL-52 De-Escalator,战略配备,支援武器,电弧；爆炸；重甲穿透（资料）,补给依赖；易误伤,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
-重甲穿透（资料）（Wiki资料）：仅记录 Wiki Heavy Armor Penetrating 展示特征，不表示实战方便反重。",
-stratagem.tx-41-sterilizer,TX-41 灭菌器,TX-41 Sterilizer,战略配备,支援武器,毒气,,控场,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Stagger | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
-控场（Wiki资料）：取气体混乱及减速机制，不把穿甲或气体数字视为方便反重。",
-stratagem.b-md-c4-pack,B/MD C4背包,B/MD C4 Pack,战略配备,支援武器,反坦克特征（资料）；爆炸,机器人推荐,,,是,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/B%2FMD_C4_Pack | https://helldivers.wiki.gg/wiki/Warbond_Rundown | https://www.reddit.com/r/Helldivers/comments/1w5ntvv/shouldnt_the_c4_pack_have_a_little_backpack_icon/ | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+重甲穿透（资料）（Wiki资料）：仅记录 Wiki Heavy Armor Penetrating 展示特征，不表示实战方便反重。
+易误伤（玩家反馈）：近距开火会电到队友；玩家称及时飞扑基本不会自伤，但需要留意队友位置。
+补给依赖（玩家反馈）：2026-10 玩家指出它东线猛吃补包，其他武器通常只在补反重时才吃；2026-09 又记录电榴弹自伤回归，续航与容错都受影响。
+玩家实战补充：2026-11玩家仍认为其强势，近距电击可处理集群；电榴弹与GL-52的对应依据是电弧加爆炸机制，官方译名待复核。",
+stratagem.tx-41-sterilizer,TX-41 灭菌器,TX-41 Sterilizer,战略配备,支援武器,毒气,控场；评价有分歧,控场,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Stagger | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+控场（Wiki资料）：取气体混乱及减速机制，不把穿甲或气体数字视为方便反重。
+控场（玩家反馈）：2026-10/11 有视频用它打出1622杀并单通N10孢裂；但11月高赞指出毒气混乱效果像抽奖，控制与压制多数时候不如火焰恐惧。
+评价有分歧（玩家反馈）：同一批讨论里既有为其正名的单通视频，也有玩家说混乱效果比其他毒气武器更差、还占火力投射位置。",
+stratagem.b-md-c4-pack,B/MD C4背包,B/MD C4 Pack,战略配备,支援武器,反坦克特征（资料）；爆炸,反重；清杂；简易使用；机器人推荐,,,是,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/B%2FMD_C4_Pack | https://helldivers.wiki.gg/wiki/Warbond_Rundown | https://www.reddit.com/r/Helldivers/comments/1w5ntvv/shouldnt_the_c4_pack_have_a_little_backpack_icon/ | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
-机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。",
+机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
+反重（玩家反馈）：2026-10 视频以C4东线多倍全变种霸王虫击杀N10单通，称其为最能游龙的背包反重位；9月玩家说丢了就跑，既能反重还能清杂。
+清杂（玩家反馈）：玩家称C4丢了就跑能顺带清杂，配合补给小车与火焰哨戒炮在毒蟑变种里稳定清场。
+简易使用（玩家反馈）：萌新视角：比起无后座一炮干不死泰坦的尴尬，C4拉烟就是一顿狂扔，相当轮椅，只是空爆泰坦需要熟悉。",
 stratagem.ms-11-solo-silo,MS-11 单兵导弹发射井,MS-11 Solo Silo,战略配备,支援武器,反坦克特征（资料）；消耗式,反重,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1qfrhzr/good_support_builds/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 消耗式（Wiki资料）：物品本体为消耗性，不等于整个任务仅能呼叫一次。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
-反重（玩家反馈）：讨论将其作为重目标处理方案，是否便利取决于部署和瞄准条件。",
-stratagem.b-flam-80-cremator,B/FLAM-80 焚燃者,B/FLAM-80 Cremator,战略配备,支援武器,背包供弹；对敌燃烧,反中；控场,,,是,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/B/FLAM-80_Cremator | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1xpqz8s/so_the_maxigun/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+反重（玩家反馈）：讨论将其作为重目标处理方案，是否便利取决于部署和瞄准条件。
+玩家实战补充：玩家整理的单兵导弹发射井说明：一次性支援武器、可嵌入地面并配手持瞄准遥控器，来自尘卷风债券第三页。",
+stratagem.b-flam-80-cremator,B/FLAM-80 焚燃者,B/FLAM-80 Cremator,战略配备,支援武器,背包供弹；对敌燃烧,反中；控场；清杂；补给依赖,,,是,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/B/FLAM-80_Cremator | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1xpqz8s/so_the_maxigun/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 控场（玩家反馈）：11月对比评论明确提到减速与控群，仅作玩家用途反馈，不作为数值验证。
-反中（玩家反馈）：同帖玩家将其列为兼顾反中型的近距火力选择，未据此判定无条件反重。",
+反中（玩家反馈）：同帖玩家将其列为兼顾反中型的近距火力选择，未据此判定无条件反重。
+清杂（玩家反馈）：2026-09/10 有焚燃者2400杀多倍N10单通，也有『一套模板通吃终结族全难度』的体系推荐。
+补给依赖（玩家反馈）：2026-10 玩家指出带超大杯喷火器必须从副手和投掷物补高效反重，而副手反重、千兆都吃补，最多人改带热熔雷。",
 stratagem.cqc-1-one-true-flag,CQC-1 唯一真旗,CQC-1 One True Flag,战略配备,支援武器,近战；单手使用,控场；玩具；评价有分歧,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://helldivers.wiki.gg/wiki/OTF | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1xjsj8i/is_masters_of_ceremony_woth_it_just_for_the_flag/ | https://www.reddit.com/r/Helldivers/comments/1vl7uds/is_the_flag_irresponsible_to_bring_on_spore_strain/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 玩具（玩家反馈）：玩家常强调插旗、斯巴达扮演和士气/趣味价值；有人质疑实用性，但其他玩家提供吸引仇恨、引走敌群的用途。标签表达部分玩家的娱乐取向，不等于当前版本完全无用。
 控场（玩家反馈）：玩家以吸引仇恨、风筝敌人替队友争取任务空间；要求走位、生存及队友配合，并非直接杀伤效率。
 评价有分歧（玩家反馈）：现有玩具评价同条备注保留了实用反例/熟练玩家意见；表达分歧，不作无效或禁抽结论。",
-stratagem.gl-28-belt-fed-grenade-launcher,GL-28 弹链式榴弹发射器背包,GL-28 Belt-Fed Grenade Launcher,战略配备,支援武器,背包供弹；爆炸；重甲穿透（资料）,,清杂,,是,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/BFGL | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+stratagem.gl-28-belt-fed-grenade-launcher,GL-28 弹链式榴弹发射器背包,GL-28 Belt-Fed Grenade Launcher,战略配备,支援武器,背包供弹；爆炸；重甲穿透（资料）,清杂；区域封锁；补给依赖,清杂,,是,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/BFGL | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
-重甲穿透（资料）（Wiki资料）：仅记录 Wiki Heavy Armor Penetrating 展示特征，不表示实战方便反重。",
-stratagem.m-1000-maxigun,M-1000 重装机枪,M-1000 Maxigun,战略配备,支援武器,背包供弹,反中；清杂；对群；应急补位；评价有分歧,,,是,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://www.reddit.com/r/Helldivers/comments/1xpqz8s/so_the_maxigun/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+重甲穿透（资料）（Wiki资料）：仅记录 Wiki Heavy Armor Penetrating 展示特征，不表示实战方便反重。
+清杂（玩家反馈）：配上补给载具解决续航后，玩家称其dps高、输出持久、压制强，双人N10升旗能解决八成以上虫子。
+补给依赖（玩家反馈）：续航是主要短板；讨论认为它与加特林优势区间接近，都是缺补时明显变弱。
+区域封锁（玩家反馈）：2026-06 防守战N10一个弹链榴弹加一个迫击炮能摁住两三艘船的增援；2026-09 西线N10工厂世界喷气旅升旗也用它压制。
+玩家实战补充：有人明确说它反重能力不咋地但能补残血，因此本轮不标反重标签；同帖把火力贡献部分归给火焰哨戒炮。
+玩家实战补充：2026-11 玩家说新变种用弹链榴弹打泰坦肚子可以弥补稀缺的反重火力，另有千杀单通难十毒瘴变种的配装展示。",
+stratagem.m-1000-maxigun,M-1000 重装机枪,M-1000 Maxigun,战略配备,支援武器,背包供弹,反中；清杂；需准备；对群；应急补位；评价有分歧,,,是,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Support_Weapon_Guide | https://www.reddit.com/r/Helldivers/comments/1xpqz8s/so_the_maxigun/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 背包供弹（Wiki资料）：支援武器需要背包供弹，与独立背包争用同一携带槽。
 清杂（玩家反馈）：11月增强后玩家肯定其压住虫群；站桩和尸体阻挡改善程度仍有分歧。
 反中（玩家反馈）：玩家明确定位反中型与清杂，重甲另配手雷、副手或战备；不按高射速推断反重便利。
 应急补位（玩家反馈）：仅在可伤弱点磨伤重目标，主用途是清杂/反中，讨论建议另配专用反重。
 对群（玩家反馈）：11月增强后玩家明确用于压住虫群；这是实际群体用途，而非从高射速推导。
 评价有分歧（玩家反馈）：新增强后的机动、尸体阻挡改善和实际收益仍有分歧；不能沿用旧“纯玩具”评价。
-玩家实战补充：重甲仅能磨可伤弱点且坚固目标输出受限，讨论建议另配专用反重。",
+需准备（玩家反馈）：需要站桩持续输出，评论以都站桩了不如带重机枪支架调侃其机动代价。
+玩家实战补充：重甲仅能磨可伤弱点且坚固目标输出受限，讨论建议另配专用反重。
+玩家实战补充：2026-11玩家称其离T0只差最后一步：扫轻甲中型混合集群强，精度不及哨戒炮，评论形容为拼尽全力模仿加特林炮台。",
 stratagem.las-44-nova,LAS-44 新星,LAS-44 Nova,战略配备,支援武器,反坦克特征（资料）；蓄力；热量管理,反重；反中；需精确瞄准；评价有分歧；机器人推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://helldivers.wiki.gg/wiki/LAS-44_Nova | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1xdr9rb/nova_vs_quasar_vs_recoiless_rifle_which_is_better/ | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 反重（玩家反馈）：部分玩家反馈能兼顾重目标，但较依赖精准命中和多发；意见存在分歧。
@@ -792,79 +931,110 @@ stratagem.las-44-nova,LAS-44 新星,LAS-44 Nova,战略配备,支援武器,反坦
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 需精确瞄准（玩家反馈）：反重较依赖命中部位和多次精准射击，不能由资料Anti-Tank特征代替玩家判断。
 评价有分歧（玩家反馈）：玩家对超重型处理效率有不同反馈，非否认持续火力用途。
-玩家实战补充：多位玩家认可持续精准火力，但对反超重目标效率意见分歧；较依赖命中部位和多次射击，不按资料 Anti-Tank 特征判成无条件便利。",
-stratagem.40-k-meltagun,40-K 热熔枪,40-K Meltagun,战略配备,支援武器,反坦克特征（资料）；蓄力,反重；需精确瞄准；需准备；机器人推荐；光能族推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://www.reddit.com/r/Helldivers/comments/1wax7hl/i_am_too_dependant_on_recoiless_for_anti_tank/ | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+玩家实战补充：多位玩家认可持续精准火力，但对反超重目标效率意见分歧；较依赖命中部位和多次射击，不按资料 Anti-Tank 特征判成无条件便利。
+玩家实战补充：2026-10/11 玩家称新星两枪能爆泰坦或白牛的头、蓄力冷却短、无限弹药，在非孢裂变种里能和无后座竞争反重；也有『这才是真正的蓄力武器』的单通视频。此前『拆毁值只有17、不算强三号位』的说法来自未放出内容的预告，不采信。",
+stratagem.40-k-meltagun,40-K 热熔枪,40-K Meltagun,战略配备,支援武器,反坦克特征（资料）；蓄力,反重；需精确瞄准；需准备；评价有分歧；机器人推荐；光能族推荐,,,是,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3ASupport_Weapon_Stratagems | https://www.reddit.com/r/Helldivers/comments/1wax7hl/i_am_too_dependant_on_recoiless_for_anti_tank/ | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 反重（玩家反馈）：玩家反馈近距离重目标击杀快；接近、稳定瞄准和地形是明显前提。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 需精确瞄准（玩家反馈）：近距反重仍有瞄准学习成本；机动背包只帮助接近，不等于自动命中。
 需准备（玩家反馈）：短射程需规划接近路线/安全窗口，可借机动或传送辅助；不硬绑定背包。
+评价有分歧（玩家反馈）：2026-08 有人说它太猛、伤害高续航足、比无后座颗秒还爽且风险高被泰坦踹死；也有人直接评价东线纯区、本质战锤风味爆破锤。
 玩家实战补充：近距离命中后玩家反馈重目标处理快，但短射程、接近风险与瞄准学习成本限制便利性；传送/机动背包可辅助接近。",
 stratagem.b-1-supply-pack,B-1 补给背包,B-1 Supply Pack,战略配备,背包,,续航支援；机器人推荐；光能族推荐,,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://www.reddit.com/r/Helldivers/comments/1qfrhzr/good_support_builds/ | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 续航支援（玩家反馈）：玩家反复推荐其为队友恢复弹药、治疗针和投掷物的持续支援手段。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
-机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。",
+机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
+【历史观点】玩家实战补充：【历史观点，已被更新证据覆盖】时间线：2025-10 神九门补给背包一期的热门评论哀悼『无限补包陨落』；2026年讨论里的补包已按当前版本计算，旧结论不作现版本依据。",
 stratagem.lift-850-jump-pack,LIFT-850 喷射背包,LIFT-850 Jump Pack,战略配备,背包,,机动,机动,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/LIFT-860_Hover_Pack | https://www.reddit.com/r/Helldivers/comments/1vq4fu9/which_backpack_is_the_best/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 机动（玩家反馈）：玩家反馈用于越过地形、快速赶路和脱离包围。",
-stratagem.sh-20-ballistic-shield-backpack,SH-20 防弹护盾背包,SH-20 Ballistic Shield Backpack,战略配备,背包,需单手武器配合,,防护,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/Ballistic_Shield,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
-需单手武器配合（Wiki资料）：在身前展开持盾需要单手武器；背负时的被动遮挡另有规则。",
-stratagem.ax-ar-23-guard-dog,AX/AR-23 “护卫犬”,AX/AR-23 Guard Dog,战略配备,背包,自动运作,,,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/Stratagem_Previews,Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。,
+stratagem.sh-20-ballistic-shield-backpack,SH-20 防弹护盾背包,SH-20 Ballistic Shield Backpack,战略配备,背包,需单手武器配合,防护,防护,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/Ballistic_Shield,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+需单手武器配合（Wiki资料）：在身前展开持盾需要单手武器；背负时的被动遮挡另有规则。
+防护（玩家反馈）：2026-09 玩家称钗+防弹盾在东线近距离顶三四个指挥官输出毫无压力，小跳虫也不再怕突脸；西线枪盾流靠它撑住单手武器输出。",
+stratagem.ax-ar-23-guard-dog,AX/AR-23 “护卫犬”,AX/AR-23 Guard Dog,战略配备,背包,自动运作,清杂；对单,,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/Stratagem_Previews,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+清杂（玩家反馈）：2026-07 长评把它列为老冻肉第一只狗，锁头特性让它在南线仍有一战之力。
+对单（玩家反馈）：同一长评强调锁头特性，同时也指出它是唯一会被打坏、有实际碰撞体积、需要回背包修理而浪费输出的狗。",
 stratagem.ax-las-5-rover,AX/LAS-5 “护卫犬”漫游者,AX/LAS-5 Rover,战略配备,背包,自动运作；激光,清杂,,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/AX/LAS-5_Rover | https://www.reddit.com/r/Helldivers/comments/1vq4fu9/which_backpack_is_the_best/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 清杂（玩家反馈）：玩家把激光护卫犬作为持续补充杂兵火力，存在不同背包偏好。",
 stratagem.sh-32-shield-generator-pack,SH-32 防护罩生成背包,SH-32 Shield Generator Pack,战略配备,背包,,防护；机器人推荐；光能族推荐,防护,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/SH-32_Shield_Generator_Pack | https://www.reddit.com/r/Helldivers/comments/1vq4fu9/which_backpack_is_the_best/ | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 防护（玩家反馈）：玩家区分球形护盾的防御用途与进攻/机动背包。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。",
-stratagem.sh-51-directional-shield,SH-51 定向护盾,SH-51 Directional Shield,战略配备,背包,需单手武器配合,,防护,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/SH-51_Directional_Shield,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
-需单手武器配合（Wiki资料）：正面护盾展开需要瞄准单手武器；不据此强行限定玩家只能携带单手枪。",
-stratagem.ax-flam-75-hot-dog,AX/FLAM-75 热狗,AX/FLAM-75 Hot Dog,战略配备,背包,自动运作；对敌燃烧,,,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/AX/FLAM-75_Hot_Dog,Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。,
+stratagem.sh-51-directional-shield,SH-51 定向护盾,SH-51 Directional Shield,战略配备,背包,需单手武器配合,防护；需准备,防护,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/SH-51_Directional_Shield,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+需单手武器配合（Wiki资料）：正面护盾展开需要瞄准单手武器；不据此强行限定玩家只能携带单手枪。
+防护（玩家反馈）：2026-08 玩家确认定向盾打开时可以反弹任何子弹和炮弹；10月有人在西线用单手武器配它。
+需准备（玩家反馈）：全战备评测指出它只有装备单手武器且处于瞄准状态才会投射护盾，与蛋盾用法完全不同；爆燃弩单手射击还会削一些射速。",
+stratagem.ax-flam-75-hot-dog,AX/FLAM-75 热狗,AX/FLAM-75 Hot Dog,战略配备,背包,自动运作；对敌燃烧,,,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/AX/FLAM-75_Hot_Dog,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+玩家实战补充：玩家听说火系带控制、伤害还能反重才解锁热狗，实战却觉得火焰控制并不明显，怀疑是配装打法问题。",
 stratagem.b-100-portable-hellbomb,B-100 便携式地狱火炸弹,B-100 Portable Hellbomb,战略配备,背包,反坦克特征（资料）；爆炸,机器人推荐,拆迁,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/Stratagem_Previews | https://www.bilibili.com/opus/910576488913305616,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 拆迁（资料推导）：根据可携带地狱火炸弹的介绍归入爆破用途，具体可拆建筑仍需逐类核实。
 机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。",
-stratagem.ax-arc-3-k-9,AX/ARC-3 “护卫犬”K-9,AX/ARC-3 K-9,战略配备,背包,反坦克特征（资料）；电弧；自动运作,清杂；易误伤,,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/Stratagem_Previews | https://www.reddit.com/r/Helldivers/comments/1vq4fu9/which_backpack_is_the_best/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+stratagem.ax-arc-3-k-9,AX/ARC-3 “护卫犬”K-9,AX/ARC-3 K-9,战略配备,背包,反坦克特征（资料）；电弧；自动运作,控场；清杂；易误伤；机器人推荐,,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/Stratagem_Previews | https://www.reddit.com/r/Helldivers/comments/1vq4fu9/which_backpack_is_the_best/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 清杂（玩家反馈）：玩家反馈连锁电弧可处理杂兵群，但友伤与走位限制明显，不按高杀敌数推断无条件最强。
-易误伤（玩家反馈）：既有玩家清杂备注明确说友伤与走位限制明显。",
-stratagem.lift-860-hover-pack,LIFT-860 悬浮背包,LIFT-860 Hover Pack,战略配备,背包,,,机动,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/LIFT-860_Hover_Pack,Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。,
-stratagem.ax-tx-13-dog-breath,AX/TX-13“护卫犬”腐息,AX/TX-13 Dog Breath,战略配备,背包,自动运作；毒气,控场,控场,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/Stagger | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/AX/TX-13_%22Guard_Dog%22_Dog_Breath | https://www.reddit.com/r/Helldivers/comments/1vq4fu9/which_backpack_is_the_best/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
-控场（玩家反馈）：玩家明确把毒气犬用于控制近身敌人。",
+易误伤（玩家反馈）：既有玩家清杂备注明确说友伤与走位限制明显。
+控场（玩家反馈）：2026-07 玩家说电狗打机器人意外好用，机器人排队一电一排，还能直接震开盾哥盾牌并眩晕。
+机器人推荐（玩家反馈）：同一讨论给出西线用途：打中强化双足极大概率殉爆白火箭直接秒杀，电弧重穿让没手雷时也不至于对无畏毫无办法。",
+stratagem.lift-860-hover-pack,LIFT-860 悬浮背包,LIFT-860 Hover Pack,战略配备,背包,,机动,机动,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/LIFT-860_Hover_Pack,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+机动（玩家反馈）：2026-10 玩家称以前还得找风水好的地方摆反坦克炮，现在尾随打就行、等于无限弹药，西线飞包配新星被称作轮椅。",
+stratagem.ax-tx-13-dog-breath,AX/TX-13“护卫犬”腐息,AX/TX-13 Dog Breath,战略配备,背包,自动运作；毒气,控场；清杂；评价有分歧,控场,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/Stagger | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/AX/TX-13_%22Guard_Dog%22_Dog_Breath | https://www.reddit.com/r/Helldivers/comments/1vq4fu9/which_backpack_is_the_best/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+控场（玩家反馈）：玩家明确把毒气犬用于控制近身敌人。
+清杂（玩家反馈）：2026-07 玩家把腐息与毒气迫击炮并列为『新轮椅』，说毒气狗负责补足近防、配合手雷甲和前兆补反重。
+评价有分歧（玩家反馈）：同期也有玩家评价它手感有点差：能点燃的靠点燃杀不死，能直击杀死的没机会点燃。",
 stratagem.lift-182-warp-pack,LIFT-182 传送背包,LIFT-182 Warp Pack,战略配备,背包,,机动,机动,,否,是,部分核实,https://helldivers.wiki.gg/wiki/Category%3ABackpack_Stratagems | https://helldivers.wiki.gg/wiki/Advanced_Automaton_Backpack_Stratagem_Guide | https://helldivers.wiki.gg/wiki/Stratagem_Previews | https://www.reddit.com/r/Helldivers/comments/1vq4fu9/which_backpack_is_the_best/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
-机动（玩家反馈）：玩家认可迅速换位；不做所有地图最优评级。",
+机动（玩家反馈）：玩家认可迅速换位；不做所有地图最优评级。
+玩家实战补充：2026-08东线易上手配装清单把它列为首选机动位，与爆裂铳、匕首、热熔枪、毒雷同列；属玩家取向而非强度排名。
+玩家实战补充：2026-09 有帖子澄清：传送背包启动声音大，但不会让机器人直接仇恨潜兵，只会转头警戒；没有直接视线接触时仍可照常潜行，『传包完全不适配潜行』的说法被反驳。",
 stratagem.m-104-incinerator-frv,M-104 炽灼型快速侦查载具,M-104 Incinerator FRV,战略配备,载具,对敌燃烧,易误伤,机动,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.reddit.com/r/Helldivers/comments/1xn02je/is_it_wrong_to_say_it_feels_like_the_base_frv_has/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 机动（资料推导）：按 FRV 运载与快速机动介绍分类，不给火力强度评级。
 易误伤（玩家反馈）：11月讨论警告被摧毁后的剧烈爆炸会殃及队伍；使用与损失均需注意位置。",
-stratagem.td-110-maelstrom,TD-110 风暴漩涡,TD-110 Maelstrom,战略配备,载具,反坦克特征（资料）；烟雾,,清杂,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Maelstrom,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+stratagem.td-110-maelstrom,TD-110 风暴漩涡,TD-110 Maelstrom,战略配备,载具,反坦克特征（资料）；烟雾,反重；清杂；补给依赖,清杂,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Maelstrom,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
-清杂（Wiki资料）：页面明确偏清群与压制，不能只看 Tank Destroyer 名称判为方便反重。",
-stratagem.exo-49-emancipator-exosuit,EXO-49 “解放者”外骨骼装甲,EXO-49 Emancipator Exosuit,战略配备,载具,反坦克特征（资料）,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
-反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。",
+清杂（Wiki资料）：页面明确偏清群与压制，不能只看 Tank Destroyer 名称判为方便反重。
+反重（玩家反馈）：2026-09 新战备初评称它清杂反重兼备；10月玩家补充加特林有着全游戏机枪最高穿甲、最多备弹与1200射速。
+清杂（玩家反馈）：同一帖以『为什么没人带好难猜啊』反讽其出场率，说明数值与实际选用落差明显。
+补给依赖（玩家反馈）：2026-09 玩家说射200发就要萎一会儿换弹，隔壁堡垒可以右键按到死。
+玩家实战补充：2026-10 帖子里以反讽口吻问『为什么没人带好难猜啊』，配合换弹吐槽，说明数值高但实战出场率低。",
+stratagem.exo-49-emancipator-exosuit,EXO-49 “解放者”外骨骼装甲,EXO-49 Emancipator Exosuit,战略配备,载具,反坦克特征（资料）,机器人推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
+机器人推荐（玩家反馈）：2026-06 玩家称多轮加强之后终于有资格在西线挺直腰板走，并有专门讲西线用法的教学视频。",
 stratagem.exo-45-patriot-exosuit,EXO-45 “爱国者”外骨骼装甲,EXO-45 Patriot Exosuit,战略配备,载具,反坦克特征（资料）,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。",
 stratagem.m-103-supply-frv,M-103 补给型快速侦察载具,M-103 Supply FRV,战略配备,载具,自动运作,续航支援,机动；续航支援,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/M-103_Supply_FRV | https://www.reddit.com/r/Helldivers/comments/1xn02je/is_it_wrong_to_say_it_feels_like_the_base_frv_has/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 自动运作（Wiki资料）：仅指车载自动炮塔，驾驶和补给操作仍需玩家。
-续航支援（玩家反馈）：11月讨论明确肯定车载补给，代价是直接火力较弱。",
+续航支援（玩家反馈）：11月讨论明确肯定车载补给，代价是直接火力较弱。
+玩家实战补充：玩家称补给小车出现后，背包武器多带补给小车、非背包武器多带补包，队内自带补给常年没人用，因此可以放开叫补给。",
 stratagem.m-102-gunner-frv,M-102 炮手快速侦查载具,M-102 Gunner FRV,战略配备,载具,,机动,机动,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.reddit.com/r/Helldivers/comments/1xn02je/is_it_wrong_to_say_it_feels_like_the_base_frv_has/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 机动（资料推导）：按 FRV 运载与快速机动介绍分类，不给火力强度评级。
 机动（玩家反馈）：11月讨论认为原型FRV的速度和运输泛用性仍有价值，并非新车全面替代。",
-stratagem.td-220-bastion-mk-xvi,TD-220 堡垒MK XVI,TD-220 Bastion MK XVI,战略配备,载具,反坦克特征（资料）；爆炸,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+stratagem.td-220-bastion-mk-xvi,TD-220 堡垒MK XVI,TD-220 Bastion MK XVI,战略配备,载具,反坦克特征（资料）；爆炸,反重；需准备,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
-反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。",
+反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
+反重（玩家反馈）：玩家手册强调它是坦克歼击车不是坦克，适合有索敌和大弱点的boss；另有评论说能把备弹打完就是有效输出，打霸王虫多半打不空主炮。
+需准备（玩家反馈）：手册列出CD长、在场时间短、只有30度射击角度、越障能力差、转向空间大等限制。",
 stratagem.exo-55-breakthrough-exosuit,EXO-55 “突破”外骨骼装甲,EXO-55 Breakthrough Exosuit,战略配备,载具,重甲穿透（资料）,,防护,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/EXO-55_Breakthrough_Exosuit,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 重甲穿透（资料）（Wiki资料）：仅记录 Wiki Heavy Armor Penetrating 展示特征，不表示实战方便反重。
 防护（Wiki资料）：自带防弹盾；不代表对所有来源伤害免疫。",
-stratagem.exo-51-lumberer-exosuit,EXO-51 “伐木者”外骨骼装甲,EXO-51 Lumberer Exosuit,战略配备,载具,反坦克特征（资料）；对敌燃烧,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
-反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。",
-stratagem.a-mg-43-machine-gun-sentry,A/MG-43 哨戒机枪,A/MG-43 Machine Gun Sentry,战略配备,自动哨戒炮,自动运作；固定部署,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/All_Stratagems,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+stratagem.exo-51-lumberer-exosuit,EXO-51 “伐木者”外骨骼装甲,EXO-51 Lumberer Exosuit,战略配备,载具,反坦克特征（资料）；对敌燃烧,反重；清杂；易自伤,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Equipment_Traits | https://helldivers.wiki.gg/wiki/All_Stratagems,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
+清杂（玩家反馈）：2026-07 玩家说开局开着伐木者跟怪站撸，左键清杂右键打精英；10月有更新后压烟视频，建议退着打保持距离、多铺地火。
+反重（玩家反馈）：2026-10 平衡调整后火焰射流伤害从3提升到8、比焚燃者还高，玩家认为凭借机甲坦度可以近身火焰和AT炮同时开火融化牛牛泰坦。
+易自伤（玩家反馈）：有玩家下机甲时被自己之前喷的火烫死，需注意地火残留。
+玩家实战补充：2026-10-20 平衡调整把火焰射流伤害从3提到8；10-23 压烟视频建议不要对着脚下喷、退着打保持距离、多铺地火少直喷。",
+stratagem.a-mg-43-machine-gun-sentry,A/MG-43 哨戒机枪,A/MG-43 Machine Gun Sentry,战略配备,自动哨戒炮,自动运作；固定部署,清杂,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/All_Stratagems,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 自动运作（Wiki资料）：自动搜索或攻击范围内敌人；不等同于能处理全部敌种。
-固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。",
-stratagem.a-g-16-gatling-sentry,A/G-16 加特林哨戒炮,A/G-16 Gatling Sentry,战略配备,自动哨戒炮,自动运作；固定部署,清杂；光能族推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。
+清杂（玩家反馈）：玩家讨论为什么野排更爱带哨戒机枪：加特林爆发和清杂更猛，但哨戒机枪误伤低得多，碰一下潜兵不一定死。
+玩家实战补充：2026-02 神九门毒气地雷那期的热门评论把哨戒机枪与加特林、火箭、机炮哨戒炮横向比较，认为它没有极高输出、对重甲也没有对应能力；句子模仿视频台词，按玩梗处理，只留作背景。",
+stratagem.a-g-16-gatling-sentry,A/G-16 加特林哨戒炮,A/G-16 Gatling Sentry,战略配备,自动哨戒炮,自动运作；固定部署,清杂；易误伤；光能族推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.bilibili.com/opus/1010453981962436614/ | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 自动运作（Wiki资料）：自动搜索或攻击范围内敌人；不等同于能处理全部敌种。
 固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
-清杂（玩家反馈）：2025攻略：压低甲单位。",
+清杂（玩家反馈）：2025攻略：压低甲单位。
+易误伤（玩家反馈）：2026 东线绿战备科普指出加特林哨戒炮出伤极强、中甲及以下光速融化，同样也会融化潜兵，带可以带但要谨慎扔。",
 stratagem.a-ac-8-autocannon-sentry,A/AC-8 自动哨戒炮,A/AC-8 Autocannon Sentry,战略配备,自动哨戒炮,反坦克特征（资料）；自动运作；固定部署,光能族推荐,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 自动运作（Wiki资料）：自动搜索或攻击范围内敌人；不等同于能处理全部敌种。
@@ -882,51 +1052,75 @@ stratagem.a-mls-4x-rocket-sentry,A/MLS-4X 火箭哨戒炮,A/MLS-4X Rocket Sentry
 自动运作（Wiki资料）：自动搜索或攻击范围内敌人；不等同于能处理全部敌种。
 固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。
 光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
-机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。",
-stratagem.a-arc-3-tesla-tower,A/ARC-3 特斯拉塔,A/ARC-3 Tesla Tower,战略配备,自动哨戒炮,电弧；自动运作；固定部署,易误伤,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+机器人推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
+玩家实战补充：2026-09 玩家说它清完点跑路断后或布防时好用，但压烟时不好用，因为压完烟往往还要往雷区走。",
+stratagem.a-arc-3-tesla-tower,A/ARC-3 特斯拉塔,A/ARC-3 Tesla Tower,战略配备,自动哨戒炮,电弧；自动运作；固定部署,控场；区域封锁；易误伤,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 自动运作（Wiki资料）：自动搜索或攻击范围内敌人；不等同于能处理全部敌种。
 固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。
-易误伤（玩家反馈）：2025攻略：附近易误伤，注意姿态/防电装备。",
-stratagem.a-m-23-ems-mortar-sentry,A/M-23 电磁冲击波迫击哨戒炮,A/M-23 EMS Mortar Sentry,战略配备,自动哨戒炮,自动运作；固定部署；眩晕,控场,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Stagger | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1qfrhzr/good_support_builds/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+易误伤（玩家反馈）：2025攻略：附近易误伤，注意姿态/防电装备。
+控场（玩家反馈）：2026-10 玩家认为它清杂能力十分不错尤其东南线，任务点入口扔一个怪根本进不来，拉烟也不怕；8月评论补充电弧可沿惯性路径继续连锁。
+区域封锁（玩家反馈）：同一帖指出缺点是TK，且牛或泰坦一脚会捣碎；另有玩家建议在扔电塔时同时放防护罩生成器保护它。",
+stratagem.a-m-23-ems-mortar-sentry,A/M-23 电磁冲击波迫击哨戒炮,A/M-23 EMS Mortar Sentry,战略配备,自动哨戒炮,自动运作；固定部署；眩晕,控场；区域封锁,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Stagger | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1qfrhzr/good_support_builds/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 自动运作（Wiki资料）：自动搜索或攻击范围内敌人；不等同于能处理全部敌种。
-固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。",
+固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。
+区域封锁（玩家反馈）：全战备评测绿战备篇说明它与迫击炮机制一致，静电场炮弹会眩晕落点10米范围内敌人，并减速后续进入静电场的敌人。",
 stratagem.a-las-98-laser-sentry,A/LAS-98 激光哨戒炮,A/LAS-98 Laser Sentry,战略配备,自动哨戒炮,自动运作；热量管理；重甲穿透（资料）；激光；固定部署,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 重甲穿透（资料）（Wiki资料）：仅记录 Wiki Heavy Armor Penetrating 展示特征，不表示实战方便反重。
 自动运作（Wiki资料）：自动搜索或攻击范围内敌人；不等同于能处理全部敌种。
-固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。",
-stratagem.a-flam-40-flame-sentry,A/FLAM-40 火焰喷射哨戒炮,A/FLAM-40 Flame Sentry,战略配备,自动哨戒炮,自动运作；对敌燃烧；固定部署,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。
+玩家实战补充：玩家认为激光结算机制改动后，一直照一个单位照到死的开火AI已经落后，容易吊死在一个重甲上，建议改成短时间转火给范围内敌人挂燃烧。",
+stratagem.a-flam-40-flame-sentry,A/FLAM-40 火焰喷射哨戒炮,A/FLAM-40 Flame Sentry,战略配备,自动哨戒炮,自动运作；对敌燃烧；固定部署,反重；清杂；区域封锁；简易使用,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 自动运作（Wiki资料）：自动搜索或攻击范围内敌人；不等同于能处理全部敌种。
-固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。",
-stratagem.a-gm-17-gas-mortar-sentry,A/GM-17 瓦斯迫击哨戒炮,A/GM-17 Gas Mortar Sentry,战略配备,自动哨戒炮,自动运作；毒气；固定部署,光能族推荐,控场,,否,否,部分核实,https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Stagger | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。
+反重（玩家反馈）：2026-10版本评论称其把停在射界内的强袭虫与路过的泰坦烧死；覆盖半径有限、依赖敌人进入范围，不是远程反重。
+区域封锁（玩家反馈）：持续一分多钟的近距火焰覆盖被玩家称为无人区，用于封锁推进路线。
+清杂（玩家反馈）：2026-10 玩家称增强射程那次起东线就离不开它，除三号位和背包只带这个都能乱杀虫子；另有评论说两个火炮台能压一波N10烟。
+简易使用（玩家反馈）：玩家称现在不知道带啥就拿这个火焰炮塔，CD只有60多秒、炸了完全不心疼，只要注意清指挥官和重甲基本就能压住一波烟。
+玩家实战补充：索敌与转向异常、部署后耐久低，UP主建议留人保一下；评论把旧版定位概括为叫一个站桩队友下来，新版更像范围杀伤区。",
+stratagem.a-gm-17-gas-mortar-sentry,A/GM-17 瓦斯迫击哨戒炮,A/GM-17 Gas Mortar Sentry,战略配备,自动哨戒炮,自动运作；毒气；固定部署,区域封锁；光能族推荐,控场,,否,否,部分核实,https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Stagger | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1010453981962436614/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 自动运作（Wiki资料）：自动搜索或攻击范围内敌人；不等同于能处理全部敌种。
 固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。
 控场（Wiki资料）：取气体混乱及减速机制，不把穿甲或气体数字视为方便反重。
-光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。",
+光能族推荐（玩家反馈）：2026-10配装清单所列；限对应阵营。
+区域封锁（玩家反馈）：债券测评给出近100米射程、一轮约9-10颗炮弹，但也指出射击间隔长、迫击炮索敌奇怪、仇恨偏高。",
 stratagem.md-6-anti-personnel-minefield,MD-6 反步兵雷区,MD-6 Anti-Personnel Minefield,战略配备,雷区,爆炸；固定部署,,区域封锁,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3AEmplacement_Stratagems | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
 固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。
-区域封锁（资料推导）：固定雷区提供区域防守，未把它当作随时可用的直接反重手段。",
-stratagem.md-i4-incendiary-mines,MD-I4 燃烧地雷,MD-I4 Incendiary Mines,战略配备,雷区,爆炸；对敌燃烧；固定部署,,区域封锁,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3AEmplacement_Stratagems | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+区域封锁（资料推导）：固定雷区提供区域防守，未把它当作随时可用的直接反重手段。
+玩家实战补充：玩家撤退时把雷区放在高台和楼下台阶，队友与小怪贴身激战时被炸倒，说明野排里误伤风险很实际。",
+stratagem.md-i4-incendiary-mines,MD-I4 燃烧地雷,MD-I4 Incendiary Mines,战略配备,雷区,爆炸；对敌燃烧；固定部署,区域封锁,区域封锁,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3AEmplacement_Stratagems | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
 固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。
-区域封锁（资料推导）：固定雷区提供区域防守，未把它当作随时可用的直接反重手段。",
-stratagem.md-17-anti-tank-mines,MD-17 反坦克地雷,MD-17 Anti-Tank Mines,战略配备,雷区,反坦克特征（资料）；爆炸；固定部署,,区域封锁,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3AEmplacement_Stratagems | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+区域封锁（资料推导）：固定雷区提供区域防守，未把它当作随时可用的直接反重手段。
+区域封锁（玩家反馈）：2025-03 玩家曾把它当作2分钟CD的轨道火、丢完轨道火再丢燃烧地雷爽压烟；2026-09 更新的说法是清完点跑路断后或布防时好用，压烟时反而不好用。以2026年结论为准。",
+stratagem.md-17-anti-tank-mines,MD-17 反坦克地雷,MD-17 Anti-Tank Mines,战略配备,雷区,反坦克特征（资料）；爆炸；固定部署,反重；易误伤,区域封锁,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3AEmplacement_Stratagems | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 爆炸（Wiki资料）：记录爆炸载荷；不能单凭此标签推断能拆除哪类建筑。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。
-区域封锁（资料推导）：固定雷区提供区域防守，未把它当作随时可用的直接反重手段。",
+区域封锁（资料推导）：固定雷区提供区域防守，未把它当作随时可用的直接反重手段。
+反重（玩家反馈）：玩家测试讨论更新后反坦克地雷只会被重型单位触发，但机甲、掉落的支援武器等也可能触发。
+易误伤（玩家反馈）：2026-08 有玩家抱怨升旗时往点里放雷炸到队友；另有反步兵雷区的误伤实例，说明地雷类需要留意队友动线。",
 stratagem.fx-12-shield-generator-relay,FX-12 防护罩生成中继器,FX-12 Shield Generator Relay,战略配备,部署设施,固定部署,防护,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3AEmplacement_Stratagems | https://helldivers.wiki.gg/wiki/All_Stratagems | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。
-防护（玩家反馈）：2025攻略：保护其他炮塔，注意部署顺序。",
-stratagem.e-mg-101-hmg-emplacement,E/MG-101 重机枪部署支架,E/MG-101 HMG Emplacement,战略配备,部署设施,重甲穿透（资料）；固定部署,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3AEmplacement_Stratagems | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+防护（玩家反馈）：2025攻略：保护其他炮塔，注意部署顺序。
+玩家实战补充：2026-09 玩家建议在扔特斯拉电塔时同时放下防护罩生成器，可以保护电塔不被绿胖和队友打掉，同时电死靠近的敌人。",
+stratagem.e-mg-101-hmg-emplacement,E/MG-101 重机枪部署支架,E/MG-101 HMG Emplacement,战略配备,部署设施,重甲穿透（资料）；固定部署,反中；需准备,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3AEmplacement_Stratagems | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Equipment_Traits,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 重甲穿透（资料）（Wiki资料）：仅记录 Wiki Heavy Armor Penetrating 展示特征，不表示实战方便反重。
-固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。",
-stratagem.e-gl-21-grenadier-battlement,E/GL-21 掷弹兵防卫墙,E/GL-21 Grenadier Battlement,战略配备,部署设施,固定部署,,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3AEmplacement_Stratagems | https://helldivers.wiki.gg/wiki/All_Stratagems,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
-固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。",
-stratagem.md-8-gas-mines,MD-8 毒气地雷,MD-8 Gas Mines,战略配备,雷区,毒气；固定部署,区域封锁,控场,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3AEmplacement_Stratagems | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Stagger | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。
+反中（玩家反馈）：玩家说可以把它当次抛重机枪玩，能打牛腿、去壳后打肉击杀，也能打泰坦就是费子弹。
+需准备（玩家反馈）：需要掌握放置的时机和位置以保证输出最大化、防止后背被偷；与掷弹兵防卫墙并称轮椅炮。",
+stratagem.e-gl-21-grenadier-battlement,E/GL-21 掷弹兵防卫墙,E/GL-21 Grenadier Battlement,战略配备,部署设施,固定部署,清杂；评价有分歧,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3AEmplacement_Stratagems | https://helldivers.wiki.gg/wiki/All_Stratagems,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
+固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。
+清杂（玩家反馈）：玩家说可以当作次抛榴弹发射器用，60发大弹鼓把一片敌人炸飞；东线南线配合背包位反重武器很好玩。
+评价有分歧（玩家反馈）：作者自己也承认综合来看防卫墙并不算强力的战备，主要是自己喜欢所以常用。
+玩家实战补充：2026-10 东线向排行榜把榴弹墙放在T4：作者说东线几乎没人带、防守图也少见，但本人挺喜欢用。属出场率观察，不是强度定论。",
+stratagem.md-8-gas-mines,MD-8 毒气地雷,MD-8 Gas Mines,战略配备,雷区,毒气；固定部署,控场；清杂；区域封锁,控场,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3AEmplacement_Stratagems | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Stagger | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.bilibili.com/opus/1099063130125762563,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。
 控场（Wiki资料）：取气体混乱及减速机制，不把穿甲或气体数字视为方便反重。
-区域封锁（玩家反馈）：2025攻略：在虫族增援处布雷，未沿用旧冷却数。",
+区域封锁（玩家反馈）：2025攻略：在虫族增援处布雷，未沿用旧冷却数。
+控场（玩家反馈）：2026-10 玩家称有毒气地雷在正前方控场，才能安心处理重甲和后方巡逻队；否则单炮塔清理不及时多半只能放弃炮塔跑路。
+清杂（玩家反馈）：玩家指出毒地雷基本把小怪滤完，剩下的牛牛和泰坦靠自己清理，因此与火炮塔的清杂职责会重叠。
+玩家实战补充：2026-03 终结族战备排行摘要把毒气地雷列为T0；作者自述玩法偏省弹药、打弱点并尽量按客观强度排序。属个人排行线索，未作为机制标签。",
 stratagem.e-at-12-anti-tank-emplacement,E/AT-12 反坦克炮台,E/AT-12 Anti-Tank Emplacement,战略配备,部署设施,反坦克特征（资料）；固定部署,反重；需准备,,,否,否,部分核实,https://helldivers.wiki.gg/wiki/Category%3AEmplacement_Stratagems | https://helldivers.wiki.gg/wiki/All_Stratagems | https://helldivers.wiki.gg/wiki/Equipment_Traits | https://www.reddit.com/r/Helldivers/comments/1qfrhzr/good_support_builds/,"Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。
 反坦克特征（资料）（Wiki资料）：仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。
 固定部署（Wiki资料）：部署后固定在该位置；不是指支援武器的静止装填。

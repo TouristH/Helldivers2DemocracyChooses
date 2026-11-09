@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "researched_at": "2026-11-08",
+  "researched_at": "2026-11-09",
   "catalog_updated_at": "2026-10-21",
   "policy": {
     "mechanics": "Independent factual descriptions; never converted directly into convenience ratings.",
@@ -12,7 +12,12 @@
     "scope": "Knowledge foundation only; current random generation is unchanged.",
     "player_tags": "Independent IDs from the fixed player vocabulary; no combination IDs or standalone anti-tank convenience score.",
     "player_tag_display": "A semicolon-joined review/export view, parsed into a set of independent IDs at runtime.",
-    "practical_priority": "Prefer sourced player tags over reference-role inference; retain mechanism descriptions independently."
+    "practical_priority": "Prefer sourced player tags over reference-role inference; retain mechanism descriptions independently.",
+    "source_priority": "国内社区证据（B站、贴吧、小黑盒）优先于海外社区；同一标签出现分歧时以带日期、阵营与条件的国内实战描述为准，海外讨论只作背景。",
+    "tier_lists": "梯队图是线索不是逐件证据：只收作者写明的分级口径、机制和条件，图标格子未逐格识别时不生成标签。",
+    "browser_collection": "Reddit 与小黑盒正文在用户已登录的 Edge 内通过 WorkBuddy 浏览器操控阅读，未由智能体处理任何账号凭据。",
+    "temporal_precedence": "同一标签在不同时间出现不同结论时以较新证据为准；旧证据保留在来源与备注中并标记 historical=true，不参与运行时标签集合。as_of 取该结论所引来源的最新发布日期。",
+    "domestic_evidence": "国内社区（B站、贴吧、小黑盒）优先；本轮按全部战略配备名与社区简称批量检索，B站2760条搜索结果、426个视频详情、3500余条高赞评论，小黑盒426条帖子摘要，逐条清洗后入库。"
   },
   "taxonomy": {
     "categories": {
@@ -2188,6 +2193,2156 @@
       "revision": null,
       "scope": "索引2026-09-25；实读正文/评论，页面仅相对时间，精确补丁未核。讨论铝热反重补位与起效/距离/命中问题；另有炸药近距拆厂反馈。",
       "access": "page"
+    },
+    {
+      "id": "bili_flame_sentry_20261020",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV17UnA6fEmr/",
+      "title": "版本新神，光环喷颗秒指挥官变六重自由大人！火焰炮台融化一切稳坐炮台T0",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "UP主小憨不是铁憨憨，2026-10-20发布，播放约8万。实读标题、简介与高赞评论：火炮台数值高但索敌异常、需要保护；评论称其覆盖半径约十五米、持续一分多钟，能把停在射界内的强袭虫和路过的泰坦烧死。仅该版本实战观感，不含数值。",
+      "access": "page"
+    },
+    {
+      "id": "bili_maxigun_20261107",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV16c4J6tEd1/",
+      "title": "你赢了，你的武器小众又独特~新版本重装机枪离T0战备只差最后一步",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "UP主小憨不是铁憨憨，2026-11-07发布。简介为第三方修改器链接，与本条无关；实读标题与评论：重装机枪要站桩输出，精度不及哨戒炮，被视为接近T0的持续火力。",
+      "access": "page"
+    },
+    {
+      "id": "bili_at_seeker_20261006",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1ChHt63EFF/",
+      "title": "[HELLDIVERS2]手雷位的大咖- 反坦克寻踪雷",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "UP主OneMoreChanceTXM，2026-10-06发布。简介称几乎全能但被锁定机制拖累；评论补充西线两发可处理重甲、单人配补给背包可拦车队、可拆小构筑、可打炮艇，并认为投掷物反重供给已很充足。",
+      "access": "page"
+    },
+    {
+      "id": "bili_arc_20261108",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1XGW76hEsu/",
+      "title": "什么叫电弧这个牢大武器都能一脚踢死毒瘴变种？千杀单通全清难十虫族毒瘴变种",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "UP主上官筱幽，2026-11-08发布。以电弧发射器完成N10虫族毒瘴变种千杀全清；评论仍有人认为电弧数量不及同类前一直不推荐，说明强度评价存在分歧。",
+      "access": "page"
+    },
+    {
+      "id": "bili_quasar_20251226",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1YWBaB6EQc/",
+      "title": "最逻辑自洽的反重三号位 加速步枪类星体加农炮全清霸王虫击杀n10虫窝重启闸机",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "UP主我先投降了zzz，2025-12-26发布。评论认为类星体的优点是配装时不用犹豫，也有人说视频表现主要来自操作基本功，不代表武器本身强度。",
+      "access": "page"
+    },
+    {
+      "id": "bili_gl52_20261106",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1nZ4q6VEDw/",
+      "title": "电榴弹现在强度如何？电榴弹N10虫窝毒瘴变种单通",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "UP主我先投降了zzz，2026-11-06发布。简介列出电榴弹配装；评论称近距开火只要及时飞扑基本不自伤，仍属强势，主要需注意队友。电榴弹与GL-52的对应按电弧加爆炸机制判断，未见官方译名复核。",
+      "access": "page"
+    },
+    {
+      "id": "bili_easy_loadout_20260830",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1ee4D6KEZo/",
+      "title": "什么配装才能爽虐虫族？东线易上手顶级轮椅配装体系推荐",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "UP主我先投降了zzz，2026-08-30发布，播放约11万。实读高赞评论中的东线易上手搭配：传送背包配爆裂铳、匕首、热熔枪、毒雷；以及外骨骼与实弹狗方案。属玩家取向清单，不是强度排名。",
+      "access": "page"
+    },
+    {
+      "id": "bili_illuminate_harvester_20241213",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1JpBTYREyg/",
+      "title": "教你如何 快速秒掉带护盾的光能者猎杀器（三足）",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "UP主喵魔王0v0，2024-12-13发布，光能族刚上线版本。简介：先用飞鹰机枪打掉护盾再补爆炸物；无后坐力炮可一发打掉飞船出兵口；火焰手雷对小兵群有效。属历史版本观点，之后多次平衡改动。",
+      "access": "page"
+    },
+    {
+      "id": "tieba_at_obligation_20261013",
+      "kind": "community",
+      "url": "https://tieba.baidu.com/p/11102035475",
+      "title": "是不是野队没人反重",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "贴吧用户炒鸡骇人鲸，2026-10-13发帖，50 条回复。楼主认为东线N10萌新普遍不带反重、老手应自觉补位，否则被泰坦追；回复称重甲刷新量明显上升，也有人认为当前有手雷位就够用。属组队观感，不含数值。",
+      "access": "page"
+    },
+    {
+      "id": "tieba_gl28_20261027",
+      "kind": "community",
+      "url": "https://tieba.baidu.com/p/11142106449",
+      "title": "感觉有了补车弹链榴弹已经飞升夯九门了",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "贴吧用户幽光785，2026-10-27，17 条回复。配装为补给载具、弹链榴弹、毒雷、火炮塔，双人N10爆裂变种升旗；楼主称弹链榴弹dps高、输出持久、压制强，能解决八成以上虫子。回复认为弹链与加特林优势区间接近、续航是主要短板，弹链榴弹反重不咋地但能补残血；另有回复把清场功劳归给火炮台。",
+      "access": "page"
+    },
+    {
+      "id": "tieba_at_seeker_20261022",
+      "kind": "community",
+      "url": "https://tieba.baidu.com/p/11126384438",
+      "title": "求助 有人知道反坦克追踪雷怎么稳定两颗秒蟑龙吗",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "贴吧用户无语，2026-10-22，17 条回复。楼主反映两发有时秒杀、有时四发才死；回复认为溅射或空中提前引爆会丢伤害，千兆直击更稳定，热熔地雷对强袭虫与泰坦更稳但打不了蟑龙，次抛、类星体、无后座命中头部可一发。均为该版本玩家经验。",
+      "access": "page"
+    },
+    {
+      "id": "tieba_recommend_20261102",
+      "kind": "community",
+      "url": "https://tieba.baidu.com/p/11159777535",
+      "title": "老冻肉回归，现在有哪些战备是比较好用的",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "贴吧用户，2026-11-02，9 条回复。回复主推尖峰（AMW-20），称重甲消消乐、三线通用，备弹五乘五、战术换弹可留一发共六发，并建议清杂交给其他位、西线保证主副手有一个能拆巢；另有人提喷火加强后可用。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_romantic_loadout_20260823",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/188843559",
+      "title": "推荐一套最浪漫、三线通用、且全模板通用的战备",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "小黑盒用户天之愿 Lv.20，2026-08-23，广东。实读全文：配装为三叉戟、最后通牒、热熔地雷、工兵甲、AC-8机炮、轨道燃烧火力网、轨道游走火力网、轨道380MM火力网。作者逐条说明三个轨道火力网轮流压增援、机炮清残兵与巡逻队、两颗通牒打泰坦与坦克、六颗热熔地雷处理无畏和大锤哥，并对比千兆容量少、有时秒不掉强袭虫、西线坦克模板乏力。标题带'浪漫'的玩笑口吻，但机制、数量和条件具体，非反串。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_east_tier_20261018",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/194334865",
+      "title": "到我了，个人理解东线向战备排行榜，大伙怎么看",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "小黑盒用户绝对强大之龟 Lv.9，2026-10-18，辽宁。实读正文：给出T0至T4的分级口径，并说明T4里榴弹墙在东线几乎没人带、防守图也少见，作者本人却喜欢用。梯队明细是图标图片，未逐格识别，故只收文字口径与榴弹墙出场率观察。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_bug_tier_20260304",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/176552202",
+      "title": "2026.03.04 绝地潜兵2 战备排行（终结族）",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "小黑盒用户督察的员 Lv.19，2026-03-04，青海。正文自述玩法偏省弹药、打弱点，强调排行尽量按客观强度；搜索列表摘要把毒气地雷列为T0。梯队图是图标，未逐格识别，故只收方法说明与摘要中的单件线索。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_tier_criteria_20261006",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/192973880",
+      "title": "我的个人理解战备强度",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "小黑盒用户玩家33723409 Lv.11，2026-10-06，广东，147 条评论。实读正文给出T0至T3口径：T0三线全能无毒点、带一个就像轮椅；T1绝大多数场景能发挥但有不可避免短板；T2是特定阵营/任务/场景的对策卡，离开环境就坐牢；T3意义不明、娱乐向。梯队图是图标，未逐格识别。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_eval_tier_20261029",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/195282391",
+      "title": "本潜兵对超级地球战备的评价",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "scope": "小黑盒用户BOSSDUAN Lv.11，2026-10-29，广东。正文只给出分级口径：T0强中强，T1选战备优先考虑，T2少数情况会用或对策卡，T3送都不一定用。梯队图是图标，未逐格识别。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1GXHN6ZERP",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1GXHN6ZERP/",
+      "title": "重装机枪增强后表现如何？重装机枪纯游龙东线一命单通全清重甲模板【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-24",
+      "scope": "B站UP主Pytaxen，2026-10-24发布《重装机枪增强后表现如何？重装机枪纯游龙东线一命单通全清重甲模板【绝地潜兵2】》，播放1920、点赞28。实读标题、简介与高赞评论，简介要点：还不错哦~；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-24。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1Hb4F6qEFL",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1Hb4F6qEFL/",
+      "title": "新晋反重神尖峰该怎么玩？尖峰入门级三线配装推荐+打点教学【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-02",
+      "scope": "B站UP主我先投降了zzz，2026-11-02发布《新晋反重神尖峰该怎么玩？尖峰入门级三线配装推荐+打点教学【绝地潜兵2】》，播放37755、点赞1091。实读标题、简介与高赞评论，简介要点：其实是像让大伙听四凤歌了，通透了吗孩子们？ 巴啦啦魔法~so fa fa so fa 巴啦啦魔法~ro do do mi ro；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-11-02。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1pBx16NEF5",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1pBx16NEF5/",
+      "title": "潜兵神九门：尖峰",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-01",
+      "scope": "B站UP主Nemo龙井，2026-11-01发布《潜兵神九门：尖峰》，播放224476、点赞8413。实读标题、简介与高赞评论，简介要点：最速的重置，由此而生的毒点，教会箭头填数值的是...；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-11-01。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1LwhQ6QEat",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1LwhQ6QEat/",
+      "title": "潜兵神九门：反坦克追踪者",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-26",
+      "scope": "B站UP主Nemo龙井，2026-09-26发布《潜兵神九门：反坦克追踪者》，播放356011、点赞8912。实读标题、简介与高赞评论，简介要点：越用越顺手了属于是，这个债券整体可以说是西线T-1级别。 东线的适应与练习成本非常少见的会显著高于西线，综合功能性和反应速度弱于千兆。 这就是你们说的丐版债券吗.jpg；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-26。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1T8hW6fEuJ",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1T8hW6fEuJ/",
+      "title": "潜兵神九门：驱逐者",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-23",
+      "scope": "B站UP主Nemo龙井，2026-09-23发布《潜兵神九门：驱逐者》，播放418604、点赞10504。实读标题、简介与高赞评论，简介要点：爆炸家族新成员，第三把炸弹分类武器，使用绝对的数值统治西线。 冷知识我们一般都是需要补主手拆迁或清杂时才需要起爆炸主手，再让我看见三号位比一号位那我真得肘击你了。；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-23。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1E3xm6hEtx",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1E3xm6hEtx/",
+      "title": "新变种上线表现如何？机炮N10毒瘴变种虫窝单通【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-04",
+      "scope": "B站UP主我先投降了zzz，2026-11-04发布《新变种上线表现如何？机炮N10毒瘴变种虫窝单通【绝地潜兵2】》，播放17561、点赞304。实读标题、简介与高赞评论，简介要点：M90A 最后通牒 千兆 生命强化 战锤中 机炮 毒气地雷 火炮塔 解放者机甲 很一般的变种，又丑又没新意；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-11-04。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1s4nh6mErs",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1s4nh6mErs/",
+      "title": "M15-纯机炮鱼窝ACE难度无伤S评分处理方式（更新前）",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-23",
+      "scope": "B站UP主害群之马玉日，2026-10-23发布《M15-纯机炮鱼窝ACE难度无伤S评分处理方式（更新前）》，播放1355、点赞24。实读标题、简介与高赞评论，简介要点：ps：孩子们，我是Sotoa王牌机长Fuscus2，v我50立刻登机，见证传奇飞行员毛毛头如何用机炮吊舱将我击落 ps1：速通不能，需要瞄很准，只打引擎，本视频意在展示容错，趁没削打完也算是挑战自我了（ ps2：调整推迟了 ps3：over and out；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-23。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1xSet6GETj",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1xSet6GETj/",
+      "title": "类星体：从人手一把的反重武器到如今的无人问津 单通全清难十虫族地质 你发配装，我来单通第114期 【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-19",
+      "scope": "B站UP主上官筱幽，2026-09-19发布《类星体：从人手一把的反重武器到如今的无人问津 单通全清难十虫族地质 你发配装，我来单通第114期 【绝地潜兵2】》，播放20573、点赞294。实读标题、简介与高赞评论，简介要点：配装：垫料轻甲+铳+匕首+千兆级榴弹+激光狗+类星体+飞鹰空袭+毒气地雷+生命强化buff 绝地潜兵民主征兵群:134324143 进群飞鹰500kg:上右下下下；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-19。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV199ny6iERQ",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV199ny6iERQ/",
+      "title": "新星：这才是真正的蓄力武器！再见了磁轨纪元类星体！一命千杀单通全清难十孢裂变种【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-22",
+      "scope": "B站UP主上官筱幽，2026-10-22发布《新星：这才是真正的蓄力武器！再见了磁轨纪元类星体！一命千杀单通全清难十孢裂变种【绝地潜兵2】》，播放47235、点赞818。实读标题、简介与高赞评论，简介要点：配装：医疗轻甲+长柄镰+榴弹手枪+反坦克追踪雷+新星+飞鹰空袭+毒气地雷+传送背包+生命强化buff 绝地潜兵民主征兵群:134324143 进群飞鹰500kg:上右下下下；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-22。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1cEsf6aE3A",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1cEsf6aE3A/",
+      "title": "灭菌器：今天我为自己代言  灭菌器1622杀毒火流踹翻N10东线升旗",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-29",
+      "scope": "B站UP主用一生去梦，2026-10-29发布《灭菌器：今天我为自己代言  灭菌器1622杀毒火流踹翻N10东线升旗》，播放1320、点赞24。实读标题、简介与高赞评论，简介要点：配装：双重自由 核弹手枪 火摔炮 战备：补给背包 灭菌器 飞鹰110MM火箭巢 轨道炮；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-29。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1svWH6wEZK",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1svWH6wEZK/",
+      "title": "【绝地潜兵2】灭菌器+反坦克追踪者禁主副手单战备单通难10虫族升旗",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-08",
+      "scope": "B站UP主忧黎，2026-11-08发布《【绝地潜兵2】灭菌器+反坦克追踪者禁主副手单战备单通难10虫族升旗》，播放464、点赞18。实读标题、简介与高赞评论，简介要点：纯渡劫；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-11-08。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1Vt4G6oEPk",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1Vt4G6oEPk/",
+      "title": "【绝地潜兵2】还有灭菌器黑吗？说话！N10孢裂单通",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-03",
+      "scope": "B站UP主Exclamation66，2026-11-03发布《【绝地潜兵2】还有灭菌器黑吗？说话！N10孢裂单通》，播放351、点赞17。实读标题、简介与高赞评论，简介要点：补药骂窝，我是愁区；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-11-03。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1yznx6PEmL",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1yznx6PEmL/",
+      "title": "你早说反器材能这么帅！我肯定玩啊！",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-23",
+      "scope": "B站UP主小香草行不行，2026-10-23发布《你早说反器材能这么帅！我肯定玩啊！》，播放65059、点赞1640。实读标题、简介与高赞评论，简介要点：尖峰；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-23。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1uBTw66EKf",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1uBTw66EKf/",
+      "title": "【绝地潜兵2】反器材步枪为什么老是有人吹？老是有节奏？",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-06-30",
+      "scope": "B站UP主上官筱幽，2026-06-30发布《【绝地潜兵2】反器材步枪为什么老是有人吹？老是有节奏？》，播放57599、点赞744。实读标题、简介与高赞评论，简介要点：下班完，叽里呱啦录的，逻辑有点混乱。 绝地潜兵民主征兵群:134324143 进群飞鹰500kg:上右下下下；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-06-30。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1eg4B6PEdS",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1eg4B6PEdS/",
+      "title": "孩子们我吃不到地火黑利！激光大炮N10虫窝毒瘴变种单通【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-06",
+      "scope": "B站UP主我先投降了zzz，2026-11-06发布《孩子们我吃不到地火黑利！激光大炮N10虫窝毒瘴变种单通【绝地潜兵2】》，播放5784、点赞124。实读标题、简介与高赞评论，简介要点：爆燃弩 通牒 千兆 生命强化 战锤中（这个忘记换甲了，激光大炮不需要战锤甲） 激光大炮 补给背包 解放者机甲 毒气地雷；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-11-06。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1pGnn67E7U",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1pGnn67E7U/",
+      "title": "现版本焚燃者体系强力搭配！一套模板通吃终结族全难度",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-19",
+      "scope": "B站UP主恶魔大章鱼，2026-10-19发布《现版本焚燃者体系强力搭配！一套模板通吃终结族全难度》，播放6221、点赞142。实读标题、简介与高赞评论，简介要点：聊天1群：823447536 聊天2群：696500980 多人游戏联机群：1058935442；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-19。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1Joex6fEoh",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1Joex6fEoh/",
+      "title": "这就是东线最爽三号位之一 焚燃者2400杀多倍n10单通【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-19",
+      "scope": "B站UP主我先投降了zzz，2026-09-19发布《这就是东线最爽三号位之一 焚燃者2400杀多倍n10单通【绝地潜兵2】》，播放16472、点赞271。实读标题、简介与高赞评论；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-19。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV17Mg568ENU",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV17Mg568ENU/",
+      "title": "热熔地雷一发秒泰坦，热熔枪一发秒泰坦，换弹甲3号位换弹对比测试",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-08-12",
+      "scope": "B站UP主IM闪电，2026-08-12发布《热熔地雷一发秒泰坦，热熔枪一发秒泰坦，换弹甲3号位换弹对比测试》，播放144245、点赞2573。实读标题、简介与高赞评论，简介要点：简介很用心；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-08-12。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV18znu6cEWc",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV18znu6cEWc/",
+      "title": "最能游龙的背包反重位！C4东线多倍全变种霸王虫击杀n10单通【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-18",
+      "scope": "B站UP主我先投降了zzz，2026-10-18发布《最能游龙的背包反重位！C4东线多倍全变种霸王虫击杀n10单通【绝地潜兵2】》，播放4809、点赞111。实读标题、简介与高赞评论；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-18。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1h9Jm6gEkG",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1h9Jm6gEkG/",
+      "title": "潜兵豪九门：C4背包",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-16",
+      "scope": "B站UP主神成絵理，2026-10-16发布《潜兵豪九门：C4背包》，播放8049、点赞75。实读标题、简介与高赞评论，简介要点：我认为C4背包是比五字武器更豪的战备；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-16。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV16Kxw6TEHF",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV16Kxw6TEHF/",
+      "title": "你知道的，我一直是火焰喷射哨戒炮大人最忠实的侍从",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-29",
+      "scope": "B站UP主S-051，2026-10-29发布《你知道的，我一直是火焰喷射哨戒炮大人最忠实的侍从》，播放338、点赞9。实读标题、简介与高赞评论，简介要点：潜兵就算跟在火焰喷射哨戒炮大人屁股后面捡漏也是甘之如饴啊( 单人轻松压四人烟 这火炮塔把我烤熟了我都要夸一句烤的香 这把要是提前吃补把盟友弹药补上估计能爽刷200个 顺带绿胖被移除后盟友在东线是真好用；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-29。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1qNnv6EEaR",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1qNnv6EEaR/",
+      "title": "火焰炮台单防孢裂泰坦",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-21",
+      "scope": "B站UP主春逝故耘稀，2026-10-21发布《火焰炮台单防孢裂泰坦》，播放10719、点赞230。实读标题、简介与高赞评论，简介要点：孩子们，我太能烧了。 实战依旧是优先烧小兵导致被泰坦一脚踩死；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-21。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1fXnD6hEiE",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1fXnD6hEiE/",
+      "title": "绝地潜兵2东线最强压烟法两个战备堪比轨道火",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-26",
+      "scope": "B站UP主smokeremains，2026-10-26发布《绝地潜兵2东线最强压烟法两个战备堪比轨道火》，播放1381、点赞22。实读标题、简介与高赞评论，简介要点：相比于轨道火的cd,此方法每波烟都能接，输出环境安逸，最适合需要站桩换弹的战备。；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-26。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1o68R6bEZC",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1o68R6bEZC/",
+      "title": "[HD2]这就是特斯拉塔的压制力",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-08-27",
+      "scope": "B站UP主透明人撒，2026-08-27发布《[HD2]这就是特斯拉塔的压制力》，播放16276、点赞168。实读标题、简介与高赞评论；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-08-27。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV15fb36eELP",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV15fb36eELP/",
+      "title": "《绝地潜兵2》最强的绿战备是燃烧地雷，我一直都是地雷系战备的粉丝...........",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-08",
+      "scope": "B站UP主Sword丨暴风赤红，2026-09-08发布《《绝地潜兵2》最强的绿战备是燃烧地雷，我一直都是地雷系战备的粉丝...........》，播放3377、点赞60。实读标题、简介与高赞评论，简介要点：你知道的，我一直是燃烧地雷粉丝，我从来没有诋毁过我们地雷系战备家族。燃烧地雷在0.001秒创下了46杀虫群的好成绩，你们也来试试吧！火箭哨戒炮：你说得对！；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-08。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1YHNM6ZEF1",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1YHNM6ZEF1/",
+      "title": "潜兵夯九门：加特林哨戒炮",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-07-12",
+      "scope": "B站UP主Nemo龙井，2026-07-12发布《潜兵夯九门：加特林哨戒炮》，播放292477、点赞8590。实读标题、简介与高赞评论，简介要点：插了点广，但是整了点活保证观感 如果播放量影响不大的话后面拿米抽个奖；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-07-12。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1RRYs67E38",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1RRYs67E38/",
+      "title": "潜兵夯九门：轨道120MM高爆弹火力网",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-09",
+      "scope": "B站UP主Nemo龙井，2026-09-09发布《潜兵夯九门：轨道120MM高爆弹火力网》，播放217089、点赞7181。实读标题、简介与高赞评论，简介要点：120其实是西线小轨道火有没有懂的；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-09。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1cZH66GEdp",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1cZH66GEdp/",
+      "title": "以防你们不知道 现版本西线防守可以一枪不开纯睡觉",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-04",
+      "scope": "B站UP主_这不也挺好的吗，2026-10-04发布《以防你们不知道 现版本西线防守可以一枪不开纯睡觉》，播放47239、点赞770。实读标题、简介与高赞评论，简介要点：现版本箭头为了修补车给其他无人载具都整出了没仇恨的bug 只要堵住路 怪的寻路逻辑就会混乱 但为什么只说了西线呢 因为就算堵住了路 怪还是会往入口蹭 重甲单位在坦克旁边蹭会把坦克踹飞 东线的牛和泰坦都能踹飞（坦克：孩子们 箭头说我有97吨） 西线只用点名坦克就行 这把atat卡住不能动了我也不确定atat能不能也踩飞 带了突击兵和反坦克地雷就是为了点坦克的 ；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-04。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV18djf6ZENe",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV18djf6ZENe/",
+      "title": "【绝地潜兵2】飞鹰110：从区区到强强的逆袭！我成超好用的反重战备了！千杀单通难十孢裂变种",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-06-21",
+      "scope": "B站UP主上官筱幽，2026-06-21发布《【绝地潜兵2】飞鹰110：从区区到强强的逆袭！我成超好用的反重战备了！千杀单通难十孢裂变种》，播放18060、点赞269。实读标题、简介与高赞评论，简介要点：配装：垫料中甲+爆燃弩+最后通牒+毒雷+补给背包+盟友+轨道精准+飞鹰110+冰针buff 绝地潜兵民主征兵群:134324143 进群飞鹰500kg:上右下下下；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-06-21。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1LQbX6JE9R",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1LQbX6JE9R/",
+      "title": "【绝地潜兵2】传包热熔：东线游走最强组合！游走套反重最强的一集！千杀单通难十虫族",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-08-16",
+      "scope": "B站UP主上官筱幽，2026-08-16发布《【绝地潜兵2】传包热熔：东线游走最强组合！游走套反重最强的一集！千杀单通难十虫族》，播放26242、点赞420。实读标题、简介与高赞评论，简介要点：配装：医疗轻甲+三叉戟+热熔地雷+榴弹手枪+传送背包+热熔枪+飞鹰空袭+毒气地雷+生命强化buff 绝地潜兵民主征兵群:134324143 进群飞鹰500kg:上右下下下；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-08-16。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1pqHT62Eac",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1pqHT62Eac/",
+      "title": "在西线玩飞包新星能不笑的可以确诊玉玉症了",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-25",
+      "scope": "B站UP主大草原的黄鼠狼，2026-10-25发布《在西线玩飞包新星能不笑的可以确诊玉玉症了》，播放10250、点赞153。实读标题、简介与高赞评论，简介要点：潜行甲+飞包+新星+诱饵雷+有高山的地图=一杯茶一根烟，一座山头蹲一天 妈妈再也不用担心我急头白脸地硬冲车队啦；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-25。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1yjMq6vEji",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1yjMq6vEji/",
+      "title": "潜兵老旧门：护卫犬\"腐息\"",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-07-08",
+      "scope": "B站UP主Nemo龙井，2026-07-08发布《潜兵老旧门：护卫犬\"腐息\"》，播放137129、点赞5022。实读标题、简介与高赞评论，简介要点：下一集是大的，应该吧；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-07-08。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1N6jx6fEBr",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1N6jx6fEBr/",
+      "title": "潜兵神九门：补给型快速侦查载具",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-06-21",
+      "scope": "B站UP主Nemo龙井，2026-06-21发布《潜兵神九门：补给型快速侦查载具》，播放365473、点赞8001。实读标题、简介与高赞评论，简介要点：箭头怎么还不出新债券；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-06-21。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1HynN6gEwz",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1HynN6gEwz/",
+      "title": "还没获得补给车？现已返场！|【绝地潜兵2】新兵小知识（紧急加更版）",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-20",
+      "scope": "B站UP主焚风一号-B王-参上，2026-10-20发布《还没获得补给车？现已返场！|【绝地潜兵2】新兵小知识（紧急加更版）》，播放7579、点赞95。实读标题、简介与高赞评论；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-20。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1kQjz6ZE74",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1kQjz6ZE74/",
+      "title": "【绝地潜兵2】9成潜兵不知道的西线解放者机甲的用法，揭秘解放者机甲的正确打开方式，看懂后就能攻破任何阵地了",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-06-20",
+      "scope": "B站UP主幻梦之魂是勇者，2026-06-20发布《【绝地潜兵2】9成潜兵不知道的西线解放者机甲的用法，揭秘解放者机甲的正确打开方式，看懂后就能攻破任何阵地了》，播放20581、点赞374。实读标题、简介与高赞评论，简介要点：-；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-06-20。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1LunH6uE6x",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1LunH6uE6x/",
+      "title": "！？强强？！看看更新后的伐木者机甲压烟",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-23",
+      "scope": "B站UP主迅鸽幺幺漆，2026-10-23发布《！？强强？！看看更新后的伐木者机甲压烟》，播放215、点赞6。实读标题、简介与高赞评论，简介要点：-；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-23。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1EFxu6sETB",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1EFxu6sETB/",
+      "title": "重机枪支架限时飞升夯九门",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-27",
+      "scope": "B站UP主小花_xiao_hua，2026-10-27发布《重机枪支架限时飞升夯九门》，播放1751、点赞17。实读标题、简介与高赞评论，简介要点：孩子们 重机枪支架真的是什么很牢的战备吗；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-27。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV12GNz6KEAi",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV12GNz6KEAi/",
+      "title": "【绝地潜兵2】轮椅炮，重机枪支架和榴弹墙",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-07-15",
+      "scope": "B站UP主欧鸽子_Official，2026-07-15发布《【绝地潜兵2】轮椅炮，重机枪支架和榴弹墙》，播放287、点赞8。实读标题、简介与高赞评论，简介要点：-；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-07-15。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1BFW76zE1t",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1BFW76zE1t/",
+      "title": "吃的越多就越强的战备？C4补车N10虫窝毒瘴变种单通【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-08",
+      "scope": "B站UP主我先投降了zzz，2026-11-08发布《吃的越多就越强的战备？C4补车N10虫窝毒瘴变种单通【绝地潜兵2】》，播放1992、点赞54。实读标题、简介与高赞评论，简介要点：离子喷 榴弹手枪 毒气手雷 生命强化 战锤中（c4不需要这个，依旧懒得换甲了） C4 补给小车 毒气地雷 火炮塔 感觉有补车直接拿C4炸就行了，副手可以换个匕首什么的；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-11-08。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV16s486QEc2",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV16s486QEc2/",
+      "title": "加特林加强后强度如何？背包机枪N10虫窝毒瘴变种单通【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-05",
+      "scope": "B站UP主我先投降了zzz，2026-11-05发布《加特林加强后强度如何？背包机枪N10虫窝毒瘴变种单通【绝地潜兵2】》，播放15172、点赞296。实读标题、简介与高赞评论，简介要点：爆燃弩 通牒 反坦克追踪雷 生命强化 战锤中 加特林 毒气地雷 火炮塔 解放者机甲；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-11-05。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1nZ4q6VEDw",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1nZ4q6VEDw/",
+      "title": "电榴弹现在强度如何？电榴弹N10虫窝毒瘴变种单通【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-06",
+      "scope": "B站UP主我先投降了zzz，2026-11-06发布《电榴弹现在强度如何？电榴弹N10虫窝毒瘴变种单通【绝地潜兵2】》，播放7240、点赞144。实读标题、简介与高赞评论，简介要点：爆燃弩 通牒 毒雷 生命强化 战锤中 电榴弹 补给背包 解放者机甲 毒气地雷；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-11-06。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1YzYZ6qEDr",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1YzYZ6qEDr/",
+      "title": "绝地潜兵单人64颗热熔地雷秒杀霸王虫",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-13",
+      "scope": "B站UP主因吹撕汀，2026-09-13发布《绝地潜兵单人64颗热熔地雷秒杀霸王虫》，播放29003、点赞698。实读标题、简介与高赞评论，简介要点：在阴暗的地图边缘赌霸王虫不吐酸不开龙车而是直接下砸(把机枪炮台换成大蛋盾就好了 P3亲测有用)    来人把我的P2做成赛博琥珀警醒后人doge；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-13。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1MXt66TE4s",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1MXt66TE4s/",
+      "title": "【秋潮中字/绝地潜兵2】小飞饼来咯——热熔地雷使用指南",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-04",
+      "scope": "B站UP主改夕雲型秋潮，2026-09-04发布《【秋潮中字/绝地潜兵2】小飞饼来咯——热熔地雷使用指南》，播放4345、点赞164。实读标题、简介与高赞评论，简介要点：https://www.youtube.com/watch?v=-tPEtlq5N2k 原视频标题：Melta Mine and True Grit : Well Rounded Gear 原视频UP主：TheGundamBoi  原视频发布于：2026年9月2日 翻:我 校:你 ========================== 杂谈： 热熔小饼，投掷距；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-04。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1kAnt6qEfN",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1kAnt6qEfN/",
+      "title": "潜兵庸九门：视界者",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-23",
+      "scope": "B站UP主Nemo龙井，2026-10-23发布《潜兵庸九门：视界者》，播放153792、点赞5617。实读标题、简介与高赞评论，简介要点：骗你的其实不是第一把狙击步枪，加速步枪被箭头肘成能量武器了。 两天后更新星；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-23。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1ZyYo65E1C",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1ZyYo65E1C/",
+      "title": "【绝地潜兵2】9成潜兵不知道的野狼西线优势区间，揭秘野狼的改枪及其用法，看懂后远距离对射再也不怕描边了",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-13",
+      "scope": "B站UP主幻梦之魂是勇者，2026-09-13发布《【绝地潜兵2】9成潜兵不知道的野狼西线优势区间，揭秘野狼的改枪及其用法，看懂后远距离对射再也不怕描边了》，播放19264、点赞242。实读标题、简介与高赞评论；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-13。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1gvxQ6hEBb",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1gvxQ6hEBb/",
+      "title": "经典顶级轮椅配装？三绿尖峰N10虫窝毒瘴变种单通【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-04",
+      "scope": "B站UP主我先投降了zzz，2026-11-04发布《经典顶级轮椅配装？三绿尖峰N10虫窝毒瘴变种单通【绝地潜兵2】》，播放15722、点赞334。实读标题、简介与高赞评论，简介要点：爆燃弩 匕首 毒雷 生命强化 战锤中 尖峰 小机枪炮塔 火炮塔 毒气地雷 洞内多小机枪换个机甲就行，感觉这把小机枪纯摸鱼，给火炮塔挡刀来的；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-11-04。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1FJaP6ZETP",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1FJaP6ZETP/",
+      "title": "堪称手持飞鹰火？新债券焚身火雷2300杀东线n10单通【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-24",
+      "scope": "B站UP主我先投降了zzz，2026-09-24发布《堪称手持飞鹰火？新债券焚身火雷2300杀东线n10单通【绝地潜兵2】》，播放9908、点赞158。实读标题、简介与高赞评论；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-24。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1LQnA6oEYg",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1LQnA6oEYg/",
+      "title": "箭头更新小蓝熊反作弊，绿胖不再常规生成，伐木与火塔伤害翻2.67倍！绝地潜兵更新平衡性调整",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-20",
+      "scope": "B站UP主电玩布狼牙，2026-10-20发布《箭头更新小蓝熊反作弊，绿胖不再常规生成，伐木与火塔伤害翻2.67倍！绝地潜兵更新平衡性调整》，播放54765、点赞768。实读标题、简介与高赞评论；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-20。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1YGnc61EZ4",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1YGnc61EZ4/",
+      "title": "10.20平衡性调整一览，反作弊更新，新变种组合，镰刀、重装机枪等多把武器迎来加强！",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-20",
+      "scope": "B站UP主小憨不是铁憨憨，2026-10-20发布《10.20平衡性调整一览，反作弊更新，新变种组合，镰刀、重装机枪等多把武器迎来加强！》，播放54009、点赞813。实读标题、简介与高赞评论，简介要点：绿胖改新变种了，挺不错的  反作弊更新了，今晚不知道能不能出新视频；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-20。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1C2ae6DE2z",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1C2ae6DE2z/",
+      "title": "不就是霸王虫吗，看我用风暴漩涡把它推回去！",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-28",
+      "scope": "B站UP主ahbbuj，2026-09-28发布《不就是霸王虫吗，看我用风暴漩涡把它推回去！》，播放9677、点赞221。实读标题、简介与高赞评论，简介要点：最爽的一次集火；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-28。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1sxYr6GESu",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1sxYr6GESu/",
+      "title": "要是我掏出巴雷特坦克堡垒？",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-14",
+      "scope": "B站UP主cf手游Ak_，2026-09-14发布《要是我掏出巴雷特坦克堡垒？》，播放4041、点赞65。实读标题、简介与高赞评论，简介要点：巴雷特坦克堡垒！ 红镭射榴弹，爆炸清场横扫成群怪物，进可攻坚破阵，守可坚如堡垒，挑战全能战神。；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-14。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1ythb6vEqq",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1ythb6vEqq/",
+      "title": "【绝地潜兵2】新坦克TD-110漩涡，6管加特林机炮➕激光制导反坦克导弹，试玩手感太拉了！这设计的很箭头！",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-24",
+      "scope": "B站UP主一望丨无垠，2026-09-24发布《【绝地潜兵2】新坦克TD-110漩涡，6管加特林机炮➕激光制导反坦克导弹，试玩手感太拉了！这设计的很箭头！》，播放9670、点赞120。实读标题、简介与高赞评论，简介要点：-；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-24。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1v1Y86fEbu",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1v1Y86fEbu/",
+      "title": "【绝地潜兵2】完美克制——弹链榴弹配装单通西线N10工厂世界喷气旅+无畏激增升旗任务",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-10",
+      "scope": "B站UP主Mininuck，2026-09-10发布《【绝地潜兵2】完美克制——弹链榴弹配装单通西线N10工厂世界喷气旅+无畏激增升旗任务》，播放3451、点赞36。实读标题、简介与高赞评论，简介要点：本次使用129中型防爆，封面甲图片忘记换了，晚上回去换；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-10。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1Q7nZ6zEdP",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1Q7nZ6zEdP/",
+      "title": "请欣赏解放日专属的宏大美丽振奋人心高端奢华的飞鹰掠过。",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-26",
+      "scope": "B站UP主大法师小白尼达斯，2026-10-26发布《请欣赏解放日专属的宏大美丽振奋人心高端奢华的飞鹰掠过。》，播放1135、点赞19。实读标题、简介与高赞评论，简介要点：-；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-26。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV13Ag66fE76",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV13Ag66fE76/",
+      "title": "新手+飞鹰集束炸弹，你们知道吗",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-07-22",
+      "scope": "B站UP主无言不过，2026-07-22发布《新手+飞鹰集束炸弹，你们知道吗》，播放3298、点赞192。实读标题、简介与高赞评论，简介要点：已经好久没见过这么能杀的集束了；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-07-22。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1Zph86oENf",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1Zph86oENf/",
+      "title": "反坦克追踪者：手雷位新神！不亚于千兆热熔的实力！ 单通全清难十机器人升旗【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-23",
+      "scope": "B站UP主上官筱幽，2026-09-23发布《反坦克追踪者：手雷位新神！不亚于千兆热熔的实力！ 单通全清难十机器人升旗【绝地潜兵2】》，播放16235、点赞251。实读标题、简介与高赞评论，简介要点：配装：防震内衬中甲+钗+核手+反坦克追踪者+补给背包+补车+飞鹰机枪+榴弹发射器+生命强化buff 绝地潜兵民主征兵群:134324143 进群飞鹰500kg:上右下下下；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-23。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1cshV6pENt",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1cshV6pENt/",
+      "title": "【绝地潜兵2】用2分半告诉你，为什么重机枪要用最高射速？这就是伤害最高的全自动实弹武器的真正实力",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-08-25",
+      "scope": "B站UP主幻梦之魂是勇者，2026-08-25发布《【绝地潜兵2】用2分半告诉你，为什么重机枪要用最高射速？这就是伤害最高的全自动实弹武器的真正实力》，播放52533、点赞554。实读标题、简介与高赞评论，简介要点：-；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-08-25。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1MuHy6hE9m",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1MuHy6hE9m/",
+      "title": "喜欢全新的飞鹰毒气风暴么？",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-08",
+      "scope": "B站UP主HD2绝地潜兵情报站，2026-10-08发布《喜欢全新的飞鹰毒气风暴么？》，播放20020、点赞573。实读标题、简介与高赞评论，简介要点：-；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-10-08。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1BDeg6mEce",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1BDeg6mEce/",
+      "title": "热熔枪快速拉枪bug",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-17",
+      "scope": "B站UP主トゥルーホワイト，2026-09-17发布《热熔枪快速拉枪bug》，播放22658、点赞525。实读标题、简介与高赞评论，简介要点：操作步骤： 先设置记住武器瞄准模式，然后把热熔的瞄准模式改成第一人称，最后在腰射开火时拉枪并点按瞄准。 00：00~00：48 废话时间 00：48~01：47 演示时间 01：47~02：05 操作方法说明 02：16~02：37 教铸币朋友 02：38~02：55 他人视角 02：56~~~  总结与看法；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-17。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1HCTE63EhD",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1HCTE63EhD/",
+      "title": "铝热地狱史诗级加强，一发铝热弹531点伤害！",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-07-02",
+      "scope": "B站UP主喷火的烈焰特劳斯，2026-07-02发布《铝热地狱史诗级加强，一发铝热弹531点伤害！》，播放8396、点赞139。实读标题、简介与高赞评论，简介要点：-；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-07-02。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1Fk4gzUEB1",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1Fk4gzUEB1/",
+      "title": "潜兵神九门：补给背包",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2025-10-12",
+      "scope": "B站UP主Nemo龙井，2025-10-12发布《潜兵神九门：补给背包》，播放465058、点赞7996。实读标题、简介与高赞评论，简介要点：请输入文本 牢九门都做了三期了该吃点好的了 下一期不出意外应该是牢九门的近战武器；具体结论见对应装备的玩家标签与实战补充。；发布日期 2025-10-12。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV13GW9z7Eys",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV13GW9z7Eys/",
+      "title": "潜兵神九门：无后坐力炮",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2025-10-21",
+      "scope": "B站UP主Nemo龙井，2025-10-21发布《潜兵神九门：无后坐力炮》，播放609039、点赞7378。实读标题、简介与高赞评论，简介要点：No patch today 修复了少了段字幕和部分素材音量过大的问题；具体结论见对应装备的玩家标签与实战补充。；发布日期 2025-10-21。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1mnsUz8ENU",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1mnsUz8ENU/",
+      "title": "潜兵神九门：毒气手雷",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2025-10-27",
+      "scope": "B站UP主Nemo龙井，2025-10-27发布《潜兵神九门：毒气手雷》，播放399682、点赞6440。实读标题、简介与高赞评论，简介要点：为什么毒气手雷叫毒气榴弹呢 明天没有九门系列 最近大概会出一期解析巡逻队和拉烟机制的视频；具体结论见对应装备的玩家标签与实战补充。；发布日期 2025-10-27。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1y7CTBKEb3",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1y7CTBKEb3/",
+      "title": "潜兵神九门：飞鹰「其一」500KG炸弹",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2025-11-14",
+      "scope": "B站UP主Nemo龙井，2025-11-14发布《潜兵神九门：飞鹰「其一」500KG炸弹》，播放488387、点赞6982。实读标题、简介与高赞评论，简介要点：是最后一集吗?  并非 飞鹰三兄弟比较特殊 大部分情况下都是三选一 把谁丢在神九门外面都不太合适 一起讲篇幅又太长 于是神九门的最后一集会分为三个章节；具体结论见对应装备的玩家标签与实战补充。；发布日期 2025-11-14。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1ikC1BYE5i",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1ikC1BYE5i/",
+      "title": "潜兵神九门：飞鹰「其二」机枪扫射",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2025-11-15",
+      "scope": "B站UP主Nemo龙井，2025-11-15发布《潜兵神九门：飞鹰「其二」机枪扫射》，播放393075、点赞5817。实读标题、简介与高赞评论，简介要点：被神人举报限流了 更改了封面的牢大重新上传 我说这帮躲着喜欢点举报的跟区一样恶心有没有懂的；具体结论见对应装备的玩家标签与实战补充。；发布日期 2025-11-15。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1MUUSBCETP",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1MUUSBCETP/",
+      "title": "潜兵神九门：飞鹰「其三」空袭",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2025-11-25",
+      "scope": "B站UP主Nemo龙井，2025-11-25发布《潜兵神九门：飞鹰「其三」空袭》，播放406965、点赞5540。实读标题、简介与高赞评论，简介要点：神九门的第一季就到这里结束了 也许不会有第二季 剩下的装备放到其它系列讲吧；具体结论见对应装备的玩家标签与实战补充。；发布日期 2025-11-25。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1RKq6BcEve",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1RKq6BcEve/",
+      "title": "潜兵神九门：榴弹发射器",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2025-12-20",
+      "scope": "B站UP主Nemo龙井，2025-12-20发布《潜兵神九门：榴弹发射器》，播放560304、点赞7216。实读标题、简介与高赞评论，简介要点：孩子们我被砍回来了，还好旧视频没有删；具体结论见对应装备的玩家标签与实战补充。；发布日期 2025-12-20。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1AfZTBuE4c",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1AfZTBuE4c/",
+      "title": "潜兵神九门：榴弹发射器【已坠机】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-02-16",
+      "scope": "B站UP主Nemo龙井，2026-02-16发布《潜兵神九门：榴弹发射器【已坠机】》，播放493955、点赞10361。实读标题、简介与高赞评论，简介要点：榴弹神已被回调；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-02-16。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV11YZ6BNEWX",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV11YZ6BNEWX/",
+      "title": "潜兵神九门：毒气地雷",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-02-20",
+      "scope": "B站UP主Nemo龙井，2026-02-20发布《潜兵神九门：毒气地雷》，播放381876、点赞8062。实读标题、简介与高赞评论，简介要点：我刚铺的地雷被轨道火炸完了我去这轨道火怎么这么坏；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-02-20。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1uDb26dEW5",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1uDb26dEW5/",
+      "title": "潜兵神九门：热熔地雷",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-08-16",
+      "scope": "B站UP主Nemo龙井，2026-08-16发布《潜兵神九门：热熔地雷》，播放451174、点赞9824。实读标题、简介与高赞评论，简介要点：孩子们我把片头广告压得非常短，我就喜欢这种甲方。 现在站在你面前的是，手短的，自杀的，不好反泰坦的，会被中型单位踩爆的，需要手动引爆的......；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-08-16。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1xLjw6ZEMX",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1xLjw6ZEMX/",
+      "title": "潜兵神九门：千兆级榴弹",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-06-18",
+      "scope": "B站UP主Nemo龙井，2026-06-18发布《潜兵神九门：千兆级榴弹》，播放514519、点赞9496。实读标题、简介与高赞评论，简介要点：很喜欢箭头的一句话：我们想测试一下补给两颗会怎么样 是的孩子们我的更新周期比箭头还要自由；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-06-18。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1m97J6UE63",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1m97J6UE63/",
+      "title": "潜兵神九门：火焰喷射哨戒炮",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-06-27",
+      "scope": "B站UP主Nemo龙井，2026-06-27发布《潜兵神九门：火焰喷射哨戒炮》，播放278785、点赞6139。实读标题、简介与高赞评论，简介要点：我去，这炮台可太烧了；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-06-27。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1j4go67ENU",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1j4go67ENU/",
+      "title": "诱饵地雷硬控铪机密！实战讲解最阴的防守战配装！【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-07-28",
+      "scope": "B站UP主Admire_Vega，2026-07-28发布《诱饵地雷硬控铪机密！实战讲解最阴的防守战配装！【绝地潜兵2】》，播放2652、点赞59。实读标题、简介与高赞评论，简介要点：喵嗷！😭😭  -INVASION- 桀桀，喵喵喵喵？😲  喵喵喵喵喵，喵喵喵喵喵喵喵喵！😨  喵 喵 喵 喵！👈️  喵喵，喵喵喵喵喵喵喵喵喵喵喵喵😋  喵喵喵喵喵，喵喵喵Free☺️  喵，喵 喵 喵divers！💪  喵喵喵喵喵喵喵！🌍️  喵喵喵喵喵喵喵🤖🪳👽️  喵喵喵喵喵喵喵喵😈  喵，oiiai！😺  喵，喵喵divers；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-07-28。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1Zq796tEUs",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1Zq796tEUs/",
+      "title": "重甲激增？！真得用雷霆大弹链榴弹控制🤖了！纯火力压制升旗一命全清！【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-06-04",
+      "scope": "B站UP主Admire_Vega，2026-06-04发布《重甲激增？！真得用雷霆大弹链榴弹控制🤖了！纯火力压制升旗一命全清！【绝地潜兵2】》，播放2564、点赞44。实读标题、简介与高赞评论，简介要点：喵嗷！😭😭  -INVASION- 桀桀，喵喵喵喵？😲  喵喵喵喵喵，喵喵喵喵喵喵喵喵！😨  喵 喵 喵 喵！👈️  喵喵，喵喵喵喵喵喵喵喵喵喵喵喵😋  喵喵喵喵喵，喵喵喵Free☺️  喵，喵 喵 喵divers！💪  喵喵喵喵喵喵喵！🌍️  喵喵喵喵喵喵喵🤖🪳👽️  喵喵喵喵喵喵喵喵😈  喵，oiiai！😺  喵，喵喵divers；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-06-04。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1wmbV6SEiK",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1wmbV6SEiK/",
+      "title": "布拉施神九门：轨道游走元素火力网",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-08",
+      "scope": "B站UP主无铭溯月，2026-09-08发布《布拉施神九门：轨道游走元素火力网》，播放19023、点赞355。实读标题、简介与高赞评论，简介要点：给游走火力网加点小料；具体结论见对应装备的玩家标签与实战补充。；发布日期 2026-09-08。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_194934358",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/194934358",
+      "title": "玩家44585621 Lv.14 火炮台是不是出BUG了昨天还烧的又快又狠可以单炮塔压烟，今天火炮塔连个10几米的跳虫都要烧好一会绝地潜兵2",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-25",
+      "scope": "小黑盒用户玩家44585621，2026-10-25发帖（检索词：火焰喷射哨戒炮）。实读列表摘要：玩家44585621 Lv.14 火炮台是不是出BUG了昨天还烧的又快又狠可以单炮塔压烟，今天火炮塔连个10几米的跳虫都要烧好一会绝地潜兵210-25 8 1；发布日期 2026-10-25。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_193358598",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/193358598",
+      "title": "J20X Lv.15 版本答案！东线最强轮椅套推荐2（烈焰站桩输出套）或者任意绿战备直接砸掉。对单--主用副手匕首激光，超长射程适中的伤害和",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户J20X，日期未标明发帖（检索词：绝地潜兵2 战备推荐）。实读列表摘要：J20X Lv.15 版本答案！东线最强轮椅套推荐2（烈焰站桩输出套）或者任意绿战备直接砸掉。对单--主用副手匕首激光，超长射程适中的伤害和点火机制能让小虫打个照面就死，赶路的时候可以一边跑一边回头扫一圈，匕首指到哪小跳虫死到哪。数目稍微有点多用爆燃弩就行了，远距离一炸一大片。跳脸的小虫可以使用肘击对空--小单位匕首即；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_193499673",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/193499673",
+      "title": "玩家90066219 Lv.14 绝地潜兵2有没有热狗配装，打虫子经常被突脸好烦听说火系装备带控制还有伤害还能反重就去解锁了一个热狗，配着激",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户玩家90066219，日期未标明发帖（检索词：热狗背包）。实读列表摘要：玩家90066219 Lv.14 绝地潜兵2有没有热狗配装，打虫子经常被突脸好烦听说火系装备带控制还有伤害还能反重就去解锁了一个热狗，配着激光大炮用其他不变，但是实战中觉得火焰的控制并没有那么明显，感觉是打法配装出问题了。还有就是lz是手柄（手柄搓球老是串键不知道能不能改成ABXY搓）且fps苦手，喜欢玩点简单操作少准；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_196101750",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/196101750",
+      "title": "儒雅随和风某人 Lv.21 给萌新科普一下 东线某些绿战备为什么别人不喜欢你带主要是针对野排 组排想怎么玩怎么玩帖子比较主观 希望友好交流1",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户儒雅随和风某人，日期未标明发帖（检索词：绝地潜兵2 绿战备）。实读列表摘要：儒雅随和风某人 Lv.21 给萌新科普一下 东线某些绿战备为什么别人不喜欢你带主要是针对野排 组排想怎么玩怎么玩帖子比较主观 希望友好交流1.加特林哨戒炮拥有极强的出伤能力 中甲及以下的敌人会被光速融化 同样的也会融化潜兵 哨戒机枪碰一下潜兵不一定死 但是这个碰到就是增援-1 可以带但是要谨慎扔 部署位置可以选择侧边部；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_177640403",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/177640403",
+      "title": "Mr_Door Lv.15 债券测评与新内容吐槽A/GM-17 瓦斯迫击哨戒炮 T2毒迫虽然有近100m的射程，但在实际体验中效果一般。个人",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户Mr_Door，日期未标明发帖（检索词：瓦斯迫击哨戒炮）。实读列表摘要：Mr_Door Lv.15 债券测评与新内容吐槽A/GM-17 瓦斯迫击哨戒炮 T2毒迫虽然有近100m的射程，但在实际体验中效果一般。个人在使用过程中感觉其有较高的仇恨，需要更多的关注。较长的射击间隔，与迫击炮的奇怪索敌，在战斗中能够留下印象的毒气迫击支援较少。一轮大概可以发射9-10颗炮弹。（总感觉共8张绝地潜兵2；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_152733281",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/152733281",
+      "title": "四大皆空! Lv.27 「绝地潜兵2」全战备评测指南——绿战备篇二2.A/M-23 电磁冲击波哨戒炮⬇⬆➡⬇➡和迫击炮射击机制一致，子弹被替",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户四大皆空!，日期未标明发帖（检索词：电磁冲击波迫击哨戒炮）。实读列表摘要：四大皆空! Lv.27 「绝地潜兵2」全战备评测指南——绿战备篇二2.A/M-23 电磁冲击波哨戒炮⬇⬆➡⬇➡和迫击炮射击机制一致，子弹被替换为静电场炮弹，每次发射一发，射速速率较低，备弹因为射击速率的原因中规中矩，发射炮弹会眩晕炮弹落点10米范围内的敌人并减速后续进入静电场的敌人，炮弹有一定伤害（150点），但几乎可；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_194213569",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/194213569",
+      "title": "昊眳 Lv.17 特斯拉电塔真的是牢战备吗？首先我个人觉得特斯拉电塔肯定是有强度的，甚至我感觉他的清杂能力十分不错，尤其是东南线，缺点感觉只",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-17",
+      "scope": "小黑盒用户昊眳，2026-10-17发帖（检索词：特斯拉塔）。实读列表摘要：昊眳 Lv.17 特斯拉电塔真的是牢战备吗？首先我个人觉得特斯拉电塔肯定是有强度的，甚至我感觉他的清杂能力十分不错，尤其是东南线，缺点感觉只有tk，做任务的时候就往任务点入口扔一个，怪根本进不来，拉烟也不怕，除非牛或者泰坦过去一脚捣碎，不过这种情况无论什么炮台都是一样的，也不能因为这个说他不行不过还绝地潜兵210-17；发布日期 2026-10-17。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_191137163",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/191137163",
+      "title": "SakuyaCat Lv.18 大可不必急着给电榴弹哭丧电榴弹的电弧同样不会锁定趴下的潜兵，所以在近距离可以通过飞扑的方式避免被电弧锁定。0",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-22",
+      "scope": "小黑盒用户SakuyaCat，2026-09-22发帖（检索词：电弧手雷）。实读列表摘要：SakuyaCat Lv.18 大可不必急着给电榴弹哭丧电榴弹的电弧同样不会锁定趴下的潜兵，所以在近距离可以通过飞扑的方式避免被电弧锁定。00:14绝地潜兵209-22 87 128；发布日期 2026-09-22。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_188301211",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/188301211",
+      "title": "逗逼一侠 Lv.17 乱射电弧的给我注意一下真不小心电死了秒发sry总之不电队友是玩电弧最基础的，打电弧的朋友们一定要注意这点电弧链锁范围大",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-08-17",
+      "scope": "小黑盒用户逗逼一侠，2026-08-17发帖（检索词：电弧手雷）。实读列表摘要：逗逼一侠 Lv.17 乱射电弧的给我注意一下真不小心电死了秒发sry总之不电队友是玩电弧最基础的，打电弧的朋友们一定要注意这点电弧链锁范围大概看第三幅图第一发是精准可控的后面链锁基本180°的范围都是可能致命的有队友的方向可以射，但如果是怪后面的队友就不能射了。套第二张图公式就是快绝地潜兵208-17 42 19；发布日期 2026-08-17。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_194785791",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/194785791",
+      "title": "Mr_Door Lv.15 权威之镜债券体验与平衡补丁感受分享LAS-44 新星 T12s蓄力自动发射，寒冷3s常规3.6s炎热4.2s冷却",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户Mr_Door，日期未标明发帖（检索词：LAS-44新星）。实读列表摘要：Mr_Door Lv.15 权威之镜债券体验与平衡补丁感受分享LAS-44 新星 T12s蓄力自动发射，寒冷3s常规3.6s炎热4.2s冷却，880直伤，880耐伤，反坦克穿透，无限弹药。超高的耐伤带来新星的一发与尖峰的一发效果基本相同。虽然需要散热，但无限弹药，无需装填，无自伤风险，无射击姿态要求，无衰减，同时散热共；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_194548744",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/194548744",
+      "title": "BaiRan Lv.21 骗九门铁蒺藜两颗子炸弹炸死武斗。做不到，潜兵补的枪，视觉欺诈。尖峰颗秒大双足裆部。做不到，是SEAF的次抛打的。而",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-21",
+      "scope": "小黑盒用户BaiRan，2026-10-21发帖（检索词：铁蒺藜）。实读列表摘要：BaiRan Lv.21 骗九门铁蒺藜两颗子炸弹炸死武斗。做不到，潜兵补的枪，视觉欺诈。尖峰颗秒大双足裆部。做不到，是SEAF的次抛打的。而且大双足裆部4甲1800血100%耐久，尖峰5穿1550/930，一枪打上去就只有930，哪怕零距离射击都要两枪，算上衰减都要三枪了虽然据说能打关绝地潜兵210-21 152 66；发布日期 2026-10-21。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_191198790",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/191198790",
+      "title": "F2A爱好者 Lv.11 这新债券铝热手枪的补给才补一！？不是，四发蛋容的热铝热手枪，吃一口补给才给一个？真当和通牒一个级别了？带了把补包铝",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-23",
+      "scope": "小黑盒用户F2A爱好者，2026-09-23发帖（检索词：铝热弹）。实读列表摘要：F2A爱好者 Lv.11 这新债券铝热手枪的补给才补一！？不是，四发蛋容的热铝热手枪，吃一口补给才给一个？真当和通牒一个级别了？带了把补包铝热手枪，一发一个牛两发一个泰坦玩的正开心，吃口补包发现只补一发天塌了，我还以为自己在虫窝星球呢绝地潜兵209-23 32 15；发布日期 2026-09-23。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_183610508",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/183610508",
+      "title": "ufaris Lv.23 如何评价现在的铝热孩子们，真没想到有一天我会被优化。千兆级和雷管现在加强之后铝热现在被完爆了，东线就彻底查无此人了",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-06-17",
+      "scope": "小黑盒用户ufaris，2026-06-17发帖（检索词：铝热弹）。实读列表摘要：ufaris Lv.23 如何评价现在的铝热孩子们，真没想到有一天我会被优化。千兆级和雷管现在加强之后铝热现在被完爆了，东线就彻底查无此人了，毒雷千兆雷管三巨头一个没法碰瓷。西线能稳定杀坦克和炮塔也能打，可是千兆瞬爆+aoe太香了，更不说现在补给效率提升了。南线反而有优势，无交互拆飞碟。想之前手雷绝地潜兵206-17；发布日期 2026-06-17。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_192832948",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/192832948",
+      "title": "软软小桃苏 科研三线通用配装入坑的时候就想过有没有三线通用配装，如果没有能不能自己发明一套。然后看攻略加上自己实战，目前确实有点思路了。 以",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-05",
+      "scope": "小黑盒用户软软小桃苏 科研三线通用配装入坑的时候就想过有没，2026-10-05发帖（检索词：绝地潜兵2 三线通用）。实读列表摘要：软软小桃苏 科研三线通用配装入坑的时候就想过有没有三线通用配装，如果没有能不能自己发明一套。然后看攻略加上自己实战，目前确实有点思路了。 以下是配装：焦土 通碟 反坦克追踪者 战锤中甲 补包 矛枪 毒气地雷 120 有没有佬指点一下，还能不能更进一步？绝地潜兵210-05 27 2；发布日期 2026-10-05。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_191256755",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/191256755",
+      "title": "DeadLess Lv.11 西线枪盾流有点上头啊配装:钗+爆弹手枪/铝热手枪/通牒+大追踪雷+防爆垫料重/防颠垫料重+防弹护盾背包+类星体",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-24",
+      "scope": "小黑盒用户DeadLess，2026-09-24发帖（检索词：盾雷）。实读列表摘要：DeadLess Lv.11 西线枪盾流有点上头啊配装:钗+爆弹手枪/铝热手枪/通牒+大追踪雷+防爆垫料重/防颠垫料重+防弹护盾背包+类星体/反器材+轨道120+飞鹰扫（城市图换其他轨道战备） 之前枪盾流就确少一把中穿绝食单手主手，最接近需求的是英勇无畏但还是很缺子弹，钗的出现直接把枪盾流变绝地潜兵209-24 41；发布日期 2026-09-24。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_191478971",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/191478971",
+      "title": "子灬幽 Lv.18 钗盾就是新的轮椅之前一直在南线玩钗+防弹盾的组合，今天在东线也试了一把也是直接无脑突突。近距离顶三四个指挥官输出毫无压力",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-27",
+      "scope": "小黑盒用户子灬幽，2026-09-27发帖（检索词：防弹护盾背包）。实读列表摘要：子灬幽 Lv.18 钗盾就是新的轮椅之前一直在南线玩钗+防弹盾的组合，今天在东线也试了一把也是直接无脑突突。近距离顶三四个指挥官输出毫无压力。原来最烦的小跳虫，现在再也不怕突然突脸。绝地潜兵209-27 122 43；发布日期 2026-09-27。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_193421832",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/193421832",
+      "title": "真理执行者型修白 Lv.16 定向盾真好玩自从钗出来后，发现在西线玩单手武器配定向护盾真好玩。现在开始吃暴击斗士了绝地潜兵210-11 1 ",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-11",
+      "scope": "小黑盒用户真理执行者型修白，2026-10-11发帖（检索词：定向护盾）。实读列表摘要：真理执行者型修白 Lv.16 定向盾真好玩自从钗出来后，发现在西线玩单手武器配定向护盾真好玩。现在开始吃暴击斗士了绝地潜兵210-11 1 2；发布日期 2026-10-11。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_189305846",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/189305846",
+      "title": "GH423 Lv.15 这个定向护盾加强怎么样定向护盾打开时可以反弹任何子弹和炮弹绝地潜兵208-29 7 1",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-08-29",
+      "scope": "小黑盒用户GH423，2026-08-29发帖（检索词：定向护盾）。实读列表摘要：GH423 Lv.15 这个定向护盾加强怎么样定向护盾打开时可以反弹任何子弹和炮弹绝地潜兵208-29 7 1；发布日期 2026-08-29。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_190181691",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/190181691",
+      "title": "超级气球是柱投 Lv.11 传包迷思传送背包声音巨大，一旦启动等于聚光灯，全场机器人目光向我看齐，那还潜个头了？传包完全不适配潜行体系，叉出",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-08",
+      "scope": "小黑盒用户超级气球是柱投，2026-09-08发帖（检索词：传送背包）。实读列表摘要：超级气球是柱投 Lv.11 传包迷思传送背包声音巨大，一旦启动等于聚光灯，全场机器人目光向我看齐，那还潜个头了？传包完全不适配潜行体系，叉出去！（在xhh上发布一条传包的恶评）全懂的百战老冻肉：声音不会让机器人直接仇恨潜兵，只会让机器人转头警戒，如果没有直接的视线接触那该摸鱼还摸鱼，而潜行绝地潜兵209-08 90 1；发布日期 2026-09-08。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_185800119",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/185800119",
+      "title": "九万里_9W Lv.11 鬣狗的强度我认为是正确的，看价格就很明显了能点燃的靠点燃杀不死，能直击杀死的没机会点燃（玩了两把，手感有点差）绝地",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-07-15",
+      "scope": "小黑盒用户九万里_9W，2026-07-15发帖（检索词：腐息护卫犬）。实读列表摘要：九万里_9W Lv.11 鬣狗的强度我认为是正确的，看价格就很明显了能点燃的靠点燃杀不死，能直击杀死的没机会点燃（玩了两把，手感有点差）绝地潜兵207-15 38 23；发布日期 2026-07-15。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_185283730",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/185283730",
+      "title": "电子哥布林258 Lv.16 厌倦了补包榴弹吗？不如试试“新轮椅”吧接下来到场的是护卫犬腐息和毒气迫击炮，双激光过热循环无限火力，毒气狗负责",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-07-08",
+      "scope": "小黑盒用户电子哥布林258，2026-07-08发帖（检索词：腐息护卫犬）。实读列表摘要：电子哥布林258 Lv.16 厌倦了补包榴弹吗？不如试试“新轮椅”吧接下来到场的是护卫犬腐息和毒气迫击炮，双激光过热循环无限火力，毒气狗负责补足近防，还可以多带一个补给小车，手雷甲+前兆补足反重，加个飞鹰空袭和毒气地雷兜底，再加上爆炸铳补足拆巢和点杀指挥官，爽烧虫子能不笑出来可以确诊抑郁症了绝地潜兵207-08 27；发布日期 2026-07-08。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_186762876",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/186762876",
+      "title": "软鹅儿 Lv.17 都来玩掷弹兵防卫墙啊这类能秒杀防卫墙的武器。综合来看防卫墙并不算是强力的战备，主要是因为我喜欢所以经常用，而且拿着60发",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-07-27",
+      "scope": "小黑盒用户软鹅儿，2026-07-27发帖（检索词：掷弹兵防卫墙）。实读列表摘要：软鹅儿 Lv.17 都来玩掷弹兵防卫墙啊这类能秒杀防卫墙的武器。综合来看防卫墙并不算是强力的战备，主要是因为我喜欢所以经常用，而且拿着60发大弹鼓榴弹发射器把别人一堆堆炸飞真的爽。绝地潜兵207-27 35 25；发布日期 2026-07-27。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_182164338",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/182164338",
+      "title": "MN4 Lv.10 我发现重机枪部署支架、掷弹兵防卫墙很好玩（东线、南线）你可以带背包位反重武器，畅玩。能够让你反重的同时，狠狠地爽突突！！",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户MN4，日期未标明发帖（检索词：重机枪部署支架）。实读列表摘要：MN4 Lv.10 我发现重机枪部署支架、掷弹兵防卫墙很好玩（东线、南线）你可以带背包位反重武器，畅玩。能够让你反重的同时，狠狠地爽突突！！！！（ps:重机枪部署支架可以打牛腿，去壳后打肉击杀。也能打泰坦，就是费子弹）-当然，你需要玩上几盘，才能掌握放置的时机和位置，保证输出最大化以及防止后背被偷战斗吧潜兵们共7张绝地；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_175506022",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/175506022",
+      "title": "NT专用型RGM89C Lv.18 民主坚盾——堡垒坦克歼击车操作手册与生化斯坦战线上的装甲作战我们需要首先明白堡垒的定位是什么。它不是坦克",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户NT专用型RGM89C，日期未标明发帖（检索词：堡垒坦克）。实读列表摘要：NT专用型RGM89C Lv.18 民主坚盾——堡垒坦克歼击车操作手册与生化斯坦战线上的装甲作战我们需要首先明白堡垒的定位是什么。它不是坦克，它是坦克歼击车，无论是会被敌方重点关注而并不算优秀的生存性，CD长、生存较差带来较短的在场时间，还是它仅仅只有30°的射击角度、较差的越障能力与较大的转向空间，这都决定了它难以担；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_188455720",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/188455720",
+      "title": "pankzer Lv.17 所以反坦克地雷是加强了吗怎么一堆带空爆加反坦克地雷，毒地雷，地图本来就暗我还得防着你，自己升旗往点里tk三个队友",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-08-18",
+      "scope": "小黑盒用户pankzer，2026-08-18发帖（检索词：反坦克地雷）。实读列表摘要：pankzer Lv.17 所以反坦克地雷是加强了吗怎么一堆带空爆加反坦克地雷，毒地雷，地图本来就暗我还得防着你，自己升旗往点里tk三个队友，本来就够难打自己做点支线又没引怪转头说别人玩的太菜？绝地潜兵208-18 21 2；发布日期 2026-08-18。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_136082627",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/136082627",
+      "title": "ShirokoAI Lv.20 关于更新后的反坦克地雷因为在社区里看到有潜兵被反坦克地雷炸死，但是更新里提到了反坦克地雷只会被重型单位触发，",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户ShirokoAI，日期未标明发帖（检索词：反坦克地雷）。实读列表摘要：ShirokoAI Lv.20 关于更新后的反坦克地雷因为在社区里看到有潜兵被反坦克地雷炸死，但是更新里提到了反坦克地雷只会被重型单位触发，所以好奇去做了一个测试(在我的投稿里可以看到视频)测了几把后，大概得出以下结论和猜测:1.反坦克地雷的触发似乎和所在的地方有关？2.机甲会触发地雷，支援武器掉在雷上也会3绝地潜兵2；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_152297779",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/152297779",
+      "title": "四大皆空! Lv.27 「绝地潜兵2」全战备评测指南——红战备篇一4.飞鹰凝固汽油弹空袭⬆➡⬇⬆在一代被称为“火墙”，因为在二代较大的地图和",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户四大皆空!，日期未标明发帖（检索词：飞鹰凝固汽油弹）。实读列表摘要：四大皆空! Lv.27 「绝地潜兵2」全战备评测指南——红战备篇一4.飞鹰凝固汽油弹空袭⬆➡⬇⬆在一代被称为“火墙”，因为在二代较大的地图和不稳定的伤害导致其应用面不是很广，攻击模式和飞鹰空袭一致，投弹4-5枚燃烧弹覆盖地面，弹体本身有250点伤害，穿透3级，火焰半径为8米，为区域内单位造成每秒50点的火焰DOT伤害和；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_188324177",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/188324177",
+      "title": "索尔德林 Lv.18 强化资源评价 T1：侦察强化：可以达到200米的雷达，可以在低能见多障碍时预知巡逻队，空爆玩家狂喜。肌肉强化：可以抵消",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-08-17",
+      "scope": "小黑盒用户索尔德林，2026-08-17发帖（检索词：UAV侦察强化）。实读列表摘要：索尔德林 Lv.18 强化资源评价 T1：侦察强化：可以达到200米的雷达，可以在低能见多障碍时预知巡逻队，空爆玩家狂喜。肌肉强化：可以抵消消地形减速，对孢子，柏油，冰面，沙暴等都会起效。武装重新补给仓：防守常见。快速撤离：减少撤离等待时间，高难度难以守点时有奇效（如生化人，突击绝地潜兵208-17 21 10；发布日期 2026-08-17。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_188392125",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/188392125",
+      "title": "YuKiKaZeゆきかぜ Lv.11 绝地潜兵强化资源简评优化掉冰针）t2:这里的强化吃环境，吃配合，死冲可以配合生命强化提升你转点的效率，",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户YuKiKaZeゆきかぜ，日期未标明发帖（检索词：生命强化）。实读列表摘要：YuKiKaZeゆきかぜ Lv.11 绝地潜兵强化资源简评优化掉冰针）t2:这里的强化吃环境，吃配合，死冲可以配合生命强化提升你转点的效率，但是我个人非常不喜欢在野排遇到这个，除非和朋友打速清外几乎不太可能带这个（我已经开了几个月的补给车了，我已经离不开补给车小姐了，死冲你不要来找我了）；侦查强化可以配合潜行帮你绝地潜；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_191105124",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/191105124",
+      "title": "Kqs矿泉水 Lv.18 也是打出了个肌肉强化的素材可以说是为肌肉强化量身定做的环境，三线冰针 t0 没问题，仅看东线来说还是稍逊肌肉一筹希",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-22",
+      "scope": "小黑盒用户Kqs矿泉水，2026-09-22发帖（检索词：肌肉强化）。实读列表摘要：Kqs矿泉水 Lv.18 也是打出了个肌肉强化的素材可以说是为肌肉强化量身定做的环境，三线冰针 t0 没问题，仅看东线来说还是稍逊肌肉一筹希望大家能认识到肌肉的强大效果，而不是只认为肌肉是对暴雪沙暴的纯对策卡绝地潜兵209-22 103 6；发布日期 2026-09-22。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_192686042",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/192686042",
+      "title": "幼年Jingj Lv.16 这集成灭火器强化意义在哪看是灼烧部队，带了个玩了玩，被点着了不飞扑也得死啊，这东西灭火的阈值在哪？总不能是满血不",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-04",
+      "scope": "小黑盒用户幼年Jingj，2026-10-04发帖（检索词：集成灭火器）。实读列表摘要：幼年Jingj Lv.16 这集成灭火器强化意义在哪看是灼烧部队，带了个玩了玩，被点着了不飞扑也得死啊，这东西灭火的阈值在哪？总不能是满血不飞扑留一丝？那有毛用啊。另一个给两次共四发次抛也是幽默，出点阳间的被动型增强不行吗。绝地潜兵210-04 40 5；发布日期 2026-10-04。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_189280362",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/189280362",
+      "title": "Aione丶虚无 Lv.17 最简单最轮椅死亡冲刺就是蛆绝地潜兵208-28 41 4",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-08-28",
+      "scope": "小黑盒用户Aione丶虚无，2026-08-28发帖（检索词：死亡冲刺）。实读列表摘要：Aione丶虚无 Lv.17 最简单最轮椅死亡冲刺就是蛆绝地潜兵208-28 41 4；发布日期 2026-08-28。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_156003094",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/156003094",
+      "title": "文宫虫 Lv.17 付费债券简评第七期：真理执行者死亡冲刺，十分好用的强化之一，耐力耗尽后通过烧血来续航，在生命见底时会停止烧血并不触发强化",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户文宫虫，日期未标明发帖（检索词：死亡冲刺）。实读列表摘要：文宫虫 Lv.17 付费债券简评第七期：真理执行者死亡冲刺，十分好用的强化之一，耐力耗尽后通过烧血来续航，在生命见底时会停止烧血并不触发强化效果，配合生命强化后能跑超久，但野排很多人不喜欢这种血条烧掉一点又要打针的感觉，严重的甚至会被T，主要还是打不过5天王，野排慎带。人狼中甲，减少受击时准星的跳动，在西共10张Ste；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_194108486",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/194108486",
+      "title": "玩家26684541 Lv.13 为什么榴弹那么强但是我见到的用榴弹的很少？萌新发言：我也同意榴弹是很强的武器，伤害高射速也不慢，可就是见到",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-17",
+      "scope": "小黑盒用户玩家26684541，2026-10-17发帖（检索词：榴弹发射器）。实读列表摘要：玩家26684541 Lv.13 为什么榴弹那么强但是我见到的用榴弹的很少？萌新发言：我也同意榴弹是很强的武器，伤害高射速也不慢，可就是见到玩榴弹的不多，我对榴弹的印象甚至不如反器材深，难道是运气不好，没匹到玩榴弹的吗？配图：神秘的二重身绝地潜兵210-17 293 41；发布日期 2026-10-17。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_190356461",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/190356461",
+      "title": "小摆不算摆 Lv.10 萌新提问：这个榴弹发射器到底是什么机制我发现射出去的榴弹有时候是瞬爆的，有时候又会先弹一下再爆炸。我已经因为被弹回来",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-10",
+      "scope": "小黑盒用户小摆不算摆，2026-09-10发帖（检索词：榴弹发射器）。实读列表摘要：小摆不算摆 Lv.10 萌新提问：这个榴弹发射器到底是什么机制我发现射出去的榴弹有时候是瞬爆的，有时候又会先弹一下再爆炸。我已经因为被弹回来的榴弹炸飞好几次了顺带一提，刚刚我射榴弹的时候突然有个大头兵跑到我枪口上差点把我炸飞了绝地潜兵209-10 36 18；发布日期 2026-09-10。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_191454451",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/191454451",
+      "title": "Damoclese Lv.16 类星体的伤害是多少啊，为什么很多时候点不爆大狗炮我去wiki看类星体和次抛一样都是2000直击，狗炮900血",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-27",
+      "scope": "小黑盒用户Damoclese，2026-09-27发帖（检索词：类星体加农炮）。实读列表摘要：Damoclese Lv.16 类星体的伤害是多少啊，为什么很多时候点不爆大狗炮我去wiki看类星体和次抛一样都是2000直击，狗炮900血50爆免，怎么算都是可以一发点掉的，为什么很多时候得两发，是因为侧面有装甲吗？附上一张前两天的mj泰坦绝地潜兵209-27 16 8；发布日期 2026-09-27。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_193373431",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/193373431",
+      "title": "远空凌 Lv.20 我先来，论东线，无后坐力炮就是垃圾武器无后座我尽力了，进图哪哪都不行。来人说说说它具体强在哪？感觉都有它的上位。强在免费",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-10",
+      "scope": "小黑盒用户远空凌，2026-10-10发帖（检索词：无后坐力炮）。实读列表摘要：远空凌 Lv.20 我先来，论东线，无后坐力炮就是垃圾武器无后座我尽力了，进图哪哪都不行。来人说说说它具体强在哪？感觉都有它的上位。强在免费还是什么？别说均衡，这游戏，武器没特长均衡就是中庸，就是垃圾。说强的，你们平时打东线带的多吗？绝地潜兵210-10 17 6；发布日期 2026-10-10。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_176855204",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/176855204",
+      "title": "上官筱幽 Lv.22 无后座力炮风评为什么由盛转衰，持续下滑？导致现在无后座越来越吃瘪。现在就是正常的图，反重压力小，不怎么需要无后座，不正",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户上官筱幽，日期未标明发帖（检索词：无后坐力炮）。实读列表摘要：上官筱幽 Lv.22 无后座力炮风评为什么由盛转衰，持续下滑？导致现在无后座越来越吃瘪。现在就是正常的图，反重压力小，不怎么需要无后座，不正常的图，太高压了，玩无后座容易被踢死。这还只讨论了4人队的情况，如果是单通，没有了队友分担火力，无后座的罚站换弹和生存防身清杂问题进一步放大，用起来更是难受。总而言之，就是随着敌共；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_189430263",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/189430263",
+      "title": "超级茗萱 Lv.20 无后坐力炮怎么快速处理穿刺啊不管开没开壳我打它都是两发，是我没打弱点吗，到底应该打哪里啊绝地潜兵208-30 94 1",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-08-30",
+      "scope": "小黑盒用户超级茗萱，2026-08-30发帖（检索词：无后坐力炮）。实读列表摘要：超级茗萱 Lv.20 无后坐力炮怎么快速处理穿刺啊不管开没开壳我打它都是两发，是我没打弱点吗，到底应该打哪里啊绝地潜兵208-30 94 17；发布日期 2026-08-30。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_193364528",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/193364528",
+      "title": "yuyuyubi Lv.16 我先来 在东线 缓和使者是不是过誉了要因为缓和使者猛猛吃补包？我用其他武器，大部分情况是补反重才吃。而且缓和使",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户yuyuyubi，日期未标明发帖（检索词：GL-52缓和使者）。实读列表摘要：yuyuyubi Lv.16 我先来 在东线 缓和使者是不是过誉了要因为缓和使者猛猛吃补包？我用其他武器，大部分情况是补反重才吃。而且缓和使者指挥官处理也不快。常用主手，要么快速处理指挥官，比如机炮、机炮跟机炮。要么清杂快，机炮、机炮等。电榴弹我尽力了，进图哪哪都不行。来人说说说它具体强在哪？感觉都有它的上位。强在免费；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_191189849",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/191189849",
+      "title": "we1nuo Lv.9 潜兵夯九门：缓和使者（已坠机）嘿嘿昨晚看公告电榴弹自伤回来了我就知道nemo要干嘛了，果真不出我所料绝地潜兵209-",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-23",
+      "scope": "小黑盒用户we1nuo，2026-09-23发帖（检索词：GL-52缓和使者）。实读列表摘要：we1nuo Lv.9 潜兵夯九门：缓和使者（已坠机）嘿嘿昨晚看公告电榴弹自伤回来了我就知道nemo要干嘛了，果真不出我所料绝地潜兵209-23 17 7；发布日期 2026-09-23。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_191143337",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/191143337",
+      "title": "stay awake Lv.16 王朝了什么叫你作为一把激光武器，不但有中穿而且面板数值全面完爆穿甲解放者，还拥有激光家族唯二的散热器改件？",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-22",
+      "scope": "小黑盒用户stay awake，2026-09-22发帖（检索词：激光大炮）。实读列表摘要：stay awake Lv.16 王朝了什么叫你作为一把激光武器，不但有中穿而且面板数值全面完爆穿甲解放者，还拥有激光家族唯二的散热器改件？还有这个沟槽的枪口改件是什么鬼，还有惊喜？绝地潜兵209-22 92 39；发布日期 2026-09-22。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_157534451",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/157534451",
+      "title": "二营长 Lv.26 为什么大伙都不推荐激光大炮，我感觉挺好用的啊？就换成激光大炮了。感觉挺好用的，因为虫子基本没有远程攻击，都是要近身，而激",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户二营长，日期未标明发帖（检索词：激光大炮）。实读列表摘要：二营长 Lv.26 为什么大伙都不推荐激光大炮，我感觉挺好用的啊？就换成激光大炮了。感觉挺好用的，因为虫子基本没有远程攻击，都是要近身，而激光大炮，无后坐力、无下坠、超长射程，隔着老远都能滋死一大半，阿尔法指挥官滋的也很快，飞龙碰一下就死。遇到牛牛、穿刺，有铝热和爆裂铳，遇到泰坦有500kg。并且战况不焦急的话，还可以；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_177152735",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/177152735",
+      "title": "我tm太帅啦 Lv.19 西线严厉的父亲-荡平者最多荡平者的伤害没法累计超过3500，远低于vox11000点血量，必须得补一发无后座，因为",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户我tm太帅啦，日期未标明发帖（检索词：EAT-411荡平者）。实读列表摘要：我tm太帅啦 Lv.19 西线严厉的父亲-荡平者最多荡平者的伤害没法累计超过3500，远低于vox11000点血量，必须得补一发无后座，因为这个vox有个特点就是躯体破坏或者肢体破坏以后他的生命值会1000/s的速率衰减最多五千，刚好加起来够斩杀线。爆炸半径：内径10米（致死）外半径25米（剩个血皮，运绝地潜兵203-；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_191309820",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/191309820",
+      "title": "Mr_Door Lv.15 铁甲民主债券体验与补丁感受分享盔甲被动 钝击创伤缓和 T1.5有额外垫料就不差，额外效果也有用，中规中矩，值得体",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户Mr_Door，日期未标明发帖（检索词：EAT-411荡平者）。实读列表摘要：Mr_Door Lv.15 铁甲民主债券体验与补丁感受分享盔甲被动 钝击创伤缓和 T1.5有额外垫料就不差，额外效果也有用，中规中矩，值得体验。盈余EAT配给 T2爆发四个次抛，然后少个技能。团队共用两次的次抛支援。收益有点少，没有四天王的全局在线收益来的好。至少没有负面效果，所以给T2。集成灭火器 T2脱离火源10+；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_195177057",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/195177057",
+      "title": "王莽谦恭未篡时 Lv.18 荡平者好强啊今天南线 N10守导弹，有个带全次抛的兄弟一个呼叫能叫两发荡平者下来，爽压一侧所有援军绝地潜兵210",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-27",
+      "scope": "小黑盒用户王莽谦恭未篡时，2026-10-27发帖（检索词：EAT-411荡平者）。实读列表摘要：王莽谦恭未篡时 Lv.18 荡平者好强啊今天南线 N10守导弹，有个带全次抛的兄弟一个呼叫能叫两发荡平者下来，爽压一侧所有援军绝地潜兵210-27 33 7；发布日期 2026-10-27。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_194957308",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/194957308",
+      "title": "玄星辰 Lv.18 轨道炮减CD来了轨道炮攻击减CD来了，西线大炮打蚊子活动要复刻了绝地潜兵210-25 81 112",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-25",
+      "scope": "小黑盒用户玄星辰，2026-10-25发帖（检索词：轨道磁轨炮攻击）。实读列表摘要：玄星辰 Lv.18 轨道炮减CD来了轨道炮攻击减CD来了，西线大炮打蚊子活动要复刻了绝地潜兵210-25 81 112；发布日期 2026-10-25。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_194961432",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/194961432",
+      "title": "塔拉萨大公爵 Lv.17 30多秒的轨道炮攻击随便甩哈哈太爽了，自己再带一个一共三个，这才是正版超级驱逐舰的火力！劲呐！绝地潜兵210-25",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-25",
+      "scope": "小黑盒用户塔拉萨大公爵，2026-10-25发帖（检索词：轨道磁轨炮攻击）。实读列表摘要：塔拉萨大公爵 Lv.17 30多秒的轨道炮攻击随便甩哈哈太爽了，自己再带一个一共三个，这才是正版超级驱逐舰的火力！劲呐！绝地潜兵210-25 5 14；发布日期 2026-10-25。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_194960583",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/194960583",
+      "title": "跟我的补包说去吧 Lv.10 科埃佩萨已经被轨道炮灌满了两个三十秒的轨道炮攻击。落地就是：请求轨道攻击！请求轨道攻击！请求轨道攻击！直接给无",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-25",
+      "scope": "小黑盒用户跟我的补包说去吧，2026-10-25发帖（检索词：轨道磁轨炮攻击）。实读列表摘要：跟我的补包说去吧 Lv.10 科埃佩萨已经被轨道炮灌满了两个三十秒的轨道炮攻击。落地就是：请求轨道攻击！请求轨道攻击！请求轨道攻击！直接给无畏插双马尾了这谁绷得住绝地潜兵210-25 11 20；发布日期 2026-10-25。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_193031834",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/193031834",
+      "title": "软鹅儿 Lv.17 可惜啊，380380。我们找到了比你更好的，现在你被开除了。轨道精准都被加强了，380你掘起罢。。。缩减冷却这个量级应该",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-06",
+      "scope": "小黑盒用户软鹅儿，2026-10-06发帖（检索词：轨道380）。实读列表摘要：软鹅儿 Lv.17 可惜啊，380380。我们找到了比你更好的，现在你被开除了。轨道精准都被加强了，380你掘起罢。。。缩减冷却这个量级应该不太可能，但是至少能提升一下谢速吧，或者改成轨道汽油弹的五连发那样。再或者射速不变，但是取消每组攻击间隔，改成自动式的30s持续射击。总之什么都好，赶Steam10-06 52 2；发布日期 2026-10-06。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_193628685",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/193628685",
+      "title": "RyuuAstraea Lv.20 轨道火原来能拆叛变科研站吗（并不能）还没叫地狱火拉虫烟了直接交轨道火，结果直接显示已拆毁科研站还是有个泰",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-14",
+      "scope": "小黑盒用户RyuuAstraea，2026-10-14发帖（检索词：轨道火）。实读列表摘要：RyuuAstraea Lv.20 轨道火原来能拆叛变科研站吗（并不能）还没叫地狱火拉虫烟了直接交轨道火，结果直接显示已拆毁科研站还是有个泰坦啥的私了把科研站压爆了（毕竟可以压爆泰坦巢）其他带的飞鹰机枪传包毒矛绝地潜兵210-14 196 27；发布日期 2026-10-14。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_193389512",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/193389512",
+      "title": "TiQi天气抽不到奖体质 Lv.14 这轨道一发炮能不能缩减到20秒冷却啊太逆天了这精准轨道攻击，一分30就只能射击一次，能打什么东西绝地潜",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-10",
+      "scope": "小黑盒用户TiQi天气抽不到奖体质，2026-10-10发帖（检索词：轨道精准攻击）。实读列表摘要：TiQi天气抽不到奖体质 Lv.14 这轨道一发炮能不能缩减到20秒冷却啊太逆天了这精准轨道攻击，一分30就只能射击一次，能打什么东西绝地潜兵210-10 48 8；发布日期 2026-10-10。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_193693469",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/193693469",
+      "title": "不小心被肘下飞机 Lv.9 喷火器怎么用啊我这两天打虫子用喷火器，感觉没有网上说的那么强啊，射程近虫子扛着火过来给我两刀就重新部署了，是朝着",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-14",
+      "scope": "小黑盒用户不小心被肘下飞机，2026-10-14发帖（检索词：火焰喷射器）。实读列表摘要：不小心被肘下飞机 Lv.9 喷火器怎么用啊我这两天打虫子用喷火器，感觉没有网上说的那么强啊，射程近虫子扛着火过来给我两刀就重新部署了，是朝着虫子喷还是朝着虫子位置的地上喷啊绝地潜兵210-14 55 11；发布日期 2026-10-14。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_176057187",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/176057187",
+      "title": "玩家63001919 Lv.17 萌新求解，火焰喷射器类到底有什么优点今天在东线玩了一天火炬手/火焰喷射器，感受如下：清杂效率似乎并不高，而",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户玩家63001919，日期未标明发帖（检索词：火焰喷射仓）。实读列表摘要：玩家63001919 Lv.17 萌新求解，火焰喷射器类到底有什么优点今天在东线玩了一天火炬手/火焰喷射器，感受如下：清杂效率似乎并不高，而且由于持续开火减速，指挥官和其他小虫组成的成群敌人可以轻易从最远射程走到脸上。配合悬浮背包的时候不容易被贴脸，但是跳虫类可以飞上来肘你，而且体积小从空中不容易烧到。封路效果聊胜于无；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_194508937",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/194508937",
+      "title": "吃不胖的康某 Lv.19 孩子们我的火焰射流伤害从3提升到8了，比焚燃者还高我以为是减速带呢凭借机甲现在的坦度，这次加强后伐木者应该可以近身",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-20",
+      "scope": "小黑盒用户吃不胖的康某，2026-10-20发帖（检索词：伐木者机甲）。实读列表摘要：吃不胖的康某 Lv.19 孩子们我的火焰射流伤害从3提升到8了，比焚燃者还高我以为是减速带呢凭借机甲现在的坦度，这次加强后伐木者应该可以近身火焰和at炮同时开火融化牛牛泰坦了，直接化身东线大运绝地潜兵210-20 65 51；发布日期 2026-10-20。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_184930422",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/184930422",
+      "title": "玩家34508082 Lv.19 这机甲是不是有点超标了开局开着个伐木者就去跟怪站撸，左键清杂右键打精英怪感觉发现了新大陆。不过我没注意，下",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-07-03",
+      "scope": "小黑盒用户玩家34508082，2026-07-03发帖（检索词：伐木者机甲）。实读列表摘要：玩家34508082 Lv.19 这机甲是不是有点超标了开局开着个伐木者就去跟怪站撸，左键清杂右键打精英怪感觉发现了新大陆。不过我没注意，下机甲时被自己之前喷的火烫死了。。。绝地潜兵207-03 73 15；发布日期 2026-07-03。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_194540354",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/194540354",
+      "title": "otto159357 Lv.12 风暴漩涡：孩子们你们根本没问指挥官的尸体现在可以被打退风暴漩涡加特林有着全游戏机枪最高的穿甲，最多的备弹，",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-20",
+      "scope": "小黑盒用户otto159357，2026-10-20发帖（检索词：风暴漩涡）。实读列表摘要：otto159357 Lv.12 风暴漩涡：孩子们你们根本没问指挥官的尸体现在可以被打退风暴漩涡加特林有着全游戏机枪最高的穿甲，最多的备弹，1200的射速，为什么没人带好难猜啊绝地潜兵210-20 21 5；发布日期 2026-10-20。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_195284202",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/195284202",
+      "title": "孙汪汪还是孙喵喵 Lv.17 绝地潜兵2唯一轮椅,谁同意谁反对当你不知道带什么战备的时候,你就带个解放者,除了超巨巢拆不掉,你说什么它不能干",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-29",
+      "scope": "小黑盒用户孙汪汪还是孙喵喵，2026-10-29发帖（检索词：绝地潜兵2 战备强度）。实读列表摘要：孙汪汪还是孙喵喵 Lv.17 绝地潜兵2唯一轮椅,谁同意谁反对当你不知道带什么战备的时候,你就带个解放者,除了超巨巢拆不掉,你说什么它不能干,扔它下来的鹈鹕都能帮你干死一队巡逻队绝地潜兵210-29 213 102；发布日期 2026-10-29。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_196053316",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/196053316",
+      "title": "隐身虫 Lv.15 我觉得新变种用弹链榴弹打还不错用它打泰坦肚子可以弥补一些稀缺的反重火力我的配装一般是战壕喷子匕首毒雷跑男中甲弹链榴弹飞鹰",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-04",
+      "scope": "小黑盒用户隐身虫，2026-11-04发帖（检索词：毒气榴弹）。实读列表摘要：隐身虫 Lv.15 我觉得新变种用弹链榴弹打还不错用它打泰坦肚子可以弥补一些稀缺的反重火力我的配装一般是战壕喷子匕首毒雷跑男中甲弹链榴弹飞鹰扫毒地雷火炮塔绝地潜兵211-04 39 10；发布日期 2026-11-04。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_195985905",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/195985905",
+      "title": "玩家58016721 Lv.18 新变种真的很菜吗？感觉盟友射他们根本就是不痛不痒普通的虫子盟友泼水压制力很强，但是这个变种感觉到盟友的压制",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-04",
+      "scope": "小黑盒用户玩家58016721，2026-11-04发帖（检索词：M-105盟友）。实读列表摘要：玩家58016721 Lv.18 新变种真的很菜吗？感觉盟友射他们根本就是不痛不痒普通的虫子盟友泼水压制力很强，但是这个变种感觉到盟友的压制力明显变弱了，后面受不了玩榴弹去了绝地潜兵211-04 72 11；发布日期 2026-11-04。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_191411009",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/191411009",
+      "title": "玩家65075761 Lv.16 沉迷矛枪了用过一次在也回不去了，这玩意怎么能这么爽不仅能颗秒指挥官，被包围了对着地上来一发直接让虫子吃尾气",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-26",
+      "scope": "小黑盒用户玩家65075761，2026-09-26发帖（检索词：S-11矛枪）。实读列表摘要：玩家65075761 Lv.16 沉迷矛枪了用过一次在也回不去了，这玩意怎么能这么爽不仅能颗秒指挥官，被包围了对着地上来一发直接让虫子吃尾气，带上补矛小登也能虫巢游龙了绝地潜兵209-26 65 16；发布日期 2026-09-26。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_186184560",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/186184560",
+      "title": "神秘玩家F Lv.12 矛枪原来锁不到大型构筑者吗前两天才知道锁不了，拿手雷拆的绝地潜兵207-20 21 1",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-07-20",
+      "scope": "小黑盒用户神秘玩家F，2026-07-20发帖（检索词：S-11矛枪）。实读列表摘要：神秘玩家F Lv.12 矛枪原来锁不到大型构筑者吗前两天才知道锁不了，拿手雷拆的绝地潜兵207-20 21 1；发布日期 2026-07-20。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_180251675",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/180251675",
+      "title": "蒹葭大风歌 Lv.15 【428更新】mgx-42子弹风暴（次抛轻机枪）简单评测mgx-42子弹风暴不适合作为远距离的输出武器使用，它更适合",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户蒹葭大风歌，日期未标明发帖（检索词：MGX-42子弹风暴）。实读列表摘要：蒹葭大风歌 Lv.15 【428更新】mgx-42子弹风暴（次抛轻机枪）简单评测mgx-42子弹风暴不适合作为远距离的输出武器使用，它更适合中距离的压制场景，近战和远距反而不如盟友，环境适应性也没有盟友那么好，但是好在特别好上手，属于萌新之友。脱离补包体系的便携支援火力，当然老玩家主要是带它节省一个空位可以给其他红蓝位；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_183246377",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/183246377",
+      "title": "暮布 Lv.18 子弹风暴是区感觉子弹风暴是区啊，尤其是配合传包，子弹风暴+传包打东线太痛苦了也，我不信有一种传包+子弹风暴的配装能东线n1",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-06-12",
+      "scope": "小黑盒用户暮布，2026-06-12发帖（检索词：MGX-42子弹风暴）。实读列表摘要：暮布 Lv.18 子弹风暴是区感觉子弹风暴是区啊，尤其是配合传包，子弹风暴+传包打东线太痛苦了也，我不信有一种传包+子弹风暴的配装能东线n10游龙，不服就贴配装绝地潜兵206-12 40 3；发布日期 2026-06-12。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_194548885",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/194548885",
+      "title": "ALytc Lv.19 新星王朝了试玩了一下，感觉这把武器强的可怕两枪就能爆泰坦/白牛的头，蓄力冷却时间短的吓人，西线目前没试过，但肯定是类",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-21",
+      "scope": "小黑盒用户ALytc，2026-10-21发帖（检索词：LAS-44新星）。实读列表摘要：ALytc Lv.19 新星王朝了试玩了一下，感觉这把武器强的可怕两枪就能爆泰坦/白牛的头，蓄力冷却时间短的吓人，西线目前没试过，但肯定是类星体，纪元的全面上位替代，在非孢裂变种里甚至能和无后座竞争反重，由于是无限弹药，甚至可以掏出来随便点远处的指挥官预定神九门绝地潜兵210-21 203 50；发布日期 2026-10-21。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_191292364",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/191292364",
+      "title": "乔纳森乔斯达 Lv.17 也许你需要一个防护罩生成器在扔出电塔的时候放下防护罩生成器吧，他可以保护你的特斯拉不受绿胖和队友的伤害。同时电死一",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-25",
+      "scope": "小黑盒用户乔纳森乔斯达，2026-09-25发帖（检索词：防护罩生成中继器）。实读列表摘要：乔纳森乔斯达 Lv.17 也许你需要一个防护罩生成器在扔出电塔的时候放下防护罩生成器吧，他可以保护你的特斯拉不受绿胖和队友的伤害。同时电死一切靠近的敌人。00:30绝地潜兵209-25 11 11；发布日期 2026-09-25。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_188779512",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/188779512",
+      "title": "夏季实习生- Lv.18 zsbd我看Wiki上写飞鹰机枪扫射100发子弹里有25发高爆弹，高爆弹有30爆炸拆，是不是理论能让高爆弹打虫洞来",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-08-22",
+      "scope": "小黑盒用户夏季实习生-，2026-08-22发帖（检索词：飞鹰机枪扫射）。实读列表摘要：夏季实习生- Lv.18 zsbd我看Wiki上写飞鹰机枪扫射100发子弹里有25发高爆弹，高爆弹有30爆炸拆，是不是理论能让高爆弹打虫洞来拆巢绝地潜兵208-22 23 4；发布日期 2026-08-22。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_188052112",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/188052112",
+      "title": "Ekhos余响 Lv.13 这热熔枪太猛了吧热熔枪风险太高了，已经被泰坦踹死好几回了，但是用起来超爽，感觉比无后坐颗秒还爽，看着泰坦吐酸的瞬",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-08-13",
+      "scope": "小黑盒用户Ekhos余响，2026-08-13发帖（检索词：40-K热熔枪）。实读列表摘要：Ekhos余响 Lv.13 这热熔枪太猛了吧热熔枪风险太高了，已经被泰坦踹死好几回了，但是用起来超爽，感觉比无后坐颗秒还爽，看着泰坦吐酸的瞬间碎头倒下真的太刺激了，之前玩传包配的轻筒要么得满地图捡筒子，要么打一发就得游走半天才能打下一发，要么伤害太低杀个牛都得做个反重体操，只有热熔伤害高续航足还是绝地潜兵208-13；发布日期 2026-08-13。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_189984707",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/189984707",
+      "title": "言哥斯坦森 Lv.11 今天刚解锁C4背包，感觉给萌新打开了新世界。今晚用C4背包打了一晚的孢裂已经离不开C4了，之前一直用无后座，奈何有时",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-06",
+      "scope": "小黑盒用户言哥斯坦森，2026-09-06发帖（检索词：C4背包）。实读列表摘要：言哥斯坦森 Lv.11 今天刚解锁C4背包，感觉给萌新打开了新世界。今晚用C4背包打了一晚的孢裂已经离不开C4了，之前一直用无后座，奈何有时野排队友又不帮清杂，一炮干不死泰坦非常尴尬，现在用C4丢了就跑，即能反重还能清清杂，做任务的时候补给一叫，拉烟就是一顿狂扔，相当轮椅，就是空爆泰坦得熟悉一下。绝地潜兵209-06；发布日期 2026-09-06。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_191404589",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/191404589",
+      "title": "悄悄咪咪的抹茶味猫咪 其实「海胆」很适合潜行的说一颗海胆就能让潜兵无视某个敌人十多秒：这对于潜行来说是十分重要的综上，海胆其实是专为潜行特化",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户悄悄咪咪的抹茶味猫咪 其实「海胆」很适合潜行的说，日期未标明发帖（检索词：海胆）。实读列表摘要：悄悄咪咪的抹茶味猫咪 其实「海胆」很适合潜行的说一颗海胆就能让潜兵无视某个敌人十多秒：这对于潜行来说是十分重要的综上，海胆其实是专为潜行特化的控制手雷，用它打正面那肯定差强人意；但若是换个思路，将它运用在潜行这个本职工作上，那么各位会发现，它的表现十分亮眼——要知道，我东线潜行单通可是根本离不开海胆的啊绝地潜兵209-；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_196187863",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/196187863",
+      "title": "玩家47350199 Lv.19 一位潜兵试图用反坦克寻踪者拆除泰坦巢，这是他机甲发生的变化自从买了这个手雷之后还没有试过它能不能拆巢，结果",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户玩家47350199，日期未标明发帖（检索词：反坦克寻踪雷）。实读列表摘要：玩家47350199 Lv.19 一位潜兵试图用反坦克寻踪者拆除泰坦巢，这是他机甲发生的变化自从买了这个手雷之后还没有试过它能不能拆巢，结果这直接飞回来给我机甲炸成人棍了这谁能绷得住00:21绝地潜兵23天前 7 16；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_191255557",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/191255557",
+      "title": "芝麻凌_ZM0 Lv.15 标记即目标，投出即击杀反坦克寻踪者。注：禁止在评论区拉踩战备，每个人都有属于自己的武器，战备，战术，打法。绝地潜",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-24",
+      "scope": "小黑盒用户芝麻凌_ZM0，2026-09-24发帖（检索词：反坦克追踪者）。实读列表摘要：芝麻凌_ZM0 Lv.15 标记即目标，投出即击杀反坦克寻踪者。注：禁止在评论区拉踩战备，每个人都有属于自己的武器，战备，战术，打法。绝地潜兵209-24 13 123；发布日期 2026-09-24。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_152163482",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/152163482",
+      "title": "四大皆空! Lv.27 「绝地潜兵2」全战备评测指南——蓝战备篇二该护盾的生命值比防护罩生成器更高，生成延迟更短。该背包属于和蛋盾使用方法完",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户四大皆空!，日期未标明发帖（检索词：防护罩生成背包）。实读列表摘要：四大皆空! Lv.27 「绝地潜兵2」全战备评测指南——蓝战备篇二该护盾的生命值比防护罩生成器更高，生成延迟更短。该背包属于和蛋盾使用方法完全不同，只有你装备单手武器且处于瞄准状态才会投射护盾（注意：爆燃弩处于单手射击状态会削减一些射速），好在护盾的大小可以让你为队友提供掩护，有时候你需要留心，如果你进入布娃娃状态，你；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_182877308",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/182877308",
+      "title": "不会哭的苏苏 Lv.14 尝试了磁轨炮各种可行的加强方案RS-422磁轨炮从某种意义上说，磁轨炮算是lz的白月光战备之一，一枪一个蹂躏的节奏",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户不会哭的苏苏，日期未标明发帖（检索词：RS-422磁轨炮）。实读列表摘要：不会哭的苏苏 Lv.14 尝试了磁轨炮各种可行的加强方案RS-422磁轨炮从某种意义上说，磁轨炮算是lz的白月光战备之一，一枪一个蹂躏的节奏十分带劲，小登时期用来打机器人很快乐。然而，自从反器材步枪加强，同样可以对无畏进行颗秒之后，磁轨炮的缺点就越来越凸显，尤其是作为一把蓄力武器，却和无需蓄力且能连发的反器材步共8张绝；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_149059817",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/149059817",
+      "title": "神秘黑盒男 Lv.18 燃烧地雷东线还是挺好用的基本相当于2min cd的轨道火，丢完轨道火丢燃烧地雷直接爽压烟，只不过地雷都得注意一下使用",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2025-03-11",
+      "scope": "小黑盒用户神秘黑盒男，2025-03-11发帖（检索词：燃烧地雷）。实读列表摘要：神秘黑盒男 Lv.18 燃烧地雷东线还是挺好用的基本相当于2min cd的轨道火，丢完轨道火丢燃烧地雷直接爽压烟，只不过地雷都得注意一下使用场景绝地潜兵22025-03-11 13 1；发布日期 2025-03-11。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_170950295",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/170950295",
+      "title": "zmmwj Lv.18 新的轨道120真的无敌了吧n10基本上两个120间隔10秒左右扔烟里面就可以压完一整波虫烟，小单位会被电烟控死，大单",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2025-12-18",
+      "scope": "小黑盒用户zmmwj，2025-12-18发帖（检索词：轨道120）。实读列表摘要：zmmwj Lv.18 新的轨道120真的无敌了吧n10基本上两个120间隔10秒左右扔烟里面就可以压完一整波虫烟，小单位会被电烟控死，大单位会因为集中的高爆被炸死，实在不行拿个无后座在外面清理一下漏的重甲。只能说实在太有用了，希望箭头之后可以把这东西给常驻绝地潜兵22025-12-18 19 20；发布日期 2025-12-18。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_166299225",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/166299225",
+      "title": "《《网络无响应》》 Lv.16 感觉飞鹰500KG不是很猛也没入游戏前有云过上手之后感觉飞鹰500范围不是特别大，清群或者清巢都炸不干净，自",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2025-10-10",
+      "scope": "小黑盒用户《《网络无响应》》，2025-10-10发帖（检索词：飞鹰500）。实读列表摘要：《《网络无响应》》 Lv.16 感觉飞鹰500KG不是很猛也没入游戏前有云过上手之后感觉飞鹰500范围不是特别大，清群或者清巢都炸不干净，自带追踪的轨道激光就要好用一些绝地潜兵22025-10-10 166 49；发布日期 2025-10-10。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_184350501",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/184350501",
+      "title": "无思无能 Lv.14 ⚡️平等电击所有人⚡️极力推荐朋友玩玩电弧雷 这雷霆跳弹不仅是清杂好手 撤离前扔一颗还能让鹈鹕练练超级拼装😋⚡️绝地潜",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-06-26",
+      "scope": "小黑盒用户无思无能，2026-06-26发帖（检索词：电弧手雷）。实读列表摘要：无思无能 Lv.14 ⚡️平等电击所有人⚡️极力推荐朋友玩玩电弧雷 这雷霆跳弹不仅是清杂好手 撤离前扔一颗还能让鹈鹕练练超级拼装😋⚡️绝地潜兵206-26 15 93；发布日期 2026-06-26。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_183645581",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/183645581",
+      "title": "被遗忘的于勤 Lv.19 【新强化预览】🔥 内置灭火器为地狱伞兵的护甲配备隐蔽式自动快速响应灭火器。不再需要翻滚灭火。🛡️ 防撞缓冲（名称暂",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-06-17",
+      "scope": "小黑盒用户被遗忘的于勤，2026-06-17发帖（检索词：集成灭火器）。实读列表摘要：被遗忘的于勤 Lv.19 【新强化预览】🔥 内置灭火器为地狱伞兵的护甲配备隐蔽式自动快速响应灭火器。不再需要翻滚灭火。🛡️ 防撞缓冲（名称暂译）减少来自撞击和碰撞造成的伤害。（已修改）注：原图数值显示异常，具体减伤百分比暂未公布。绝地潜兵206-17 56 85；发布日期 2026-06-17。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_188425761",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/188425761",
+      "title": "堇月亘 Lv.11 我很困惑，为何现在反器材也成嘉豪武器了？反器材只需要趴下来从容地对着腿打两个弹夹，都不需要切手雷，两个弹夹下去牛就死了，",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-08-18",
+      "scope": "小黑盒用户堇月亘，2026-08-18发帖（检索词：反器材步枪）。实读列表摘要：堇月亘 Lv.11 我很困惑，为何现在反器材也成嘉豪武器了？反器材只需要趴下来从容地对着腿打两个弹夹，都不需要切手雷，两个弹夹下去牛就死了，被近身了就拿爆裂铳一枪清理跳虫，清杂效率也不低，你们难道不觉得很轮椅吗？绝地潜兵208-18 191 50；发布日期 2026-08-18。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_161545696",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/161545696",
+      "title": "两袖清风两行泪 Lv.18 抗压王止息但是现在还不是很了解他那个眩晕弹的机制，貌似是要绝大部分命中才能控住。命中了，但是跳蛋好像也能控住，但",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2025-08-18",
+      "scope": "小黑盒用户两袖清风两行泪，2025-08-18发帖（检索词：眩晕弹）。实读列表摘要：两袖清风两行泪 Lv.18 抗压王止息但是现在还不是很了解他那个眩晕弹的机制，貌似是要绝大部分命中才能控住。命中了，但是跳蛋好像也能控住，但有些时候又控不住。就很奇怪。绝地潜兵22025-08-18 62 105；发布日期 2025-08-18。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_155481634",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/155481634",
+      "title": "拉盖娅背后的男人 Lv.22 这反步兵雷区是能误伤队友吗结束撤退的时候，我往高台和楼下的台阶上放了一个，温暖的队友在小怪靠近的时候，选择和小",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户拉盖娅背后的男人，日期未标明发帖（检索词：反步兵雷区）。实读列表摘要：拉盖娅背后的男人 Lv.22 这反步兵雷区是能误伤队友吗结束撤退的时候，我往高台和楼下的台阶上放了一个，温暖的队友在小怪靠近的时候，选择和小怪贴身激战，然后就变成了冰冷的骷髅头符号，现在我也不知道是不是我炸的，但是我昨天看帖子里推荐带这玩意，我的第一个1500金币就买了它，还有我每次都是一级一级升，我队友怎绝地潜兵22；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_191294942",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/191294942",
+      "title": "Blorg Lv.15 一些尝试拯救激光哨戒炮的改动构想在激光结算机制改动后一直照一个单位照到死的开火AI已经落后。让激光炮照每个单位0.5",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户Blorg，日期未标明发帖（检索词：激光哨戒炮）。实读列表摘要：Blorg Lv.15 一些尝试拯救激光哨戒炮的改动构想在激光结算机制改动后一直照一个单位照到死的开火AI已经落后。让激光炮照每个单位0.5s就转火别的3s内未被照过的单位，高效把范围内所有敌人都挂上燃烧。这样还能防止它吊死在一个重甲上，甚至范围内少于6个单位还可以边攻击边散热。这样激光炮就变成了和火箭炮差不多绝地潜兵；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_194824496",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/194824496",
+      "title": "枯茗 Lv.21 什么叫解放日战备是轨道烟花和飞鹰通场？这烟花效果还不如放个轨道空爆，再打两发铝热手枪热闹，飞鹰箭木更是重量级，俯冲一下抛个",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-24",
+      "scope": "小黑盒用户枯茗，2026-10-24发帖（检索词：烟花术）。实读列表摘要：枯茗 Lv.21 什么叫解放日战备是轨道烟花和飞鹰通场？这烟花效果还不如放个轨道空爆，再打两发铝热手枪热闹，飞鹰箭木更是重量级，俯冲一下抛个热诱弹就走了，你哪怕全队四架飞鹰编队飞下啊绝地潜兵210-24 40 74；发布日期 2026-10-24。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_193576665",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/193576665",
+      "title": "一直游泳到大海变蓝 Lv.10 最完美武器三线通解配装，只需要替换极少战备懒人必学前言此配装主副雷、前两个战备均可通用，只需要根据情况替换后",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户一直游泳到大海变蓝，日期未标明发帖（检索词：绝地潜兵2 三线通用）。实读列表摘要：一直游泳到大海变蓝 Lv.10 最完美武器三线通解配装，只需要替换极少战备懒人必学前言此配装主副雷、前两个战备均可通用，只需要根据情况替换后二战备即可。主手：三叉戟（近防的神，极高的爆发能力瞬间蒸发你身边的敌人，本身机炮需要频繁换弹，搭配随切随用的武器防身非常舒服）副手：最后通牒（请输入文本）手雷：反坦克追踪者（东线泰；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_175911558",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/175911558",
+      "title": "爱国精硬 Lv.20 感觉这个弹链式榴弹发射器还不错哦？核弹手枪，火雷，飞鹰扫射，轨道120，轨道毒，弹链榴弹。双重自由清掉中型虫，榴弹直接",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户爱国精硬，日期未标明发帖（检索词：弹链式榴弹发射器）。实读列表摘要：爱国精硬 Lv.20 感觉这个弹链式榴弹发射器还不错哦？核弹手枪，火雷，飞鹰扫射，轨道120，轨道毒，弹链榴弹。双重自由清掉中型虫，榴弹直接炸小虫，也能拆巢，能解放一个战备位，城市图的补给也很充足，感觉这个榴弹好像爆炸范围没普通榴弹大，不容易误伤。实际体验感觉还不错，虽说普通榴弹已经成神了，但这个弹链榴弹也是一绝地潜兵；该来源未显示发布日期，不参与时间线裁决。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_182557076",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/182557076",
+      "title": "嗯呃啊 Lv.16 轨道激光 算强势嘛目前在n7左右徘徊 西线南线我会带轨道激光 西线用来引导去处理一些任务 同时如果刷出很多大怪不能快速处",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-06-01",
+      "scope": "小黑盒用户嗯呃啊，2026-06-01发帖（检索词：轨道激光）。实读列表摘要：嗯呃啊 Lv.16 轨道激光 算强势嘛目前在n7左右徘徊 西线南线我会带轨道激光 西线用来引导去处理一些任务 同时如果刷出很多大怪不能快速处理就喊这个 南线也是处理大怪 我的打法主要是为了推任务为主 西线是 类星体 传包 500kg 轨道激光武器是 扫荡者 制导手枪 铝热南线是 盟友 补包 机绝地潜兵206-01 18；发布日期 2026-06-01。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1TqTF6YE3d",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1TqTF6YE3d/",
+      "title": "灭菌器现在真不是最弱战备【绝地潜兵2 】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-06-30",
+      "scope": "B站UP主恶魔大章鱼，2026-06-30发布《灭菌器现在真不是最弱战备【绝地潜兵2 】》，播放26408、点赞488。实读标题、简介与高赞评论；具体结论见对应装备的玩家标签与实战补充。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV14a4g6LEfb",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV14a4g6LEfb/",
+      "title": "【绝地潜兵】净化者真是个sb武器",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-03",
+      "scope": "B站UP主牛驼因，2026-11-03发布《【绝地潜兵】净化者真是个sb武器》，播放2049、点赞36。实读标题、简介与高赞评论；具体结论见对应装备的玩家标签与实战补充。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV164ak6qEGF",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV164ak6qEGF/",
+      "title": "【绝地潜兵2】9成潜兵不知道的钗的真正用法，揭秘新版本枪盾流的打开方式，用激光火力网让敌人成片倒下！",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-02",
+      "scope": "B站UP主幻梦之魂是勇者，2026-10-02发布《【绝地潜兵2】9成潜兵不知道的钗的真正用法，揭秘新版本枪盾流的打开方式，用激光火力网让敌人成片倒下！》，播放41463、点赞821。实读标题、简介与高赞评论；具体结论见对应装备的玩家标签与实战补充。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_187167445",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/187167445",
+      "title": "不会压枪玩啥AK Lv.13 破门锤配什么战备好久闻破门锤大名，很早就解锁了，但因为玩的实在太飞舞的原因一直在打低难，重甲单位很少，体会不到",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户不会压枪玩啥AK，日期未标明发帖（检索词：破门锤）。实读列表摘要：不会压枪玩啥AK Lv.13 破门锤配什么战备好久闻破门锤大名，很早就解锁了，但因为玩的实在太飞舞的原因一直在打低难，重甲单位很少，体会不到他的强度，现在也是可以勉强单通N6了，想玩点新玩具，都推荐带喷气或传送这种机动背包但这玩意就七枚炸药会不会不够用，而且这玩意也不能用来清杂，主武器弹药压力特别大，我绝地潜兵208-",
+      "access": "page"
+    },
+    {
+      "id": "xhh_186648042",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/186648042",
+      "title": "玩家61764941 Lv.16 某种小众变态东线电弧配装电弧发射器无疑是一把强力的3号位武器。至于什么dps低的发瘟、蓄力走路、锁定经常锁",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户玩家61764941，日期未标明发帖（检索词：电弧发射器）。实读列表摘要：玩家61764941 Lv.16 某种小众变态东线电弧配装电弧发射器无疑是一把强力的3号位武器。至于什么dps低的发瘟、蓄力走路、锁定经常锁尸体、不小心电死队友啥的，哎呀，超模武器别在意这么多啦。增加了不少新的反重手段后，电弧似乎真的能把反重完全外包了。但是电指挥官依然十分寂寞该铳得铳。铝热可以换大摔炮，但我绝地潜兵2",
+      "access": "page"
+    },
+    {
+      "id": "xhh_196112502",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/196112502",
+      "title": "今天鴟什么 Lv.12 玩电弧发射器没tk过队友被老外称赞了这武器口碑这么差吗绝地潜兵211-05 18 14",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-05",
+      "scope": "小黑盒用户今天鴟什么，2026-11-05发帖（检索词：电弧发射器）。实读列表摘要：今天鴟什么 Lv.12 玩电弧发射器没tk过队友被老外称赞了这武器口碑这么差吗绝地潜兵211-05 18 14",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV16c4J6tEd1",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV16c4J6tEd1/",
+      "title": "你赢了，你的武器小众又独特~新版本重装机枪离T0战备只差最后一步",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-07",
+      "scope": "B站UP主小憨不是铁憨憨，2026-11-07发布《你赢了，你的武器小众又独特~新版本重装机枪离T0战备只差最后一步》，播放16319、点赞381。实读标题、简介与高赞评论；具体结论见对应装备的玩家标签与实战补充。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_152975517",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/152975517",
+      "title": "纯真帕瓦人 Lv.16 请教一下为什么大家更爱带哨戒机枪而不是哨戒加特林？我感觉加特林的爆发和清杂真的很猛啊而且开火声音听得就爽为啥大伙都更",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2025-04-28",
+      "scope": "小黑盒用户纯真帕瓦人，2025-04-28发帖（检索词：哨戒机枪）。实读列表摘要：纯真帕瓦人 Lv.16 请教一下为什么大家更爱带哨戒机枪而不是哨戒加特林？我感觉加特林的爆发和清杂真的很猛啊而且开火声音听得就爽为啥大伙都更爱带机枪呢求教一下绝地潜兵22025-04-28 60 13",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV1uHh962EdH",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV1uHh962EdH/",
+      "title": "反坦克追踪者:千兆级榴弹的强度，全新掀桌反重武器！",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-09-26",
+      "scope": "B站UP主一只屑子豪，2026-09-26发布《反坦克追踪者:千兆级榴弹的强度，全新掀桌反重武器！》，播放12923、点赞928。实读标题、简介与高赞评论；具体结论见对应装备的玩家标签与实战补充。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_164538783",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/164538783",
+      "title": "终结族脑虫 Lv.17 面向友军的大学习第3期，全战备介绍之红战备篇今天我要来向大家介绍所有红色战备！红色战备属于火力支援型战备，顾名思义潜",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户终结族脑虫，日期未标明发帖（检索词：绝地潜兵2 红战备）。实读列表摘要：终结族脑虫 Lv.17 面向友军的大学习第3期，全战备介绍之红战备篇今天我要来向大家介绍所有红色战备！红色战备属于火力支援型战备，顾名思义潜兵可以在执行任务期间呼叫驱逐舰进行轨道大规模火力掩护以及舰载机飞鹰定点火力支援。1.轨道加特林火力网呼叫指令→↓←↑↑简介:呼叫后驱逐舰会以信标为中心进行长达9秒的持续加特林扫射，",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV128pP6mEXD",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV128pP6mEXD/",
+      "title": "以防你不知道DSS现在的飞鹰毒气风暴有多夸张【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-06",
+      "scope": "B站UP主我先投降了zzz，2026-10-06发布《以防你不知道DSS现在的飞鹰毒气风暴有多夸张【绝地潜兵2】》，播放31448、点赞385。实读标题、简介与高赞评论；具体结论见对应装备的玩家标签与实战补充。",
+      "access": "page"
+    },
+    {
+      "id": "bili_BV15j4J67EqR",
+      "kind": "community",
+      "url": "https://www.bilibili.com/video/BV15j4J67EqR/",
+      "title": "弹链榴弹快乐局！无脑输出，一脚踢飞毒瘴变种！千杀单通全清难十虫族毒瘴变种【绝地潜兵2】",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-11-07",
+      "scope": "B站UP主上官筱幽，2026-11-07发布《弹链榴弹快乐局！无脑输出，一脚踢飞毒瘴变种！千杀单通全清难十虫族毒瘴变种【绝地潜兵2】》，播放2449、点赞87。实读标题、简介与高赞评论；具体结论见对应装备的玩家标签与实战补充。",
+      "access": "page"
+    },
+    {
+      "id": "xhh_177215851",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/177215851",
+      "title": "我tm太帅啦 Lv.19 第一届绝地好声音之MS-11单兵导弹发射井MS-11 单兵导弹发射井：一个能容纳一枚强大导弹的发射井，并配备手持式",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户我tm太帅啦，日期未标明发帖（检索词：单兵导弹发射井）。实读列表摘要：我tm太帅啦 Lv.19 第一届绝地好声音之MS-11单兵导弹发射井MS-11 单兵导弹发射井：一个能容纳一枚强大导弹的发射井，并配备手持式瞄准遥控器。特点是一次性支援武器，能嵌入地面，延伸目标系统以便拾取，并在使用时发射嵌入导弹。解锁方式：尘卷风债卷第三页解锁，需要110点勋章。呼叫时间：标准情况 7.75秒，升级版",
+      "access": "page"
+    },
+    {
+      "id": "xhh_189377814",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/189377814",
+      "title": "P1rrha Lv.24 空爆火箭筒的空爆模式该怎么用往高了打会在天上爆，往低了打完全不爆，还不如直击模式，而且拆孢子也太慢了，是有什么特殊",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-08-30",
+      "scope": "小黑盒用户P1rrha，2026-08-30发帖（检索词：空爆火箭弹发射器）。实读列表摘要：P1rrha Lv.24 空爆火箭筒的空爆模式该怎么用往高了打会在天上爆，往低了打完全不爆，还不如直击模式，而且拆孢子也太慢了，是有什么特殊技巧吗绝地潜兵208-30 40 5",
+      "access": "page"
+    },
+    {
+      "id": "xhh_195179124",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/195179124",
+      "title": "懒 萌新开始迷上玩次抛了都是大佬拿着各种各样的武器把泰坦们删除了，就是没怎么遇到过次抛。于是，我爱上了次抛（一次性消耗性反重炮，好像是这一串",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2026-10-28",
+      "scope": "小黑盒用户懒 萌新开始迷上玩次抛了都是大佬拿着各种各样的武，2026-10-28发帖（检索词：消耗性反坦克武器）。实读列表摘要：懒 萌新开始迷上玩次抛了都是大佬拿着各种各样的武器把泰坦们删除了，就是没怎么遇到过次抛。于是，我爱上了次抛（一次性消耗性反重炮，好像是这一串名字，总之是次抛）。每次捡起次抛的时候，总觉得自己是西部牛仔，为手中的左轮上了唯一一发子弹，一枪打中远处的泰坦，牛牛还有穿刺虫。我还绝地潜兵210-28 65 35",
+      "access": "page"
+    },
+    {
+      "id": "xhh_169699491",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/169699491",
+      "title": "法尔赛特民主之声 Lv.13 【小报】轨道烟雾攻击冷却时间增加30s现在已知的debuff：针减少。弹药减少。轨道烟冷却更长。绝地潜兵220",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2025-11-29",
+      "scope": "小黑盒用户法尔赛特民主之声，2025-11-29发帖（检索词：轨道毒气攻击）。实读列表摘要：法尔赛特民主之声 Lv.13 【小报】轨道烟雾攻击冷却时间增加30s现在已知的debuff：针减少。弹药减少。轨道烟冷却更长。绝地潜兵22025-11-29 29 14",
+      "access": "page"
+    },
+    {
+      "id": "xhh_147172828",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/147172828",
+      "title": "无弬尘令 Lv.19 民主式动态战备（第七期）轨道加特林火力网怪怪的，还说不上哪里怪。可能是这个轨道网过于Q弹了？重制版再研究更好的表现形式",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "2025-02-15",
+      "scope": "小黑盒用户无弬尘令，2025-02-15发帖（检索词：轨道加特林火力网）。实读列表摘要：无弬尘令 Lv.19 民主式动态战备（第七期）轨道加特林火力网怪怪的，还说不上哪里怪。可能是这个轨道网过于Q弹了？重制版再研究更好的表现形式。随缘更新，下期见。绝地潜兵22025-02-15 14 87",
+      "access": "page"
+    },
+    {
+      "id": "xhh_134552096",
+      "kind": "community",
+      "url": "https://xiaoheihe.cn/app/bbs/link/134552096",
+      "title": "LycorZ Lv.21 【致新鲜冻肉】关于强化的选择如果没有选择该强化，建议在空降落地后叫补给和队友一起补充，但后续复活初始装备依旧是数量",
+      "accessed_at": "2026-11-09",
+      "revision": null,
+      "published_at": "",
+      "scope": "小黑盒用户LycorZ，日期未标明发帖（检索词：生命强化）。实读列表摘要：LycorZ Lv.21 【致新鲜冻肉】关于强化的选择如果没有选择该强化，建议在空降落地后叫补给和队友一起补充，但后续复活初始装备依旧是数量减半2.生命强化主要作用：可以增强冻肉的承伤上限，让冻肉变得更耐造如果没有使用该强化，即使是重甲依旧也是脆皮，效果可能也就同等于中甲垫料甲吧。那么轻甲中甲就更不用说了，在10+张绝",
+      "access": "page"
     }
   ],
   "items": [
@@ -2227,7 +4382,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_195284202"
+          ],
+          "note": "2026-10 有玩家把解放者称作唯一轮椅：不知道带什么战备时就带它，除超巨巢拆不掉几乎什么都能干；属夸张口吻，只作出场率线索。",
+          "as_of": "2026-10-29"
+        }
+      ]
     },
     {
       "id": "primary.ar-23p-liberator-penetrator",
@@ -2623,6 +4787,15 @@
             "cnwp_steam_cn_modding"
           ],
           "note": "2025简介用于清无票者；不沿用跨年强度比较。"
+        },
+        {
+          "id": "player.single_target",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1ZyYo65E1C"
+          ],
+          "note": "2026-09 玩家说野狼在西线主要是泼，9到10发算上火能处理一个蹂躏；不打弱点比焦土慢，比离子喷、爆燃弩、爆裂铳快。",
+          "as_of": "2026-09-13"
         }
       ],
       "occupancy": {
@@ -3132,6 +5305,15 @@
             "wp_traits_index"
           ],
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1kAnt6qEfN"
+          ],
+          "note": "2026-10 高赞批评它卡指挥官和武斗的阈值、处理效率相当一般，另有玩家反驳猛吹的人是把拉烟压力全给队友。",
+          "as_of": "2026-10-23"
         }
       ],
       "occupancy": {
@@ -4034,7 +6216,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_175911558"
+          ],
+          "note": "玩家配装帖把双重自由用来清中型虫、榴弹炸小虫并拆巢，认为能解放一个战备位，城市图补给也充足。",
+          "as_of": ""
+        }
+      ]
     },
     {
       "id": "primary.m90a-shotgun",
@@ -4195,6 +6386,15 @@
             "cnwp_reddit_cyborg_counter"
           ],
           "note": "既有反中型玩家备注明确列出自伤限制；不是仅因爆炸机制就批量贴风险。"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_188425761"
+          ],
+          "note": "玩家谈反器材时说被近身就拿爆裂铳一枪清理跳虫，清杂效率也不低。",
+          "as_of": "2026-08-18"
         }
       ],
       "occupancy": {
@@ -4266,6 +6466,15 @@
             "cnwp_steam_cn_modding"
           ],
           "note": "拆巢补位，不是所有建筑通解。"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_193358598"
+          ],
+          "note": "东线烈焰站桩套里，玩家说小虫数目稍多就用爆燃弩，远距离一炸一大片。",
+          "as_of": ""
         }
       ],
       "occupancy": {
@@ -4313,6 +6522,33 @@
             "wp_traits_index"
           ],
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1T8hW6fEuJ"
+          ],
+          "note": "2026-09 神九门称它是爆炸家族新成员、第三把炸弹分类武器；玩家补充一般是在需要补主手拆迁或清杂时才起爆炸主手。",
+          "as_of": "2026-09-23"
+        },
+        {
+          "id": "player.structure_demolition",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1T8hW6fEuJ"
+          ],
+          "note": "同一期说明其定位是补主手拆迁，用绝对数值统治西线；评论说下坠比通牒小、50米内指哪打哪。",
+          "as_of": "2026-09-23"
+        },
+        {
+          "id": "player.automaton_recommended",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1T8hW6fEuJ"
+          ],
+          "note": "视频明确以『统治西线』描述这把爆炸主手，西线即机器人战线。",
+          "as_of": "2026-09-23"
         }
       ],
       "occupancy": {
@@ -4464,7 +6700,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_192832948"
+          ],
+          "note": "2026-10 有玩家把焦土放进自己研究的三线通用配装（焦土、通牒、反坦克追踪者、补包、矛枪、毒气地雷、120）。",
+          "as_of": "2026-10-05"
+        }
+      ]
     },
     {
       "id": "primary.las-16-sickle",
@@ -4705,6 +6950,15 @@
             "cnwp_reddit_cyborg_counter"
           ],
           "note": "玩家用于生化人等目标；需掌握蓄力节奏。"
+        },
+        {
+          "id": "player.self_damage_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV14a4g6LEfb"
+          ],
+          "note": "2026-11 玩家指出净化者蓄力过程中被打断会自动往地上开枪把自己炸死，忠诚者爆炸伤害低炸不死、纪元肩扛式则不会打地板。",
+          "as_of": "2026-11-03"
         }
       ],
       "occupancy": {
@@ -4758,6 +7012,16 @@
             "wp_traits_index"
           ],
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1kAnt6qEfN",
+            "xhh_194785791"
+          ],
+          "note": "2026-10 有高赞批评阈值设计，也有债券体验帖把PLAS-39等武器的加强列为正面改动，评价并不一致。",
+          "as_of": "2026-10-23"
         }
       ],
       "occupancy": {
@@ -4904,7 +7168,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_193576665"
+          ],
+          "note": "三线通解配装把三叉戟称作近防的神，极高爆发能瞬间蒸发身边敌人，正好补机炮频繁换弹的空窗。",
+          "as_of": ""
+        }
+      ]
     },
     {
       "id": "primary.r-40-k-hot-shot-marksman-rifle",
@@ -5097,7 +7370,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问403；基础类别/机制来自搜索索引摘录，角色未全面交叉验证，不含当前强度或精确穿甲数值。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_176057187"
+          ],
+          "note": "萌新反馈：火炬手/火焰喷射器在东线清杂效率似乎不高，持续开火减速让成群敌人能从最远射程走到脸上；配悬浮背包不易被贴脸但跳虫能从空中突脸。",
+          "as_of": ""
+        }
+      ]
     },
     {
       "id": "primary.vg-70-variable",
@@ -5934,6 +8216,24 @@
             "wp_traits_index"
           ],
           "note": "仅Wiki界面资料特征；不等同可靠反重，不描述精确数值或完整子伤害配置。"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_193358598"
+          ],
+          "note": "东线烈焰站桩套把匕首当对单清小虫位：超长射程、点火机制让小虫打个照面就死，赶路可以一边跑一边回头扫。",
+          "as_of": ""
+        },
+        {
+          "id": "player.easy_to_use",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_193358598"
+          ],
+          "note": "同一帖称匕首指到哪小跳虫死到哪，用来处理贴脸目标非常直观。",
+          "as_of": ""
         }
       ],
       "occupancy": {
@@ -6288,7 +8588,8 @@
           "basis": "community_observation",
           "source_ids": [
             "wp_comm_ultimatum_uses",
-            "wp_comm_at_sidearm"
+            "wp_comm_at_sidearm",
+            "xhh_romantic_loadout_20260823"
           ],
           "note": "玩家用于补足非反重支援装的重敌缺口；也有以低弹量和自伤风险拒用的意见。"
         },
@@ -6369,6 +8670,19 @@
             "wp_comm_at_sidearm"
           ],
           "note": "玩家肯定补足反重缺口的能力，但要掌握抛物线/安全距离并控制自伤、友伤与低备弹；有人主用也有人仅应急或拒用。"
+        },
+        {
+          "source_ids": [
+            "xhh_romantic_loadout_20260823"
+          ],
+          "note": "2026-08 配装用两颗通牒处理泰坦、坦克等高级重甲，作为轨道火力网之外的补刀。"
+        },
+        {
+          "source_ids": [
+            "xhh_191198790"
+          ],
+          "note": "2026-09 同期债券的铝热手枪四发弹容吃一口补给只补一发，玩家拿来和通牒的补给待遇比较；说的是另一把副武器，仅作补给体系线索。",
+          "as_of": "2026-09-23"
         }
       ]
     },
@@ -7275,6 +9589,24 @@
             "cnwp_reddit_thermite_conditions"
           ],
           "note": "有人看重口袋反重，有人不喜欢命中难度、反弹与生效延迟；场景和偏好不能抹平。"
+        },
+        {
+          "id": "player.illuminate_recommended",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_183610508"
+          ],
+          "note": "2026-06 玩家比较手雷位时说铝热在南线反而有优势，可以无交互拆飞碟。",
+          "as_of": "2026-06-17"
+        },
+        {
+          "id": "player.automaton_recommended",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_183610508"
+          ],
+          "note": "同一帖说铝热在西线能稳定杀坦克和炮塔，只是千兆瞬爆加AOE更香。",
+          "as_of": "2026-06-17"
         }
       ],
       "occupancy": {
@@ -7301,6 +9633,13 @@
             "cnwp_reddit_thermite_conditions"
           ],
           "note": "讨论存在分歧：认可反重补位，但有人嫌难投中、起效慢或支援武器更顺手；并非所有玩家的统一评级。"
+        },
+        {
+          "source_ids": [
+            "xhh_183610508"
+          ],
+          "note": "2026-06 玩家复盘：千兆级和雷管加强后铝热被完爆，东线彻底查无此人，毒雷、千兆、雷管三巨头一个没法碰瓷；西线还能稳定杀坦克炮塔，南线有无交互拆飞碟的优势。",
+          "as_of": "2026-06-17"
         }
       ]
     },
@@ -7688,6 +10027,24 @@
             "ut_grenade_g_109_urchin"
           ],
           "note": ""
+        },
+        {
+          "id": "player.stealth",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_191404589"
+          ],
+          "note": "玩家认为海胆其实是为潜行特化的控制手雷，一颗能让潜兵无视某个敌人十多秒，东线潜行单通离不开它。",
+          "as_of": ""
+        },
+        {
+          "id": "player.crowd_control",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_191404589"
+          ],
+          "note": "同一帖说用它打正面肯定差强人意，但换成潜行这个本职工作表现十分亮眼。",
+          "as_of": ""
         }
       ],
       "occupancy": {
@@ -7742,6 +10099,25 @@
             "ut_grenade_g_31_arc"
           ],
           "note": ""
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_188301211",
+            "xhh_184350501"
+          ],
+          "note": "玩家称电弧雷是清杂好手，清杂手雷里除毒雷几乎没有清得过它的；雷霆跳弹还被用来在撤离前清场。",
+          "as_of": "2026-08-17"
+        },
+        {
+          "id": "player.friendly_fire_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_188301211"
+          ],
+          "note": "玩家专门提醒：第一发精准可控，但后续链锁基本180度范围内都可能致命，怪后面的队友不能射，不电队友是玩电弧最基础的。",
+          "as_of": "2026-08-17"
         }
       ],
       "occupancy": {
@@ -7754,7 +10130,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。放电和弹跳可能伤及队友，不能替代虫洞/制造厂拆迁工具。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_191137163"
+          ],
+          "note": "2026-09 玩家澄清电榴弹的电弧同样不会锁定趴下的潜兵，近距离可以通过飞扑避免被锁定；与『自伤回归』的公告讨论同月。",
+          "as_of": "2026-09-22"
+        }
+      ]
     },
     {
       "id": "grenade.tm-1-lure-mine",
@@ -8013,6 +10398,20 @@
             "ut_community_support"
           ],
           "note": "即时爆炸被多位玩家认为能方便救急，但有效内圈小、近距离自伤风险及携带量限制需要配合落点和补给；反重方便程度有个人偏好，不等同纸面穿甲等级。"
+        },
+        {
+          "source_ids": [
+            "tieba_at_seeker_20261022"
+          ],
+          "note": "玩家称其长期强势的原因是直击伤害稳定，不依赖锁定或溅射覆盖。"
+        },
+        {
+          "source_ids": [
+            "xhh_183610508",
+            "bili_BV1LwhQ6QEat"
+          ],
+          "note": "2026-06 玩家称千兆和雷管加强后压制了铝热，千兆瞬爆加AOE很香；9月神九门又拿它当反坦克追踪者的功能性与反应速度上限。",
+          "as_of": "2026-09-26"
         }
       ]
     },
@@ -8064,6 +10463,43 @@
             "ut_grenade_g_40_k_melta_mine"
           ],
           "note": "可安全距离射击引爆以拆建筑。"
+        },
+        {
+          "id": "player.anti_tank",
+          "basis": "community_observation",
+          "source_ids": [
+            "tieba_at_seeker_20261022",
+            "xhh_romantic_loadout_20260823"
+          ],
+          "note": "2026-10 玩家认为它是手雷位反强袭虫与泰坦最稳的选择，炸泰坦脚部也能处理；对蟑龙这类目标无效。"
+        },
+        {
+          "id": "player.structure_demolition",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1pGnn67E7U"
+          ],
+          "note": "2026-10 玩家给出拆巢方法：扔出地雷后拿枪点爆，或直接往虫洞附近的虫子身上扔，爆炸拆毁范围约7米、能全向拆小虫洞，泰坦洞要扔近洞口。",
+          "as_of": "2026-10-19"
+        },
+        {
+          "id": "player.precise_aim_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1pGnn67E7U",
+            "bili_BV1MXt66TE4s"
+          ],
+          "note": "玩家指出泰坦左前腿血量低，要往左前腿扔、射流命中基本能秒，投掷距离可按住前进并抬高视角增加；另有玩家说扎腿能炸但很不稳定。",
+          "as_of": "2026-10-19"
+        },
+        {
+          "id": "player.self_damage_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1uDb26dEW5"
+          ],
+          "note": "2026-08 神九门把热熔地雷概括为手短、自杀、不好反泰坦、会被中型单位踩爆、需要手动引爆；该说法早于10月的打点技巧，按历史观点保留。",
+          "as_of": "2026-08-16"
         }
       ],
       "occupancy": {
@@ -8076,7 +10512,23 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。无社区实战便利性评价；Wiki所述个别一击击杀细节有讨论争议，未收录这些保证。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_romantic_loadout_20260823"
+          ],
+          "note": "2026-08 配装带六颗热熔地雷处理无畏与大锤哥；作者对比千兆：容量少、有时秒不掉强袭虫、碰到西线坦克模板乏力，热熔地雷不受此限。"
+        },
+        {
+          "source_ids": [
+            "bili_BV1YzYZ6qEDr",
+            "bili_BV1MXt66TE4s"
+          ],
+          "note": "时间线：2026-08 简介说它不好反泰坦、手短、需手动引爆；2026-09 玩家说热熔两件套给潜行很大灵活度、能高效清小中甲集群，但东线反泰坦仍差点、扎腿不稳定；2026-10 给出往泰坦左前腿扔基本能秒的打点方法。以最新打点结论为准。",
+          "as_of": "2026-09-13"
+        }
+      ]
     },
     {
       "id": "grenade.g-8-immolation",
@@ -8126,6 +10578,15 @@
             "ut_grenade_g_8_immolation"
           ],
           "note": ""
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1FJaP6ZETP"
+          ],
+          "note": "2026-09 有『堪称手持飞鹰火』的新债券焚身火雷2300杀东线N10单通视频，评论称确实很不错。",
+          "as_of": "2026-09-24"
         }
       ],
       "occupancy": {
@@ -8138,7 +10599,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。火场弹无拆迁力；Wiki报告洞穴内火焰问题，不能以爆炸式投掷物的名称推导拆洞能力。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "bili_BV1FJaP6ZETP"
+          ],
+          "note": "2026-09 评论提醒组个反重仙人，不然这套火雷配装反重压力有点大。",
+          "as_of": "2026-09-24"
+        }
+      ]
     },
     {
       "id": "grenade.g-60-anti-tank-seeker",
@@ -8180,6 +10650,58 @@
             "ut_official_ironclad"
           ],
           "note": "官方定位为对装甲载具的导引投掷物。"
+        },
+        {
+          "id": "player.anti_tank",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_at_seeker_20261006"
+          ],
+          "note": "西线玩家称两发大概率处理重甲单位，配合补给背包可单人拦车队；锁定机制影响对移动目标的命中。"
+        },
+        {
+          "id": "player.structure_demolition",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_at_seeker_20261006"
+          ],
+          "note": "玩家称拆迁小构筑方便；具体目标未逐一列举。"
+        },
+        {
+          "id": "player.preparation_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_at_seeker_20261006"
+          ],
+          "note": "UP主总结几乎全能但被锁定机制拖累，需要等待锁定并预判目标走向。"
+        },
+        {
+          "id": "player.automaton_recommended",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_at_seeker_20261006"
+          ],
+          "note": "评论明确称西线好用，作为不占支援武器位的脱手反重。"
+        },
+        {
+          "id": "player.self_damage_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1uHh962EdH",
+            "xhh_196187863"
+          ],
+          "note": "2026-09 玩家说太近炸牛经常把自己炸飞；另有帖子记录用它拆泰坦巢时手雷飞回来把机甲炸成人棍。",
+          "as_of": "2026-09-26"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1LwhQ6QEat",
+            "bili_BV1uHh962EdH"
+          ],
+          "note": "神九门评语称越用越顺手、债券整体西线T-1，但东线适应与练习成本明显更高、综合功能性和反应速度弱于千兆；也有玩家说炸泰坦扔了三发头还没死。",
+          "as_of": "2026-09-26"
         }
       ],
       "occupancy": {
@@ -8192,7 +10714,23 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。没有当前所选社区资料的反重便利性评价；Wiki提示飞行轨迹及命中部位可能令对泰坦不稳定，不将官方定位当可靠击杀保证。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "tieba_at_seeker_20261022"
+          ],
+          "note": "2026-10 玩家实测打蟑龙两发不稳、有时要四发；讨论认为溅射或空中提前引爆导致伤害丢失，锁定制导类普遍不如直击稳定。"
+        },
+        {
+          "source_ids": [
+            "bili_BV1LwhQ6QEat",
+            "xhh_192832948"
+          ],
+          "note": "2026-09 神九门简介写『越用越顺手』、债券整体西线T-1，东线适应与练习成本显著高于西线；10月有玩家把它放进三线通用科研配装。",
+          "as_of": "2026-10-05"
+        }
+      ]
     },
     {
       "id": "grenade.g-11-caltrops",
@@ -8234,6 +10772,15 @@
             "ut_grenade_g_11_caltrops"
           ],
           "note": "子雷可在狭窄通路提供减速眩晕。"
+        },
+        {
+          "id": "player.crowd_control",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_194785791"
+          ],
+          "note": "2026-10 债券体验帖称铁蒺藜能停牛，可以保护喷火炮台免于被牛换掉。",
+          "as_of": ""
         }
       ],
       "occupancy": {
@@ -8246,7 +10793,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；已按可读搜索索引摘录标注，未固定Wiki修订。主要为近炸控制与预警，未据低额爆炸标签推导大范围杀伤或拆迁。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_194548744"
+          ],
+          "note": "2026-10 有帖子专门打假：宣传里『铁蒺藜两颗子炸弹炸死武斗』做不到，实际是潜兵补的枪；同期也有人打假尖峰颗秒大双足裆部。属反夸大线索，不作为强度结论。",
+          "as_of": "2026-10-21"
+        }
+      ]
     },
     {
       "id": "booster.hellpod-space-optimization",
@@ -8379,7 +10935,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_188324177"
+          ],
+          "note": "2026-08 评价帖把侦察强化列T1：可达200米雷达，在低能见、多障碍时预知巡逻队，对空爆类玩法尤其有用。",
+          "as_of": "2026-08-17"
+        }
+      ]
     },
     {
       "id": "booster.stamina-enhancement",
@@ -8419,7 +10984,17 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_188392125",
+            "xhh_134552096"
+          ],
+          "note": "强化资源简评说耐力强化增加体力上限并加快回复，极暑星球几乎必带，普通星球也能增加满管体力奔跑距离和后续回复速度；另一篇给出轻甲无强化约30秒持续、约11秒恢复的实测。",
+          "as_of": ""
+        }
+      ]
     },
     {
       "id": "booster.muscle-enhancement",
@@ -8458,7 +11033,17 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_188324177",
+            "xhh_191105124"
+          ],
+          "note": "2026-08 评价帖称肌肉强化可抵消地形减速，对孢子、柏油、冰面、沙暴都起效；9月有玩家认为三线里它强到可以称T0，不只是暴雪沙暴的对策卡。",
+          "as_of": "2026-09-22"
+        }
+      ]
     },
     {
       "id": "booster.increased-reinforcement-budget",
@@ -8488,7 +11073,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_188324177"
+          ],
+          "note": "同帖把提高增援预算列T2：增援预算加四个，但如果20个都不够用，24个也没变化。",
+          "as_of": "2026-08-17"
+        }
+      ]
     },
     {
       "id": "booster.flexible-reinforcement-budget",
@@ -8518,7 +11112,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_188324177"
+          ],
+          "note": "同帖把灵活增援预算列T3：恢复时间缩短到一分三十秒，但耗光20个后要不间断消耗24分钟增援才超过提高增援预算。",
+          "as_of": "2026-08-17"
+        }
+      ]
     },
     {
       "id": "booster.localization-confusion",
@@ -8548,7 +11151,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。社区提醒它不作用于所有任务自动刷怪；尚待正文与实际宿主规则进一步核对。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_188324177"
+          ],
+          "note": "同帖说明定位混淆在一直拉烟时把拉烟间隔延长约10%，但一波烟出来的怪物总量不变。",
+          "as_of": "2026-08-17"
+        }
+      ]
     },
     {
       "id": "booster.expert-extraction-pilot",
@@ -8616,7 +11228,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_188324177"
+          ],
+          "note": "同帖说明激励性冲击：帮助提前零点几秒从东线酸性地雷和霸王虫吐酸中恢复。",
+          "as_of": "2026-08-17"
+        }
+      ]
     },
     {
       "id": "booster.experimental-infusion",
@@ -8760,6 +11381,16 @@
             "cnwp_reddit_booster_conditions"
           ],
           "note": "玩家意见分歧，常配合生命强化和队伍协调使用。 延长机动但扣血争议大，常结合生命强化。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_156003094",
+            "xhh_189280362"
+          ],
+          "note": "付费债券简评称它耐力耗尽后烧血续航、配合生命强化能跑超久、十分好用；但野排很多人不喜欢血条烧掉一点又要打针，严重的甚至会被踢，也说它打不过五天王。另有玩家直接称它是最简单最轮椅。",
+          "as_of": "2026-08-28"
         }
       ],
       "occupancy": {
@@ -8826,7 +11457,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_188324177"
+          ],
+          "note": "同帖把武装重新补给仓列为防守图常见选择。",
+          "as_of": "2026-08-17"
+        }
+      ]
     },
     {
       "id": "booster.sample-extricator",
@@ -8864,7 +11504,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_188324177"
+          ],
+          "note": "同帖说明样本拯救者：击杀大型敌人时按概率给一个普通样本。",
+          "as_of": "2026-08-17"
+        }
+      ]
     },
     {
       "id": "booster.sample-scanner",
@@ -8902,7 +11551,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_188324177"
+          ],
+          "note": "同帖说明样本扫描仪：拾取普通样本时15%概率多一个普通样本。",
+          "as_of": "2026-08-17"
+        }
+      ]
     },
     {
       "id": "booster.stun-pods",
@@ -9090,6 +11748,16 @@
             "ut_official_ironclad"
           ],
           "note": "较快灭火可降低暴露于燃烧的负担。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_192686042",
+            "xhh_183645581"
+          ],
+          "note": "2026-06 新强化预览称内置灭火器让人不再需要翻滚灭火；2026-10 则有玩家质疑被点着不飞扑也得死、灭火阈值不明、意义存疑。以较新的质疑为准，保留预览作历史。",
+          "as_of": "2026-10-04"
         }
       ],
       "occupancy": {
@@ -9102,7 +11770,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki正文访问返回403；效果依据可读索引摘录，未固定Wiki修订。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_191309820"
+          ],
+          "note": "2026 铁甲民主债券体验把集成灭火器等新强化放在一起做T度评价，说明它属于同批讨论对象。",
+          "as_of": ""
+        }
+      ]
     },
     {
       "id": "stratagem.orbital-precision-strike",
@@ -9149,7 +11826,17 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "bili_BV11YZ6BNEWX",
+            "xhh_193389512"
+          ],
+          "note": "2026-02 有玩家说100秒冷却低廉就能丢、很长一段时间把它当500kg用，还称一发够炸烂探测塔；2026-10 另一批玩家嫌1分30只能射击一次，希望缩到20秒。",
+          "as_of": "2026-10-10"
+        }
+      ]
     },
     {
       "id": "stratagem.orbital-gatling-barrage",
@@ -9203,7 +11890,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_147172828"
+          ],
+          "note": "2025-02 有玩家做动态战备演示时说轨道加特林火力网『怪怪的、还说不上哪里怪』；属早期观感，未作为当前结论。",
+          "as_of": "2025-02-15"
+        }
+      ]
     },
     {
       "id": "stratagem.orbital-gas-strike",
@@ -9327,7 +12023,18 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "bili_BV1RRYs67E38",
+            "xhh_170950295"
+          ],
+          "note": "【历史观点，已被更新证据覆盖】2026-09 高赞对比120与380，认为380能干的120都能干，380大概只剩拆机器人堡垒或虫子巨巢；2025-12 曾有玩家说两个120间隔10秒扔烟里可压完一整波虫烟。以2026年对比结论为准。",
+          "as_of": "2026-09-09",
+          "historical": true
+        }
+      ]
     },
     {
       "id": "stratagem.orbital-airburst-strike",
@@ -9382,7 +12089,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_164538783"
+          ],
+          "note": "全战备介绍红战备篇指出轨道空爆可瞬间摧毁范围内中小型目标，但无法对重甲目标造成有效杀伤。",
+          "as_of": ""
+        }
+      ]
     },
     {
       "id": "stratagem.orbital-smoke-strike",
@@ -9413,7 +12129,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_169699491"
+          ],
+          "note": "2025-11 社区小报记录轨道烟雾攻击冷却时间增加30秒；属旧版本改动，按历史观点保留。",
+          "as_of": "2025-11-29"
+        }
+      ]
     },
     {
       "id": "stratagem.orbital-ems-strike",
@@ -9493,6 +12218,16 @@
             "cnroot_automatons_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1RRYs67E38",
+            "xhh_193031834"
+          ],
+          "note": "2026-09 高赞认为120比380好搓、冷却快、落点集中、弹药投送率高，想不出380的优势；10月有玩家直接说『我们找到了比你更好的，现在你被开除了』。",
+          "as_of": "2026-10-06"
         }
       ],
       "occupancy": {
@@ -9506,7 +12241,15 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_romantic_loadout_20260823"
+          ],
+          "note": "玩家把轨道游走与轨道380成对投放，称相当于每轮六发炮弹，比单用多一枚炮弹和清重甲能力。"
+        }
+      ]
     },
     {
       "id": "stratagem.orbital-walking-barrage",
@@ -9556,6 +12299,14 @@
             "cnst_barrages_practice"
           ],
           "note": "玩家尤其肯定机器人推进拆基地用途；方向与区域仍需规划。"
+        },
+        {
+          "id": "player.area_denial",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_romantic_loadout_20260823"
+          ],
+          "note": "2026-08 三线通用配装把轨道游走、轨道380与轨道燃烧轮流投放，作者称三个轨道火力网足以压住任何模板的每一波增援。"
         }
       ],
       "occupancy": {
@@ -9626,6 +12377,15 @@
             "cnst_bili_2025_loadouts"
           ],
           "note": "2025攻略：用于拆点。"
+        },
+        {
+          "id": "player.objective_support",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_182557076"
+          ],
+          "note": "玩家说西线、南线都会带，西线用来引导处理任务目标，同时刷出很多大怪不能快速处理时喊它。",
+          "as_of": "2026-06-01"
         }
       ],
       "occupancy": {
@@ -9699,7 +12459,22 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_romantic_loadout_20260823"
+          ],
+          "note": "东线烟持续时间较长；队友也带轨道燃烧时可错开投放，轮流压住剩下的增援。"
+        },
+        {
+          "source_ids": [
+            "bili_BV1fXnD6hEiE"
+          ],
+          "note": "2026-10 玩家提出毒气地雷加火炮塔的压烟法，明确说相比轨道火的CD，这个方法每波烟都能接、输出环境安逸，最适合需要站桩换弹的战备。",
+          "as_of": "2026-10-26"
+        }
+      ]
     },
     {
       "id": "stratagem.orbital-railcannon-strike",
@@ -9769,6 +12544,15 @@
             "cnst_barrages_practice"
           ],
           "note": "自动选目标省瞄准，部分玩家看重瞬时应对特定重型；目标选择与冷却令评价分歧，不能保证消灭所有重甲。"
+        },
+        {
+          "source_ids": [
+            "xhh_194957308",
+            "xhh_194961432",
+            "xhh_194960583"
+          ],
+          "note": "2026-10-25 多条帖子同时提到轨道炮攻击减CD，玩家称30多秒的轨道炮随便甩、自己再带一个一共三个，落地连喊轨道攻击给无畏『插双马尾』。",
+          "as_of": "2026-10-25"
         }
       ]
     },
@@ -9815,7 +12599,17 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "bili_BV1MuHy6hE9m",
+            "bili_BV128pP6mEXD"
+          ],
+          "note": "2026-10 有专门讲飞鹰毒怎么配装的两分钟视频，同期评论提到对增援的压制；未见可读的具体结论，暂只作线索。",
+          "as_of": "2026-10-08"
+        }
+      ]
     },
     {
       "id": "stratagem.eagle-strafing-run",
@@ -9841,6 +12635,25 @@
             "cnst_bili_2025_loadouts"
           ],
           "note": "2025攻略：清杂与压增援。"
+        },
+        {
+          "id": "player.structure_demolition",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1ikC1BYE5i",
+            "xhh_188779512"
+          ],
+          "note": "2025-11 高赞称它在西线是拆迁好手、4+1发且CD极短；2026-08 有玩家查Wiki说100发里25发高爆弹带30爆炸拆，推论可用来拆虫洞。",
+          "as_of": "2026-08-22"
+        },
+        {
+          "id": "player.easy_to_use",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1ikC1BYE5i"
+          ],
+          "note": "同一评论称它反应速度快、解锁极早，从萌新用到老登，能开路能断后。",
+          "as_of": "2025-11-15"
         }
       ],
       "occupancy": {
@@ -9854,7 +12667,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "bili_illuminate_harvester_20241213"
+          ],
+          "note": "【历史观点，已被更新证据覆盖】2024-12光能族版本玩家先用扫射打掉猎杀器护盾，再补爆炸物拆除营地飞船；属该版本观点，之后有多次平衡改动。",
+          "historical": true
+        }
+      ]
     },
     {
       "id": "stratagem.eagle-airstrike",
@@ -9951,6 +12773,15 @@
             "cnst_airburst_cluster"
           ],
           "note": "玩家指出横向宽覆盖和投放方向可造成队友伤亡。"
+        },
+        {
+          "id": "player.anti_tank",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV13Ag66fE76"
+          ],
+          "note": "2026-07 玩家称集束在东线反重清杂都可以，只是范围太长容易把队友一起炸死。",
+          "as_of": "2026-07-22"
         }
       ],
       "occupancy": {
@@ -10048,7 +12879,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_152297779"
+          ],
+          "note": "全战备评测红战备篇说明它在一代叫火墙，二代因地图较大和伤害不稳定应用面不广，投弹4-5枚燃烧弹覆盖地面、弹体250伤害、穿透3级、火焰半径8米。",
+          "as_of": ""
+        }
+      ]
     },
     {
       "id": "stratagem.eagle-110mm-rocket-pods",
@@ -10074,6 +12914,24 @@
             "st_traits"
           ],
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
+        },
+        {
+          "id": "player.single_target",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV18djf6ZENe"
+          ],
+          "note": "2026-06 玩家称它确实能用了，基本用途就是点杀牛和无畏之类，但一发千兆也能做到，仍不配跟机枪、空袭、500抢位置。",
+          "as_of": "2026-06-21"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1MUUSBCETP"
+          ],
+          "note": "2025-11 有玩家说刚开始以为很行、后来发现打泰坦几次不死、锁牛牛却炸地板；与2026年『能用了但不突出』并存。",
+          "as_of": "2025-11-25"
         }
       ],
       "occupancy": {
@@ -10145,6 +13003,16 @@
             "cnst_bili_2025_loadouts"
           ],
           "note": "2025攻略：进攻拆点。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV18djf6ZENe",
+            "xhh_166299225"
+          ],
+          "note": "2026-06 玩家认为500在东线跟机枪扫射、空袭不算一个级别，『现在带个500都不知道能干什么用』，只算T2；优势区间是一发清掉大部分巢穴。2025-10 也有人说范围不大、清群清巢都炸不干净。",
+          "as_of": "2026-06-21"
         }
       ],
       "occupancy": {
@@ -10158,7 +13026,17 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "bili_BV1y7CTBKEb3",
+            "bili_BV18djf6ZENe"
+          ],
+          "note": "时间线：2025-11 神九门把飞鹰三兄弟概括为机枪纵向、空袭横向、500KG圆形消消乐，东西线基本至少带一个；2026-06 玩家改称500像轨道毒一样被毒雷毒地雷完爆、只能算T2。以2026年结论为准，旧观点保留作历史。",
+          "as_of": "2026-06-21"
+        }
+      ]
     },
     {
       "id": "stratagem.mg-43-machine-gun",
@@ -10190,6 +13068,15 @@
             "cnroot_illuminate_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.structure_demolition",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1EFxu6sETB"
+          ],
+          "note": "2026-10 玩家称在东线最喜欢拿这把免费的机枪拆泰坦巢。",
+          "as_of": "2026-10-27"
         }
       ],
       "occupancy": {
@@ -10250,7 +13137,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_195179124"
+          ],
+          "note": "2026-10 萌新说自己迷上次抛，一枪打中远处的泰坦、牛牛和穿刺虫，形容像给左轮上了唯一一发子弹。",
+          "as_of": "2026-10-28"
+        }
+      ]
     },
     {
       "id": "stratagem.m-105-stalwart",
@@ -10290,6 +13186,15 @@
             "cnst_stalwart_practice"
           ],
           "note": "用于清无票者与虫潮；玩家常让爆炸主手承担较硬目标，与盟友互补。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_195985905"
+          ],
+          "note": "2026-11 玩家说普通虫子盟友泼水压制力很强，但新变种里明显变弱，后面受不了改玩榴弹。",
+          "as_of": "2026-11-04"
         }
       ],
       "occupancy": {
@@ -10375,6 +13280,16 @@
             "cnst_tieba_laser_cannon"
           ],
           "note": "历史反馈更偏向先由爆炸战备压血，再用激光补刀；不是新增通用反重主职责。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1eg4B6PEdS",
+            "xhh_157534451"
+          ],
+          "note": "2026-11 有玩家说输出太低、不打弱点打一辈子；也有玩家认为它无后坐力、无下坠、超长射程，滋死大半虫群、飞龙碰一下就死。",
+          "as_of": "2026-11-06"
         }
       ],
       "occupancy": {
@@ -10446,6 +13361,26 @@
             "cnst_amr_discussion"
           ],
           "note": "重型需特定弱点与精确命中；标签限这些用途，不沿用旧弹数。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1yznx6PEmL",
+            "xhh_188425761"
+          ],
+          "note": "2026-10 玩家称西线完全算神九门、东南只能算新九门且有衰减bug；2026-08 另一批玩家认为趴下对腿两个弹夹就够轮椅，门槛争议明显。",
+          "as_of": "2026-10-23"
+        },
+        {
+          "id": "player.preparation_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1uBTw66EKf",
+            "xhh_188425761"
+          ],
+          "note": "需要趴下从容打点、没有准星，新手在第一人称瞄准上手前容易打空；一波失误就会堆怪。",
+          "as_of": "2026-08-18"
         }
       ],
       "occupancy": {
@@ -10520,6 +13455,16 @@
             "st_comm_melta"
           ],
           "note": "相对蓄力/持续照射方案，玩家认可直接爆发处理重型；仍需弹药和装填空间，不是全场景无门槛。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_193373431",
+            "xhh_176855204"
+          ],
+          "note": "2026-10 有玩家直言东线进图哪哪都不行、感觉都有上位；另有长帖分析风评由盛转衰：反重压力小的图用不上，高压图罚站换弹容易被踢死，单通更明显。",
+          "as_of": "2026-10-10"
         }
       ],
       "occupancy": {
@@ -10541,6 +13486,27 @@
             "st_comm_melta"
           ],
           "note": "讨论中多位玩家认可其直接爆发反重；前提是有弹药、装填空间并接受背包占用。并非所有重目标都保证一击。"
+        },
+        {
+          "source_ids": [
+            "bili_illuminate_harvester_20241213"
+          ],
+          "note": "【历史观点，已被更新证据覆盖】2024-12光能族版本玩家用其一发打掉猎杀器与飞船腹部出兵口；属该版本观点，后续有平衡改动。",
+          "historical": true
+        },
+        {
+          "source_ids": [
+            "xhh_romantic_loadout_20260823"
+          ],
+          "note": "比较弹药量时指出无后座只有六发炮弹，而六颗热熔地雷足以在不补给的情况下处理多轮重甲。"
+        },
+        {
+          "source_ids": [
+            "xhh_189430263",
+            "xhh_176855204"
+          ],
+          "note": "2026-08 有玩家问打穿刺不管开没开壳都要两发是不是没打弱点；另有长帖把罚站换弹、生存与清杂问题列为风评下滑主因，单通时没有队友分担火力会更难受。",
+          "as_of": "2026-08-30"
         }
       ]
     },
@@ -10576,6 +13542,25 @@
             "cnroot_automatons_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_194108486",
+            "xhh_175911558"
+          ],
+          "note": "2026-10 玩家认为它伤害高、射速不慢、很强但出场少；另一篇配装帖说榴弹直接炸小虫、能解放一个战备位。",
+          "as_of": "2026-10-17"
+        },
+        {
+          "id": "player.self_damage_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_190356461"
+          ],
+          "note": "2026-09 玩家实测榴弹有时瞬爆、有时先弹一下再爆，被弹回来的榴弹把自己炸飞好几次。",
+          "as_of": "2026-09-10"
         }
       ],
       "occupancy": {
@@ -10589,7 +13574,17 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "bili_BV1Zph86oENf",
+            "bili_BV1AfZTBuE4c"
+          ],
+          "note": "时间线：2026-02 神九门标注『榴弹神已被回调』（此前短暂四级穿甲），2026-09 玩家谈到1800伤害阈值与千兆差不多、并给出标记泰坦等吐酸停下时往肚子下扔可一发送走；以2026-09后的表现为准。",
+          "as_of": "2026-09-23"
+        }
+      ]
     },
     {
       "id": "stratagem.flam-40-flamethrower",
@@ -10614,6 +13609,17 @@
             "cnroot_illuminate_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_193358598",
+            "xhh_193693469",
+            "xhh_176057187"
+          ],
+          "note": "2026-10 有人给出东线烈焰站桩套，称火焰喷射器对付中距离大群重甲绰绰有余；同期也有萌新说没网上说的那么强、射程近被虫子两刀重新部署，另一篇说持续开火减速导致清杂效率不高。",
+          "as_of": "2026-10-14"
         }
       ],
       "occupancy": {
@@ -10735,6 +13741,14 @@
             "cnst_hmg_practice"
           ],
           "note": "能靠重甲弱点处理巨型者/收割者等；精度、姿态、换弹窗口要求高，实用性评价有分歧。"
+        },
+        {
+          "source_ids": [
+            "bili_BV1cshV6pENt",
+            "bili_BV1EFxu6sETB"
+          ],
+          "note": "2026-08 玩家说100发打起来不一样、能用来反中清杂；10月有人补充使用重机枪支架时仇恨优先级会低于队友，且它命中体积比看上去小。",
+          "as_of": "2026-10-27"
         }
       ]
     },
@@ -10848,6 +13862,12 @@
             "cnst_autocannon_tips"
           ],
           "note": "重甲多依赖AP模式和弱点；泰坦等建议额外反重配合，不等于泛用反重便捷。"
+        },
+        {
+          "source_ids": [
+            "xhh_romantic_loadout_20260823"
+          ],
+          "note": "在三重轨道火力网配装中负责清理被炮火轰过一轮的残兵与巡逻队，作者看重其功能性。"
         }
       ]
     },
@@ -10913,6 +13933,24 @@
             "st_comm_arc_advice"
           ],
           "note": "反重只保留已有伤重收尾语境，主要玩家职责仍为清群/眩晕。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_arc_20261108"
+          ],
+          "note": "同版本既有玩家以它单通N10毒瘴变种全清，也有人认为电弧数量不足而一直不推荐，强度评价分歧。"
+        },
+        {
+          "id": "player.friendly_fire_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_186648042",
+            "xhh_196112502"
+          ],
+          "note": "玩家明确列出蓄力走路、锁定尸体、不小心电死队友等毒点；2026-11 有人因『玩电弧没TK过队友』被老外称赞，可见误伤口碑。",
+          "as_of": "2026-11-05"
         }
       ],
       "occupancy": {
@@ -10933,6 +13971,12 @@
             "st_comm_arc_advice"
           ],
           "note": "玩家主定位为清群、眩晕和辅助队友；高耐久重目标击杀慢，常建议用专用反重补位。已有伤重可收尾，不能按 Wiki Anti-Tank 展示特征算方便反重。"
+        },
+        {
+          "source_ids": [
+            "bili_arc_20261108"
+          ],
+          "note": "该视频以ARC-3完成N10虫族毒瘴变种千杀全清，说明上限存在但高度依赖操作与配装。"
         }
       ]
     },
@@ -10983,6 +14027,16 @@
             "st_comm_nova"
           ],
           "note": "玩家明确指出蓄力、受击晃动和射后冷却影响连续反重，需安排发射窗口。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1xSet6GETj",
+            "xhh_191454451"
+          ],
+          "note": "2026-09 视频标题即称其从人手一把到无人问津，高赞评论指冷却太慢、堆怪量下杀得慢约等于没杀；另有玩家算出2000直击却常要两发点掉大狗炮。旧的『配装不用思考』评价保留为历史。",
+          "as_of": "2026-09-27"
         }
       ],
       "occupancy": {
@@ -11003,6 +14057,21 @@
             "st_comm_nova"
           ],
           "note": "免弹药与空闲背包槽受好评；蓄力、受击晃动和射后长冷却使连续反重不如即时开火方案方便。"
+        },
+        {
+          "source_ids": [
+            "bili_quasar_20251226"
+          ],
+          "note": "【历史观点，已被更新证据覆盖】玩家认为其最大优点是配装时不用思考，可稳定占一个反重位；也有人认为视频表现主要来自基本功，不代表武器本身强度。",
+          "historical": true
+        },
+        {
+          "source_ids": [
+            "bili_BV1xSet6GETj",
+            "bili_BV199ny6iERQ"
+          ],
+          "note": "2026-09 视频标题『从人手一把的反重武器到如今的无人问津』，高赞指冷却和蓄力期间连无后座都能打出去一半弹药；10月出现『再见了磁轨纪元类星体』的新星单通视频。较旧的『配装不用思考』评价降为历史观点。",
+          "as_of": "2026-10-22"
         }
       ]
     },
@@ -11042,7 +14111,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_189377814"
+          ],
+          "note": "2026-08 玩家问空爆模式往高打在天上爆、往低完全不爆，还不如直击模式，且拆孢子太慢。",
+          "as_of": "2026-08-30"
+        }
+      ]
     },
     {
       "id": "stratagem.mls-4x-commando",
@@ -11191,7 +14269,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_182877308"
+          ],
+          "note": "玩家讨论磁轨炮加强方案时提到，自从反器材步枪加强到同样能对无畏颗秒后，飞矛一类蓄力武器的缺点更明显；属讨论线索，未作为强度结论。",
+          "as_of": ""
+        }
+      ]
     },
     {
       "id": "stratagem.rs-422-railgun",
@@ -11365,6 +14452,44 @@
           "source_ids": [
             "st_apex"
           ]
+        },
+        {
+          "id": "player.anti_tank",
+          "basis": "community_observation",
+          "source_ids": [
+            "tieba_recommend_20261102"
+          ],
+          "note": "2026-11 回归玩家求推荐时被点名为主推，玩家称其重甲消消乐、三线通用；备弹五乘五且战术换弹可留一发，容错高于一次性反重。"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1pBx16NEF5",
+            "bili_BV1Hb4F6qEFL"
+          ],
+          "note": "2026-11 玩家称尖峰打红色变种时反重甲好用、清杂感觉也不错，且弹药效率太高，可以从容吃野外补给。",
+          "as_of": "2026-11-02"
+        },
+        {
+          "id": "player.single_target",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1pBx16NEF5",
+            "xhh_194785791"
+          ],
+          "note": "2026-11 配装教学强调打点，神九门评论称视野里有指挥官和牛会先抽指挥官；债券测评给出蹲/趴时弹容5、背包备弹4共25发。",
+          "as_of": "2026-11-01"
+        },
+        {
+          "id": "player.preparation_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_194785791",
+            "xhh_194548744"
+          ],
+          "note": "使用时需要蹲或趴，能打断牛牛冲刺；对泰坦头等弱点两枪可解决，但打大双足裆部因衰减往往要两三枪。",
+          "as_of": "2026-10-21"
         }
       ],
       "occupancy": {
@@ -11378,7 +14503,23 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "tieba_recommend_20261102"
+          ],
+          "note": "推荐语境偏保底反重：清杂交给其他位，西线还需主副手有一个能拆巢。"
+        },
+        {
+          "source_ids": [
+            "xhh_194548885",
+            "xhh_194548744"
+          ],
+          "note": "2026-10 有玩家试玩称两枪能爆泰坦或白牛的头、蓄力冷却短、无限弹药，在非孢裂变种里甚至能和无后座竞争反重；另一帖随即打假，指出大双足裆部4甲1800血，尖峰5穿1550/930，零距离也要两枪、算衰减要三枪。",
+          "as_of": "2026-10-21"
+        }
+      ]
     },
     {
       "id": "stratagem.cqc-20-breaching-hammer",
@@ -11419,6 +14560,15 @@
             "cnroot_automatons_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.supply_dependent",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_187167445"
+          ],
+          "note": "玩家指出只有七枚炸药、不能清杂、主武器弹药压力大，普遍建议搭配喷气或传送背包，并担心续航。",
+          "as_of": ""
         }
       ],
       "occupancy": {
@@ -11472,6 +14622,34 @@
             "cnroot_illuminate_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_180251675"
+          ],
+          "note": "玩家简评认为它适合中距离压制场景，近战和远距反而不如盟友。",
+          "as_of": ""
+        },
+        {
+          "id": "player.easy_to_use",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_180251675"
+          ],
+          "note": "同一篇简评称它特别好上手、属于萌新之友，是脱离补包体系的便携支援火力。",
+          "as_of": ""
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_183246377",
+            "xhh_180251675"
+          ],
+          "note": "2026-06 有玩家直接说它配传包打东线太痛苦，与简评里的萌新之友定位相反。",
+          "as_of": "2026-06-12"
         }
       ],
       "occupancy": {
@@ -11546,7 +14724,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_194548885"
+          ],
+          "note": "2026-10 玩家把纪元与类星体并列，称新星是它们的全面上位替代；说明同批次蓄力等离子武器的相对定位在变化。",
+          "as_of": "2026-10-21"
+        }
+      ]
     },
     {
       "id": "stratagem.s-11-speargun",
@@ -11588,6 +14775,25 @@
             "st_comm_support"
           ],
           "note": "帖子提到虫洞、制造厂与停泊飞船；这是玩家用途反馈，未硬编码所有结构兼容。"
+        },
+        {
+          "id": "player.single_target",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_191411009",
+            "xhh_186184560"
+          ],
+          "note": "2026-09 玩家称它能颗秒指挥官、被包围时对地一发让虫子吃尾气；7月有人补充它锁不到大型构筑者。",
+          "as_of": "2026-09-26"
+        },
+        {
+          "id": "player.preparation_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_186184560"
+          ],
+          "note": "锁定有目标限制，面对大型构筑者需要改用手雷拆除。",
+          "as_of": "2026-07-20"
         }
       ],
       "occupancy": {
@@ -11627,6 +14833,16 @@
             "st_traits"
           ],
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
+        },
+        {
+          "id": "player.area_denial",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_195177057",
+            "xhh_177152735"
+          ],
+          "note": "2026-10 南线N10守导弹时全次抛配装一次呼叫两发，能爽压一侧所有援军；另有测评给出内径10米致死、外半径25米只剩血皮的覆盖范围。",
+          "as_of": "2026-10-27"
         }
       ],
       "occupancy": {
@@ -11719,6 +14935,24 @@
             "st_comm_chainsaw_fun"
           ],
           "note": "现有玩具评价同条备注保留了实用反例/熟练玩家意见；表达分歧，不作无效或禁抽结论。"
+        },
+        {
+          "id": "player.self_damage_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV14a4g6LEfb"
+          ],
+          "note": "2026-11 玩家指出蓄力过程中被打断会自动往地上开枪把自己炸死，几乎只有这把武器有此问题。",
+          "as_of": "2026-11-03"
+        },
+        {
+          "id": "player.preparation_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV164ak6qEGF"
+          ],
+          "note": "2026-10 玩家称爽但短板大：基本没办法处理坦克工厂和大象，补给和拆构筑也是大问题。",
+          "as_of": "2026-10-02"
         }
       ],
       "occupancy": {
@@ -11765,6 +14999,24 @@
             "st_traits"
           ],
           "note": "仅记录 Wiki Heavy Armor Penetrating 展示特征，不表示实战方便反重。"
+        },
+        {
+          "id": "player.friendly_fire_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_gl52_20261106"
+          ],
+          "note": "近距开火会电到队友；玩家称及时飞扑基本不会自伤，但需要留意队友位置。"
+        },
+        {
+          "id": "player.supply_dependent",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_193364528",
+            "xhh_191189849"
+          ],
+          "note": "2026-10 玩家指出它东线猛吃补包，其他武器通常只在补反重时才吃；2026-09 又记录电榴弹自伤回归，续航与容错都受影响。",
+          "as_of": "2026-09-23"
         }
       ],
       "occupancy": {
@@ -11778,7 +15030,15 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "bili_gl52_20261106"
+          ],
+          "note": "2026-11玩家仍认为其强势，近距电击可处理集群；电榴弹与GL-52的对应依据是电弧加爆炸机制，官方译名待复核。"
+        }
+      ]
     },
     {
       "id": "stratagem.tx-41-sterilizer",
@@ -11804,6 +15064,26 @@
             "st_status"
           ],
           "note": "取气体混乱及减速机制，不把穿甲或气体数字视为方便反重。"
+        },
+        {
+          "id": "player.crowd_control",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1svWH6wEZK",
+            "bili_BV1cEsf6aE3A"
+          ],
+          "note": "2026-10/11 有视频用它打出1622杀并单通N10孢裂；但11月高赞指出毒气混乱效果像抽奖，控制与压制多数时候不如火焰恐惧。",
+          "as_of": "2026-11-08"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1svWH6wEZK",
+            "bili_BV1TqTF6YE3d"
+          ],
+          "note": "同一批讨论里既有为其正名的单通视频，也有玩家说混乱效果比其他毒气武器更差、还占火力投射位置。",
+          "as_of": "2026-11-08"
         }
       ],
       "occupancy": {
@@ -11850,6 +15130,35 @@
             "cnroot_automatons_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.anti_tank",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV18znu6cEWc",
+            "xhh_189984707"
+          ],
+          "note": "2026-10 视频以C4东线多倍全变种霸王虫击杀N10单通，称其为最能游龙的背包反重位；9月玩家说丢了就跑，既能反重还能清杂。",
+          "as_of": "2026-10-18"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_189984707",
+            "bili_BV1BFW76zE1t"
+          ],
+          "note": "玩家称C4丢了就跑能顺带清杂，配合补给小车与火焰哨戒炮在毒蟑变种里稳定清场。",
+          "as_of": "2026-11-08"
+        },
+        {
+          "id": "player.easy_to_use",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_189984707"
+          ],
+          "note": "萌新视角：比起无后座一炮干不死泰坦的尴尬，C4拉烟就是一顿狂扔，相当轮椅，只是空爆泰坦需要熟悉。",
+          "as_of": "2026-09-06"
         }
       ],
       "occupancy": {
@@ -11912,7 +15221,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_177215851"
+          ],
+          "note": "玩家整理的单兵导弹发射井说明：一次性支援武器、可嵌入地面并配手持瞄准遥控器，来自尘卷风债券第三页。",
+          "as_of": ""
+        }
+      ]
     },
     {
       "id": "stratagem.b-flam-80-cremator",
@@ -11952,6 +15270,25 @@
             "cnst_maxigun_nov"
           ],
           "note": "同帖玩家将其列为兼顾反中型的近距火力选择，未据此判定无条件反重。"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1pGnn67E7U",
+            "bili_BV1Joex6fEoh"
+          ],
+          "note": "2026-09/10 有焚燃者2400杀多倍N10单通，也有『一套模板通吃终结族全难度』的体系推荐。",
+          "as_of": "2026-10-19"
+        },
+        {
+          "id": "player.supply_dependent",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1pGnn67E7U"
+          ],
+          "note": "2026-10 玩家指出带超大杯喷火器必须从副手和投掷物补高效反重，而副手反重、千兆都吃补，最多人改带热熔雷。",
+          "as_of": "2026-10-19"
         }
       ],
       "occupancy": {
@@ -12069,6 +15406,32 @@
           "source_ids": [
             "st_gl28"
           ]
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "tieba_gl28_20261027"
+          ],
+          "note": "配上补给载具解决续航后，玩家称其dps高、输出持久、压制强，双人N10升旗能解决八成以上虫子。"
+        },
+        {
+          "id": "player.supply_dependent",
+          "basis": "community_observation",
+          "source_ids": [
+            "tieba_gl28_20261027"
+          ],
+          "note": "续航是主要短板；讨论认为它与加特林优势区间接近，都是缺补时明显变弱。"
+        },
+        {
+          "id": "player.area_denial",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1Zq796tEUs",
+            "bili_BV1v1Y86fEbu"
+          ],
+          "note": "2026-06 防守战N10一个弹链榴弹加一个迫击炮能摁住两三艘船的增援；2026-09 西线N10工厂世界喷气旅升旗也用它压制。",
+          "as_of": "2026-09-10"
         }
       ],
       "occupancy": {
@@ -12082,7 +15445,23 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "tieba_gl28_20261027"
+          ],
+          "note": "有人明确说它反重能力不咋地但能补残血，因此本轮不标反重标签；同帖把火力贡献部分归给火焰哨戒炮。"
+        },
+        {
+          "source_ids": [
+            "xhh_196053316",
+            "bili_BV15j4J67EqR"
+          ],
+          "note": "2026-11 玩家说新变种用弹链榴弹打泰坦肚子可以弥补稀缺的反重火力，另有千杀单通难十毒瘴变种的配装展示。",
+          "as_of": "2026-11-07"
+        }
+      ]
     },
     {
       "id": "stratagem.m-1000-maxigun",
@@ -12140,6 +15519,14 @@
             "cnst_maxigun_nov"
           ],
           "note": "新增强后的机动、尸体阻挡改善和实际收益仍有分歧；不能沿用旧“纯玩具”评价。"
+        },
+        {
+          "id": "player.preparation_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_maxigun_20261107"
+          ],
+          "note": "需要站桩持续输出，评论以都站桩了不如带重机枪支架调侃其机动代价。"
         }
       ],
       "occupancy": {
@@ -12160,6 +15547,12 @@
             "cnst_maxigun_nov"
           ],
           "note": "重甲仅能磨可伤弱点且坚固目标输出受限，讨论建议另配专用反重。"
+        },
+        {
+          "source_ids": [
+            "bili_maxigun_20261107"
+          ],
+          "note": "2026-11玩家称其离T0只差最后一步：扫轻甲中型混合集群强，精度不及哨戒炮，评论形容为拼尽全力模仿加特林炮台。"
         }
       ]
     },
@@ -12253,6 +15646,14 @@
             "st_comm_nova"
           ],
           "note": "多位玩家认可持续精准火力，但对反超重目标效率意见分歧；较依赖命中部位和多次射击，不按资料 Anti-Tank 特征判成无条件便利。"
+        },
+        {
+          "source_ids": [
+            "xhh_194548885",
+            "bili_BV199ny6iERQ"
+          ],
+          "note": "2026-10/11 玩家称新星两枪能爆泰坦或白牛的头、蓄力冷却短、无限弹药，在非孢裂变种里能和无后座竞争反重；也有『这才是真正的蓄力武器』的单通视频。此前『拆毁值只有17、不算强三号位』的说法来自未放出内容的预告，不采信。",
+          "as_of": "2026-10-22"
         }
       ]
     },
@@ -12319,6 +15720,16 @@
             "st_comm_melta"
           ],
           "note": "短射程需规划接近路线/安全窗口，可借机动或传送辅助；不硬绑定背包。"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_188052112",
+            "bili_BV17Mg568ENU"
+          ],
+          "note": "2026-08 有人说它太猛、伤害高续航足、比无后座颗秒还爽且风险高被泰坦踹死；也有人直接评价东线纯区、本质战锤风味爆破锤。",
+          "as_of": "2026-08-13"
         }
       ],
       "occupancy": {
@@ -12387,7 +15798,17 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "bili_BV1Fk4gzUEB1"
+          ],
+          "note": "【历史观点，已被更新证据覆盖】时间线：2025-10 神九门补给背包一期的热门评论哀悼『无限补包陨落』；2026年讨论里的补包已按当前版本计算，旧结论不作现版本依据。",
+          "as_of": "2025-10-12",
+          "historical": true
+        }
+      ]
     },
     {
       "id": "stratagem.lift-850-jump-pack",
@@ -12450,6 +15871,16 @@
           "source_ids": [
             "st_ballistic_shield"
           ]
+        },
+        {
+          "id": "player.protection",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_191478971",
+            "xhh_191256755"
+          ],
+          "note": "2026-09 玩家称钗+防弹盾在东线近距离顶三四个指挥官输出毫无压力，小跳虫也不再怕突脸；西线枪盾流靠它撑住单手武器输出。",
+          "as_of": "2026-09-27"
         }
       ],
       "occupancy": {
@@ -12480,6 +15911,24 @@
           "source_ids": [
             "st_previews"
           ]
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1yjMq6vEji"
+          ],
+          "note": "2026-07 长评把它列为老冻肉第一只狗，锁头特性让它在南线仍有一战之力。",
+          "as_of": "2026-07-08"
+        },
+        {
+          "id": "player.single_target",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1yjMq6vEji"
+          ],
+          "note": "同一长评强调锁头特性，同时也指出它是唯一会被打坏、有实际碰撞体积、需要回背包修理而浪费输出的狗。",
+          "as_of": "2026-07-08"
         }
       ],
       "occupancy": {
@@ -12617,6 +16066,25 @@
           "source_ids": [
             "st_directional_shield"
           ]
+        },
+        {
+          "id": "player.protection",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_189305846",
+            "xhh_193421832"
+          ],
+          "note": "2026-08 玩家确认定向盾打开时可以反弹任何子弹和炮弹；10月有人在西线用单手武器配它。",
+          "as_of": "2026-10-11"
+        },
+        {
+          "id": "player.preparation_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_152163482"
+          ],
+          "note": "全战备评测指出它只有装备单手武器且处于瞄准状态才会投射护盾，与蛋盾用法完全不同；爆燃弩单手射击还会削一些射速。",
+          "as_of": ""
         }
       ],
       "occupancy": {
@@ -12667,7 +16135,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_193499673"
+          ],
+          "note": "玩家听说火系带控制、伤害还能反重才解锁热狗，实战却觉得火焰控制并不明显，怀疑是配装打法问题。",
+          "as_of": ""
+        }
+      ]
     },
     {
       "id": "stratagem.b-100-portable-hellbomb",
@@ -12770,6 +16247,24 @@
             "st_comm_backpacks"
           ],
           "note": "既有玩家清杂备注明确说友伤与走位限制明显。"
+        },
+        {
+          "id": "player.crowd_control",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1yjMq6vEji"
+          ],
+          "note": "2026-07 玩家说电狗打机器人意外好用，机器人排队一电一排，还能直接震开盾哥盾牌并眩晕。",
+          "as_of": "2026-07-08"
+        },
+        {
+          "id": "player.automaton_recommended",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1yjMq6vEji"
+          ],
+          "note": "同一讨论给出西线用途：打中强化双足极大概率殉爆白火箭直接秒杀，电弧重穿让没手雷时也不至于对无畏毫无办法。",
+          "as_of": "2026-07-08"
         }
       ],
       "occupancy": {
@@ -12800,6 +16295,15 @@
           "source_ids": [
             "st_hover"
           ]
+        },
+        {
+          "id": "player.mobility",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1pqHT62Eac"
+          ],
+          "note": "2026-10 玩家称以前还得找风水好的地方摆反坦克炮，现在尾随打就行、等于无限弹药，西线飞包配新星被称作轮椅。",
+          "as_of": "2026-10-25"
         }
       ],
       "occupancy": {
@@ -12853,6 +16357,24 @@
             "st_comm_backpacks"
           ],
           "note": "玩家明确把毒气犬用于控制近身敌人。"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_185283730"
+          ],
+          "note": "2026-07 玩家把腐息与毒气迫击炮并列为『新轮椅』，说毒气狗负责补足近防、配合手雷甲和前兆补反重。",
+          "as_of": "2026-07-08"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_185800119"
+          ],
+          "note": "同期也有玩家评价它手感有点差：能点燃的靠点燃杀不死，能直击杀死的没机会点燃。",
+          "as_of": "2026-07-15"
         }
       ],
       "occupancy": {
@@ -12904,7 +16426,22 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "bili_easy_loadout_20260830"
+          ],
+          "note": "2026-08东线易上手配装清单把它列为首选机动位，与爆裂铳、匕首、热熔枪、毒雷同列；属玩家取向而非强度排名。"
+        },
+        {
+          "source_ids": [
+            "xhh_190181691"
+          ],
+          "note": "2026-09 有帖子澄清：传送背包启动声音大，但不会让机器人直接仇恨潜兵，只会转头警戒；没有直接视线接触时仍可照常潜行，『传包完全不适配潜行』的说法被反驳。",
+          "as_of": "2026-09-08"
+        }
+      ]
     },
     {
       "id": "stratagem.m-104-incinerator-frv",
@@ -12983,6 +16520,33 @@
           "source_ids": [
             "st_maelstrom"
           ]
+        },
+        {
+          "id": "player.anti_tank",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_194540354"
+          ],
+          "note": "2026-09 新战备初评称它清杂反重兼备；10月玩家补充加特林有着全游戏机枪最高穿甲、最多备弹与1200射速。",
+          "as_of": "2026-10-20"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_194540354"
+          ],
+          "note": "同一帖以『为什么没人带好难猜啊』反讽其出场率，说明数值与实际选用落差明显。",
+          "as_of": "2026-10-20"
+        },
+        {
+          "id": "player.supply_dependent",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1ythb6vEqq"
+          ],
+          "note": "2026-09 玩家说射200发就要萎一会儿换弹，隔壁堡垒可以右键按到死。",
+          "as_of": "2026-09-24"
         }
       ],
       "occupancy": {
@@ -12996,7 +16560,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_194540354"
+          ],
+          "note": "2026-10 帖子里以反讽口吻问『为什么没人带好难猜啊』，配合换弹吐槽，说明数值高但实战出场率低。",
+          "as_of": "2026-10-20"
+        }
+      ]
     },
     {
       "id": "stratagem.exo-49-emancipator-exosuit",
@@ -13014,6 +16587,15 @@
             "st_traits"
           ],
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
+        },
+        {
+          "id": "player.automaton_recommended",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1kQjz6ZE74"
+          ],
+          "note": "2026-06 玩家称多轮加强之后终于有资格在西线挺直腰板走，并有专门讲西线用法的教学视频。",
+          "as_of": "2026-06-20"
         }
       ],
       "occupancy": {
@@ -13111,7 +16693,15 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_romantic_loadout_20260823"
+          ],
+          "note": "玩家称补给小车出现后，背包武器多带补给小车、非背包武器多带补包，队内自带补给常年没人用，因此可以放开叫补给。"
+        }
+      ]
     },
     {
       "id": "stratagem.m-102-gunner-frv",
@@ -13176,6 +16766,25 @@
             "st_traits"
           ],
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
+        },
+        {
+          "id": "player.anti_tank",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_175506022",
+            "bili_BV1sxYr6GESu"
+          ],
+          "note": "玩家手册强调它是坦克歼击车不是坦克，适合有索敌和大弱点的boss；另有评论说能把备弹打完就是有效输出，打霸王虫多半打不空主炮。",
+          "as_of": "2026-09-14"
+        },
+        {
+          "id": "player.preparation_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_175506022"
+          ],
+          "note": "手册列出CD长、在场时间短、只有30度射击角度、越障能力差、转向空间大等限制。",
+          "as_of": ""
         }
       ],
       "occupancy": {
@@ -13253,6 +16862,34 @@
             "st_traits"
           ],
           "note": "仅记录 Wiki Anti-Tank 展示特征，不表示伤害、实战反重效率或反重便利性。"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_184930422",
+            "bili_BV1LunH6uE6x"
+          ],
+          "note": "2026-07 玩家说开局开着伐木者跟怪站撸，左键清杂右键打精英；10月有更新后压烟视频，建议退着打保持距离、多铺地火。",
+          "as_of": "2026-10-23"
+        },
+        {
+          "id": "player.anti_tank",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_194508937"
+          ],
+          "note": "2026-10 平衡调整后火焰射流伤害从3提升到8、比焚燃者还高，玩家认为凭借机甲坦度可以近身火焰和AT炮同时开火融化牛牛泰坦。",
+          "as_of": "2026-10-20"
+        },
+        {
+          "id": "player.self_damage_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_184930422"
+          ],
+          "note": "有玩家下机甲时被自己之前喷的火烫死，需注意地火残留。",
+          "as_of": "2026-07-03"
         }
       ],
       "occupancy": {
@@ -13266,7 +16903,17 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_194508937",
+            "bili_BV1LunH6uE6x"
+          ],
+          "note": "2026-10-20 平衡调整把火焰射流伤害从3提到8；10-23 压烟视频建议不要对着脚下喷、退着打保持距离、多铺地火少直喷。",
+          "as_of": "2026-10-23"
+        }
+      ]
     },
     {
       "id": "stratagem.a-mg-43-machine-gun-sentry",
@@ -13292,6 +16939,16 @@
             "st_overview"
           ],
           "note": "部署后固定在该位置；不是指支援武器的静止装填。"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_152975517",
+            "xhh_196101750"
+          ],
+          "note": "玩家讨论为什么野排更爱带哨戒机枪：加特林爆发和清杂更猛，但哨戒机枪误伤低得多，碰一下潜兵不一定死。",
+          "as_of": "2025-04-28"
         }
       ],
       "occupancy": {
@@ -13305,7 +16962,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "bili_BV11YZ6BNEWX"
+          ],
+          "note": "2026-02 神九门毒气地雷那期的热门评论把哨戒机枪与加特林、火箭、机炮哨戒炮横向比较，认为它没有极高输出、对重甲也没有对应能力；句子模仿视频台词，按玩梗处理，只留作背景。",
+          "as_of": "2026-02-20"
+        }
+      ]
     },
     {
       "id": "stratagem.a-g-16-gatling-sentry",
@@ -13347,6 +17013,15 @@
             "cnst_bili_2025_loadouts"
           ],
           "note": "2025攻略：压低甲单位。"
+        },
+        {
+          "id": "player.friendly_fire_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_196101750"
+          ],
+          "note": "2026 东线绿战备科普指出加特林哨戒炮出伤极强、中甲及以下光速融化，同样也会融化潜兵，带可以带但要谨慎扔。",
+          "as_of": ""
         }
       ],
       "occupancy": {
@@ -13549,7 +17224,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "bili_BV15fb36eELP"
+          ],
+          "note": "2026-09 玩家说它清完点跑路断后或布防时好用，但压烟时不好用，因为压完烟往往还要往雷区走。",
+          "as_of": "2026-09-08"
+        }
+      ]
     },
     {
       "id": "stratagem.a-arc-3-tesla-tower",
@@ -13590,6 +17274,26 @@
             "cnst_bili_2025_loadouts"
           ],
           "note": "2025攻略：附近易误伤，注意姿态/防电装备。"
+        },
+        {
+          "id": "player.crowd_control",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_194213569",
+            "bili_BV1o68R6bEZC"
+          ],
+          "note": "2026-10 玩家认为它清杂能力十分不错尤其东南线，任务点入口扔一个怪根本进不来，拉烟也不怕；8月评论补充电弧可沿惯性路径继续连锁。",
+          "as_of": "2026-10-17"
+        },
+        {
+          "id": "player.area_denial",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_194213569",
+            "xhh_191292364"
+          ],
+          "note": "同一帖指出缺点是TK，且牛或泰坦一脚会捣碎；另有玩家建议在扔电塔时同时放防护罩生成器保护它。",
+          "as_of": "2026-10-17"
         }
       ],
       "occupancy": {
@@ -13644,6 +17348,15 @@
           "source_ids": [
             "st_comm_support"
           ]
+        },
+        {
+          "id": "player.area_denial",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_152733281"
+          ],
+          "note": "全战备评测绿战备篇说明它与迫击炮机制一致，静电场炮弹会眩晕落点10米范围内敌人，并减速后续进入静电场的敌人。",
+          "as_of": ""
         }
       ],
       "occupancy": {
@@ -13718,7 +17431,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_191294942"
+          ],
+          "note": "玩家认为激光结算机制改动后，一直照一个单位照到死的开火AI已经落后，容易吊死在一个重甲上，建议改成短时间转火给范围内敌人挂燃烧。",
+          "as_of": ""
+        }
+      ]
     },
     {
       "id": "stratagem.a-flam-40-flame-sentry",
@@ -13751,6 +17473,43 @@
             "st_overview"
           ],
           "note": "部署后固定在该位置；不是指支援武器的静止装填。"
+        },
+        {
+          "id": "player.anti_tank",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_flame_sentry_20261020",
+            "tieba_gl28_20261027"
+          ],
+          "note": "2026-10版本评论称其把停在射界内的强袭虫与路过的泰坦烧死；覆盖半径有限、依赖敌人进入范围，不是远程反重。"
+        },
+        {
+          "id": "player.area_denial",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_flame_sentry_20261020"
+          ],
+          "note": "持续一分多钟的近距火焰覆盖被玩家称为无人区，用于封锁推进路线。"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV16Kxw6TEHF",
+            "bili_BV1qNnv6EEaR"
+          ],
+          "note": "2026-10 玩家称增强射程那次起东线就离不开它，除三号位和背包只带这个都能乱杀虫子；另有评论说两个火炮台能压一波N10烟。",
+          "as_of": "2026-10-29"
+        },
+        {
+          "id": "player.easy_to_use",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV16Kxw6TEHF",
+            "xhh_194934358"
+          ],
+          "note": "玩家称现在不知道带啥就拿这个火焰炮塔，CD只有60多秒、炸了完全不心疼，只要注意清指挥官和重甲基本就能压住一波烟。",
+          "as_of": "2026-10-29"
         }
       ],
       "occupancy": {
@@ -13764,7 +17523,15 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "bili_flame_sentry_20261020"
+          ],
+          "note": "索敌与转向异常、部署后耐久低，UP主建议留人保一下；评论把旧版定位概括为叫一个站桩队友下来，新版更像范围杀伤区。"
+        }
+      ]
     },
     {
       "id": "stratagem.a-gm-17-gas-mortar-sentry",
@@ -13814,6 +17581,15 @@
             "cnroot_illuminate_oct2026"
           ],
           "note": "2026-10配装清单所列；限对应阵营。"
+        },
+        {
+          "id": "player.area_denial",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_177640403"
+          ],
+          "note": "债券测评给出近100米射程、一轮约9-10颗炮弹，但也指出射击间隔长、迫击炮索敌奇怪、仇恨偏高。",
+          "as_of": ""
         }
       ],
       "occupancy": {
@@ -13874,7 +17650,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_155481634"
+          ],
+          "note": "玩家撤退时把雷区放在高台和楼下台阶，队友与小怪贴身激战时被炸倒，说明野排里误伤风险很实际。",
+          "as_of": ""
+        }
+      ]
     },
     {
       "id": "stratagem.md-i4-incendiary-mines",
@@ -13915,6 +17700,16 @@
             "st_overview"
           ],
           "note": "固定雷区提供区域防守，未把它当作随时可用的直接反重手段。"
+        },
+        {
+          "id": "player.area_denial",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_149059817",
+            "bili_BV15fb36eELP"
+          ],
+          "note": "2025-03 玩家曾把它当作2分钟CD的轨道火、丢完轨道火再丢燃烧地雷爽压烟；2026-09 更新的说法是清完点跑路断后或布防时好用，压烟时反而不好用。以2026年结论为准。",
+          "as_of": "2026-09-08"
         }
       ],
       "occupancy": {
@@ -13970,6 +17765,26 @@
             "st_overview"
           ],
           "note": "固定雷区提供区域防守，未把它当作随时可用的直接反重手段。"
+        },
+        {
+          "id": "player.anti_tank",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_136082627",
+            "xhh_188455720"
+          ],
+          "note": "玩家测试讨论更新后反坦克地雷只会被重型单位触发，但机甲、掉落的支援武器等也可能触发。",
+          "as_of": "2026-08-18"
+        },
+        {
+          "id": "player.friendly_fire_risk",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_188455720",
+            "xhh_155481634"
+          ],
+          "note": "2026-08 有玩家抱怨升旗时往点里放雷炸到队友；另有反步兵雷区的误伤实例，说明地雷类需要留意队友动线。",
+          "as_of": "2026-08-18"
         }
       ],
       "occupancy": {
@@ -14022,7 +17837,16 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_191292364"
+          ],
+          "note": "2026-09 玩家建议在扔特斯拉电塔时同时放下防护罩生成器，可以保护电塔不被绿胖和队友打掉，同时电死靠近的敌人。",
+          "as_of": "2026-09-25"
+        }
+      ]
     },
     {
       "id": "stratagem.e-mg-101-hmg-emplacement",
@@ -14048,6 +17872,25 @@
             "st_overview"
           ],
           "note": "部署后固定在该位置；不是指支援武器的静止装填。"
+        },
+        {
+          "id": "player.anti_medium",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_182164338"
+          ],
+          "note": "玩家说可以把它当次抛重机枪玩，能打牛腿、去壳后打肉击杀，也能打泰坦就是费子弹。",
+          "as_of": ""
+        },
+        {
+          "id": "player.preparation_required",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_182164338",
+            "bili_BV12GNz6KEAi"
+          ],
+          "note": "需要掌握放置的时机和位置以保证输出最大化、防止后背被偷；与掷弹兵防卫墙并称轮椅炮。",
+          "as_of": "2026-07-15"
         }
       ],
       "occupancy": {
@@ -14079,6 +17922,25 @@
             "st_overview"
           ],
           "note": "部署后固定在该位置；不是指支援武器的静止装填。"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_186762876",
+            "xhh_182164338"
+          ],
+          "note": "玩家说可以当作次抛榴弹发射器用，60发大弹鼓把一片敌人炸飞；东线南线配合背包位反重武器很好玩。",
+          "as_of": "2026-07-27"
+        },
+        {
+          "id": "player.disputed",
+          "basis": "community_observation",
+          "source_ids": [
+            "xhh_186762876"
+          ],
+          "note": "作者自己也承认综合来看防卫墙并不算强力的战备，主要是自己喜欢所以常用。",
+          "as_of": "2026-07-27"
         }
       ],
       "occupancy": {
@@ -14092,7 +17954,15 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_east_tier_20261018"
+          ],
+          "note": "2026-10 东线向排行榜把榴弹墙放在T4：作者说东线几乎没人带、防守图也少见，但本人挺喜欢用。属出场率观察，不是强度定论。"
+        }
+      ]
     },
     {
       "id": "stratagem.md-8-gas-mines",
@@ -14134,6 +18004,25 @@
             "cnst_bili_2025_loadouts"
           ],
           "note": "2025攻略：在虫族增援处布雷，未沿用旧冷却数。"
+        },
+        {
+          "id": "player.crowd_control",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1fXnD6hEiE"
+          ],
+          "note": "2026-10 玩家称有毒气地雷在正前方控场，才能安心处理重甲和后方巡逻队；否则单炮塔清理不及时多半只能放弃炮塔跑路。",
+          "as_of": "2026-10-26"
+        },
+        {
+          "id": "player.crowd_clear",
+          "basis": "community_observation",
+          "source_ids": [
+            "bili_BV1fXnD6hEiE",
+            "bili_BV1BFW76zE1t"
+          ],
+          "note": "玩家指出毒地雷基本把小怪滤完，剩下的牛牛和泰坦靠自己清理，因此与火炮塔的清杂职责会重叠。",
+          "as_of": "2026-11-08"
         }
       ],
       "occupancy": {
@@ -14147,7 +18036,15 @@
       "review": {
         "status": "partial",
         "note": "Wiki 正文访问返回 403；本条资料依据可读搜索索引片段，待全文及后续平衡补丁复核。"
-      }
+      },
+      "observations": [
+        {
+          "source_ids": [
+            "xhh_bug_tier_20260304"
+          ],
+          "note": "2026-03 终结族战备排行摘要把毒气地雷列为T0；作者自述玩法偏省弹药、打弱点并尽量按客观强度排序。属个人排行线索，未作为机制标签。"
+        }
+      ]
     },
     {
       "id": "stratagem.e-at-12-anti-tank-emplacement",

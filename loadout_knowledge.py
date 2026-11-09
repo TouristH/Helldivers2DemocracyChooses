@@ -218,7 +218,9 @@ def _occupancy(value: str) -> bool | None:
 
 
 def _baseline(entry: Mapping[str, Any]) -> tuple[Any, ...]:
-    claims = entry.get("tags", [])
+    # Historical claims stay in the evidence file but no longer define the
+    # current table baseline: newer evidence wins when opinions conflict.
+    claims = [c for c in entry.get("tags", []) if not c.get("historical")]
     mechanics = frozenset(c["id"] for c in claims if c["id"].startswith("mechanic."))
     players = frozenset(c["id"] for c in claims if c["id"].startswith("player."))
     references = frozenset(c["id"] for c in claims if c["id"].startswith("role."))
