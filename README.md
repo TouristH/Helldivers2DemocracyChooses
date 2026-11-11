@@ -1,6 +1,6 @@
 # 绝地潜兵 2：民主帮你选择
 
-> 安装包见 [v0.4.0 发布页](https://github.com/TouristH/Helldivers2DemocracyChooses/releases/tag/v0.4.0)。本版提供可编辑的配备知识库和按群启用的实验配装。
+> 安装包见 [最新发布页](https://github.com/TouristH/Helldivers2DemocracyChooses/releases/latest)。稳定版提供可编辑的配备知识库和按群启用的实验配装。
 
 ![军需部门已点头批准这次配装](assets/icon.webp)
 
@@ -60,6 +60,8 @@ python -m playwright install chromium
 ```
 
 重启 MaiBot，Runner 会发现根目录的 `_manifest.json` 和 `plugin.py`，并生成 `config.toml`。编辑该文件，在 `[plugin]` 的 `allowed_groups` 中填入允许使用的群号；默认空名单拒绝全部命令。全局群白名单通过配置文件维护。
+
+从旧版升级时，如果现有 `config.toml` 的 `[plugin]` 段缺少 `config_version`，在该段下补一行 `config_version = "1.0.0"`，保存后重载插件或重启 MaiBot。直接修改原文件即可保留群白名单、管理员和黑名单设置。
 
 这一步请认真完成。未经登记的群尚未获准领取民主，管理员本人也不能靠拍桌子领取。
 
@@ -131,10 +133,11 @@ python -m playwright install chromium
 
 ## 出勤名单与军需官权限
 
-仅有四项插件配置，编辑 `config.toml` 维护，完整注释见 [config.example.toml](config.example.toml)：
+在 `config.toml` 维护以下四项设置，并保留 Runner 使用的 `config_version`。完整注释见 [config.example.toml](config.example.toml)。
 
 ```toml
 [plugin]
+config_version = "1.0.0"
 allowed_groups = []
 admin_users = []
 command_blacklist = {}
@@ -152,6 +155,7 @@ loadout_reroll_seconds = 120
 
 ```toml
 [plugin]
+config_version = "1.0.0"
 allowed_groups = ["987654321"]
 admin_users = ["123456789"]
 loadout_reroll_seconds = 120

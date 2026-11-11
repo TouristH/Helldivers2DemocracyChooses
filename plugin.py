@@ -346,6 +346,12 @@ class PluginSection(PluginConfigBase):
     __ui_icon__ = "gamepad-2"
     __ui_order__ = 10
 
+    config_version: str = Field(
+        default="1.0.0",
+        description="MaiBot Runner 使用的配置结构版本。",
+        json_schema_extra={"label": "配置版本", "group": "基础", "order": 0, "hidden": True},
+    )
+
     allowed_groups: list[str] = Field(
         default_factory=list,
         description=(

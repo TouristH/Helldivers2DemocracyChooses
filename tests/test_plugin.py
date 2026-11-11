@@ -1133,7 +1133,8 @@ def test_config_model_declares_every_key_the_code_reads() -> None:
 
 def test_every_config_field_is_actually_used() -> None:
     """Guards the opposite drift: knobs that exist in the WebUI but change nothing."""
-    unused = sorted(config_field_names() - config_keys_read_by_code())
+    # MaiBot's Runner uses this field before the plugin is activated.
+    unused = sorted(config_field_names() - config_keys_read_by_code() - {"config_version"})
     assert not unused, f"声明了但代码从不读取的配置项：{unused}"
 
 
@@ -1154,6 +1155,17 @@ def test_example_config_validates_against_the_model() -> None:
     assert not unknown, f"config.example.toml 写了模型不认识的键：{unknown}"
 
 
+def test_runner_defaults_and_example_supply_the_config_version() -> None:
+    import tomllib
+
+    defaults = DemocracyChoosesPlugin().get_default_config()
+    with (MANIFEST_PATH.parent / "config.example.toml").open("rb") as handle:
+        example = tomllib.load(handle)
+
+    assert defaults["plugin"].get("config_version") == "1.0.0"
+    assert example["plugin"].get("config_version") == "1.0.0"
+
+
 def test_config_fields_carry_webui_metadata() -> None:
     fields = getattr(PluginSection, "model_fields", None)
     if not isinstance(fields, dict):
@@ -1167,7 +1179,7 @@ def test_config_fields_carry_webui_metadata() -> None:
         assert str(extra.get("label") or "").strip(), f"{name} 缺少 WebUI label"
         assert extra.get("group"), f"{name} 缺少 WebUI 分组"
         groups.add(extra["group"])
-    assert groups == {"权限", "随机配装"}, groups
+    assert groups == {"基础", "权限", "随机配装"}, groups
 
 
 def test_group_allowlist_is_not_editable_in_generated_webui_form() -> None:
@@ -1177,6 +1189,7 @@ def test_group_allowlist_is_not_editable_in_generated_webui_form() -> None:
     fields = schema["sections"]["plugin"]["fields"]
     visible_fields = {name for name, field in fields.items() if not field.get("hidden")}
     assert "allowed_groups" not in visible_fields
+    assert "config_version" not in visible_fields
     assert {"admin_users", "command_blacklist", "loadout_reroll_seconds"} <= visible_fields
     config = PluginConfig.model_validate({"plugin": {"allowed_groups": ["100"]}})
     assert config.plugin.allowed_groups == ["100"]
