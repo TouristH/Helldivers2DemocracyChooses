@@ -1,5 +1,7 @@
 # 绝地潜兵 2：民主帮你选择
 
+> 当前为 **Dev 开发分支**，包含配备知识库及 Excel 映射。正式稳定版为 [v0.3.2](https://github.com/TouristH/Helldivers2DemocracyChooses/releases/tag/v0.3.2)，本分支改动暂不发布正式 Release。
+
 ![军需部门已点头批准这次配装](assets/icon.webp)
 
 [![Tests](https://github.com/TouristH/Helldivers2DemocracyChooses/actions/workflows/tests.yml/badge.svg)](https://github.com/TouristH/Helldivers2DemocracyChooses/actions/workflows/tests.yml)
@@ -40,13 +42,13 @@
 
 ### 在 MaiBot 1.4 上要注意的两件事
 
-- **多实例各读各的装备清单。** 1.4 允许一个 MAIBOT 跑多只麦麦，每个实例只有自己的 `data/plugins/<插件 ID>/` 目录。插件优先从那里读 `loadout_data.json`，第一次使用时把插件目录里的那份复制过去；改这份副本（而不是源码目录里的那份）才会生效，插件更新覆盖源码也不会再把改动删掉。`/hd status` 会显示当前实例实际使用的数据目录。1.3 及更老的宿主没有这个目录接口，仍然读插件目录里的文件，行为与升级前一致。
+- **多实例各读各的数据。** 1.4 允许一个 MAIBOT 跑多只麦麦，每个实例只有自己的 `data/plugins/<插件 ID>/` 目录。装备清单（`loadout_data.json`）和标签库（`loadout_tags.xlsx`、`loadout_knowledge.json`）优先从那里读取，第一次使用时从插件目录复制过去；改这份副本（而不是源码目录里的那份）才会生效，插件更新覆盖源码也不会再把改动删掉。`/hd status` 会显示当前实例实际使用的数据目录。1.3 及更老的宿主没有这个目录接口，仍然读插件目录里的文件，行为与升级前一致。
 - **命令权限多了一层。** 1.4 的「配置 → 命令权限」可以按用户或聊天限制插件命令，宿主会在命令到达插件之前先拦一次；插件自己的 `allowed_groups`、`admin_users` 和 `command_blacklist` 照常生效，两层都要放行。命令目录（`/pm cmd`）里本插件显示为 `public`：公开动作与管理指令 `diag` 共用同一个命令组件，`diag` 的管理员判定由插件自己完成。
 
 在 MaiBot 的 `plugins` 目录执行：
 
 ```bash
-git clone https://github.com/TouristH/Helldivers2DemocracyChooses.git
+git clone --branch Dev https://github.com/TouristH/Helldivers2DemocracyChooses.git
 ```
 
 在**运行 MaiBot 宿主的同一个 Python 环境**安装依赖和渲染浏览器：
@@ -72,7 +74,7 @@ python -m playwright install chromium
 |---|---|---|
 | `/hd loadout` | 领取一整套随机配装，停止在菜单里服役 | 允许群内成员，可用黑名单限制 |
 | `/hd loadout 1-8` | 在有效期内重抽指定格，重新理解民主的安排 | 允许群内成员，可用黑名单限制 |
-| `/hd status` | 查看装备库、重抽时间窗和出图状态 | 允许群内成员，可用黑名单限制 |
+| `/hd status` | 查看装备库、标签覆盖及修改数、重抽时间窗和出图状态 | 允许群内成员，可用黑名单限制 |
 | `/hd help [主题]` | 阅读使用说明；本部门保留“早就写了”的权利 | 允许群内成员，可用黑名单限制 |
 | `/hd diag` | 执行真实图片渲染及发送自检 | 允许群内的宿主操作员、管理员白名单 |
 
@@ -86,6 +88,27 @@ python -m playwright install chromium
 /hd loadout
 /hd loadout 3
 ```
+
+## 军需部的配备标签簿
+
+“尽量合理”先从认识装备开始。当前为既有 **221 项配备**整理了分类与标签，推荐直接编辑根目录 [loadout_tags.xlsx](loadout_tags.xlsx) 的“装备标签”工作表。提供筛选、冻结表头与名称列、分类和占用等下拉选项，以及可查阅的标签字典；浅黄色区域为可编辑字段。保存后插件下一次读取即使用新内容，无需重建 JSON；`/hd status` 会显示实际读取的文件、覆盖数与标签修改数。
+
+读取顺序为 **Excel 优先，Excel 不存在时才读取 [CSV](loadout_tags.csv)**，不会混用两份内容。Excel 有错误时会提示校验问题，不会静默沿用旧 CSV。仍想编辑 CSV 时，请先移走同目录 Excel，再按 UTF-8 CSV 保存；校验工具也支持 `--table loadout_tags.csv` 显式读取。
+
+- **固定玩家标签，独立排列组合**：统一使用 25 个独立标签，覆盖实战职责、操作要求、目标范围、风险与评价。表格显示的“玩家标签集”只是阅读视图，例如 `控场；清杂；易误伤` 或 `反重；简易使用；对单`；程序分别保存和匹配每个标签 ID，组合本身不会成为新标签。
+- **机制事实另存**：穿透资料、爆炸、燃烧、单手、背包供弹等独立保留。重甲穿透不会自动变成“反重方便”。
+- **玩家标签优先用于实战判断**：“玩具”“评价有分歧”“需精确瞄准”等同样是独立标签，备注保留场景、争议和实用反例。没有单列的反重便利性评分，也不从“有条件”推导难用或从反重推导对单。
+- **占用明确登记**：支援武器槽与背包槽分开记录，自带弹药背包也计入背包占用。
+
+分类、独立标签与占用都可以在表格中调整；`id`、装备名称、英文名和槽位请保持不变。Excel 允许排序、筛选、调整列顺序和添加个人备注列，程序按表头映射；请保留“装备标签”工作表名称和必需表头，标签字段使用纯文本。多个标签推荐用中文分号 `；` 分隔，英文分号、竖线、顿号以及中文名称或标签 ID 也能识别。输入顺序不影响匹配，重复标签会去重。固定词表与完整字典见 [标签编辑说明](docs/loadout-tags.md)，查证记录及逐条来源保存在 [loadout_knowledge.json](loadout_knowledge.json)。表格修改不会改写原始研究证据，读取接口会识别标签、分类和占用等结构字段的修改。
+
+维护者可运行 `python tools/check_loadout_knowledge.py --export-csv loadout_tags.csv`，将当前实际使用的 Excel 内容校验后导出为标准 CSV；读取 Excel 使用 Python 标准库，无需额外安装 Excel 库。
+
+**当前已建成战备知识库与读取接口，但尚未启用“尽量合理”的抽取规则。** 已按全部战略配备名与社区简称批量检索国内社区（B站、贴吧、小黑盒），积累 354 条来源、159 件装备带玩家标签；逐条结论都带日期、阵营与使用条件。国内社区证据优先于海外讨论；同一标签在时间线上出现不同结论时以较新证据为准，旧观点保留在备注并标注「历史观点」，不再作为当前标签。Wiki 正文访问受限，使用搜索索引摘录的记录仍标为“部分核实”；缺证据时玩家标签留空，具体限制保留在研究备注中。这本簿子允许补正，军需部暂不接受把“它能穿甲”当成“它打起来一定顺手”的审批依据。
+
+### 请玩家帮军需部校对
+
+欢迎通过 [Dev 标签反馈 Issue](https://github.com/TouristH/Helldivers2DemocracyChooses/issues/new?template=tag-feedback.yml) 提议补充、删除或纠正标签，也可以先[查看已有 Dev 标签反馈](https://github.com/TouristH/Helldivers2DemocracyChooses/issues?q=is%3Aissue+label%3ADev+label%3A%E6%A0%87%E7%AD%BE%E5%8F%8D%E9%A6%88)。请写装备名或 ID、建议增删的独立标签，以及阵营、难度、搭配和使用条件；附上 Reddit、贴吧、B站讨论链接或自己的实战例子会更方便核对。Issue 由仓库共用，表单以 `[Dev 标签反馈]` 和标签标识开发版意见，维护者复核后再更新 Dev 知识库。民主允许你提出意见，军需部负责逐条核对。
 
 ## 出勤名单与军需官权限
 

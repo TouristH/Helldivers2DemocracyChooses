@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
   "id": "github.touristh.helldivers2-democracy-chooses",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "name": "绝地潜兵 2：民主帮你选择",
-  "description": "HELLDIVERS 2（绝地潜兵2）随机配装插件，支持八格离线图卡、单格重抽、文字回退、配置式群白名单与管理员渲染诊断；兼容 MaiBot 1.4 多实例与命令权限。",
+  "description": "HELLDIVERS 2（绝地潜兵2）随机配装插件，支持八格离线图卡、单格重抽、Excel/CSV 配备标签知识库、全局群白名单与渲染诊断；兼容 MaiBot 1.4 多实例与命令权限。",
   "author": {
     "name": "TouristH",
     "url": "https://github.com/TouristH"

@@ -1500,6 +1500,30 @@ def test_equipment_data_is_seeded_into_the_instance_data_directory(tmp_path: Pat
     asyncio.run(scenario())
 
 
+def test_tag_knowledge_is_seeded_per_instance_and_prefers_excel(tmp_path: Path) -> None:
+    """标签表也属于可编辑数据：播种到实例目录，Excel 优先、删掉后回落到 CSV。"""
+
+    async def scenario() -> None:
+        plugin = DemocracyChoosesPlugin()
+
+        class Ctx:
+            class paths:
+                data_dir = tmp_path / "instance"
+
+        attach_ctx(plugin, Ctx())
+        table = plugin._knowledge_table()
+        assert table == tmp_path / "instance" / "loadout_tags.xlsx"
+        assert table.exists(), "首次使用应从插件目录播种"
+        assert plugin._data_file("loadout_knowledge.json").exists()
+        # 维护者删掉工作簿改用 CSV 时，不能被悄悄重新播种。
+        table.unlink()
+        csv_copy = tmp_path / "instance" / "loadout_tags.csv"
+        csv_copy.write_text("id\n", encoding="utf-8")
+        assert plugin._knowledge_table() == csv_copy
+
+    asyncio.run(scenario())
+
+
 def test_two_instances_never_share_an_equipment_list(tmp_path: Path) -> None:
     """多实例是 1.4 的主打功能：两个实例各一份装备清单，互不覆盖。"""
 
@@ -1593,7 +1617,7 @@ def test_empty_plugin_config_never_wipes_loaded_settings() -> None:
     asyncio.run(scenario())
 
 
-def test_status_reports_which_data_directory_is_in_use(tmp_path: Path) -> None:
+def test_status_reports_the_data_directory_and_reads_it(tmp_path: Path) -> None:
     """多实例排查的第一件事：这个实例到底读的哪份数据。"""
 
     async def scenario() -> None:
@@ -1610,5 +1634,6 @@ def test_status_reports_which_data_directory_is_in_use(tmp_path: Path) -> None:
         )
         assert ok
         assert str(tmp_path / "instance") in replies[-1]
+        assert "配装标签" in replies[-1], "标签库应从实例目录读取并通过校验"
 
     asyncio.run(scenario())

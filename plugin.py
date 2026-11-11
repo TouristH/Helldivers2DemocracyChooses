@@ -12,6 +12,11 @@ import unicodedata
 from pathlib import Path
 from typing import Any, Iterable, Mapping, Sequence
 
+if __package__:
+    from .loadout_knowledge import KnowledgeError, load_knowledge
+else:
+    from loadout_knowledge import KnowledgeError, load_knowledge
+
 
 try:  # maibot-plugin-sdk 2.x
     from maibot_sdk import (  # type: ignore
@@ -81,15 +86,17 @@ LOADOUT_DATA_FILE = Path(__file__).with_name("loadout_data.json")
 LOADOUT_ICONS_FILE = Path(__file__).with_name("loadout_icons.json")
 # MaiBot 1.4 can host several bots inside one MAIBOT, and every instance owns a
 # separate ``data/plugins/<plugin id>`` directory (``ctx.paths.data_dir`` in the
-# SDK). User editable game data belongs there: replacing this source tree on a
-# plugin update can no longer wipe the edits, and two instances never share one
-# equipment list. ``BUNDLE_DIR`` stays the fallback for hosts without the path
-# API (MaiBot 1.3 and older) and for tests.
+# SDK). User editable game data and the tag knowledge base belong there:
+# replacing this source tree on a plugin update can no longer wipe the edits, and
+# two instances never share one equipment list or one tag table. ``BUNDLE_DIR``
+# stays the fallback for hosts without the path API (MaiBot 1.3 and older) and
+# for tests.
 BUNDLE_DIR = Path(__file__).resolve().parent
 # Seeded into the data directory on first use. Only files users are expected to
 # edit are copied; the multi-megabyte icon bundle is read in place unless a copy
 # already exists in the data directory.
-EDITABLE_DATA_FILES = frozenset({"loadout_data.json"})
+EDITABLE_DATA_FILES = frozenset({"loadout_data.json", "loadout_knowledge.json", "loadout_tags.xlsx"})
+KNOWLEDGE_TABLES = ("loadout_tags.xlsx", "loadout_tags.csv")
 LOADOUT_SLOTS = ("primary", "secondary", "grenade", "booster")
 LOADOUT_SLOT_LABELS = {
     "primary": "主武器",
@@ -447,6 +454,19 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
     def _data_file(self, name: str) -> Path:
         """Active path of one data file; seeds the data directory on first use."""
         return data_file(name, self._data_dir())
+
+    def _knowledge_table(self) -> Path:
+        """Tag table of this instance: Excel first, then CSV, else the seeded copy.
+
+        A maintainer who removed the workbook to work from CSV keeps that choice:
+        resolving the table must not re-seed a file they deleted on purpose.
+        """
+        base = self._data_dir()
+        for name in KNOWLEDGE_TABLES:
+            candidate = base / name
+            if candidate.exists():
+                return candidate
+        return data_file(KNOWLEDGE_TABLES[0], base)
 
     def _apply_command_config(self, kwargs: Mapping[str, Any]) -> None:
         """Adopt the live config MaiBot 1.4 attaches to every command call.
@@ -858,6 +878,18 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
             f"重抽时间窗：{self._loadout_reroll_seconds()} 秒\n"
             f"数据目录：{self._data_dir()}"
         )
+        try:
+            knowledge = load_knowledge(
+                self._knowledge_table(),
+                self._data_file("loadout_knowledge.json"),
+                self._data_file("loadout_data.json"),
+            )
+            player_count = knowledge.player_tag_count
+            edited_count = sum(item.user_modified for item in knowledge.items.values())
+            message += f"\n配装标签：{len(knowledge.items)} 件，含玩家标签 {player_count} 件，标签修改 {edited_count} 件\n标签表：{knowledge.table_path.name}"
+        except KnowledgeError as exc:
+            message += "\n配装标签库暂不可用，请管理员检查 loadout_tags.xlsx 或 CSV"
+            self._log("warning", "Loadout knowledge is unavailable: %s", exc)
         if self._last_render_error:
             message += f"\n配装出图异常：{self._last_render_error}（可用 /helldivers diag 复现）"
         await self._reply(kwargs, message)
@@ -927,9 +959,9 @@ def data_file(name: str, data_dir: Path | None = None) -> Path:
     """Active copy of a data file: the per-instance one first, else the bundled one.
 
     ``EDITABLE_DATA_FILES`` are seeded into the data directory once so that an
-    existing installation keeps its edited equipment list after the upgrade, and
-    a later plugin update -- which replaces the source tree -- cannot drop it.
-    A read-only or missing data directory simply falls back to the bundled file.
+    existing installation keeps its edits after the upgrade, and a later plugin
+    update -- which replaces the source tree -- cannot drop them. A read-only or
+    missing data directory simply falls back to the bundled file.
     """
     source = BUNDLE_DIR / name
     base = Path(data_dir) if data_dir is not None else BUNDLE_DIR

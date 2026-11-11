@@ -168,6 +168,35 @@ maintainer refresh tool still accesses the sources above; removing the old
 runtime queries does not remove the attribution or license obligations for
 the bundled Wiki-derived catalog and game artwork.
 
+## Equipment knowledge annotations
+
+`loadout_tags.xlsx` is the primary editable runtime workbook in the `0.4.0`
+development branch. `loadout_tags.csv` is its textual export and fallback.
+`loadout_knowledge.json` preserves its initial research, project-authored tag
+definitions, per-claim source references, and access limitations. The research
+date is 2026-11-08; its equipment coverage remains the 2026-10-21 catalog.
+
+The source registry credits Helldivers Wiki contributors, Arrowhead Game Studios
+through the official PlayStation Blog, and the authors and commenters of the
+linked Reddit, Bilibili, Baidu Tieba, and Steam Community discussions and guides.
+For video sources, the registry distinguishes descriptions and comments actually
+read from the video itself; a cited description is not a claim to have watched
+the full video. Community experiences are recorded as concise
+project-written annotations, not copied posts or claims of player consensus.
+The Wiki-derived portions retain the respective CC BY-SA 4.0 and CC BY-NC-SA 4.0
+boundaries described above; this repository does not relicense third-party
+source material under MIT. Linked official and community material remains
+subject to its respective rights holders and terms.
+
+Wiki sources read through search excerpts are explicitly recorded as
+`search_excerpt` with no invented revision ID. Entries depending on those
+excerpts remain partially verified. The fixed, independent `player.*` tags,
+including the subjective `player.toy` tag, are kept separate from mechanism
+descriptions and preserve conditions, disagreement, and counterexamples where
+reported. A semicolon-joined tag collection is only a review/export view, not
+a composite tag or a convenience score. Editing the workbook or CSV
+does not rewrite or fabricate the initial source evidence.
+
 ## Python dependencies
 
 Python dependencies are installed from their own distributions and are not
