@@ -1,0 +1,1202 @@
+{
+  "schema_version": 1,
+  "slot_counts": {"primary": 1, "secondary": 1, "grenade": 1, "booster": 1, "stratagem": 4},
+  "limits": {"backpacks": 1, "persistent_support_weapons": 1, "temporary_support_weapons": 1, "vehicles": 1},
+  "selectors": {
+    "crowd_clear_primary": {
+      "label": "清杂主武器",
+      "match": [
+        {"slots": ["primary"], "any_tags": ["player.crowd_clear","role.crowd_clear"]}
+      ]
+    },
+    "anti_medium_primary": {
+      "label": "反中主武器",
+      "match": [
+        {"slots": ["primary"], "any_tags": ["player.anti_medium","role.anti_medium"]}
+      ]
+    },
+    "close_combat_primary": {
+      "label": "近战距离主武器",
+      "match": [
+        {"slots": ["primary"], "categories": ["shotgun","submachine_gun","flamethrower"], "any_tags": ["player.crowd_clear","role.crowd_clear","player.crowd_control","role.crowd_control","player.anti_medium","role.anti_medium"]}
+      ]
+    },
+    "control_shotgun": {
+      "label": "控场霰弹枪",
+      "match": [
+        {"slots": ["primary"], "categories": ["shotgun"], "any_tags": ["player.crowd_control","role.crowd_control"]}
+      ]
+    },
+    "direct_fire_primary": {
+      "label": "无爆炸弹药的直射主武器",
+      "match": [
+        {"slots": ["primary"], "all_tags": ["mechanic.ballistic"], "without_tags": ["mechanic.explosive","player.toy"]}
+      ]
+    },
+    "precision_primary": {
+      "label": "对中甲有办法的精确主武器",
+      "match": [
+        {"slots": ["primary"], "categories": ["marksman_rifle","energy_marksman_rifle","bolt_action_sniper_rifle"], "any_tags": ["player.anti_medium","mechanic.medium_penetration_trait","mechanic.heavy_penetration_trait"], "without_tags": ["player.toy"]}
+      ]
+    },
+    "one_handed_primary": {
+      "label": "单手主武器",
+      "match": [
+        {"slots": ["primary"], "all_tags": ["mechanic.one_handed"]}
+      ]
+    },
+    "stealth_primary": {
+      "label": "潜行主武器",
+      "match": [
+        {"slots": ["primary"], "any_tags": ["player.stealth","role.stealth"]}
+      ]
+    },
+    "energy_primary": {
+      "label": "热量管理主武器",
+      "match": [
+        {"slots": ["primary"], "all_tags": ["mechanic.heat"]}
+      ]
+    },
+    "plasma_primary": {
+      "label": "等离子反中主武器",
+      "match": [
+        {"slots": ["primary"], "all_tags": ["mechanic.plasma"], "any_tags": ["player.anti_medium","role.anti_medium"]}
+      ]
+    },
+    "shield_breaking_primary": {
+      "label": "用于持续破盾的主武器",
+      "match": [
+        {"slots": ["primary"], "item_ids": ["primary.ar-23-liberator","primary.ar-23a-liberator-carbine","primary.ar-61-tenderizer","primary.ar-2-coyote","primary.mp-98-knight","primary.sta-11-smg","primary.sg-225-breaker","primary.sg-225sp-breaker-spray-and-pray","primary.las-16-sickle","primary.las-17-double-edge-sickle","primary.vg-70-variable"]}
+      ]
+    },
+    "close_defense_secondary": {
+      "label": "近身自保副武器",
+      "match": [
+        {"slots": ["secondary"], "item_ids": ["secondary.p-19-redeemer","secondary.sg-22-bushwhacker","secondary.las-7-dagger","secondary.p-69-veto"]}
+      ]
+    },
+    "anti_medium_secondary": {
+      "label": "反中副武器",
+      "match": [
+        {"slots": ["secondary"], "any_tags": ["player.anti_medium","role.anti_medium"]}
+      ]
+    },
+    "medical_secondary": {
+      "label": "治疗副武器",
+      "match": [
+        {"slots": ["secondary"], "categories": ["stim_pistol"]}
+      ]
+    },
+    "stun_melee_secondary": {
+      "label": "可控场的眩晕近战副武器",
+      "match": [
+        {"slots": ["secondary"], "all_tags": ["mechanic.melee","mechanic.stun"]}
+      ]
+    },
+    "control_throwable": {
+      "label": "控场投掷物",
+      "match": [
+        {"slots": ["grenade"], "any_tags": ["player.crowd_control","role.crowd_control"]}
+      ]
+    },
+    "smoke_throwable": {
+      "label": "烟雾投掷物",
+      "match": [
+        {"slots": ["grenade"], "all_tags": ["mechanic.smoke"]}
+      ]
+    },
+    "anti_tank_throwable": {
+      "label": "反重投掷物",
+      "match": [
+        {"slots": ["grenade"], "any_tags": ["player.anti_tank","role.anti_tank"]}
+      ]
+    },
+    "gas_throwable": {
+      "label": "毒气投掷物",
+      "match": [
+        {"slots": ["grenade"], "all_tags": ["mechanic.gas"]}
+      ]
+    },
+    "fire_throwable": {
+      "label": "适合持续影响区域的燃烧投掷物",
+      "match": [
+        {"slots": ["grenade"], "item_ids": ["grenade.g-10-incendiary","grenade.g-13-incendiary-impact","grenade.g-8-immolation"]}
+      ]
+    },
+    "squad_cover_throwable": {
+      "label": "小队掩护投掷物",
+      "match": [
+        {"slots": ["grenade"], "item_ids": ["grenade.g-sh-39-shield","grenade.g-3-smoke","grenade.smokescreen"]}
+      ]
+    },
+    "portable_demolition": {
+      "label": "手持拆迁手段",
+      "match": [
+        {"slots": ["primary","secondary","grenade"], "any_tags": ["player.structure_demolition","role.structure_demolition"], "without_tags": ["limitation.no_demolition"]}
+      ]
+    },
+    "bug_hole_demolition": {
+      "label": "可手持封虫洞的装备",
+      "match": [
+        {"slots": ["primary"], "item_ids": ["primary.ar-gl-21-one-two","primary.r-36-eruptor","primary.cb-9-exploding-crossbow","primary.gl-15-evictor"]},
+        {"slots": ["secondary"], "item_ids": ["secondary.gp-31-grenade-pistol","secondary.gp-20-ultimatum"]},
+        {"slots": ["grenade"], "item_ids": ["grenade.g-12-high-explosive","grenade.g-6-frag","grenade.g-16-impact","grenade.g-10-incendiary","grenade.g-13-incendiary-impact","grenade.ted-63-dynamite"]}
+      ]
+    },
+    "quick_bug_hole_demolition": {
+      "label": "可连续或快速封洞的装备",
+      "match": [
+        {"slots": ["primary"], "item_ids": ["primary.r-36-eruptor","primary.cb-9-exploding-crossbow","primary.gl-15-evictor"]},
+        {"slots": ["secondary"], "item_ids": ["secondary.gp-31-grenade-pistol"]},
+        {"slots": ["stratagem"], "item_ids": ["stratagem.gl-21-grenade-launcher","stratagem.ac-8-autocannon","stratagem.gl-28-belt-fed-grenade-launcher"]}
+      ]
+    },
+    "portable_fabricator_demolition": {
+      "label": "随身拆制造厂的手段",
+      "match": [
+        {"slots": ["primary"], "item_ids": ["primary.ar-gl-21-one-two","primary.r-36-eruptor","primary.cb-9-exploding-crossbow","primary.gl-15-evictor"]},
+        {"slots": ["secondary"], "item_ids": ["secondary.gp-31-grenade-pistol","secondary.gp-20-ultimatum"]},
+        {"slots": ["grenade"], "item_ids": ["grenade.g-12-high-explosive","grenade.g-16-impact","grenade.g-123-thermite","grenade.ted-63-dynamite"]}
+      ]
+    },
+    "remote_fabricator_demolition": {
+      "label": "可从厂外远拆的战备",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.gr-8-recoilless-rifle","stratagem.las-99-quasar-cannon","stratagem.faf-14-spear","stratagem.eagle-strafing-run","stratagem.eagle-airstrike","stratagem.eagle-500kg-bomb","stratagem.orbital-laser","stratagem.orbital-precision-strike"]}
+      ]
+    },
+    "warp_ship_bypass_portable": {
+      "label": "可直接拆有盾停泊飞船的随身装备",
+      "match": [
+        {"slots": ["secondary"], "item_ids": ["secondary.gp-20-ultimatum"]},
+        {"slots": ["grenade"], "item_ids": ["grenade.g-123-thermite"]}
+      ]
+    },
+    "warp_ship_bypass_strike": {
+      "label": "可直接拆有盾停泊飞船的火力战备",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.eagle-500kg-bomb","stratagem.orbital-precision-strike","stratagem.orbital-laser","stratagem.orbital-gas-strike","stratagem.orbital-railcannon-strike"]}
+      ]
+    },
+    "warp_ship_door_demolition": {
+      "label": "破盾后可从舱门拆停泊飞船的随身装备",
+      "match": [
+        {"slots": ["primary"], "item_ids": ["primary.r-36-eruptor","primary.cb-9-exploding-crossbow","primary.gl-15-evictor"]},
+        {"slots": ["secondary"], "item_ids": ["secondary.gp-31-grenade-pistol"]},
+        {"slots": ["grenade"], "item_ids": ["grenade.g-12-high-explosive","grenade.g-16-impact"]}
+      ]
+    },
+    "mobility_booster": {
+      "label": "机动强化",
+      "match": [
+        {"slots": ["booster"], "item_ids": ["booster.stamina-enhancement","booster.muscle-enhancement","booster.motivational-shocks","booster.experimental-infusion"]}
+      ]
+    },
+    "sustain_booster": {
+      "label": "落地补给或治疗强化",
+      "match": [
+        {"slots": ["booster"], "any_tags": ["utility.deployment_supplies","utility.stim_effect"]}
+      ]
+    },
+    "protection_booster": {
+      "label": "防护强化",
+      "match": [
+        {"slots": ["booster"], "any_tags": ["player.protection","role.protection"]}
+      ]
+    },
+    "sample_booster": {
+      "label": "样本强化",
+      "match": [
+        {"slots": ["booster"], "any_tags": ["utility.samples"]}
+      ]
+    },
+    "extraction_booster": {
+      "label": "撤离或增援强化",
+      "match": [
+        {"slots": ["booster"], "any_tags": ["utility.extraction","utility.reinforcement"]}
+      ]
+    },
+    "stealth_booster": {
+      "label": "潜行或降低遭遇压力的强化",
+      "match": [
+        {"slots": ["booster"], "any_tags": ["player.stealth","role.stealth","utility.encounter_delay"]}
+      ]
+    },
+    "ranged_anti_tank_support": {
+      "label": "中远距离常驻反重支援武器",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.gr-8-recoilless-rifle","stratagem.las-99-quasar-cannon","stratagem.faf-14-spear","stratagem.amw-20-apex","stratagem.las-44-nova"], "support_weapon": true}
+      ]
+    },
+    "backpack_anti_tank_support": {
+      "label": "占背包的常驻反重武器",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.gr-8-recoilless-rifle","stratagem.faf-14-spear","stratagem.amw-20-apex"], "support_weapon": true, "backpack": true}
+      ]
+    },
+    "backpack_free_anti_tank_support": {
+      "label": "免背包的常驻反重武器",
+      "match": [
+        {"slots": ["stratagem"], "support_weapon": true, "without_tags": ["mechanic.expendable"], "backpack": false, "any_tags": ["player.anti_tank","role.anti_tank"]}
+      ]
+    },
+    "temporary_anti_tank_support": {
+      "label": "临时反重支援武器",
+      "match": [
+        {"slots": ["stratagem"], "support_weapon": true, "backpack": false, "all_tags": ["mechanic.expendable"], "any_tags": ["player.anti_tank","role.anti_tank"]}
+      ]
+    },
+    "crowd_clear_support": {
+      "label": "常驻清杂支援武器",
+      "match": [
+        {"slots": ["stratagem"], "support_weapon": true, "without_tags": ["mechanic.expendable"], "any_tags": ["player.crowd_clear","role.crowd_clear"]}
+      ]
+    },
+    "backpack_free_crowd_clear_support": {
+      "label": "免背包的常驻清杂支援武器",
+      "match": [
+        {"slots": ["stratagem"], "support_weapon": true, "without_tags": ["mechanic.expendable"], "backpack": false, "any_tags": ["player.crowd_clear","role.crowd_clear"]}
+      ]
+    },
+    "backpack_free_anti_medium_support": {
+      "label": "免背包的常驻反中支援武器",
+      "match": [
+        {"slots": ["stratagem"], "support_weapon": true, "without_tags": ["mechanic.expendable"], "backpack": false, "any_tags": ["player.anti_medium","role.anti_medium"]}
+      ]
+    },
+    "precision_support": {
+      "label": "打弱点的精确支援武器",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.apw-1-anti-materiel-rifle","stratagem.rs-422-railgun","stratagem.amw-20-apex","stratagem.las-44-nova"]}
+      ]
+    },
+    "machine_gun_support": {
+      "label": "常驻机枪",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.mg-43-machine-gun","stratagem.m-105-stalwart","stratagem.mg-206-heavy-machine-gun","stratagem.m-1000-maxigun"]}
+      ]
+    },
+    "backpack_free_machine_gun": {
+      "label": "免背包的常驻机枪",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.mg-43-machine-gun","stratagem.m-105-stalwart","stratagem.mg-206-heavy-machine-gun"], "backpack": false}
+      ]
+    },
+    "explosive_launcher_support": {
+      "label": "可清群封洞的榴弹支援武器",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.gl-21-grenade-launcher","stratagem.gl-28-belt-fed-grenade-launcher"]}
+      ]
+    },
+    "fire_support": {
+      "label": "常驻火焰支援武器",
+      "match": [
+        {"slots": ["stratagem"], "support_weapon": true, "without_tags": ["mechanic.expendable"], "any_tags": ["mechanic.fire"]}
+      ]
+    },
+    "arc_support": {
+      "label": "常驻电弧支援武器",
+      "match": [
+        {"slots": ["stratagem"], "support_weapon": true, "without_tags": ["mechanic.expendable"], "any_tags": ["mechanic.arc"]}
+      ]
+    },
+    "heat_support": {
+      "label": "热量管理支援武器",
+      "match": [
+        {"slots": ["stratagem"], "support_weapon": true, "without_tags": ["mechanic.expendable"], "any_tags": ["mechanic.heat"]}
+      ]
+    },
+    "anti_air_support": {
+      "label": "可用于对空的支援武器",
+      "match": [
+        {"slots": ["stratagem"], "support_weapon": true, "without_tags": ["mechanic.expendable"], "any_tags": ["player.anti_air","role.anti_air"]}
+      ]
+    },
+    "anti_air_throwable": {
+      "label": "可用于对空的投掷物",
+      "match": [
+        {"slots": ["grenade"], "any_tags": ["player.anti_air","role.anti_air"]}
+      ]
+    },
+    "shield_breaking_support": {
+      "label": "用于持续破盾的支援武器",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.mg-43-machine-gun","stratagem.m-105-stalwart","stratagem.mg-206-heavy-machine-gun","stratagem.m-1000-maxigun","stratagem.las-98-laser-cannon","stratagem.ac-8-autocannon"]}
+      ]
+    },
+    "harvester_support": {
+      "label": "破盾后打收割者弱点的支援武器",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.mg-43-machine-gun","stratagem.mg-206-heavy-machine-gun","stratagem.las-98-laser-cannon","stratagem.ac-8-autocannon","stratagem.apw-1-anti-materiel-rifle"]}
+      ]
+    },
+    "backpack_free_harvester_support": {
+      "label": "免背包的收割者弱点武器",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.mg-43-machine-gun","stratagem.mg-206-heavy-machine-gun","stratagem.las-98-laser-cannon","stratagem.apw-1-anti-materiel-rifle"], "backpack": false}
+      ]
+    },
+    "cave_support": {
+      "label": "可提前携入洞穴的免背包支援武器",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.mg-43-machine-gun","stratagem.m-105-stalwart","stratagem.mg-206-heavy-machine-gun","stratagem.arc-3-arc-thrower","stratagem.gl-21-grenade-launcher","stratagem.flam-40-flamethrower"], "support_weapon": true, "backpack": false}
+      ]
+    },
+    "cave_anti_tank_support": {
+      "label": "可提前携入洞穴的反重支援武器",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.gr-8-recoilless-rifle","stratagem.las-99-quasar-cannon","stratagem.las-44-nova","stratagem.40-k-meltagun"]}
+      ]
+    },
+    "mobility_backpack": {
+      "label": "机动背包",
+      "match": [
+        {"slots": ["stratagem"], "backpack": true, "categories": ["backpack"], "any_tags": ["player.mobility","role.mobility"]}
+      ]
+    },
+    "supply_backpack": {
+      "label": "补给背包",
+      "match": [
+        {"slots": ["stratagem"], "backpack": true, "categories": ["backpack"], "any_tags": ["player.sustain","role.sustain"]}
+      ]
+    },
+    "energy_shield_backpack": {
+      "label": "个人能量护盾背包",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.sh-32-shield-generator-pack"]}
+      ]
+    },
+    "one_handed_shield": {
+      "label": "搭配单手武器的盾牌",
+      "match": [
+        {"slots": ["stratagem"], "backpack": true, "all_tags": ["mechanic.requires_one_handed"]}
+      ]
+    },
+    "crowd_clear_drone": {
+      "label": "清杂无人机背包",
+      "match": [
+        {"slots": ["stratagem"], "categories": ["backpack"], "all_tags": ["mechanic.autonomous"], "any_tags": ["player.crowd_clear","role.crowd_clear"]}
+      ]
+    },
+    "crowd_clear_sentry": {
+      "label": "清杂哨戒炮",
+      "match": [
+        {"slots": ["stratagem"], "categories": ["sentry"], "any_tags": ["player.crowd_clear","role.crowd_clear"]}
+      ]
+    },
+    "bullet_sentry": {
+      "label": "实弹清杂哨戒炮",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.a-mg-43-machine-gun-sentry","stratagem.a-g-16-gatling-sentry"]}
+      ]
+    },
+    "heavy_sentry": {
+      "label": "用于处理重型目标的哨戒炮",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.a-ac-8-autocannon-sentry","stratagem.a-mls-4x-rocket-sentry"]}
+      ]
+    },
+    "control_sentry": {
+      "label": "控场哨戒炮",
+      "match": [
+        {"slots": ["stratagem"], "categories": ["sentry"], "any_tags": ["player.crowd_control","role.crowd_control"]}
+      ]
+    },
+    "low_damage_control_sentry": {
+      "label": "用电磁或毒气控制的迫击哨戒炮",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.a-m-23-ems-mortar-sentry","stratagem.a-gm-17-gas-mortar-sentry"]}
+      ]
+    },
+    "anti_tank_minefield": {
+      "label": "反重雷区",
+      "match": [
+        {"slots": ["stratagem"], "categories": ["minefield"], "any_tags": ["player.anti_tank","role.anti_tank"]}
+      ]
+    },
+    "anti_tank_emplacement": {
+      "label": "反坦克炮台",
+      "match": [
+        {"slots": ["stratagem"], "categories": ["emplacement"], "any_tags": ["player.anti_tank","role.anti_tank"]}
+      ]
+    },
+    "crew_emplacement": {
+      "label": "可手动操作的部署火力",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.e-mg-101-hmg-emplacement","stratagem.e-gl-21-grenadier-battlement","stratagem.e-at-12-anti-tank-emplacement"]}
+      ]
+    },
+    "shield_relay": {
+      "label": "防护罩生成中继器",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.fx-12-shield-generator-relay"]}
+      ]
+    },
+    "anti_tank_strike": {
+      "label": "用于定点反重的火力战备",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.orbital-railcannon-strike","stratagem.orbital-precision-strike","stratagem.eagle-500kg-bomb"]}
+      ]
+    },
+    "anti_tank_orbital": {
+      "label": "用于定点反重的轨道战备",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.orbital-railcannon-strike","stratagem.orbital-precision-strike"]}
+      ]
+    },
+    "crowd_clear_strike": {
+      "label": "清杂攻击战备",
+      "match": [
+        {"slots": ["stratagem"], "categories": ["orbital","eagle"], "any_tags": ["player.crowd_clear","role.crowd_clear"]}
+      ]
+    },
+    "area_denial_strike": {
+      "label": "持续封锁火力",
+      "match": [
+        {"slots": ["stratagem"], "categories": ["orbital","eagle"], "any_tags": ["player.area_denial","role.area_denial"]}
+      ]
+    },
+    "orbital_area_denial": {
+      "label": "轨道封锁火力",
+      "match": [
+        {"slots": ["stratagem"], "categories": ["orbital"], "any_tags": ["player.area_denial","role.area_denial"]}
+      ]
+    },
+    "orbital_crowd_clear": {
+      "label": "轨道清杂火力",
+      "match": [
+        {"slots": ["stratagem"], "categories": ["orbital"], "any_tags": ["player.crowd_clear","role.crowd_clear"]}
+      ]
+    },
+    "orbital_control": {
+      "label": "轨道控场",
+      "match": [
+        {"slots": ["stratagem"], "categories": ["orbital"], "any_tags": ["player.crowd_control","role.crowd_control"]}
+      ]
+    },
+    "smoke_strike": {
+      "label": "烟雾支援",
+      "match": [
+        {"slots": ["stratagem"], "categories": ["orbital","eagle"], "all_tags": ["mechanic.smoke"]}
+      ]
+    },
+    "orbital_assault": {
+      "label": "用于压制大型据点的轨道火力",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.orbital-120mm-he-barrage","stratagem.orbital-380mm-he-barrage","stratagem.orbital-walking-barrage","stratagem.orbital-laser"]}
+      ]
+    },
+    "eagle_blast": {
+      "label": "飞鹰爆破",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.eagle-airstrike","stratagem.eagle-500kg-bomb"]}
+      ]
+    },
+    "eagle_fast_clear": {
+      "label": "飞鹰清杂",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.eagle-strafing-run","stratagem.eagle-cluster-bomb"]}
+      ]
+    },
+    "eagle_strafe": {
+      "label": "飞鹰机枪扫射",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.eagle-strafing-run"]}
+      ]
+    },
+    "gas_area_denial": {
+      "label": "持续毒气战备",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.orbital-gas-strike","stratagem.md-8-gas-mines","stratagem.a-gm-17-gas-mortar-sentry"]}
+      ]
+    },
+    "fire_area_denial": {
+      "label": "持续火焰战备",
+      "match": [
+        {"slots": ["stratagem"], "categories": ["orbital","eagle","sentry","minefield"], "all_tags": ["mechanic.fire"], "any_tags": ["player.area_denial","role.area_denial"]}
+      ]
+    },
+    "exosuit": {
+      "label": "外骨骼装甲",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.exo-45-patriot-exosuit","stratagem.exo-49-emancipator-exosuit","stratagem.exo-51-lumberer-exosuit","stratagem.exo-55-breakthrough-exosuit"]}
+      ]
+    },
+    "armored_vehicle": {
+      "label": "履带装甲载具",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.td-220-bastion-mk-xvi","stratagem.td-110-maelstrom"]}
+      ]
+    },
+    "recon_vehicle": {
+      "label": "可用于快速转移的侦察载具",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.m-102-gunner-frv","stratagem.m-104-incinerator-frv"]}
+      ]
+    },
+    "automaton_recommended": {
+      "label": "机器人推荐",
+      "match": [
+        {"slots": ["primary","secondary","grenade","stratagem"], "any_tags": ["player.automaton_recommended"]}
+      ]
+    },
+    "illuminate_recommended": {
+      "label": "光能族推荐",
+      "match": [
+        {"slots": ["primary","secondary","grenade","stratagem"], "any_tags": ["player.illuminate_recommended"]}
+      ]
+    },
+    "easy_anti_tank": {
+      "label": "有简易使用反馈的反重装备",
+      "match": [
+        {"slots": ["secondary","grenade","stratagem"], "all_tags": ["player.anti_tank","player.easy_to_use"]}
+      ]
+    },
+    "mortar_sentry": {
+      "label": "高爆迫击哨戒炮",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.a-m-12-mortar-sentry"]}
+      ]
+    },
+    "harvester_precision_support": {
+      "label": "精确打收割者腿根的支援武器",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.apw-1-anti-materiel-rifle","stratagem.las-98-laser-cannon","stratagem.ac-8-autocannon"]}
+      ]
+    },
+    "backpack_free_ammo_crowd_clear_support": {
+      "label": "消耗弹药的免背包清杂支援武器",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.mg-43-machine-gun","stratagem.m-105-stalwart","stratagem.mg-206-heavy-machine-gun","stratagem.gl-21-grenade-launcher"], "support_weapon": true, "backpack": false}
+      ]
+    },
+    "cave_utility_backpack": {
+      "label": "洞穴内可直接使用的独立背包",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.b-1-supply-pack","stratagem.sh-32-shield-generator-pack","stratagem.ax-ar-23-guard-dog","stratagem.ax-las-5-rover","stratagem.ax-tx-13-dog-breath"], "support_weapon": false, "backpack": true}
+      ]
+    },
+    "cave_backpack_fed_support": {
+      "label": "可提前携入洞穴的带供弹背包武器",
+      "match": [
+        {"slots": ["stratagem"], "item_ids": ["stratagem.ac-8-autocannon","stratagem.b-flam-80-cremator","stratagem.gl-28-belt-fed-grenade-launcher"], "support_weapon": true, "backpack": true}
+      ]
+    },
+    "general_booster": {
+      "label": "通用防护、物资或机动强化",
+      "match": [
+        {"slots": ["booster"], "item_ids": ["booster.hellpod-space-optimization","booster.vitality-enhancement","booster.stamina-enhancement","booster.muscle-enhancement","booster.experimental-infusion"]}
+      ]
+    }
+  },
+  "templates": [
+    {
+      "id": "balanced_advance",
+      "name": "均衡推进",
+      "faction": "any",
+      "mission": "advance",
+      "summary": "用主武器清杂，留常驻反重和随身拆迁手段，再用封锁战备切开增援。",
+      "requires": ["crowd_clear_primary", "ranged_anti_tank_support", "portable_demolition", "area_denial_strike"],
+      "stratagem_pool": ["ranged_anti_tank_support", "area_denial_strike", "crowd_clear_sentry", "heavy_sentry", "crowd_clear_strike", "mobility_backpack"],
+      "preferred": ["easy_anti_tank", "general_booster"]
+    },
+    {
+      "id": "anti_tank_lead",
+      "name": "反重主力",
+      "faction": "any",
+      "mission": "advance",
+      "summary": "用远距反重武器接管重型目标，主武器清杂，副武器补处理中甲。",
+      "requires": ["crowd_clear_primary", "anti_medium_secondary", "ranged_anti_tank_support", "anti_tank_strike"],
+      "stratagem_pool": ["ranged_anti_tank_support", "anti_tank_strike", "crowd_clear_strike", "orbital_control", "bullet_sentry", "heavy_sentry"],
+      "preferred": ["easy_anti_tank", "general_booster"]
+    },
+    {
+      "id": "sustained_crowd_clear",
+      "name": "清杂火力",
+      "faction": "any",
+      "mission": "advance",
+      "summary": "常驻清杂武器对付敌群，留定点反重战备和控场投掷物处理漏网目标。",
+      "requires": ["crowd_clear_support", "anti_tank_strike", "control_throwable", "crowd_clear_sentry"],
+      "stratagem_pool": ["crowd_clear_support", "anti_tank_strike", "crowd_clear_sentry", "supply_backpack", "crowd_clear_strike", "area_denial_strike", "heavy_sentry"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "ammo_support",
+      "name": "补给火力手",
+      "faction": "any",
+      "mission": "advance",
+      "summary": "用补给背包维持免背包支援武器的射击，也能给小队补物资。",
+      "requires": ["supply_backpack", "backpack_free_ammo_crowd_clear_support", "anti_tank_strike", "sustain_booster"],
+      "stratagem_pool": ["supply_backpack", "backpack_free_ammo_crowd_clear_support", "anti_tank_strike", "crowd_clear_sentry", "heavy_sentry", "orbital_control"]
+    },
+    {
+      "id": "field_medic",
+      "name": "战地医疗",
+      "faction": "any",
+      "mission": "escort",
+      "summary": "副武器治疗队友，补给背包补物资，用掩护投掷物给救援留空间。",
+      "requires": ["medical_secondary", "supply_backpack", "squad_cover_throwable", "crowd_clear_primary", "anti_tank_strike"],
+      "stratagem_pool": ["supply_backpack", "anti_tank_strike", "backpack_free_anti_medium_support", "shield_relay", "bullet_sentry", "orbital_control"],
+      "preferred": ["sustain_booster"]
+    },
+    {
+      "id": "mobile_anti_tank",
+      "name": "机动反重",
+      "faction": "any",
+      "mission": "advance",
+      "summary": "保留机动背包换位置，用免背包的反重支援武器接战。",
+      "requires": ["mobility_backpack", "backpack_free_anti_tank_support", "crowd_clear_primary", "portable_demolition"],
+      "stratagem_pool": ["mobility_backpack", "backpack_free_anti_tank_support", "crowd_clear_strike", "area_denial_strike", "bullet_sentry", "heavy_sentry"],
+      "preferred": ["mobility_booster"]
+    },
+    {
+      "id": "shield_advance",
+      "name": "单手持盾推进",
+      "faction": "any",
+      "mission": "advance",
+      "summary": "盾牌配单手主武器维持正面射击，给重目标留定点战备。",
+      "requires": ["one_handed_shield", "one_handed_primary", "anti_tank_strike", "portable_demolition"],
+      "stratagem_pool": ["one_handed_shield", "anti_tank_strike", "crowd_clear_strike", "backpack_free_anti_medium_support", "bullet_sentry", "orbital_control"],
+      "preferred": ["protection_booster"]
+    },
+    {
+      "id": "sentry_crossfire",
+      "name": "双哨戒交叉火力",
+      "faction": "any",
+      "mission": "defense",
+      "summary": "实弹炮塔处理小怪，重型炮塔接中重型目标，个人留随身拆迁手段。",
+      "requires": ["bullet_sentry", "heavy_sentry", "crowd_clear_primary", "portable_demolition"],
+      "stratagem_pool": ["bullet_sentry", "heavy_sentry", "low_damage_control_sentry", "anti_tank_strike", "shield_relay", "backpack_free_anti_medium_support"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "emplacement_defense",
+      "name": "反坦克阵地",
+      "faction": "any",
+      "mission": "defense",
+      "summary": "用反坦克炮台守射界，控场炮塔拦近身目标，投掷物补紧急控制。",
+      "requires": ["anti_tank_emplacement", "low_damage_control_sentry", "control_throwable", "crowd_clear_primary"],
+      "stratagem_pool": ["anti_tank_emplacement", "low_damage_control_sentry", "shield_relay", "bullet_sentry", "orbital_area_denial", "energy_shield_backpack"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "orbital_fire_support",
+      "name": "轨道攻坚",
+      "faction": "any",
+      "mission": "advance",
+      "summary": "轨道清杂和大型据点火力各留一手，近身仍有主武器和随身爆破。",
+      "requires": ["orbital_crowd_clear", "orbital_assault", "direct_fire_primary", "portable_demolition", "anti_tank_orbital"],
+      "stratagem_pool": ["orbital_crowd_clear", "orbital_assault", "anti_tank_orbital", "orbital_control", "bullet_sentry", "ranged_anti_tank_support"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "eagle_assault",
+      "name": "飞鹰双用途空袭",
+      "faction": "any",
+      "mission": "advance",
+      "summary": "飞鹰分别负责清杂和爆破，返航补弹时靠支援武器和独立轨道战备。",
+      "requires": ["eagle_fast_clear", "eagle_blast", "ranged_anti_tank_support", "orbital_area_denial"],
+      "stratagem_pool": ["eagle_fast_clear", "eagle_blast", "ranged_anti_tank_support", "orbital_area_denial"],
+      "preferred": ["crowd_clear_primary", "general_booster"]
+    },
+    {
+      "id": "expendable_blitz",
+      "name": "次抛快攻",
+      "faction": "any",
+      "mission": "blitz",
+      "summary": "靠随身爆破赶目标点，用临时反重武器和定点打击处理挡路重甲。",
+      "requires": ["temporary_anti_tank_support", "anti_tank_strike", "portable_demolition", "mobility_booster"],
+      "stratagem_pool": ["temporary_anti_tank_support", "anti_tank_strike", "mobility_backpack", "crowd_clear_strike", "bullet_sentry", "smoke_strike"],
+      "preferred": ["crowd_clear_primary"],
+      "allow_temporary_support": true
+    },
+    {
+      "id": "stealth_recon",
+      "name": "潜行侦察",
+      "faction": "any",
+      "mission": "advance",
+      "summary": "用带潜行定位的主武器绕过交战，烟雾和机动背包负责转移。",
+      "requires": ["stealth_primary", "smoke_throwable", "mobility_backpack", "anti_tank_strike"],
+      "stratagem_pool": ["mobility_backpack", "anti_tank_strike", "smoke_strike", "bullet_sentry", "backpack_free_anti_medium_support", "orbital_control"],
+      "preferred": ["stealth_booster"]
+    },
+    {
+      "id": "sample_recovery",
+      "name": "样本回收",
+      "faction": "any",
+      "mission": "samples",
+      "summary": "带样本强化跑图，用机动背包脱离追击，控场投掷物留给拾取和撤退。",
+      "requires": ["sample_booster", "mobility_backpack", "control_throwable", "anti_tank_strike", "direct_fire_primary"],
+      "stratagem_pool": ["mobility_backpack", "anti_tank_strike", "smoke_strike", "bullet_sentry", "backpack_free_crowd_clear_support", "orbital_control"]
+    },
+    {
+      "id": "extraction_hold",
+      "name": "撤离接应",
+      "faction": "any",
+      "mission": "extraction",
+      "summary": "用撤离或增援强化接应队友，炮塔清理撤离区，烟幕掩护最后一段路。",
+      "requires": ["extraction_booster", "smoke_strike", "bullet_sentry", "anti_tank_strike", "crowd_clear_primary"],
+      "stratagem_pool": ["smoke_strike", "bullet_sentry", "anti_tank_strike", "heavy_sentry", "shield_relay", "low_damage_control_sentry"]
+    },
+    {
+      "id": "energy_endurance",
+      "name": "热量管理火力",
+      "faction": "any",
+      "mission": "advance",
+      "summary": "主武器和支援武器都可管理热量，交替射击时用定点战备解决重甲。",
+      "requires": ["energy_primary", "heat_support", "anti_tank_strike", "portable_demolition"],
+      "stratagem_pool": ["heat_support", "anti_tank_strike", "bullet_sentry", "heavy_sentry", "crowd_clear_drone", "orbital_area_denial"],
+      "preferred": ["sustain_booster"]
+    },
+    {
+      "id": "squad_smoke_cover",
+      "name": "烟幕掩护",
+      "faction": "any",
+      "mission": "escort",
+      "summary": "支援位给队伍铺烟或加罩，靠直射主武器和定点火力保护跟进路线。",
+      "requires": ["smoke_strike", "squad_cover_throwable", "direct_fire_primary", "anti_tank_strike", "shield_relay"],
+      "stratagem_pool": ["smoke_strike", "anti_tank_strike", "shield_relay", "backpack_free_anti_medium_support", "bullet_sentry", "mobility_backpack"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "motorized_recon",
+      "name": "车载机动支援",
+      "faction": "any",
+      "mission": "escort",
+      "summary": "适用于能通车的开阔地形，侦察载具负责转移，下车后靠机枪和独立反重火力。",
+      "requires": ["recon_vehicle", "backpack_free_machine_gun", "anti_tank_strike", "portable_demolition"],
+      "stratagem_pool": ["recon_vehicle", "backpack_free_machine_gun", "anti_tank_strike", "smoke_strike", "supply_backpack", "orbital_control"],
+      "preferred": ["mobility_booster"]
+    },
+    {
+      "id": "bug_open_field",
+      "name": "东线 · 地表推进",
+      "faction": "terminids",
+      "mission": "advance",
+      "summary": "清杂主武器扛巡逻小群，常驻反重接冲锋虫，另外保留随身封洞。",
+      "requires": ["crowd_clear_primary", "ranged_anti_tank_support", "bug_hole_demolition", "crowd_clear_strike"],
+      "stratagem_pool": ["ranged_anti_tank_support", "crowd_clear_strike", "orbital_area_denial", "bullet_sentry", "mobility_backpack", "orbital_control"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "bug_close_control",
+      "name": "东线 · 贴脸控场",
+      "faction": "terminids",
+      "mission": "advance",
+      "summary": "控场霰弹枪和近身副武器先解围，反重投掷物和定点火力留给贴上来的重甲。",
+      "requires": ["control_shotgun", "close_defense_secondary", "anti_tank_throwable", "anti_tank_strike", "crowd_clear_support"],
+      "stratagem_pool": ["anti_tank_strike", "crowd_clear_support", "low_damage_control_sentry", "bullet_sentry", "mobility_backpack", "orbital_control"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "bug_spitter_counter",
+      "name": "东线 · 喷吐群反中",
+      "faction": "terminids",
+      "mission": "advance",
+      "summary": "主武器集中处理中甲喷吐单位，控制投掷物断节奏，另留常驻反重和封洞装备。",
+      "requires": ["anti_medium_primary", "control_throwable", "ranged_anti_tank_support", "bug_hole_demolition"],
+      "stratagem_pool": ["ranged_anti_tank_support", "crowd_clear_strike", "orbital_control", "bullet_sentry", "heavy_sentry", "orbital_area_denial"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "bug_nest_blitz",
+      "name": "东线 · 封洞闪击",
+      "faction": "terminids",
+      "mission": "blitz",
+      "summary": "优先可快速连续封洞的装备，机动强化和机动背包用来跑巢，定点打击处理拦路重甲。",
+      "requires": ["quick_bug_hole_demolition", "mobility_booster", "mobility_backpack", "anti_tank_strike"],
+      "stratagem_pool": ["quick_bug_hole_demolition", "mobility_backpack", "anti_tank_strike", "crowd_clear_strike", "bullet_sentry", "orbital_control"],
+      "preferred": ["close_defense_secondary"]
+    },
+    {
+      "id": "bug_grenade_push",
+      "name": "东线 · 榴弹封巢",
+      "faction": "terminids",
+      "mission": "blitz",
+      "summary": "榴弹支援武器承担清群和封洞，近身主武器守贴脸距离，投掷物补反重。",
+      "requires": ["explosive_launcher_support", "close_combat_primary", "anti_tank_throwable", "anti_tank_strike"],
+      "stratagem_pool": ["explosive_launcher_support", "supply_backpack", "anti_tank_strike", "bullet_sentry", "orbital_control", "crowd_clear_strike"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "bug_cave_clear",
+      "name": "东线 · 洞穴清群",
+      "faction": "terminids",
+      "mission": "cave",
+      "summary": "下洞前拿支援武器和独立背包，手上留封洞和应急反重。其余战备留给地表或有天窗的区域。",
+      "requires": ["cave_support", "cave_utility_backpack", "close_combat_primary", "bug_hole_demolition", "anti_tank_throwable"],
+      "stratagem_pool": ["cave_support", "cave_utility_backpack", "bullet_sentry", "low_damage_control_sentry", "heavy_sentry", "anti_tank_orbital"],
+      "preferred": ["sustain_booster"]
+    },
+    {
+      "id": "bug_cave_anti_tank",
+      "name": "东线 · 洞穴反重",
+      "faction": "terminids",
+      "mission": "cave",
+      "summary": "下洞前先拿可在地下直接开火的反重武器，清杂主武器和随身爆破承担近距离推进。",
+      "requires": ["cave_anti_tank_support", "close_combat_primary", "bug_hole_demolition", "anti_medium_secondary"],
+      "stratagem_pool": ["cave_anti_tank_support", "supply_backpack", "energy_shield_backpack", "bullet_sentry", "control_sentry", "heavy_sentry", "anti_tank_orbital"],
+      "preferred": ["sustain_booster"]
+    },
+    {
+      "id": "bug_cave_pack_firepower",
+      "name": "东线 · 洞穴带包重火力",
+      "faction": "terminids",
+      "mission": "cave",
+      "summary": "预先带上配套供弹背包和重火力，直射主武器守近距离，手上保留封洞和应急反重。",
+      "requires": ["cave_backpack_fed_support", "direct_fire_primary", "bug_hole_demolition", "anti_tank_throwable"],
+      "stratagem_pool": ["cave_backpack_fed_support", "bullet_sentry", "control_sentry", "heavy_sentry", "anti_tank_orbital", "orbital_control"],
+      "preferred": ["sustain_booster"]
+    },
+    {
+      "id": "bug_fire_defense",
+      "name": "东线 · 火线守点",
+      "faction": "terminids",
+      "mission": "defense",
+      "summary": "用持续火焰封住入口，实弹哨戒处理漏网小虫，重甲从远处接。",
+      "requires": ["fire_area_denial", "bullet_sentry", "ranged_anti_tank_support", "fire_throwable"],
+      "stratagem_pool": ["fire_area_denial", "bullet_sentry", "ranged_anti_tank_support", "control_sentry", "crowd_clear_strike", "heavy_sentry"],
+      "preferred": ["crowd_clear_primary", "general_booster"]
+    },
+    {
+      "id": "bug_gas_choke",
+      "name": "东线 · 毒气封口",
+      "faction": "terminids",
+      "mission": "defense",
+      "summary": "投掷毒气拉开距离，持续毒气封路，留反重武器和随身封洞手段。",
+      "requires": ["gas_throwable", "gas_area_denial", "ranged_anti_tank_support", "bug_hole_demolition"],
+      "stratagem_pool": ["gas_area_denial", "ranged_anti_tank_support", "bullet_sentry", "orbital_crowd_clear", "heavy_sentry", "crowd_clear_strike"],
+      "preferred": ["close_combat_primary", "general_booster"]
+    },
+    {
+      "id": "bug_fire_sweeper",
+      "name": "东线 · 手持喷火推进",
+      "faction": "terminids",
+      "mission": "advance",
+      "summary": "火焰支援武器负责近处虫群，直射主武器处理远一点的目标，留反重和封洞。",
+      "requires": ["fire_support", "direct_fire_primary", "bug_hole_demolition", "anti_tank_strike"],
+      "stratagem_pool": ["fire_support", "anti_tank_strike", "fire_area_denial", "bullet_sentry", "orbital_control", "energy_shield_backpack", "crowd_clear_strike"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "bug_exosuit_nest",
+      "name": "东线 · 机甲推巢",
+      "faction": "terminids",
+      "mission": "blitz",
+      "summary": "用机甲顶住进巢时的火力压力，下机后仍有随身封洞和独立反重战备。",
+      "requires": ["exosuit", "bug_hole_demolition", "anti_tank_strike", "crowd_clear_primary"],
+      "stratagem_pool": ["exosuit", "anti_tank_strike", "quick_bug_hole_demolition", "bullet_sentry", "orbital_control", "orbital_area_denial", "mobility_backpack"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "bug_oil_rig_escort",
+      "name": "东线 · 钻机护送",
+      "faction": "terminids",
+      "mission": "escort",
+      "summary": "用支援武器处理拦路重甲，实弹哨戒从车侧拦杂兵，投掷物留给近处控制。",
+      "requires": ["ranged_anti_tank_support", "crowd_clear_primary", "bullet_sentry", "control_throwable"],
+      "stratagem_pool": ["ranged_anti_tank_support", "bullet_sentry", "low_damage_control_sentry", "shield_relay", "orbital_control", "heavy_sentry"],
+      "preferred": ["mobility_booster"]
+    },
+    {
+      "id": "bug_breach_containment",
+      "name": "东线 · 增援口火力",
+      "faction": "terminids",
+      "mission": "defense",
+      "summary": "轨道封锁压增援口，控场哨戒接第二波，反重手专盯穿过火力的重甲。",
+      "requires": ["orbital_area_denial", "low_damage_control_sentry", "ranged_anti_tank_support", "bug_hole_demolition"],
+      "stratagem_pool": ["orbital_area_denial", "low_damage_control_sentry", "ranged_anti_tank_support", "bullet_sentry", "heavy_sentry", "anti_tank_strike"],
+      "preferred": ["crowd_clear_primary", "general_booster"]
+    },
+    {
+      "id": "bug_support_rotation",
+      "name": "东线 · 机枪加次抛",
+      "faction": "terminids",
+      "mission": "advance",
+      "summary": "平时常驻机枪清杂，重甲出现时短换次抛，另带独立反重战备处理连续压力。",
+      "requires": ["machine_gun_support", "temporary_anti_tank_support", "anti_tank_strike", "bug_hole_demolition"],
+      "stratagem_pool": ["machine_gun_support", "temporary_anti_tank_support", "anti_tank_strike", "bullet_sentry", "supply_backpack", "orbital_area_denial", "orbital_control"],
+      "allow_temporary_support": true,
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "bot_frontline",
+      "name": "西线 · 中远距推进",
+      "faction": "automatons",
+      "mission": "advance",
+      "summary": "主武器处理毁灭者等中甲，反重支援接重型单位，留随身拆厂和清杂火力。",
+      "requires": ["anti_medium_primary", "ranged_anti_tank_support", "portable_fabricator_demolition", "crowd_clear_strike"],
+      "stratagem_pool": ["ranged_anti_tank_support", "crowd_clear_strike", "heavy_sentry", "orbital_control", "orbital_assault", "energy_shield_backpack"],
+      "preferred": ["automaton_recommended", "general_booster"]
+    },
+    {
+      "id": "bot_factory_blitz",
+      "name": "西线 · 远拆制造厂",
+      "faction": "automatons",
+      "mission": "blitz",
+      "summary": "用可从厂外进攻的战备跑点，随身爆破补漏，主武器负责赶路时的中甲敌人。",
+      "requires": ["remote_fabricator_demolition", "portable_fabricator_demolition", "anti_medium_primary", "mobility_booster"],
+      "stratagem_pool": ["remote_fabricator_demolition", "mobility_backpack", "smoke_strike", "heavy_sentry", "crowd_clear_strike", "orbital_assault"]
+    },
+    {
+      "id": "bot_precision_support",
+      "name": "西线 · 支援武器点弱点",
+      "faction": "automatons",
+      "mission": "advance",
+      "summary": "靠精确支援武器打弱点，直射主武器应对小兵，定点战备接难处理的重甲。",
+      "requires": ["precision_support", "direct_fire_primary", "anti_tank_strike", "portable_fabricator_demolition"],
+      "stratagem_pool": ["precision_support", "anti_tank_strike", "smoke_strike", "bullet_sentry", "heavy_sentry", "supply_backpack", "energy_shield_backpack"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "bot_marksman",
+      "name": "西线 · 精确主武器反中",
+      "faction": "automatons",
+      "mission": "advance",
+      "summary": "中甲优先交给精确主武器，反坦克支援单独留给重型目标，用烟幕调整射位。",
+      "requires": ["precision_primary", "ranged_anti_tank_support", "smoke_strike", "portable_fabricator_demolition"],
+      "stratagem_pool": ["ranged_anti_tank_support", "smoke_strike", "bullet_sentry", "heavy_sentry", "orbital_control", "crowd_clear_strike"],
+      "preferred": ["automaton_recommended", "general_booster"]
+    },
+    {
+      "id": "bot_antiair",
+      "name": "西线 · 炮艇拦截",
+      "faction": "automatons",
+      "mission": "advance",
+      "summary": "支援武器留给空中目标，地面重甲用独立战备，实弹哨戒分摊贴近压力。",
+      "requires": ["anti_air_support", "anti_tank_strike", "anti_medium_primary", "bullet_sentry"],
+      "stratagem_pool": ["anti_air_support", "anti_tank_strike", "bullet_sentry", "orbital_control", "heavy_sentry", "energy_shield_backpack"],
+      "preferred": ["portable_fabricator_demolition", "general_booster"]
+    },
+    {
+      "id": "bot_shield_alley",
+      "name": "西线 · 持盾巷战",
+      "faction": "automatons",
+      "mission": "advance",
+      "summary": "短距离持盾配单手主武器，免背包反中支援处理装甲，留拆厂和定点反重。",
+      "requires": ["one_handed_shield", "one_handed_primary", "backpack_free_anti_medium_support", "anti_tank_strike", "portable_fabricator_demolition"],
+      "stratagem_pool": ["one_handed_shield", "backpack_free_anti_medium_support", "anti_tank_strike", "smoke_strike", "bullet_sentry", "orbital_control"],
+      "preferred": ["protection_booster"]
+    },
+    {
+      "id": "bot_smoke_bypass",
+      "name": "西线 · 烟幕绕厂",
+      "faction": "automatons",
+      "mission": "blitz",
+      "summary": "在两处备好烟幕，机动背包换路线，用远拆手段减少在工厂门口停留。",
+      "requires": ["smoke_throwable", "smoke_strike", "mobility_backpack", "remote_fabricator_demolition", "direct_fire_primary"],
+      "stratagem_pool": ["smoke_strike", "mobility_backpack", "remote_fabricator_demolition", "backpack_free_anti_tank_support", "bullet_sentry", "anti_tank_orbital"],
+      "preferred": ["stealth_booster"]
+    },
+    {
+      "id": "bot_reinforcement_at",
+      "name": "西线 · 临时反重截援",
+      "faction": "automatons",
+      "mission": "advance",
+      "summary": "以临时反重支援拦重型增援，定点打击补第二个目标，留常规武器对付中甲和制造厂。",
+      "requires": ["temporary_anti_tank_support", "anti_tank_strike", "anti_medium_primary", "portable_fabricator_demolition"],
+      "stratagem_pool": ["temporary_anti_tank_support", "anti_tank_strike", "heavy_sentry", "smoke_strike", "orbital_assault", "bullet_sentry", "energy_shield_backpack"],
+      "preferred": ["automaton_recommended", "general_booster"],
+      "allow_temporary_support": true
+    },
+    {
+      "id": "bot_factory_strider_focus",
+      "name": "西线 · 重型步行机接战",
+      "faction": "automatons",
+      "mission": "advance",
+      "summary": "反重支援武器配重型哨戒，预留独立反重火力，直射主武器处理随行单位。",
+      "requires": ["backpack_anti_tank_support", "heavy_sentry", "anti_tank_strike", "direct_fire_primary"],
+      "stratagem_pool": ["backpack_anti_tank_support", "heavy_sentry", "anti_tank_strike", "orbital_control", "crowd_clear_strike", "shield_relay"],
+      "preferred": ["portable_fabricator_demolition", "general_booster"]
+    },
+    {
+      "id": "bot_at_minefield",
+      "name": "西线 · 反坦克雷区阵地",
+      "faction": "automatons",
+      "mission": "defense",
+      "summary": "把反重雷区放在敌军必经方向，可操作炮位接漏网单位，随身反重负责脱离炮位时的应急。",
+      "requires": ["anti_tank_minefield", "crew_emplacement", "anti_medium_primary", "anti_tank_throwable"],
+      "stratagem_pool": ["anti_tank_minefield", "crew_emplacement", "heavy_sentry", "low_damage_control_sentry", "smoke_strike", "shield_relay"],
+      "preferred": ["protection_booster"]
+    },
+    {
+      "id": "bot_bunker_assault",
+      "name": "西线 · 大据点攻坚",
+      "faction": "automatons",
+      "mission": "advance",
+      "summary": "用大型轨道火力给攻坚创造空档，远拆外围制造厂，主副武器留给中甲守军。",
+      "requires": ["orbital_assault", "remote_fabricator_demolition", "anti_medium_primary", "close_defense_secondary", "portable_fabricator_demolition"],
+      "stratagem_pool": ["orbital_assault", "remote_fabricator_demolition", "anti_tank_strike", "smoke_strike", "heavy_sentry", "backpack_free_anti_medium_support", "energy_shield_backpack"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "bot_urban_plasma",
+      "name": "西线 · 等离子中甲压制",
+      "faction": "automatons",
+      "mission": "advance",
+      "summary": "等离子主武器压制中甲，近身换副武器，反重支援和随身拆厂手段负责推进。",
+      "requires": ["plasma_primary", "close_defense_secondary", "backpack_free_anti_tank_support", "portable_fabricator_demolition"],
+      "stratagem_pool": ["backpack_free_anti_tank_support", "energy_shield_backpack", "orbital_control", "crowd_clear_strike", "bullet_sentry", "smoke_strike"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "bot_mortar_line",
+      "name": "西线 · 迫击火力线",
+      "faction": "automatons",
+      "mission": "defense",
+      "summary": "高爆迫击负责远处火力，电磁或毒气迫击负责控场，用反重炮台处理直线逼近的重型单位。",
+      "requires": ["mortar_sentry", "low_damage_control_sentry", "anti_tank_emplacement", "anti_medium_primary"],
+      "stratagem_pool": ["mortar_sentry", "low_damage_control_sentry", "anti_tank_emplacement", "shield_relay", "smoke_strike", "energy_shield_backpack"],
+      "preferred": ["protection_booster"]
+    },
+    {
+      "id": "bot_armored_escort",
+      "name": "西线 · 装甲载具协同",
+      "faction": "automatons",
+      "mission": "escort",
+      "summary": "载具接大目标，步兵带免背包支援武器补中甲，手持爆破和掩护投掷物留给下车推进。",
+      "requires": ["armored_vehicle", "backpack_free_anti_medium_support", "portable_fabricator_demolition", "squad_cover_throwable"],
+      "stratagem_pool": ["armored_vehicle", "backpack_free_anti_medium_support", "supply_backpack", "smoke_strike", "shield_relay", "anti_tank_strike", "heavy_sentry"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "ill_crowd_frontline",
+      "name": "南线 · 清潮推进",
+      "faction": "illuminate",
+      "mission": "advance",
+      "summary": "主武器和独立攻击战备对付人潮，支援武器打收割者弱点，随身备好拆船手段。",
+      "requires": ["crowd_clear_primary", "crowd_clear_strike", "harvester_support", "warp_ship_bypass_portable"],
+      "stratagem_pool": ["crowd_clear_strike", "harvester_support", "bullet_sentry", "heavy_sentry", "gas_area_denial", "energy_shield_backpack"],
+      "preferred": ["illuminate_recommended", "general_booster"]
+    },
+    {
+      "id": "ill_shield_hunter",
+      "name": "南线 · 持续破盾",
+      "faction": "illuminate",
+      "mission": "advance",
+      "summary": "主武器持续打盾，支援武器接收割者腿根，破盾后用随身爆破拆船舱门。",
+      "requires": ["shield_breaking_primary", "harvester_support", "warp_ship_door_demolition", "bullet_sentry"],
+      "stratagem_pool": ["harvester_support", "bullet_sentry", "gas_area_denial", "crowd_clear_strike", "heavy_sentry", "supply_backpack"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "ill_direct_demolition",
+      "name": "南线 · 带盾飞船爆破",
+      "faction": "illuminate",
+      "mission": "blitz",
+      "summary": "用可直接爆破有盾停泊飞船的战备跑点，携带一件随身爆破手段补冷却。",
+      "requires": ["warp_ship_bypass_strike", "warp_ship_bypass_portable", "crowd_clear_primary", "mobility_booster"],
+      "stratagem_pool": ["warp_ship_bypass_strike", "mobility_backpack", "bullet_sentry", "backpack_free_harvester_support", "eagle_strafe", "gas_area_denial"]
+    },
+    {
+      "id": "ill_door_demolition",
+      "name": "南线 · 破盾拆舱门",
+      "faction": "illuminate",
+      "mission": "blitz",
+      "summary": "支援武器打掉停泊飞船的盾，随后用随身爆破打舱门，炮塔掩护接近。",
+      "requires": ["shield_breaking_support", "warp_ship_door_demolition", "bullet_sentry", "control_throwable"],
+      "stratagem_pool": ["shield_breaking_support", "bullet_sentry", "heavy_sentry", "low_damage_control_sentry", "energy_shield_backpack", "mobility_backpack", "supply_backpack"],
+      "preferred": ["mobility_booster"]
+    },
+    {
+      "id": "ill_harvester_precision",
+      "name": "南线 · 收割者弱点射击",
+      "faction": "illuminate",
+      "mission": "advance",
+      "summary": "破盾主武器配精确支援火力，集中打收割者腿根。哨戒先隔开近处敌群。",
+      "requires": ["shield_breaking_primary", "harvester_precision_support", "crowd_clear_sentry", "warp_ship_bypass_strike"],
+      "stratagem_pool": ["harvester_precision_support", "crowd_clear_sentry", "warp_ship_bypass_strike", "heavy_sentry", "orbital_control", "mobility_backpack"],
+      "preferred": ["close_defense_secondary", "general_booster"]
+    },
+    {
+      "id": "ill_arc_control",
+      "name": "南线 · 电弧控场",
+      "faction": "illuminate",
+      "mission": "advance",
+      "summary": "电弧支援武器负责群体控制，主武器打盾，定点打击接重目标，随身装备可拆停泊飞船。",
+      "requires": ["arc_support", "shield_breaking_primary", "anti_tank_strike", "warp_ship_bypass_portable"],
+      "stratagem_pool": ["arc_support", "anti_tank_strike", "crowd_clear_strike", "low_damage_control_sentry", "bullet_sentry", "mobility_backpack"],
+      "preferred": ["illuminate_recommended", "general_booster"]
+    },
+    {
+      "id": "ill_sentry_hold",
+      "name": "南线 · 街口哨戒阵地",
+      "faction": "illuminate",
+      "mission": "defense",
+      "summary": "实弹、重型和控场哨戒分别负责小群、重目标和拖慢推进，手上保留破盾手段。",
+      "requires": ["bullet_sentry", "heavy_sentry", "low_damage_control_sentry", "shield_breaking_primary"],
+      "stratagem_pool": ["bullet_sentry", "heavy_sentry", "low_damage_control_sentry", "shield_relay", "warp_ship_bypass_strike", "harvester_support"],
+      "preferred": ["warp_ship_bypass_portable", "general_booster"]
+    },
+    {
+      "id": "ill_airwatch",
+      "name": "南线 · 空中单位拦截",
+      "faction": "illuminate",
+      "mission": "advance",
+      "summary": "支援武器留给飞行单位，持续射击主武器补破盾，随身装备可直接拆停泊船。",
+      "requires": ["anti_air_support", "shield_breaking_primary", "warp_ship_bypass_portable", "crowd_clear_strike"],
+      "stratagem_pool": ["anti_air_support", "crowd_clear_strike", "bullet_sentry", "heavy_sentry", "gas_area_denial", "energy_shield_backpack"],
+      "preferred": ["anti_air_throwable", "illuminate_recommended", "general_booster"]
+    },
+    {
+      "id": "ill_gas_street",
+      "name": "南线 · 毒气分割街区",
+      "faction": "illuminate",
+      "mission": "defense",
+      "summary": "随身毒气和持续毒气各留一手，给打收割者弱点和清小群争取窗口。",
+      "requires": ["gas_throwable", "gas_area_denial", "harvester_support", "warp_ship_bypass_strike", "crowd_clear_primary"],
+      "stratagem_pool": ["gas_area_denial", "harvester_support", "warp_ship_bypass_strike", "bullet_sentry", "heavy_sentry", "low_damage_control_sentry"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "ill_mobile_street",
+      "name": "南线 · 机动穿街",
+      "faction": "illuminate",
+      "mission": "advance",
+      "summary": "机动背包负责转移，免背包支援武器处理收割者，随身破盾和拆船装备给跑点留余地。",
+      "requires": ["mobility_backpack", "backpack_free_harvester_support", "shield_breaking_primary", "warp_ship_bypass_portable"],
+      "stratagem_pool": ["mobility_backpack", "backpack_free_harvester_support", "bullet_sentry", "heavy_sentry", "gas_area_denial", "eagle_strafe"],
+      "preferred": ["mobility_booster"]
+    },
+    {
+      "id": "ill_sustained_mg",
+      "name": "南线 · 补给机枪",
+      "faction": "illuminate",
+      "mission": "advance",
+      "summary": "带补给背包供给常驻机枪，反中主武器接关键单位，拆船交给独立火力。",
+      "requires": ["supply_backpack", "backpack_free_machine_gun", "anti_medium_primary", "control_throwable", "warp_ship_bypass_strike"],
+      "stratagem_pool": ["supply_backpack", "backpack_free_machine_gun", "warp_ship_bypass_strike", "bullet_sentry", "heavy_sentry", "orbital_control"],
+      "preferred": ["sustain_booster"]
+    },
+    {
+      "id": "ill_exosuit_breakthrough",
+      "name": "南线 · 机甲突破",
+      "faction": "illuminate",
+      "mission": "advance",
+      "summary": "机甲负责高压路段，卸下机甲后仍有可持续破盾的主武器和手持拆船方案。",
+      "requires": ["exosuit", "shield_breaking_primary", "warp_ship_door_demolition", "orbital_control"],
+      "stratagem_pool": ["exosuit", "orbital_control", "warp_ship_bypass_strike", "heavy_sentry", "mobility_backpack", "backpack_free_harvester_support"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "ill_melee_backstop",
+      "name": "南线 · 持盾近身拦截",
+      "faction": "illuminate",
+      "mission": "advance",
+      "summary": "单手主武器和盾牌负责近处拦截，眩晕副武器控贴脸敌人，远处目标有支援武器和独立拆船火力。",
+      "requires": ["one_handed_shield", "one_handed_primary", "stun_melee_secondary", "backpack_free_harvester_support", "warp_ship_bypass_strike"],
+      "stratagem_pool": ["one_handed_shield", "backpack_free_harvester_support", "warp_ship_bypass_strike", "bullet_sentry", "heavy_sentry", "gas_area_denial"],
+      "preferred": ["general_booster"]
+    },
+    {
+      "id": "ill_emplacement_hold",
+      "name": "南线 · 手动炮位守线",
+      "faction": "illuminate",
+      "mission": "defense",
+      "summary": "用手动部署火力封主要射界，护罩留给炮位，清杂哨戒补侧向来敌。",
+      "requires": ["crew_emplacement", "shield_relay", "crowd_clear_sentry", "shield_breaking_primary"],
+      "stratagem_pool": ["crew_emplacement", "shield_relay", "crowd_clear_sentry", "warp_ship_bypass_strike", "low_damage_control_sentry", "harvester_support"],
+      "preferred": ["protection_booster"]
+    }
+  ]
+}

@@ -9,12 +9,21 @@ import re
 import shutil
 import time
 import unicodedata
+from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Any, Iterable, Mapping, Sequence
 
 if __package__:
+    from .experimental_groups import ExperimentalGroups, ExperimentalGroupsError
+    from .loadout_experiment import (
+        ExperimentError, TemplateCatalog, generate_experimental_loadout, load_templates, reroll_experimental_slot,
+    )
     from .loadout_knowledge import KnowledgeError, load_knowledge
 else:
+    from experimental_groups import ExperimentalGroups, ExperimentalGroupsError
+    from loadout_experiment import (
+        ExperimentError, TemplateCatalog, generate_experimental_loadout, load_templates, reroll_experimental_slot,
+    )
     from loadout_knowledge import KnowledgeError, load_knowledge
 
 
@@ -190,11 +199,15 @@ COMMAND_TRIGGERS = (COMMAND_NAME, "hd", "潜兵", "绝地潜兵")
 # a bare word like ``hd`` would swallow ordinary chat.
 COMMAND_ALIASES = tuple(f"/{name}" for name in COMMAND_TRIGGERS if name != COMMAND_NAME)
 TRIGGER_ALTERNATION = "|".join(re.escape(name) for name in COMMAND_TRIGGERS)
-COMMAND_PATTERN = rf"^/(?:{TRIGGER_ALTERNATION})(?:\s+(?P<action>\w+))?(?:\s+(?P<arg>\w+))?\s*$"
+COMMAND_PATTERN = (
+    rf"^/(?:{TRIGGER_ALTERNATION})"
+    r"(?:\s+(?:(?P<exp>(?i:exp))(?:\s+(?P<exp_arg>\w+(?:\s+[\w-]+)?))?"
+    r"|(?P<action>\w+)(?:\s+(?P<arg>\w+))?))?\s*$"
+)
 COMMAND_RE = re.compile(COMMAND_PATTERN, re.IGNORECASE)
 
 
-ACTION_LABELS = {'loadout': '配装', 'status': '状态', 'diag': '自检', 'help': '帮助'}
+ACTION_LABELS = {'loadout': '配装', 'status': '状态', 'diag': '自检', 'help': '帮助', 'exp': '实验配装'}
 
 
 LETTER_SHORTCUTS = (('lo', 'loadout'), ('st', 'status'), ('diag', 'diag'), ('h', 'help'))
@@ -208,9 +221,24 @@ ACTION_ALIASES = {
     "诊断": "diag", "自检": "diag", "检测": "diag", "测试": "diag",
     **dict(LETTER_SHORTCUTS), **dict(SINGLE_CHAR_SHORTCUTS),
 }
-COMMAND_ACTIONS = frozenset({"loadout", "status", "diag", "help"})
-FUNCTIONAL_ACTIONS = frozenset({"loadout", "status", "help"})
+COMMAND_ACTIONS = frozenset({"loadout", "status", "diag", "help", "exp"})
+FUNCTIONAL_ACTIONS = frozenset({"loadout", "status", "help", "exp"})
 ADMIN_ACTIONS = frozenset({"diag"})
+EXPERIMENT_MANAGEMENT = frozenset({"on", "off", "status"})
+EXPERIMENT_FACTIONS = {
+    "any": "any", "通用": "any",
+    "terminids": "terminids", "东线": "terminids",
+    "automatons": "automatons", "西线": "automatons",
+    "illuminate": "illuminate", "南线": "illuminate",
+}
+
+
+@dataclass(frozen=True)
+class ExperimentalSession:
+    template_id: str
+    template_name: str
+    loadout: dict[str, str]
+    updated_at: float
 
 
 def pad_display(text: str, width: int) -> str:
@@ -246,17 +274,18 @@ def usage_hint(*, reroll: int = LOADOUT_REROLL_TTL_SECONDS) -> str:
         "绝地潜兵 2：民主帮你选择\n用法：\n"
         "/helldivers loadout     生成一套随机配装并以图片发送\n"
         f"                        抽完 {reroll} 秒内可加序号 1-8 单独重抽该格\n"
+        "/helldivers exp         实验配装与本群实验白名单\n"
         "/helldivers status      查看配装数据与出图状态\n"
         "/helldivers diag        自检出图链路（管理指令）\n"
         "/helldivers help [主题] 查看帮助，带主题看单条命令详情\n"
         "管理指令只有 admin_users 白名单管理员与宿主操作员能用；"
         "白名单群内其余指令默认所有人可用，可单独加黑名单。\n"
         "所有指令仅限 allowed_groups 白名单群，私聊不可用；管理员与宿主操作员同样受限。\n"
-        "群白名单只能在配置文件 plugin.allowed_groups 中维护。\n"
+        "基础群白名单在 plugin.allowed_groups 中维护，实验白名单由群内管理指令维护。\n"
         "动作简写："
         + " / ".join(f"{shortcut} {ACTION_LABELS[action]}" for shortcut, action in LETTER_SHORTCUTS)
         + "\n单字简写：" + " / ".join(shortcut for shortcut, _ in SINGLE_CHAR_SHORTCUTS)
-        + "\n可用主题：loadout / status / diag / help / shortcut\n"
+        + "\n可用主题：loadout / exp / status / diag / help / shortcut\n"
         "中文写法：/helldivers 配装、/helldivers 帮助 配装\n"
         f"触发词：{' / '.join('/' + name for name in COMMAND_TRIGGERS)}（完全等价）"
     )
@@ -279,6 +308,13 @@ def topic_shortcut(plugin: Any) -> str:
 
 HELP_TOPICS = {
     "loadout": topic_loadout,
+    "exp": (
+        "【/helldivers exp】实验配装\n"
+        "管理员可用 /hd exp on、/hd exp off 或 /hd exp status 管理当前群。\n"
+        "/hd exp loadout 抽通用推进模板。可加阵营或模板 ID。\n"
+        "/hd exp presets [阵营] 查看模板 ID，/hd exp loadout 1-8 重抽一格。\n"
+        "中文写法：/潜兵 exp loadout 东线（也可选西线、南线或通用）"
+    ),
     "diag": (
         "【/helldivers diag】自检出图链路（管理指令）\n"
         "检查配装数据与装备图标，再渲染并发送测试图。失败会显示宿主返回的原因，"
@@ -294,7 +330,7 @@ HELP_TOPICS = {
     "help": (
         "【/helldivers help [主题]】显示用法\n"
         "不带主题显示全部命令；带主题看单条命令详情，例如 /helldivers help loadout。\n"
-        "可用的主题：loadout / status / diag / help / shortcut\n"
+        "可用的主题：loadout / exp / status / diag / help / shortcut\n"
         "中文写法：/helldivers 帮助，或 /helldivers 帮助 配装\n"
         "简写清单见 /helldivers help 简写（也可写 shortcut / 快捷 / 缩写）"
     ),
@@ -326,7 +362,7 @@ class PluginSection(PluginConfigBase):
     admin_users: list[str] = Field(
         default_factory=list,
         description=(
-            "管理指令 diag 的白名单 QQ 号。功能性指令（配装/状态/帮助）"
+            "出图自检和实验白名单管理指令的管理员 QQ 号。功能性指令（配装/状态/帮助）"
             "在允许群内默认所有人都能用，不需要写在这里。宿主操作员在允许群内拥有管理权限。"
         ),
         json_schema_extra={
@@ -342,7 +378,7 @@ class PluginSection(PluginConfigBase):
         default_factory=dict,
         description=(
             "功能性指令的黑名单：键是指令名（loadout / "
-            "status / help，或 * 表示全部功能性指令），值是禁止使用该指令的 QQ 号列表。"
+            "exp / status / help，或 * 表示全部功能性指令），值是禁止使用该指令的 QQ 号列表。"
             "管理指令不受此表影响（它们本来就是白名单制）；管理员也不会被此表拦住。"
         ),
         json_schema_extra={
@@ -401,6 +437,7 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
         self._cfg: dict[str, Any] = {}
         # scope -> (loadout, motto, monotonic stamp); powers ``loadout <1-8>``.
         self._loadout_sessions: dict[str, tuple[dict[str, str], str, float]] = {}
+        self._experimental_sessions: dict[tuple[str, str], ExperimentalSession] = {}
         # Why the last card render / image send failed; empty after a success.
         self._last_render_error = ""
         # Resolved lazily: ``ctx.paths`` only exists inside a runner, and the
@@ -417,6 +454,7 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
 
     async def on_unload(self) -> None:
         self._loadout_sessions.clear()
+        self._experimental_sessions.clear()
 
     async def on_config_update(self, scope: str = CONFIG_RELOAD_SCOPE_SELF, config_data: Any = None, version: str = "") -> None:
         del version
@@ -554,14 +592,15 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
         a real command and must not fall through to a default action.
         """
         matched = kwargs.get("matched_groups")
-        action = str(matched.get("action") or "").strip().lower() if isinstance(matched, Mapping) else ""
-        argument = str(matched.get("arg") or "").strip().lower() if isinstance(matched, Mapping) else ""
-        if not action:
+        if not isinstance(matched, Mapping) or not (matched.get("action") or matched.get("exp")):
             result = COMMAND_RE.match(str(kwargs.get("text") or "").strip())
             if result is None:
                 return "", ""
-            action = str(result.group("action") or "").strip().lower()
-            argument = str(result.group("arg") or "").strip().lower()
+            matched = result.groupdict()
+        if matched.get("exp"):
+            return "exp", " ".join(str(matched.get("exp_arg") or "").lower().split())
+        action = str(matched.get("action") or "").strip().lower()
+        argument = str(matched.get("arg") or "").strip().lower()
         action = ACTION_ALIASES.get(action, action)
         if action in HELP_ONLY_ALIASES:
             # ``/hd 简写`` is shorthand for ``help shortcut``.
@@ -739,13 +778,17 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
         await self._reply(kwargs, "\n".join(lines))
         return sent, "自检通过" if sent else "图片发送失败", 2
 
-    async def _send_loadout_card(self, kwargs: Mapping[str, Any], loadout: Mapping[str, str], motto: str) -> tuple[bool, str, int]:
-        image = await self._render_card(render_loadout_html(loadout, motto=motto, icons=load_loadout_icons(self._data_file("loadout_icons.json"))))
+    async def _send_loadout_card(
+        self, kwargs: Mapping[str, Any], loadout: Mapping[str, str], motto: str, *, template_name: str = "",
+    ) -> tuple[bool, str, int]:
+        footer = f"绝地潜兵 2 实验配装 · {template_name}" if template_name else LOADOUT_FOOTER
+        icons = load_loadout_icons(self._data_file("loadout_icons.json"))
+        image = await self._render_card(render_loadout_html(loadout, motto=motto, footer=footer, icons=icons))
         if image and await self._send_image(kwargs, image):
             return True, "已发送配装图", 2
         reason = self._last_render_error or "未知原因"
         self._log("warning", "Helldivers loadout fell back to text: %s", reason)
-        text = format_loadout(loadout, motto=motto)
+        text = format_loadout(loadout, motto=motto, template_name=template_name)
         # Surface the reason: a silent text fallback is impossible to debug from chat.
         await self._reply(kwargs, f"{text}\n（配装图生成失败，已回退文字：{reason}）")
         return True, "已发送配装文本", 2
@@ -803,6 +846,120 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
         self._loadout_sessions[scope] = (loadout, motto, now)
         return await self._send_loadout_card(kwargs, loadout, motto)
 
+    async def _experimental_command(
+        self, kwargs: Mapping[str, Any], group_id: str, argument: str,
+    ) -> tuple[bool, str, int]:
+        subcommand, _, value = argument.partition(" ")
+        if not subcommand:
+            denial = self._command_permission(kwargs, "help")
+            if denial:
+                await self._reply(kwargs, denial)
+                return False, denial, 2
+            await self._reply(kwargs, self._help_text("exp"))
+            return True, "已发送实验配装用法", 2
+        managing = subcommand in EXPERIMENT_MANAGEMENT
+        if managing and not self._is_admin(kwargs):
+            message = "实验白名单只有插件管理员或宿主操作员可以管理"
+        elif (managing and value) or (not managing and subcommand not in {"loadout", "presets"}):
+            message = "实验指令格式无效，请用 /hd help exp 查看用法"
+        elif not managing:
+            message = self._command_permission(kwargs, "exp")
+            if not message and subcommand == "loadout":
+                message = self._command_permission(kwargs, "loadout")
+        else:
+            message = ""
+        if message:
+            await self._reply(kwargs, message)
+            return False, message, 2
+
+        data_dir = self._data_dir()
+        state_dir = BUNDLE_DIR / "data" if data_dir == BUNDLE_DIR else data_dir
+        groups = ExperimentalGroups(state_dir / "experimental_groups.json")
+        try:
+            if managing:
+                if subcommand == "status":
+                    enabled = groups.enabled(group_id)
+                else:
+                    enabled = subcommand == "on"
+                    groups.set_enabled(group_id, enabled)
+                    if not enabled:
+                        self._experimental_sessions = {
+                            key: session for key, session in self._experimental_sessions.items()
+                            if key[0] != group_id
+                        }
+                status = "已启用" if enabled else "未启用"
+                message = f"本群实验配装{status}。"
+                if enabled:
+                    message += " 可用 /hd exp loadout 抽取，或用 /hd exp presets 查看预设。"
+                await self._reply(kwargs, message)
+                return True, message, 2
+            if not groups.enabled(group_id):
+                message = "本群未启用实验配装，请联系管理员使用 /hd exp on"
+                await self._reply(kwargs, message)
+                return False, message, 2
+        except ExperimentalGroupsError as exc:
+            self._log("warning", "Experimental group allowlist is unavailable: %s", exc)
+            message = "实验白名单读写失败，请管理员检查数据目录中的 experimental_groups.json"
+            await self._reply(kwargs, message)
+            return False, message, 2
+
+        choice = EXPERIMENT_FACTIONS.get(value, value or "any")
+        try:
+            catalog = load_templates(self._data_file("loadout_templates.json"))
+            if subcommand == "presets":
+                rows = [f"{template.name}  {template.id}" for template in catalog.templates.values()
+                        if template.faction == choice]
+                if not rows:
+                    raise ExperimentError("没有该阵营的预设，可选通用、东线、西线、南线")
+                await self._reply(kwargs, "实验预设（用 /hd exp loadout <模板 ID> 抽取）\n" + "\n".join(rows))
+                return True, "已发送实验预设", 2
+            return await self._experimental_loadout(kwargs, group_id, catalog, choice)
+        except KnowledgeError as exc:
+            self._log("warning", "Experimental loadout knowledge is unavailable: %s", exc)
+            message = "实验配装暂不可用，请管理员检查装备目录和标签表"
+        except ExperimentError as exc:
+            message = f"实验配装失败：{exc}"
+        await self._reply(kwargs, message)
+        return False, message, 2
+
+    async def _experimental_loadout(
+        self, kwargs: Mapping[str, Any], group_id: str, catalog: TemplateCatalog, choice: str,
+    ) -> tuple[bool, str, int]:
+        scope = group_id, self._loadout_scope(kwargs)
+        now = time.monotonic()
+        ttl = self._loadout_reroll_seconds()
+        self._experimental_sessions = {
+            key: session for key, session in self._experimental_sessions.items()
+            if now - session.updated_at <= ttl
+        }
+        wants_reroll = choice.isdecimal() or choice in LOADOUT_INDEX_WORDS
+        index = parse_loadout_index(choice) if wants_reroll and len(choice) <= 2 else 0
+        session = self._experimental_sessions.get(scope)
+        if wants_reroll:
+            if index not in LOADOUT_SLOT_CHOICES:
+                raise ExperimentError(f"重抽序号需要在 1-8 之间（{LOADOUT_SLOT_HINT}）")
+            if session is None:
+                raise ExperimentError(f"没有可重抽的实验配装，请先抽一套，重抽时限为 {ttl} 秒")
+
+        knowledge = load_knowledge(
+            self._knowledge_table(),
+            self._data_file("loadout_knowledge.json"),
+            self._data_file("loadout_data.json"),
+        )
+        if wants_reroll and session is not None:
+            key = LOADOUT_SLOT_CHOICES[index]
+            replacement = reroll_experimental_slot(knowledge, catalog, session.template_id, session.loadout, key)
+            if replacement is None:
+                raise ExperimentError(f"{loadout_slot_title(index)} 没有符合原模板的替代装备")
+            session = replace(session, loadout={**session.loadout, key: replacement}, updated_at=now)
+        else:
+            template, loadout = generate_experimental_loadout(knowledge, catalog, choice)
+            session = ExperimentalSession(template.id, template.name, loadout, now)
+
+        self._experimental_sessions[scope] = session
+        names = {key: knowledge.items[item_id].name for key, item_id in session.loadout.items()}
+        return await self._send_loadout_card(kwargs, names, "", template_name=session.template_name)
+
     async def _reply(self, kwargs: Mapping[str, Any], message: str) -> bool:
         """Send command feedback to the originating chat stream.
 
@@ -824,7 +981,7 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
 
     @Command(
         COMMAND_NAME,
-        description="随机配装、单格重抽、状态与出图自检（/helldivers 或 /hd）",
+        description="随机配装、实验配装、单格重抽、状态与出图自检（/helldivers 或 /hd）",
         pattern=COMMAND_PATTERN,
         aliases=list(COMMAND_ALIASES),
         timeout_ms=COMMAND_RPC_TIMEOUT_MS,
@@ -845,6 +1002,8 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
             )
             return False, refusal, 2
         action, argument = self._resolve_command(kwargs)
+        if action == "exp":
+            return await self._experimental_command(kwargs, group_id, argument)
         denial = self._command_permission(kwargs, action)
         if denial:
             await self._reply(kwargs, f"{denial}。")
@@ -1123,12 +1282,13 @@ def render_loadout_html(
     )
 
 
-def format_loadout(loadout: Mapping[str, str], *, motto: str = "") -> str:
+def format_loadout(loadout: Mapping[str, str], *, motto: str = "", template_name: str = "") -> str:
     """Plain-text rendering, used when the host cannot render images.
 
     Slot numbers match the badges on the card so a text-only user can reroll too.
     """
-    lines = ["【绝地潜兵 2：民主帮你选择·随机配装】"]
+    mode = f"实验配装 · {template_name}" if template_name else "随机配装"
+    lines = [f"【绝地潜兵 2：民主帮你选择·{mode}】"]
     for index, slot in enumerate(LOADOUT_SLOTS, start=1):
         if loadout.get(slot):
             lines.append(f"{index} {LOADOUT_SLOT_LABELS[slot]}：{loadout[slot]}")
