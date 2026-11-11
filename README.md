@@ -1,6 +1,6 @@
 # 绝地潜兵 2：民主帮你选择
 
-> 当前为 **Dev 开发分支**，包含配备知识库、Excel 映射与按群启用的实验配装。正式稳定版为 [v0.3.2](https://github.com/TouristH/Helldivers2DemocracyChooses/releases/tag/v0.3.2)，本分支改动暂不发布正式 Release。
+> 安装包见 [v0.4.0 发布页](https://github.com/TouristH/Helldivers2DemocracyChooses/releases/tag/v0.4.0)。本版提供可编辑的配备知识库和按群启用的实验配装。
 
 ![军需部门已点头批准这次配装](assets/icon.webp)
 
@@ -49,7 +49,7 @@
 在 MaiBot 的 `plugins` 目录执行：
 
 ```bash
-git clone --branch Dev https://github.com/TouristH/Helldivers2DemocracyChooses.git
+git clone https://github.com/TouristH/Helldivers2DemocracyChooses.git
 ```
 
 在**运行 MaiBot 宿主的同一个 Python 环境**安装依赖和渲染浏览器：
@@ -94,7 +94,7 @@ python -m playwright install chromium
 /hd loadout 3
 ```
 
-### 实验配装（Dev）
+### 实验配装
 
 实验配装默认关闭。管理员在已列入 `allowed_groups` 的群里执行 `/hd exp on`，将当前群加入实验白名单。`/hd exp status` 查询本群状态，`/hd exp off` 将本群移出实验白名单并清除本群的实验重抽会话。开关状态在重启后保留。MaiBot 1.4 各实例写入自己的 `data/plugins/<插件 ID>/experimental_groups.json`。旧宿主使用 `<插件目录>/data/experimental_groups.json`。
 

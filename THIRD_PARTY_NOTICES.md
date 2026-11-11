@@ -171,10 +171,10 @@ the bundled Wiki-derived catalog and game artwork.
 ## Equipment knowledge annotations
 
 `loadout_tags.xlsx` is the primary editable runtime workbook in the `0.4.0`
-development branch. `loadout_tags.csv` is its textual export and fallback.
+release. `loadout_tags.csv` is its textual export and fallback.
 `loadout_knowledge.json` preserves its initial research, project-authored tag
 definitions, per-claim source references, and access limitations. The research
-date is 2026-11-08; its equipment coverage remains the 2026-10-21 catalog.
+date is 2026-11-09; its equipment coverage remains the 2026-10-21 catalog.
 
 The source registry credits Helldivers Wiki contributors, Arrowhead Game Studios
 through the official PlayStation Blog, and the authors and commenters of the
