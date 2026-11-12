@@ -59,7 +59,7 @@ python -m pip install -r plugins/Helldivers2DemocracyChooses/requirements.txt
 python -m playwright install chromium
 ```
 
-重启 MaiBot，Runner 会发现根目录的 `_manifest.json` 和 `plugin.py`，并生成 `config.toml`。编辑该文件，在 `[plugin]` 的 `allowed_groups` 中填入允许使用的群号；默认空名单拒绝全部命令。全局群白名单通过配置文件维护。
+重启 MaiBot，Runner 会发现根目录的 `_manifest.json` 和 `plugin.py`，并生成 `config.toml`。在 MaiBot WebUI 的插件配置中填写「允许使用的群（白名单）」，也可直接编辑 `config.toml` 的 `[plugin].allowed_groups`。默认空名单拒绝全部命令。
 
 从旧版升级时，如果现有 `config.toml` 的 `[plugin]` 段缺少 `config_version`，在该段下补一行 `config_version = "1.0.0"`，保存后重载插件或重启 MaiBot。直接修改原文件即可保留群白名单、管理员和黑名单设置。
 
@@ -133,20 +133,20 @@ python -m playwright install chromium
 
 ## 出勤名单与军需官权限
 
-在 `config.toml` 维护以下四项设置，并保留 Runner 使用的 `config_version`。完整注释见 [config.example.toml](config.example.toml)。
+以下四项设置可以在 MaiBot WebUI 的插件配置中维护，也可以直接编辑 `config.toml`。请保留 Runner 使用的 `config_version`。完整注释见 [config.example.toml](config.example.toml)。
 
 ```toml
 [plugin]
 config_version = "1.0.0"
 allowed_groups = []
 admin_users = []
-command_blacklist = {}
+command_blacklist = []
 loadout_reroll_seconds = 120
 ```
 
-- `allowed_groups`：全局群白名单，值为群号字符串列表；默认 `[]` 拒绝所有命令，只能在配置文件内添加或移除群，WebUI 配置表单隐藏此项。
+- `allowed_groups` 为全局群白名单，值为群号字符串列表。默认 `[]` 拒绝所有命令。
 - `admin_users` 为管理员账号白名单。在允许群内，仅宿主操作员和这些账号能执行 `diag` 与 `exp on`、`exp off`、`exp status`。
-- `command_blacklist` 按功能限制账号，键为 `loadout`、`exp`、`status`、`help` 或 `"*"`，值为账号字符串列表。`exp` 限制实验预设列表、抽取和重抽，`loadout` 同时限制普通和实验配装的抽取与重抽。
+- `command_blacklist` 按功能限制账号。每条规则填写一个 QQ 号，并选择 `loadout`、`exp`、`status`、`help` 或 `"*"`。星号涵盖全部功能命令。`exp` 限制实验预设列表、抽取和重抽，`loadout` 同时限制普通和实验配装的抽取与重抽。删除规则并保存即可解除该条限制。
 - `loadout_reroll_seconds`：单格重抽有效秒数，配置模型允许 `10–3600`。
 
 所有命令先检查全局群白名单，宿主操作员和管理员也须通过。仅在已配置的群聊内可用。通过群检查后，管理指令检查宿主操作员或 `admin_users` 身份。普通成员使用功能命令时检查黑名单，实验配装另需本群已开启。
@@ -160,10 +160,16 @@ allowed_groups = ["987654321"]
 admin_users = ["123456789"]
 loadout_reroll_seconds = 120
 
-[plugin.command_blacklist]
-"*" = ["10001"]
-loadout = ["10002"]
+[[plugin.command_blacklist]]
+action = "*"
+user_id = "10001"
+
+[[plugin.command_blacklist]]
+action = "loadout"
+user_id = "10002"
 ```
+
+旧版使用的 `[plugin.command_blacklist]` 表和内联字典可继续读取。WebUI 首次保存时会转为规则列表，旧版使用的命令别名会归入对应的正式命令。
 
 ## 军械库清点与打印机检修
 

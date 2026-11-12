@@ -11,7 +11,7 @@ import time
 import unicodedata
 from dataclasses import dataclass, replace
 from pathlib import Path
-from typing import Any, Iterable, Mapping, Sequence
+from typing import Any, Iterable, Literal, Mapping, Sequence
 
 if __package__:
     from .experimental_groups import ExperimentalGroups, ExperimentalGroupsError
@@ -35,7 +35,7 @@ try:  # maibot-plugin-sdk 2.x
         MaiBotPlugin,
         PluginConfigBase,
     )
-    from pydantic import ConfigDict  # type: ignore
+    from pydantic import ConfigDict, field_validator  # type: ignore
 except ImportError as sdk_import_error:  # importing should still support isolated tests
     logging.getLogger(__name__).warning(
         "maibot-plugin-sdk is unavailable; DemocracyChooses is using test-only SDK stubs: %s",
@@ -51,6 +51,9 @@ except ImportError as sdk_import_error:  # importing should still support isolat
 
     def Field(default: Any = None, default_factory: Any = None, **_: Any) -> Any:
         return default_factory() if default_factory else default
+
+    def field_validator(*_: Any, **__: Any):
+        return lambda method: method
 
     class MaiBotPlugin:
         ctx: Any
@@ -339,8 +342,51 @@ HELP_TOPICS = {
 HELP_ONLY_ALIASES = {"简写": "shortcut", "快捷": "shortcut", "缩写": "shortcut", "快捷方式": "shortcut", "简称": "shortcut"}
 
 
+def _blacklist_by_action(value: Any) -> dict[str, set[str]]:
+    """Read rule rows and the command-keyed tables used by older configs."""
+    rules: Iterable[tuple[Any, Any]]
+    if isinstance(value, Mapping):
+        rules = value.items()
+    elif isinstance(value, list):
+        rules = (
+            (row.get("action", ""), [row.get("user_id", "")])
+            for row in value
+            if isinstance(row, Mapping)
+        )
+    else:
+        return {}
+
+    result: dict[str, set[str]] = {}
+    for raw_action, raw_users in rules:
+        if isinstance(raw_users, str):
+            raw_users = [raw_users]
+        if not isinstance(raw_users, (list, tuple, set)):
+            continue
+        blocked = {str(user).strip() for user in raw_users if str(user).strip()}
+        if blocked:
+            key = str(raw_action).strip()
+            key = "*" if key in {"*", "all", "全部", "所有"} else ACTION_ALIASES.get(key, key)
+            result.setdefault(key, set()).update(blocked)
+    return result
+
+
+class BlacklistRule(PluginConfigBase):
+    model_config = ConfigDict(coerce_numbers_to_str=True)
+
+    action: Literal["loadout", "exp", "status", "help", "*"] = Field(
+        default="loadout",
+        description="受限制的功能命令",
+        json_schema_extra={"label": "命令（* 表示全部功能命令）"},
+    )
+    user_id: str = Field(
+        default="",
+        description="禁止使用该命令的 QQ 号",
+        json_schema_extra={"label": "QQ 号", "placeholder": "输入 QQ 号"},
+    )
+
+
 class PluginSection(PluginConfigBase):
-    """Allowed groups, permissions and the loadout reroll window."""
+    """群白名单、权限和配装重抽时间窗。"""
     model_config = ConfigDict(validate_assignment=True, extra="ignore", coerce_numbers_to_str=True)
     __ui_label__ = "绝地潜兵 2：民主帮你选择"
     __ui_icon__ = "gamepad-2"
@@ -355,13 +401,13 @@ class PluginSection(PluginConfigBase):
     allowed_groups: list[str] = Field(
         default_factory=list,
         description=(
-            "允许使用本插件所有指令的群号白名单，只能在配置文件中添加。"
+            "允许使用本插件所有指令的群号白名单。"
             "默认空列表表示所有群均不可用；私聊不可用，管理员与宿主操作员也不能绕过。"
         ),
         json_schema_extra={
             "label": "允许使用的群（白名单）", "group": "权限", "order": 1,
-            "hint": "仅通过 config.toml 的 plugin.allowed_groups 维护", "example": ["123456789"],
-            "hidden": True,
+            "hint": "填写允许使用插件的群号，留空时所有群都不可用。",
+            "placeholder": "输入群号", "example": ["123456789"],
         },
     )
 
@@ -380,19 +426,18 @@ class PluginSection(PluginConfigBase):
         },
     )
 
-    command_blacklist: dict[str, list[str]] = Field(
-        default_factory=dict,
+    command_blacklist: list[BlacklistRule] = Field(
+        default_factory=list,
         description=(
-            "功能性指令的黑名单：键是指令名（loadout / "
-            "exp / status / help，或 * 表示全部功能性指令），值是禁止使用该指令的 QQ 号列表。"
+            "每条规则指定一个功能命令和一个受限制的 QQ 号，* 表示全部功能命令。"
             "管理指令不受此表影响（它们本来就是白名单制）；管理员也不会被此表拦住。"
         ),
         json_schema_extra={
             "label": "指令黑名单",
             "group": "权限",
             "order": 6,
-            "hint": '例如 {"*": ["10001"], "loadout": ["10002"]}',
-            "example": {"loadout": ["10001"]},
+            "hint": "选择命令并填写 QQ 号。删除规则后保存即可解除该规则的限制。",
+            "example": [{"action": "loadout", "user_id": "10001"}],
         },
     )
 
@@ -406,6 +451,18 @@ class PluginSection(PluginConfigBase):
         ),
         json_schema_extra={"label": "配装重抽时间窗（秒）", "group": "随机配装", "order": 30, "example": 300},
     )
+
+    @field_validator("command_blacklist", mode="before")
+    @classmethod
+    def _read_legacy_blacklist(cls, value: Any) -> Any:
+        if not isinstance(value, Mapping):
+            return value
+        return [
+            {"action": action, "user_id": user_id}
+            for action, users in _blacklist_by_action(value).items()
+            if action == "*" or action in FUNCTIONAL_ACTIONS
+            for user_id in sorted(users)
+        ]
 
 
 class PluginConfig(PluginConfigBase):
@@ -541,25 +598,7 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
         return {str(item).strip() for item in rows if str(item).strip()}
 
     def _command_blacklist(self) -> dict[str, set[str]]:
-        """``{action or '*': {user_id, ...}}`` from the ``command_blacklist`` table."""
-        value = self._cfg.get("command_blacklist")
-        if not isinstance(value, Mapping):
-            return {}
-        result: dict[str, set[str]] = {}
-        for raw_action, raw_users in value.items():
-            if isinstance(raw_users, str):
-                users: Iterable[Any] = [raw_users]
-            elif isinstance(raw_users, (list, tuple, set)):
-                users = raw_users
-            else:
-                continue
-            blocked = {str(user).strip() for user in users if str(user).strip()}
-            if not blocked:
-                continue
-            key = str(raw_action).strip()
-            key = "*" if key in {"*", "all", "全部", "所有"} else ACTION_ALIASES.get(key, key)
-            result.setdefault(key, set()).update(blocked)
-        return result
+        return _blacklist_by_action(self._cfg.get("command_blacklist"))
 
     def _is_admin(self, kwargs: Mapping[str, Any]) -> bool:
         """Host operator, or a user named in the ``admin_users`` whitelist."""
@@ -1004,7 +1043,7 @@ class DemocracyChoosesPlugin(MaiBotPlugin):
         if not group_id or group_id not in self._cfg_id_list("allowed_groups"):
             refusal = "本插件仅限配置白名单群聊使用"
             await self._reply(
-                kwargs, f"{refusal}。请联系管理员在配置文件 plugin.allowed_groups 中添加群号。"
+                kwargs, f"{refusal}。请联系管理员在插件设置的群白名单中添加群号。"
             )
             return False, refusal, 2
         action, argument = self._resolve_command(kwargs)

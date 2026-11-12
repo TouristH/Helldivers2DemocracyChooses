@@ -1,12 +1,12 @@
 # 绝地潜兵 2：民主帮你选择 —— 配置示例
-# 编辑 config.toml 维护群白名单等四项设置。
+# 在 MaiBot WebUI 的插件配置或 config.toml 中维护以下设置。
 
 [plugin]
 
 # MaiBot Runner 要求的配置结构版本，请保留。
 config_version = "1.0.0"
 
-# 全局群白名单，只能在配置文件内添加或移除群，不提供群聊增删命令。
+# 全局群白名单，通过 WebUI 或配置文件添加或移除群。
 # 所有命令（含 help/status/diag）均须先通过此检查；默认空名单拒绝全部命令。
 # 未列出的群和没有群号的私聊均不可用；宿主操作员及管理员不能绕过。
 # 例：allowed_groups = ["123456789", "987654321"]
@@ -19,17 +19,20 @@ allowed_groups = []
 # 例：admin_users = ["123456789", "987654321"]
 admin_users = []
 
-# 功能命令黑名单。键为 loadout / exp / status / help / "*"，值为账号字符串列表。
+# 功能命令黑名单。每条规则填写一个 QQ 号和命令 loadout / exp / status / help / "*"。
 # loadout 限制普通和实验配装的抽取与重抽，exp 还可单独限制实验预设列表和抽取。
 # "*" 禁止该账号使用全部功能命令。diag 和实验白名单管理使用管理员权限判断。
-command_blacklist = {}
+command_blacklist = []
 
 # 普通与实验配装抽取后可单格重抽的有效秒数，允许范围 10–3600。
 # 每次成功重抽刷新有效期；超时后需重新抽取整套配装。
 loadout_reroll_seconds = 120
 
-# 如需按指令填写黑名单，删除上面的 command_blacklist = {}，
-# 再取消以下三行的注释；将此表保留在配置文件末尾：
-# [plugin.command_blacklist]
-# "*" = ["10001"]
-# loadout = ["10002"]
+# 手动填写黑名单时，删除上面的 command_blacklist = []，再按以下格式增加规则。
+# [[plugin.command_blacklist]]
+# action = "*"
+# user_id = "10001"
+#
+# [[plugin.command_blacklist]]
+# action = "loadout"
+# user_id = "10002"

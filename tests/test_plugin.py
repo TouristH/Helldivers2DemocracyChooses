@@ -1182,17 +1182,30 @@ def test_config_fields_carry_webui_metadata() -> None:
     assert groups == {"基础", "权限", "随机配装"}, groups
 
 
-def test_group_allowlist_is_not_editable_in_generated_webui_form() -> None:
+def test_group_allowlist_is_editable_in_generated_webui_form() -> None:
     from maibot_sdk.config import generate_plugin_config_schema
 
     schema = generate_plugin_config_schema(PluginConfig)
     fields = schema["sections"]["plugin"]["fields"]
     visible_fields = {name for name, field in fields.items() if not field.get("hidden")}
-    assert "allowed_groups" not in visible_fields
+    assert "allowed_groups" in visible_fields
+    assert fields["allowed_groups"]["ui_type"] == "list"
+    assert fields["allowed_groups"]["item_type"] == "string"
     assert "config_version" not in visible_fields
     assert {"admin_users", "command_blacklist", "loadout_reroll_seconds"} <= visible_fields
     config = PluginConfig.model_validate({"plugin": {"allowed_groups": ["100"]}})
     assert config.plugin.allowed_groups == ["100"]
+
+
+def test_blacklist_webui_schema_uses_editable_rule_rows() -> None:
+    schema = DemocracyChoosesPlugin().get_webui_config_schema()
+    blacklist = schema["sections"]["plugin"]["fields"]["command_blacklist"]
+
+    assert blacklist["ui_type"] == "list"
+    assert blacklist["item_type"] == "object"
+    assert blacklist["default"] == []
+    assert set(blacklist["item_fields"]["action"]["choices"]) == {"*"} | FUNCTIONAL_ACTIONS
+    assert blacklist["item_fields"]["user_id"]["type"] == "string"
 
 
 def test_config_numeric_fields_declare_sane_bounds() -> None:
@@ -1291,6 +1304,35 @@ def test_blacklist_keys_accept_action_aliases() -> None:
     for key in ("配装", "lo", "loadout"):
         plugin._cfg = {"allowed_groups": ["100"], "command_blacklist": {key: ["700"]}}
         assert plugin._command_permission({"user_id": "700"}, "loadout"), f"别名 {key} 没生效"
+
+
+def test_legacy_blacklist_normalizes_aliases_and_empty_rule_list_unblocks_users() -> None:
+    plugin = command_plugin([])
+    legacy = {
+        "plugin": {
+            "config_version": "1.0.0",
+            "allowed_groups": ["100"],
+            "command_blacklist": {"all": ["900"], "lo": ["700"], "loadout": [700, "800"]},
+        }
+    }
+    normalized, _ = plugin.normalize_plugin_config(legacy)
+    config = normalized["plugin"]
+    assert config["command_blacklist"] == [
+        {"action": "*", "user_id": "900"},
+        {"action": "loadout", "user_id": "700"},
+        {"action": "loadout", "user_id": "800"},
+    ]
+    assert config["allowed_groups"] == ["100"]
+
+    asyncio.run(plugin.on_config_update(config_data=normalized))
+    assert plugin._command_permission({"user_id": "900"}, "help")
+    assert plugin._command_permission({"user_id": "700"}, "loadout")
+    assert not plugin._command_permission({"user_id": "700"}, "help")
+
+    config["command_blacklist"] = []
+    asyncio.run(plugin.on_config_update(config_data=normalized))
+    assert not plugin._command_permission({"user_id": "900"}, "help")
+    assert not plugin._command_permission({"user_id": "700"}, "loadout")
 
 
 def test_admin_whitelist_wins_over_the_blacklist() -> None:
